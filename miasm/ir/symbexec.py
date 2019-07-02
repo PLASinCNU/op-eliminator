@@ -827,6 +827,8 @@ class SymbolicExecutionEngine(object):
 
         self.ir_arch = ir_arch
         self.expr_simp = sb_expr_simp
+        self.info_mems = []
+        self.info_ids = []
 
     def get_state(self):
         """Return the current state of the SymbolicEngine"""
@@ -965,15 +967,19 @@ class SymbolicExecutionEngine(object):
                     continue
                 yield mem, value
 
-    def dump(self, ids=True, mems=True):
+    def dump(self, ids=True, mems=True, step=False):
         """
         Display modififed variables
         @ids: display modified ids
         @mems: display modified memory
         """
 
+        info = dict()
         for variable, value in self.modified(None, ids, mems):
-            print("%-18s" % variable, "=", "%s" % value)
+            if step:
+                print("%-18s" % variable, "=", "%s" % value)
+            info[variable] = value
+        return info
 
     def eval_assignblk(self, assignblk):
         """
@@ -1029,7 +1035,7 @@ class SymbolicExecutionEngine(object):
         @irb: irbloc instance
         @step: display intermediate steps
         """
-        for assignblk in irb:
+        for index, assignblk in enumerate(irb):
             if step:
                 print('Instr', assignblk.instr)
                 print('Assignblk:')
@@ -1037,8 +1043,9 @@ class SymbolicExecutionEngine(object):
                 print('_' * 80)
             self.eval_updt_assignblk(assignblk)
             if step:
-                self.dump(mems=False)
-                self.dump(ids=False)
+                self.info_ids.append(self.dump(mems=False, step=step))
+                self.info_mems.append(self.dump(ids=False, step=step))
+            if step:
                 print('_' * 80)
         dst = self.eval_expr(self.ir_arch.IRDst)
 
@@ -1066,6 +1073,7 @@ class SymbolicExecutionEngine(object):
             irblock = ircfg.get_block(addr)
             if irblock is None:
                 break
+            # print(irblock.loc_key.key)
             if irblock.loc_key == lbl_stop:
                 break
             addr = self.eval_updt_irblock(irblock, step=step)
