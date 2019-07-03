@@ -52,7 +52,7 @@ for step, info in enumerate(sb.info_ids):
     for variable in info[1]:
         z3_expr_dict[step + 1][variable] = translator.from_expr(info[1][variable])
 for step in z3_expr_dict.keys():
-    print('###### step', step)
+    print('###### step', step, sb.info_ids[step-1][0])
     for variable in z3_expr_dict[step]:
         print('\t', variable, ':', z3_expr_dict[step][variable])
 print()

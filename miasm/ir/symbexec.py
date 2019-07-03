@@ -1054,7 +1054,6 @@ class SymbolicExecutionEngine(object):
             if step:
                 print('_' * 80)
         dst = self.eval_expr(self.ir_arch.IRDst)
-
         return dst
 
     def run_block_at(self, ircfg, addr, step=False):
