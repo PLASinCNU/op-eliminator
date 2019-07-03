@@ -1042,9 +1042,8 @@ class SymbolicExecutionEngine(object):
                 print(assignblk)
                 print('_' * 80)
             self.eval_updt_assignblk(assignblk)
-            if step:
-                self.info_ids.append(self.dump(mems=False, step=step))
-                self.info_mems.append(self.dump(ids=False, step=step))
+            self.info_ids.append([assignblk.instr, self.dump(mems=False, step=step)])
+            self.info_mems.append([assignblk.instr, self.dump(ids=False, step=step)])
             if step:
                 print('_' * 80)
         dst = self.eval_expr(self.ir_arch.IRDst)

@@ -23,16 +23,31 @@ ircfg = ira.new_ircfg_from_asmcfg(asmcfg)
 # ircfg = ira.new_ircfg(asmcfg)
 # print(loc_db._offset_to_loc_key.keys()[0])
 sb = SymbolicExecutionEngine(ira)
+# symbolic_pc = sb.run_at(ircfg, loc_db._offset_to_loc_key.keys()[0])
+# for index, info in enumerate(sb.info_ids):
+#     print('###### step', index+1)
+#     print('\t', info[0])
+#     for reg in info[1]:
+#         print('\t\t', reg, ':', info[1][reg])
+
+sb.symbols[machine.mn.regs.ECX] = ExprInt(-1, 32)
 symbolic_pc = sb.run_at(ircfg, loc_db._offset_to_loc_key.keys()[0])
-print(symbolic_pc)
-sb.symbols[machine.mn.regs.ECX] = ExprInt(-3, 32)
-symbolic_pc = sb.run_at(ircfg, loc_db._offset_to_loc_key.keys()[0], step=True)
-for reg in sb.info_ids[-1]:
-    print(reg, sb.info_ids[-1][reg])
+for index, info in enumerate(sb.info_ids):
+    print('###### step', index+1)
+    print('\t', info[0])
+    for reg in info[1]:
+        print('\t\t', reg, ':', info[1][reg])
 
 translator = TranslatorZ3(endianness="<", loc_db=loc_db)
-ebx_z3_expr = translator.from_expr(sb.info_ids[-1][sb.info_ids[-1].keys()[11]])
+print('###instr', sb.info_ids[3][0])
+print('###expr_source', sb.info_ids[3][1][ExprId('zf', 1)])
+
+z3_expr_src = translator.from_expr(ExprId('zf', 1))
+z3_expr_value = translator.from_expr(sb.info_ids[3][1][ExprId('zf', 1)])
+print('###z3_expr', z3_expr_value)
+
 solver = z3.Solver()
-solver.add(ebx_z3_expr == 10)
+solver.add(z3_expr_src == 1)
+solver.add(z3_expr_src == z3_expr_value)
 solver.check()
 print(solver.model())
