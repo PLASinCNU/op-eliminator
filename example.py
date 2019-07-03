@@ -30,24 +30,39 @@ sb = SymbolicExecutionEngine(ira)
 #     for reg in info[1]:
 #         print('\t\t', reg, ':', info[1][reg])
 
-sb.symbols[machine.mn.regs.ECX] = ExprInt(-1, 32)
+sb.symbols[machine.mn.regs.ECX] = ExprInt(253, 32)
 symbolic_pc = sb.run_at(ircfg, loc_db._offset_to_loc_key.keys()[0])
-for index, info in enumerate(sb.info_ids):
-    print('###### step', index+1)
+print('###### modified state step by step')
+for step, info in enumerate(sb.info_ids):
+    print('###### step', step + 1)
     print('\t', info[0])
-    for reg in info[1]:
-        print('\t\t', reg, ':', info[1][reg])
+    print('\t### info_ids')
+    print('\t\t', info[1])
+    # for reg in info[1]:
+    #     print('\t\t', reg, ':', info[1][reg])
+    print('\t### info_mems')
+    print('\t\t', sb.info_mems[step][1])
+print()
 
 translator = TranslatorZ3(endianness="<", loc_db=loc_db)
-print('###instr', sb.info_ids[3][0])
-print('###expr_source', sb.info_ids[3][1][ExprId('zf', 1)])
-
-z3_expr_src = translator.from_expr(ExprId('zf', 1))
-z3_expr_value = translator.from_expr(sb.info_ids[3][1][ExprId('zf', 1)])
-print('###z3_expr', z3_expr_value)
-
-solver = z3.Solver()
-solver.add(z3_expr_src == 1)
-solver.add(z3_expr_src == z3_expr_value)
-solver.check()
-print(solver.model())
+z3_expr_dict = dict()
+print('###### z3_expr about variable step by step')
+for step, info in enumerate(sb.info_ids):
+    z3_expr_dict[step + 1] = dict()
+    for variable in info[1]:
+        z3_expr_dict[step + 1][variable] = translator.from_expr(info[1][variable])
+for step in z3_expr_dict.keys():
+    print('###### step', step)
+    for variable in z3_expr_dict[step]:
+        print('\t', variable, ':', z3_expr_dict[step][variable])
+print()
+#
+# z3_expr_dst = translator.from_expr(ExprId('zf', 1))
+# z3_expr_value = translator.from_expr(sb.info_ids[3][1][ExprId('zf', 1)])
+# print('###z3_expr', z3_expr_value)
+#
+# solver = z3.Solver()
+# solver.add(z3_expr_dst == 1)
+# solver.add(z3_expr_dst == z3_expr_value)
+# solver.check()
+# print(solver.model())

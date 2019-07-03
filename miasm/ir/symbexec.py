@@ -829,6 +829,7 @@ class SymbolicExecutionEngine(object):
         self.expr_simp = sb_expr_simp
         self.info_mems = []
         self.info_ids = []
+        self.before_state = {}
 
     def get_state(self):
         """Return the current state of the SymbolicEngine"""
@@ -958,13 +959,19 @@ class SymbolicExecutionEngine(object):
             init_state = {}
         if ids:
             for variable, value in viewitems(self.symbols.symbols_id):
-                if variable in init_state and init_state[variable] == value:
+                # if variable in init_state and init_state[variable] == value:
+                #     continue
+                if variable in self.before_state and self.before_state[variable] == value:
                     continue
+                self.before_state[variable] = value
                 yield variable, value
         if mems:
             for mem, value in self.symbols.memory():
-                if mem in init_state and init_state[mem] == value:
+                # if mem in init_state and init_state[mem] == value:
+                #     continue
+                if mem in self.before_state and self.before_state[mem] == value:
                     continue
+                self.before_state[mem] = value
                 yield mem, value
 
     def dump(self, ids=True, mems=True, step=False):
