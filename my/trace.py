@@ -41,6 +41,35 @@ class Asm_instruction:
         opc = li[0]
         del li[0]
         self.set(int(ta),pa,opc,li)
+def is_zf_zero(ta, trace_list, binstr):
+
+    zf = ExprId('zf',1)
+    zf_val = ExprInt(1,1)
+
+    loc_db = LocationDB()
+    c = Container.from_string(s)
+    machine = Machine('x86_64')
+    mdis = machine.dis_engine(c.bin_stream)
+    asmcfg = mdis.dis_multiblock(0)
+    ira = machine.ira(loc_db)
+    ircfg = ira.new_ircfg_from_asmcfg(asmcfg)
+    sb = SymbolicExecutionEngine(ira)
+    sb.symbols[machine.mn.regs.ECX] = ExprInt(253,32)
+    symbolic_pc = sb.run_at(ircfg,loc_db._offset_to_loc_key.keys()[0])
+
+    info = sb.info_ids[ta]
+    flags = info[1]
+
+    if flag[zf] == zf_val:
+        return True
+    else:
+        return False
+
+def additional_constraint_str(ta,trace_list):
+    if is_zf_zer(ta,trace_list):
+	print('zf == 1')
+    else:
+	print('zf == 0')
 
 def is_next_varying(ta_list, trace_list):
 	if isinstance(ta_list,list):
