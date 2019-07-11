@@ -12,8 +12,8 @@ from typing import NamedTuple
 
 class Asm_instruction:
     ta = int()
-	pa = ""
-	name = ""
+    pa = ""
+    name = ""
     operand = []
 	
     def set(self,ta,pa,name, operand):
