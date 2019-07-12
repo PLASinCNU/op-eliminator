@@ -50,7 +50,7 @@ def is_zf_zero(ta, trace_list, binstr):
     zf_val = ExprInt(1,1)
 
     loc_db = LocationDB()
-    c = Container.from_string(s)
+    c = Container.from_string(binstr)
     machine = Machine('x86_64')
     mdis = machine.dis_engine(c.bin_stream)
     asmcfg = mdis.dis_multiblock(0)
@@ -69,7 +69,7 @@ def is_zf_zero(ta, trace_list, binstr):
         return False
 
 def additional_constraint_str(ta,trace_list):
-    if is_zf_zer(ta,trace_list):
+    if is_zf_zero(ta,trace_list):
         print('zf == 1')
     else:
         print('zf == 0')
