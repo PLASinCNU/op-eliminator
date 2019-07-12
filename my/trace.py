@@ -171,33 +171,33 @@ def main():
     #############################################    
 
     #++++++++++++++++++++++++++++++++++++++++++++#
-    offset = 0
-    sym_state = None
-    i = 0
-    while offset < len(binstr):
-        if i>10:
-            break
-        asmblock = mdis.dis_block(offset)
-        start, end = asmblock.get_range()
+#    offset = 0
+#    sym_state = None
+#    i = 0
+#    while offset < len(binstr):
+#        if i>10:
+#            break
+#        asmblock = mdis.dis_block(offset)
+#        start, end = asmblock.get_range()
         
-        ira = machine.ira(mdis.loc_db)
-        ircfg = ira.new_ircfg()
-        ira.add_asmblock_to_ircfg(asmblock, ircfg)
+#        ira = machine.ira(mdis.loc_db)
+#        ircfg = ira.new_ircfg()
+#        ira.add_asmblock_to_ircfg(asmblock, ircfg)
 
-        symb = SymbolicExecutionEngine(ira)
-        cur_addr = symb.run_at(ircfg,offset)
+#        symb = SymbolicExecutionEngine(ira)
+#        cur_addr = symb.run_at(ircfg,offset)
 
-        for state in symb.get_state():
-            print(state)
-        if sym_state is None:
-            sym_state = symb.get_state()
-        else:
-            syb_state.merge(symb.get_state())
-        print(offset)
-        offet = end
-        i += 1
-    for state in sym_state:
-        print(state)
+#        for state in symb.get_state():
+#            print(state)
+#        if sym_state is None:
+#            sym_state = symb.get_state()
+#        else:
+#           syb_state.merge(symb.get_state())
+#       print(offset)
+#       offet = end
+#        i += 1
+#    for state in sym_state:
+#        print(state)
 
     #++++++++++++++++++++++++++++++++++++++++++++#
 #    ircfg = ira.new_ircfg_from_asmcfg(asmcfg)
