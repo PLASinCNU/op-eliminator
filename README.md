@@ -2,6 +2,48 @@
 [![Build status](https://ci.appveyor.com/api/projects/status/g845jr23nt18uf29/branch/master?svg=true)](https://ci.appveyor.com/project/cea-sec/miasm)
 [![Code Climate](https://codeclimate.com/github/cea-sec/miasm/badges/gpa.svg)](https://codeclimate.com/github/cea-sec/miasm) [![Join the chat at https://gitter.im/cea-sec/miasm](https://badges.gitter.im/cea-sec/miasm.svg)](https://gitter.im/cea-sec/miasm?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 
+O.P. detector
+=============
+
+This is an opaque predicate detector using miasm. It can detect following opaque predicates
+- 1
+- y + x^2 >= y
+- y + x^3 >= y
+- (x^3 - x) mod 3
+- (x^2 - x) mod 2
+- (x^2 + x) mod 2
+- isdigit(x), if x is always integer
+- isupper(x), if x is always uppercase
+- x != null, if x is an integer value
+
+It also avoid the false positive
+- x^2 > x
+
+The method that we used to implement our detector is borrowed from "Backward-bounded DSE: Targeting Infeasibility Question on Obfuscated Codes" by S. Bardin, IEEE S&P 2017. It showed that k-bounded reasoning with dynamic traces (i.e.reasoning only on the predecessors in k steps) will give quite good solution to "infeasibility queries" (i.e. whether this condition will never be true or not) from experiments. Thus, we take k predecessors from each predicate in the trace, followed by symbolic executing the k-instructions and reasoning to seek the answer of the "negated" version of the predicate; if the result is UNSAT, than the predicate would be proved as tautology.
+
+Current status of this tool
+* the trace is extracted by Intel Pin.
+* initially targetting all the conditional statements (say, "predicates") in the trace
+* excluding any predicate that takes at least two different branches in the trace from the "o.p. (opaque predicate) candidates"
+* most of the process including symoblic execution and reasoning is done by mi-asm internal IR level (not in trace level)
+* reasoning step uses z3 solver in mi-asm
+* tested with eight simple o.p predicates (see above) and two o.p predicates from LLVM-O (the option for obfuscation)
+
+
+Future works
+* testing with more examples, including Themida or VMProtect generated codes: simple k does not work (so far)
+* loop detection : loop with o.p. is not a benign o.p. since it might be intended by developers (like loop-switch pattern), usually with a exit instructions (branches) in the loop body
+* program slicing with o.p. predicates : the expressions and instructions that are used only for o.p. predicates and the body would be safely eliminated (proof needed)
+
+
+
+
+==================================================
+
+Following document is from mi-asm readme file
+
+==================================================
+
 Reverse engineering framework in Python
 
 **Table of Contents**
