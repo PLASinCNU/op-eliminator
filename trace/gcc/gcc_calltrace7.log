@@ -1,0 +1,120 @@
+0;400560;\x31\xed;xor ebp, ebp
+1;400562;\x49\x89\xd1;mov r9, rdx
+2;400565;\x5e;pop rsi
+3;400566;\x48\x89\xe2;mov rdx, rsp
+4;400569;\x48\x83\xe4\xf0;and rsp, 0xfffffffffffffff0
+5;40056d;\x50;push rax
+6;40056e;\x54;push rsp
+7;40056f;\x49\xc7\xc0\x70\x07\x40\x00;mov r8, 0x400770
+8;400576;\x48\xc7\xc1\x00\x07\x40\x00;mov rcx, 0x400700
+9;40057d;\x48\xc7\xc7\xb1\x06\x40\x00;mov rdi, 0x4006b1
+10;400584;\xff\x15\x66\x0a\x20\x00;call qword ptr [rip+0x200a66]
+11;400700;\x41\x57;push r15
+12;400702;\x41\x56;push r14
+13;400704;\x49\x89\xd7;mov r15, rdx
+14;400707;\x41\x55;push r13
+15;400709;\x41\x54;push r12
+16;40070b;\x4c\x8d\x25\xd6\x06\x20\x00;lea r12, ptr [rip+0x2006d6]
+17;400712;\x55;push rbp
+18;400713;\x48\x8d\x2d\xd6\x06\x20\x00;lea rbp, ptr [rip+0x2006d6]
+19;40071a;\x53;push rbx
+20;40071b;\x41\x89\xfd;mov r13d, edi
+21;40071e;\x49\x89\xf6;mov r14, rsi
+22;400721;\x4c\x29\xe5;sub rbp, r12
+23;400724;\x48\x83\xec\x08;sub rsp, 0x8
+24;400728;\x48\xc1\xfd\x03;sar rbp, 0x3
+25;40072c;\xe8\xbf\xfd\xff\xff;call 0x4004f0
+26;4004f0;\x48\x83\xec\x08;sub rsp, 0x8
+27;4004f4;\x48\x8b\x05\xfd\x0a\x20\x00;mov rax, qword ptr [rip+0x200afd]
+28;4004fb;\x48\x85\xc0;test rax, rax
+29;4004fe;\x74\x02;jz 0x400502
+30;400502;\x48\x83\xc4\x08;add rsp, 0x8
+31;400506;\xc3;ret 
+32;400731;\x48\x85\xed;test rbp, rbp
+33;400734;\x74\x20;jz 0x400756
+34;400736;\x31\xdb;xor ebx, ebx
+35;400738;\x0f\x1f\x84\x00\x00\x00\x00\x00;nop dword ptr [rax+rax*1], eax
+36;400740;\x4c\x89\xfa;mov rdx, r15
+37;400743;\x4c\x89\xf6;mov rsi, r14
+38;400746;\x44\x89\xef;mov edi, r13d
+39;400749;\x41\xff\x14\xdc;call qword ptr [r12+rbx*8]
+40;40074d;\x48\x83\xc3\x01;add rbx, 0x1
+41;400751;\x48\x39\xdd;cmp rbp, rbx
+42;400754;\x75\xea;jnz 0x400740
+43;400756;\x48\x83\xc4\x08;add rsp, 0x8
+44;40075a;\x5b;pop rbx
+45;40075b;\x5d;pop rbp
+46;40075c;\x41\x5c;pop r12
+47;40075e;\x41\x5d;pop r13
+48;400760;\x41\x5e;pop r14
+49;400762;\x41\x5f;pop r15
+50;400764;\xc3;ret 
+51;4006b1;\x55;push rbp
+52;4006b2;\x48\x89\xe5;mov rbp, rsp
+53;4006b5;\x48\x83\xec\x10;sub rsp, 0x10
+54;4006b9;\x48\x8d\x45\xfb;lea rax, ptr [rbp-0x5]
+55;4006bd;\x48\x89\xc6;mov rsi, rax
+56;4006c0;\xbf\x84\x07\x40\x00;mov edi, 0x400784
+57;4006c5;\xb8\x00\x00\x00\x00;mov eax, 0x0
+58;4006ca;\xe8\x71\xfe\xff\xff;call 0x400540
+59;400540;\xff\x25\xe2\x0a\x20\x00;jmp qword ptr [rip+0x200ae2]
+60;400546;\x68\x02\x00\x00\x00;push 0x2
+61;40054b;\xe9\xc0\xff\xff\xff;jmp 0x400510
+62;400510;\xff\x35\xf2\x0a\x20\x00;push qword ptr [rip+0x200af2]
+63;400516;\xff\x25\xf4\x0a\x20\x00;jmp qword ptr [rip+0x200af4]
+64;4006cf;\x0f\xb6\x45\xfb;movzx eax, byte ptr [rbp-0x5]
+65;4006d3;\x0f\xbe\xc0;movsx eax, al
+66;4006d6;\x89\xc7;mov edi, eax
+67;4006d8;\xe8\x89\xff\xff\xff;call 0x400666
+68;400666;\x55;push rbp
+69;400667;\x48\x89\xe5;mov rbp, rsp
+70;40066a;\x53;push rbx
+71;40066b;\x48\x83\xec\x18;sub rsp, 0x18
+72;40066f;\x89\xf8;mov eax, edi
+73;400671;\x88\x45\xec;mov byte ptr [rbp-0x14], al
+74;400674;\xe8\xd7\xfe\xff\xff;call 0x400550
+75;400550;\xff\x25\xda\x0a\x20\x00;jmp qword ptr [rip+0x200ada]
+76;400556;\x68\x03\x00\x00\x00;push 0x3
+77;40055b;\xe9\xb0\xff\xff\xff;jmp 0x400510
+78;400510;\xff\x35\xf2\x0a\x20\x00;push qword ptr [rip+0x200af2]
+79;400516;\xff\x25\xf4\x0a\x20\x00;jmp qword ptr [rip+0x200af4]
+80;400679;\x48\x8b\x18;mov rbx, qword ptr [rax]
+81;40067c;\x0f\xbe\x45\xec;movsx eax, byte ptr [rbp-0x14]
+82;400680;\x89\xc7;mov edi, eax
+83;400682;\xe8\x99\xfe\xff\xff;call 0x400520
+84;400520;\xff\x25\xf2\x0a\x20\x00;jmp qword ptr [rip+0x200af2]
+85;400526;\x68\x00\x00\x00\x00;push 0x0
+86;40052b;\xe9\xe0\xff\xff\xff;jmp 0x400510
+87;400510;\xff\x35\xf2\x0a\x20\x00;push qword ptr [rip+0x200af2]
+88;400516;\xff\x25\xf4\x0a\x20\x00;jmp qword ptr [rip+0x200af4]
+89;400687;\x48\x98;cdqe 
+90;400689;\x48\x01\xc0;add rax, rax
+91;40068c;\x48\x01\xd8;add rax, rbx
+92;40068f;\x0f\xb7\x00;movzx eax, word ptr [rax]
+93;400692;\x0f\xb7\xc0;movzx eax, ax
+94;400695;\x25\x00\x01\x00\x00;and eax, 0x100
+95;40069a;\x85\xc0;test eax, eax
+96;40069c;\x74\x07;jz 0x4006a5
+97;40069e;\xb8\x01\x00\x00\x00;mov eax, 0x1
+98;4006a3;\xeb\x05;jmp 0x4006aa
+99;4006aa;\x48\x83\xc4\x18;add rsp, 0x18
+100;4006ae;\x5b;pop rbx
+101;4006af;\x5d;pop rbp
+102;4006b0;\xc3;ret 
+103;4006dd;\x89\x45\xfc;mov dword ptr [rbp-0x4], eax
+104;4006e0;\x8b\x45\xfc;mov eax, dword ptr [rbp-0x4]
+105;4006e3;\x89\xc6;mov esi, eax
+106;4006e5;\xbf\x87\x07\x40\x00;mov edi, 0x400787
+107;4006ea;\xb8\x00\x00\x00\x00;mov eax, 0x0
+108;4006ef;\xe8\x3c\xfe\xff\xff;call 0x400530
+109;400530;\xff\x25\xea\x0a\x20\x00;jmp qword ptr [rip+0x200aea]
+110;400536;\x68\x01\x00\x00\x00;push 0x1
+111;40053b;\xe9\xd0\xff\xff\xff;jmp 0x400510
+112;400510;\xff\x35\xf2\x0a\x20\x00;push qword ptr [rip+0x200af2]
+113;400516;\xff\x25\xf4\x0a\x20\x00;jmp qword ptr [rip+0x200af4]
+114;4006f4;\xb8\x00\x00\x00\x00;mov eax, 0x0
+115;4006f9;\xc9;leave 
+116;4006fa;\xc3;ret 
+117;400774;\x48\x83\xec\x08;sub rsp, 0x8
+118;400778;\x48\x83\xc4\x08;add rsp, 0x8
+119;40077c;\xc3;ret 

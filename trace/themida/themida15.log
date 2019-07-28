@@ -1,0 +1,16 @@
+0;39264;\x8b\xe6;mov esp, esi
+1;39266;\x5b;pop ebx
+2;39267;\x5f;pop edi
+3;39268;\x5e;pop esi
+4;39269;\x5d;pop ebp
+5;3926a;\xc2\x10\x00;ret 0x10
+6;3fe97;\x88\x45\xe7;mov byte ptr [ebp-0x19], al
+7;3fe9a;\x89\x5d\xfc;mov dword ptr [ebp-0x4], ebx
+8;3fe9d;\xe8\x48\x00\x00\x00;call 0x7761feea
+9;3feea;\x8d\x4d\x98;lea ecx, ptr [ebp-0x68]
+10;3feed;\xe8\xa7\x22\xfe\xff;call 0x77602199
+11;22199;\x8b\xff;mov edi, edi
+12;2219b;\x55;push ebp
+13;2219c;\x8b\xec;mov ebp, esp
+14;2219e;\x83\xec\x5c;sub esp, 0x5c
+15;221a1;\x64\xa1\x18\x00\x00\x00;mov eax, dword ptr fs:[0x18]

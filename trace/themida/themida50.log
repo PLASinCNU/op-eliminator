@@ -1,0 +1,51 @@
+0;39264;\x8b\xe6;mov esp, esi
+1;39266;\x5b;pop ebx
+2;39267;\x5f;pop edi
+3;39268;\x5e;pop esi
+4;39269;\x5d;pop ebp
+5;3926a;\xc2\x10\x00;ret 0x10
+6;3fe97;\x88\x45\xe7;mov byte ptr [ebp-0x19], al
+7;3fe9a;\x89\x5d\xfc;mov dword ptr [ebp-0x4], ebx
+8;3fe9d;\xe8\x48\x00\x00\x00;call 0x7761feea
+9;3feea;\x8d\x4d\x98;lea ecx, ptr [ebp-0x68]
+10;3feed;\xe8\xa7\x22\xfe\xff;call 0x77602199
+11;22199;\x8b\xff;mov edi, edi
+12;2219b;\x55;push ebp
+13;2219c;\x8b\xec;mov ebp, esp
+14;2219e;\x83\xec\x5c;sub esp, 0x5c
+15;221a1;\x64\xa1\x18\x00\x00\x00;mov eax, dword ptr fs:[0x18]
+16;221a7;\x56;push esi
+17;221a8;\x57;push edi
+18;221a9;\x8b\xb8\xa8\x01\x00\x00;mov edi, dword ptr [eax+0x1a8]
+19;221af;\x33\xf6;xor esi, esi
+20;221b1;\x89\x4d\xf4;mov dword ptr [ebp-0xc], ecx
+21;221b4;\x3b\xfe;cmp edi, esi
+22;221b6;\x0f\x84\x50\x4a\x01\x00;jz 0x77616c0c
+23;221bc;\x8b\x07;mov eax, dword ptr [edi]
+24;221be;\x8b\x51\x10;mov edx, dword ptr [ecx+0x10]
+25;221c1;\xf6\xc2\x40;test dl, 0x40
+26;221c4;\x0f\x85\x94\x20\x06\x00;jnz 0x7766425e
+27;221ca;\xf6\xc2\x20;test dl, 0x20
+28;221cd;\x0f\x84\xbb\x20\x06\x00;jz 0x7766428e
+29;221d3;\x53;push ebx
+30;221d4;\x8b\xda;mov ebx, edx
+31;221d6;\x80\xe3\x60;and bl, 0x60
+32;221d9;\x80\xfb\x20;cmp bl, 0x20
+33;221dc;\x0f\x85\xd1\x20\x06\x00;jnz 0x776642b3
+34;221e2;\x83\x39\x24;cmp dword ptr [ecx], 0x24
+35;221e5;\x72\x20;jb 0x77602207
+36;221e7;\x8d\x59\x08;lea ebx, ptr [ecx+0x8]
+37;221ea;\x8b\x33;mov esi, dword ptr [ebx]
+38;221ec;\xf7\xd6;not esi
+39;221ee;\x39\x71\x14;cmp dword ptr [ecx+0x14], esi
+40;221f1;\x0f\x85\xc7\x20\x06\x00;jnz 0x776642be
+41;221f7;\x8b\x71\x0c;mov esi, dword ptr [ecx+0xc]
+42;221fa;\xf7\xd6;not esi
+43;221fc;\x39\x71\x18;cmp dword ptr [ecx+0x18], esi
+44;221ff;\x0f\x85\xb9\x20\x06\x00;jnz 0x776642be
+45;22205;\x33\xf6;xor esi, esi
+46;22207;\x3b\xc6;cmp eax, esi
+47;22209;\x0f\x85\xa3\x49\x01\x00;jnz 0x77616bb2
+48;2220f;\xf6\xc2\x10;test dl, 0x10
+49;22212;\x0f\x84\xe0\x49\x01\x00;jz 0x77616bf8
+50;22218;\x83\x49\x10\x40;or dword ptr [ecx+0x10], 0x40

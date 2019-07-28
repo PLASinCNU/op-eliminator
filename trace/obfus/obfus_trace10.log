@@ -1,0 +1,186 @@
+0;400480;\x31\xed;xor ebp, ebp
+1;400482;\x49\x89\xd1;mov r9, rdx
+2;400485;\x5e;pop rsi
+3;400486;\x48\x89\xe2;mov rdx, rsp
+4;400489;\x48\x83\xe4\xf0;and rsp, 0xfffffffffffffff0
+5;40048d;\x50;push rax
+6;40048e;\x54;push rsp
+7;40048f;\x49\xc7\xc0\x20\x07\x40\x00;mov r8, 0x400720
+8;400496;\x48\xc7\xc1\xb0\x06\x40\x00;mov rcx, 0x4006b0
+9;40049d;\x48\xc7\xc7\x50\x06\x40\x00;mov rdi, 0x400650
+10;4004a4;\xff\x15\x46\x0b\x20\x00;call qword ptr [rip+0x200b46]
+11;4006b0;\x41\x57;push r15
+12;4006b2;\x41\x56;push r14
+13;4006b4;\x49\x89\xd7;mov r15, rdx
+14;4006b7;\x41\x55;push r13
+15;4006b9;\x41\x54;push r12
+16;4006bb;\x4c\x8d\x25\x3e\x07\x20\x00;lea r12, ptr [rip+0x20073e]
+17;4006c2;\x55;push rbp
+18;4006c3;\x48\x8d\x2d\x3e\x07\x20\x00;lea rbp, ptr [rip+0x20073e]
+19;4006ca;\x53;push rbx
+20;4006cb;\x41\x89\xfd;mov r13d, edi
+21;4006ce;\x49\x89\xf6;mov r14, rsi
+22;4006d1;\x4c\x29\xe5;sub rbp, r12
+23;4006d4;\x48\x83\xec\x08;sub rsp, 0x8
+24;4006d8;\x48\xc1\xfd\x03;sar rbp, 0x3
+25;4006dc;\xe8\x4f\xfd\xff\xff;call 0x400430
+26;400430;\x48\x83\xec\x08;sub rsp, 0x8
+27;400434;\x48\x8b\x05\xbd\x0b\x20\x00;mov rax, qword ptr [rip+0x200bbd]
+28;40043b;\x48\x85\xc0;test rax, rax
+29;40043e;\x74\x02;jz 0x400442
+30;400442;\x48\x83\xc4\x08;add rsp, 0x8
+31;400446;\xc3;ret 
+32;4006e1;\x48\x85\xed;test rbp, rbp
+33;4006e4;\x74\x20;jz 0x400706
+34;4006e6;\x31\xdb;xor ebx, ebx
+35;4006e8;\x0f\x1f\x84\x00\x00\x00\x00\x00;nop dword ptr [rax+rax*1], eax
+36;4006f0;\x4c\x89\xfa;mov rdx, r15
+37;4006f3;\x4c\x89\xf6;mov rsi, r14
+38;4006f6;\x44\x89\xef;mov edi, r13d
+39;4006f9;\x41\xff\x14\xdc;call qword ptr [r12+rbx*8]
+40;400560;\x55;push rbp
+41;400561;\x48\x89\xe5;mov rbp, rsp
+42;400564;\x5d;pop rbp
+43;400565;\xeb\x89;jmp 0x4004f0
+44;4004f0;\xbe\x38\x10\x60\x00;mov esi, 0x601038
+45;4004f5;\x55;push rbp
+46;4004f6;\x48\x81\xee\x38\x10\x60\x00;sub rsi, 0x601038
+47;4004fd;\x48\x89\xe5;mov rbp, rsp
+48;400500;\x48\xc1\xfe\x03;sar rsi, 0x3
+49;400504;\x48\x89\xf0;mov rax, rsi
+50;400507;\x48\xc1\xe8\x3f;shr rax, 0x3f
+51;40050b;\x48\x01\xc6;add rsi, rax
+52;40050e;\x48\xd1\xfe;sar rsi, 0x1
+53;400511;\x74\x15;jz 0x400528
+54;400528;\x5d;pop rbp
+55;400529;\xc3;ret 
+56;4006fd;\x48\x83\xc3\x01;add rbx, 0x1
+57;400701;\x48\x39\xdd;cmp rbp, rbx
+58;400704;\x75\xea;jnz 0x4006f0
+59;400706;\x48\x83\xc4\x08;add rsp, 0x8
+60;40070a;\x5b;pop rbx
+61;40070b;\x5d;pop rbp
+62;40070c;\x41\x5c;pop r12
+63;40070e;\x41\x5d;pop r13
+64;400710;\x41\x5e;pop r14
+65;400712;\x41\x5f;pop r15
+66;400714;\xc3;ret 
+67;400650;\x55;push rbp
+68;400651;\x48\x89\xe5;mov rbp, rsp
+69;400654;\x48\x83\xec\x20;sub rsp, 0x20
+70;400658;\x48\xbf\x34\x07\x40\x00\x00\x00\x00\x00;mov rdi, 0x400734
+71;400662;\x48\x8d\x75\xf8;lea rsi, ptr [rbp-0x8]
+72;400666;\xc7\x45\xfc\x00\x00\x00\x00;mov dword ptr [rbp-0x4], 0x0
+73;40066d;\xb0\x00;mov al, 0x0
+74;40066f;\xe8\xfc\xfd\xff\xff;call 0x400470
+75;400470;\xff\x25\xaa\x0b\x20\x00;jmp qword ptr [rip+0x200baa]
+76;400476;\x68\x01\x00\x00\x00;push 0x1
+77;40047b;\xe9\xd0\xff\xff\xff;jmp 0x400450
+78;400450;\xff\x35\xb2\x0b\x20\x00;push qword ptr [rip+0x200bb2]
+79;400456;\xff\x25\xb4\x0b\x20\x00;jmp qword ptr [rip+0x200bb4]
+80;400674;\x8b\x7d\xf8;mov edi, dword ptr [rbp-0x8]
+81;400677;\x89\x45\xf0;mov dword ptr [rbp-0x10], eax
+82;40067a;\xe8\xf1\xfe\xff\xff;call 0x400570
+83;400570;\x55;push rbp
+84;400571;\x48\x89\xe5;mov rbp, rsp
+85;400574;\xb8\x02\x00\x00\x00;mov eax, 0x2
+86;400579;\x89\x7d\xf4;mov dword ptr [rbp-0xc], edi
+87;40057c;\x8b\x7d\xf4;mov edi, dword ptr [rbp-0xc]
+88;40057f;\x0f\xaf\x7d\xf4;imul edi, dword ptr [rbp-0xc]
+89;400583;\x89\x7d\xf0;mov dword ptr [rbp-0x10], edi
+90;400586;\x8b\x7d\xf0;mov edi, dword ptr [rbp-0x10]
+91;400589;\x2b\x7d\xf4;sub edi, dword ptr [rbp-0xc]
+92;40058c;\x89\x45\xe8;mov dword ptr [rbp-0x18], eax
+93;40058f;\x89\xf8;mov eax, edi
+94;400591;\x99;cdq 
+95;400592;\x8b\x7d\xe8;mov edi, dword ptr [rbp-0x18]
+96;400595;\xf7\xff;idiv edi
+97;400597;\x89\x55\xfc;mov dword ptr [rbp-0x4], edx
+98;40059a;\xc7\x45\xec\x25\x9b\xc2\x72;mov dword ptr [rbp-0x14], 0x72c29b25
+99;4005a1;\x8b\x45\xec;mov eax, dword ptr [rbp-0x14]
+100;4005a4;\x89\xc1;mov ecx, eax
+101;4005a6;\x81\xe9\xdf\x81\x83\xca;sub ecx, 0xca8381df
+102;4005ac;\x89\x45\xe4;mov dword ptr [rbp-0x1c], eax
+103;4005af;\x89\x4d\xe0;mov dword ptr [rbp-0x20], ecx
+104;4005b2;\x0f\x84\x8d\x00\x00\x00;jz 0x400645
+105;4005b8;\xe9\x00\x00\x00\x00;jmp 0x4005bd
+106;4005bd;\x8b\x45\xe4;mov eax, dword ptr [rbp-0x1c]
+107;4005c0;\x2d\x70\xa3\x93\x18;sub eax, 0x1893a370
+108;4005c5;\x89\x45\xdc;mov dword ptr [rbp-0x24], eax
+109;4005c8;\x0f\x84\x51\x00\x00\x00;jz 0x40061f
+110;4005ce;\xe9\x00\x00\x00\x00;jmp 0x4005d3
+111;4005d3;\x8b\x45\xe4;mov eax, dword ptr [rbp-0x1c]
+112;4005d6;\x2d\x47\xcb\xfb\x6d;sub eax, 0x6dfbcb47
+113;4005db;\x89\x45\xd8;mov dword ptr [rbp-0x28], eax
+114;4005de;\x0f\x84\x4e\x00\x00\x00;jz 0x400632
+115;4005e4;\xe9\x00\x00\x00\x00;jmp 0x4005e9
+116;4005e9;\x8b\x45\xe4;mov eax, dword ptr [rbp-0x1c]
+117;4005ec;\x2d\x25\x9b\xc2\x72;sub eax, 0x72c29b25
+118;4005f1;\x89\x45\xd4;mov dword ptr [rbp-0x2c], eax
+119;4005f4;\x0f\x84\x0a\x00\x00\x00;jz 0x400604
+120;400604;\xb8\x47\xcb\xfb\x6d;mov eax, 0x6dfbcb47
+121;400609;\xb9\x70\xa3\x93\x18;mov ecx, 0x1893a370
+122;40060e;\x8b\x55\xfc;mov edx, dword ptr [rbp-0x4]
+123;400611;\x83\xfa\x00;cmp edx, 0x0
+124;400614;\x0f\x44\xc1;cmovz eax, ecx
+125;400617;\x89\x45\xec;mov dword ptr [rbp-0x14], eax
+126;40061a;\xe9\x2b\x00\x00\x00;jmp 0x40064a
+127;40064a;\xe9\x52\xff\xff\xff;jmp 0x4005a1
+128;4005a1;\x8b\x45\xec;mov eax, dword ptr [rbp-0x14]
+129;4005a4;\x89\xc1;mov ecx, eax
+130;4005a6;\x81\xe9\xdf\x81\x83\xca;sub ecx, 0xca8381df
+131;4005ac;\x89\x45\xe4;mov dword ptr [rbp-0x1c], eax
+132;4005af;\x89\x4d\xe0;mov dword ptr [rbp-0x20], ecx
+133;4005b2;\x0f\x84\x8d\x00\x00\x00;jz 0x400645
+134;4005b8;\xe9\x00\x00\x00\x00;jmp 0x4005bd
+135;4005bd;\x8b\x45\xe4;mov eax, dword ptr [rbp-0x1c]
+136;4005c0;\x2d\x70\xa3\x93\x18;sub eax, 0x1893a370
+137;4005c5;\x89\x45\xdc;mov dword ptr [rbp-0x24], eax
+138;4005c8;\x0f\x84\x51\x00\x00\x00;jz 0x40061f
+139;40061f;\xc7\x45\xf8\x01\x00\x00\x00;mov dword ptr [rbp-0x8], 0x1
+140;400626;\xc7\x45\xec\xdf\x81\x83\xca;mov dword ptr [rbp-0x14], 0xca8381df
+141;40062d;\xe9\x18\x00\x00\x00;jmp 0x40064a
+142;40064a;\xe9\x52\xff\xff\xff;jmp 0x4005a1
+143;4005a1;\x8b\x45\xec;mov eax, dword ptr [rbp-0x14]
+144;4005a4;\x89\xc1;mov ecx, eax
+145;4005a6;\x81\xe9\xdf\x81\x83\xca;sub ecx, 0xca8381df
+146;4005ac;\x89\x45\xe4;mov dword ptr [rbp-0x1c], eax
+147;4005af;\x89\x4d\xe0;mov dword ptr [rbp-0x20], ecx
+148;4005b2;\x0f\x84\x8d\x00\x00\x00;jz 0x400645
+149;400645;\x8b\x45\xf8;mov eax, dword ptr [rbp-0x8]
+150;400648;\x5d;pop rbp
+151;400649;\xc3;ret 
+152;40067f;\x48\xbf\x37\x07\x40\x00\x00\x00\x00\x00;mov rdi, 0x400737
+153;400689;\x89\x45\xf4;mov dword ptr [rbp-0xc], eax
+154;40068c;\x8b\x75\xf4;mov esi, dword ptr [rbp-0xc]
+155;40068f;\xb0\x00;mov al, 0x0
+156;400691;\xe8\xca\xfd\xff\xff;call 0x400460
+157;400460;\xff\x25\xb2\x0b\x20\x00;jmp qword ptr [rip+0x200bb2]
+158;400466;\x68\x00\x00\x00\x00;push 0x0
+159;40046b;\xe9\xe0\xff\xff\xff;jmp 0x400450
+160;400450;\xff\x35\xb2\x0b\x20\x00;push qword ptr [rip+0x200bb2]
+161;400456;\xff\x25\xb4\x0b\x20\x00;jmp qword ptr [rip+0x200bb4]
+162;400696;\x31\xf6;xor esi, esi
+163;400698;\x89\x45\xec;mov dword ptr [rbp-0x14], eax
+164;40069b;\x89\xf0;mov eax, esi
+165;40069d;\x48\x83\xc4\x20;add rsp, 0x20
+166;4006a1;\x5d;pop rbp
+167;4006a2;\xc3;ret 
+168;400530;\x80\x3d\x01\x0b\x20\x00\x00;cmp byte ptr [rip+0x200b01], 0x0
+169;400537;\x75\x17;jnz 0x400550
+170;400539;\x55;push rbp
+171;40053a;\x48\x89\xe5;mov rbp, rsp
+172;40053d;\xe8\x7e\xff\xff\xff;call 0x4004c0
+173;4004c0;\x55;push rbp
+174;4004c1;\xb8\x38\x10\x60\x00;mov eax, 0x601038
+175;4004c6;\x48\x3d\x38\x10\x60\x00;cmp rax, 0x601038
+176;4004cc;\x48\x89\xe5;mov rbp, rsp
+177;4004cf;\x74\x17;jz 0x4004e8
+178;4004e8;\x5d;pop rbp
+179;4004e9;\xc3;ret 
+180;400542;\xc6\x05\xef\x0a\x20\x00\x01;mov byte ptr [rip+0x200aef], 0x1
+181;400549;\x5d;pop rbp
+182;40054a;\xc3;ret 
+183;400724;\x48\x83\xec\x08;sub rsp, 0x8
+184;400728;\x48\x83\xc4\x08;add rsp, 0x8
+185;40072c;\xc3;ret 

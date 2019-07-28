@@ -1,0 +1,101 @@
+0;39264;\x8b\xe6;mov esp, esi
+1;39266;\x5b;pop ebx
+2;39267;\x5f;pop edi
+3;39268;\x5e;pop esi
+4;39269;\x5d;pop ebp
+5;3926a;\xc2\x10\x00;ret 0x10
+6;3fe97;\x88\x45\xe7;mov byte ptr [ebp-0x19], al
+7;3fe9a;\x89\x5d\xfc;mov dword ptr [ebp-0x4], ebx
+8;3fe9d;\xe8\x48\x00\x00\x00;call 0x7761feea
+9;3feea;\x8d\x4d\x98;lea ecx, ptr [ebp-0x68]
+10;3feed;\xe8\xa7\x22\xfe\xff;call 0x77602199
+11;22199;\x8b\xff;mov edi, edi
+12;2219b;\x55;push ebp
+13;2219c;\x8b\xec;mov ebp, esp
+14;2219e;\x83\xec\x5c;sub esp, 0x5c
+15;221a1;\x64\xa1\x18\x00\x00\x00;mov eax, dword ptr fs:[0x18]
+16;221a7;\x56;push esi
+17;221a8;\x57;push edi
+18;221a9;\x8b\xb8\xa8\x01\x00\x00;mov edi, dword ptr [eax+0x1a8]
+19;221af;\x33\xf6;xor esi, esi
+20;221b1;\x89\x4d\xf4;mov dword ptr [ebp-0xc], ecx
+21;221b4;\x3b\xfe;cmp edi, esi
+22;221b6;\x0f\x84\x50\x4a\x01\x00;jz 0x77616c0c
+23;221bc;\x8b\x07;mov eax, dword ptr [edi]
+24;221be;\x8b\x51\x10;mov edx, dword ptr [ecx+0x10]
+25;221c1;\xf6\xc2\x40;test dl, 0x40
+26;221c4;\x0f\x85\x94\x20\x06\x00;jnz 0x7766425e
+27;221ca;\xf6\xc2\x20;test dl, 0x20
+28;221cd;\x0f\x84\xbb\x20\x06\x00;jz 0x7766428e
+29;221d3;\x53;push ebx
+30;221d4;\x8b\xda;mov ebx, edx
+31;221d6;\x80\xe3\x60;and bl, 0x60
+32;221d9;\x80\xfb\x20;cmp bl, 0x20
+33;221dc;\x0f\x85\xd1\x20\x06\x00;jnz 0x776642b3
+34;221e2;\x83\x39\x24;cmp dword ptr [ecx], 0x24
+35;221e5;\x72\x20;jb 0x77602207
+36;221e7;\x8d\x59\x08;lea ebx, ptr [ecx+0x8]
+37;221ea;\x8b\x33;mov esi, dword ptr [ebx]
+38;221ec;\xf7\xd6;not esi
+39;221ee;\x39\x71\x14;cmp dword ptr [ecx+0x14], esi
+40;221f1;\x0f\x85\xc7\x20\x06\x00;jnz 0x776642be
+41;221f7;\x8b\x71\x0c;mov esi, dword ptr [ecx+0xc]
+42;221fa;\xf7\xd6;not esi
+43;221fc;\x39\x71\x18;cmp dword ptr [ecx+0x18], esi
+44;221ff;\x0f\x85\xb9\x20\x06\x00;jnz 0x776642be
+45;22205;\x33\xf6;xor esi, esi
+46;22207;\x3b\xc6;cmp eax, esi
+47;22209;\x0f\x85\xa3\x49\x01\x00;jnz 0x77616bb2
+48;2220f;\xf6\xc2\x10;test dl, 0x10
+49;22212;\x0f\x84\xe0\x49\x01\x00;jz 0x77616bf8
+50;22218;\x83\x49\x10\x40;or dword ptr [ecx+0x10], 0x40
+51;2221c;\x83\x39\x24;cmp dword ptr [ecx], 0x24
+52;2221f;\x72\x06;jb 0x77602227
+53;22221;\x8b\x45\x04;mov eax, dword ptr [ebp+0x4]
+54;22224;\x89\x41\x20;mov dword ptr [ecx+0x20], eax
+55;22227;\x5b;pop ebx
+56;22228;\x5f;pop edi
+57;22229;\x5e;pop esi
+58;2222a;\xc9;leave 
+59;2222b;\xc3;ret 
+60;3fef2;\xc3;ret 
+61;3fea2;\x83\x65\xfc\x00;and dword ptr [ebp-0x4], 0x0
+62;3fea6;\xe8\x4d\x00\x00\x00;call 0x7761fef8
+63;3fef8;\x8b\x45\xbc;mov eax, dword ptr [ebp-0x44]
+64;3fefb;\xa3\x20\x01\x6e\x77;mov dword ptr [0x776e0120], eax
+65;3ff00;\x89\x35\xd4\x00\x6e\x77;mov dword ptr [0x776e00d4], esi
+66;3ff06;\xc3;ret 
+67;3feab;\x81\x4e\x34\x00\x00\x08\x00;or dword ptr [esi+0x34], 0x80000
+68;3feb2;\x80\x7d\xe7\x00;cmp byte ptr [ebp-0x19], 0x0
+69;3feb6;\x0f\x85\x01\xff\xff\xff;jnz 0x7761fdbd
+70;3fdbd;\x8b\x7d\xe0;mov edi, dword ptr [ebp-0x20]
+71;3fdc0;\x3b\x7d\xcc;cmp edi, dword ptr [ebp-0x34]
+72;3fdc3;\x0f\x83\x5b\x01\x00\x00;jnb 0x7761ff24
+73;3ff24;\xbf\x1c\x02\x6e\x77;mov edi, 0x776e021c
+74;3ff29;\x8b\x35\x1c\x02\x6e\x77;mov esi, dword ptr [0x776e021c]
+75;3ff2f;\x89\x75\xc0;mov dword ptr [ebp-0x40], esi
+76;3ff32;\x3b\xf7;cmp esi, edi
+77;3ff34;\x74\x8b;jz 0x7761fec1
+78;3ff36;\x8d\x46\xf0;lea eax, ptr [esi-0x10]
+79;3ff39;\x89\x45\xdc;mov dword ptr [ebp-0x24], eax
+80;3ff3c;\x80\x3d\x0b\x00\x6e\x77\x00;cmp byte ptr [0x776e000b], 0x0
+81;3ff43;\x75\x0d;jnz 0x7761ff52
+82;3ff52;\x8b\x36;mov esi, dword ptr [esi]
+83;3ff54;\xeb\xd9;jmp 0x7761ff2f
+84;3ff2f;\x89\x75\xc0;mov dword ptr [ebp-0x40], esi
+85;3ff32;\x3b\xf7;cmp esi, edi
+86;3ff34;\x74\x8b;jz 0x7761fec1
+87;3ff36;\x8d\x46\xf0;lea eax, ptr [esi-0x10]
+88;3ff39;\x89\x45\xdc;mov dword ptr [ebp-0x24], eax
+89;3ff3c;\x80\x3d\x0b\x00\x6e\x77\x00;cmp byte ptr [0x776e000b], 0x0
+90;3ff43;\x75\x0d;jnz 0x7761ff52
+91;3ff52;\x8b\x36;mov esi, dword ptr [esi]
+92;3ff54;\xeb\xd9;jmp 0x7761ff2f
+93;3ff2f;\x89\x75\xc0;mov dword ptr [ebp-0x40], esi
+94;3ff32;\x3b\xf7;cmp esi, edi
+95;3ff34;\x74\x8b;jz 0x7761fec1
+96;3ff36;\x8d\x46\xf0;lea eax, ptr [esi-0x10]
+97;3ff39;\x89\x45\xdc;mov dword ptr [ebp-0x24], eax
+98;3ff3c;\x80\x3d\x0b\x00\x6e\x77\x00;cmp byte ptr [0x776e000b], 0x0
+99;3ff43;\x75\x0d;jnz 0x7761ff52
+100;3ff52;\x8b\x36;mov esi, dword ptr [esi]
