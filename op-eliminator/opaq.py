@@ -1,7 +1,6 @@
 from __future__ import print_function
 import sys
 import z3
-
 from miasm.arch.x86.arch import *
 from miasm.arch.x86.regs import regs_init
 from miasm.core.locationdb import LocationDB
