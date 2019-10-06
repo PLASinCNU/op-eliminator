@@ -213,10 +213,6 @@ def get_k_blocks(trace_index, trace_list, asmblocks, k):
 
 def is_unsat_ta(asmblocks, trace_index, trace_list, loc_db, k = 10):
     asmblock = trace_list[trace_index].asmblock
-    jmp_inst = trace_list[trace_index].get_name().upper()
-#    constraints = conditional_branch_constriaint[jmp_inst]
-
-    offset = trace_list[trace_index].offset
     asmblocks.append(asmblock)
     constraint_asmblock = get_k_blocks(trace_index, trace_list, asmblocks, k)
 
@@ -225,71 +221,27 @@ def is_unsat_ta(asmblocks, trace_index, trace_list, loc_db, k = 10):
     else:
         sym_state, sym_pc = makeConstraint_str(constraint_asmblock, loc_db)
 
-#    print(sym_state.symbols[ExprId("IRDst", 64)])
     translator = TranslatorZ3(endianness="<", loc_db=loc_db)
     solver = z3.Solver()
     solver_ = z3.Solver()
 
-    for expr_id in sym_state.symbols.keys():
-        # z3_expr_id = translator.from_expr(expr_id)
-        #
-        # if isinstance(sym_state.symbols[expr_id], ExprOp):
-        #     if sym_state.symbols[expr_id].op == "call_func_ret" or sym_state.symbols[expr_id].op == "call_func_stack":
-        #         continue
-        if isinstance(sym_state.symbols[expr_id], ExprCond):
-            # try:
-            if(expr_id == ExprId('EIP',32)):
-                # z3_expr_id = translator.from_expr(sym_state.symbols[expr_id])
-                # src1 = translator.from_expr(sym_state.symbols[expr_id].src1)
-                # src2 = translator.from_expr(sym_state.symbols[expr_id].src2)
-                # simple_expr = z3.simplify(z3_expr_id)
-                if (trace_list[trace_index].get_ta() == 2116):
-                    expr_test = ExprCond(ExprSlice(ExprId('x',32), 31, 32),ExprOp('*', ExprId('x',32), ExprId('x',32)),ExprOp('*', ExprId('x',32), ExprId('x',32)))
-                    # expr_test = ExprSlice(ExprCond(ExprSlice(ExprMem(ExprOp('+', ExprId('EBP_init', 32), ExprInt(0x8, 32)), 32), 31, 32),ExprOp('*', ExprMem(ExprOp('+', ExprId('EBP_init', 32), ExprInt(0x8, 32)), 32), ExprMem(ExprOp('+', ExprId('EBP_init', 32), ExprInt(0x8, 32)), 32)),		ExprOp('*', ExprMem(ExprOp('+', ExprId('EBP_init', 32), ExprInt(0x8, 32)), 32), ExprMem(ExprOp('+', ExprId('EBP_init', 32), ExprInt(0x8, 32)), 32))	), 31, 32)
-                    z3_expr_test = translator.from_expr(expr_test)
-                    test_simp = z3.simplify(z3_expr_test)
-                    # ebp_8 = ExprMem(ExprOp('+', ExprId('EBP_init', 32), ExprInt(0x8, 32)), 32)
-                    # varX = ExprAssign(ExprId('x',32),ebp_8)
+    expr_eip = ExprId('EIP', 32)
 
-                    # z3_varX = translator.from_expr(varX)
+    if isinstance(sym_state.symbols[expr_eip], ExprCond):
+        z3_expr_id = translator.from_expr(sym_state.symbols[expr_eip])
+        src1 = translator.from_expr(sym_state.symbols[expr_eip].src1)
+        src2 = translator.from_expr(sym_state.symbols[expr_eip].src2)
 
-                    # solver.add(z3_varX)
-                    # solver_.add(z3_varX)
-                    solver.add(test_simp >= 0)
-                    solver_.add(test_simp < 0)
+        simple_expr = z3.simplify(z3_expr_id)
+        ebp_8 = ExprMem(ExprOp('+', ExprId('EBP_init', 32), ExprInt(0x8, 32)), 32)
+        z3_ebp8 = translator.from_expr(ebp_8)
 
-                # symbolic_cond = sym_state.symbols[expr_id].cond
-                # expr_size = symbolic_cond.size
-                # expr_zero = ExprInt(0,expr_size)
-                # cond = ExprOp('==',symbolic_cond,expr_zero)
-                # l_cond = ExprOp('<s',symbolic_cond,expr_zero)
-                # r_cond = ExprOp('<s',expr_zero,symbolic_cond)
-                # ncond = ExprOp('|',l_cond,r_cond)
-                # translated_cond = translator.from_expr(cond)
-                # translated_ncond = translator.from_expr(ncond)
-                # nm =z3.simplify(translated_cond)
-                # mn = z3.simplify(translated_ncond)
-
-
-                # z3_expr_cond = translator.from_expr(sym_state.symbols[expr_id])
-                # solver.add(z3.And(z3_expr_id == z3_expr_cond, z3_expr_id == src2))
-                # solver_.add(z3.And(z3_expr_id == z3_expr_cond, z3_expr_id == src2))
-            # except Exception as e:
-            #     pass
-        elif isinstance(sym_state.symbols[expr_id], ExprInt):
-            expr_int = ExprAssign(expr_id,sym_state.symbols[expr_id])
-            z3_expr_int = translator.from_expr(expr_int)
-            solver.add(z3_expr_int)
-            solver_.add(z3_expr_int)
-
-
-
-    if isinstance(sym_pc, ExprInt):
-        print('==========', trace_list[trace_index].get_ta(), '==========')
-        print("It's opaque predicate")
-        return trace_list[trace_index].get_ta()
-    else:
-        IRDst_state = sym_state.symbols[ExprId("IRDst", 32)]
+        solver.insert(z3_ebp8 < 10000)
+        solver_.insert(z3_ebp8 < 10000)
+        solver.insert(z3_ebp8 > -10000)
+        solver_.insert(z3_ebp8 > -10000)
+        solver.add( simple_expr== src1)
+        solver_.add( simple_expr== src2)
 
         s_check = solver.check()
         s_check2 = solver_.check()
@@ -297,17 +249,9 @@ def is_unsat_ta(asmblocks, trace_index, trace_list, loc_db, k = 10):
             print('======', trace_list[trace_index].get_ta(), '=====')
             print("It's opaque predicate, sat and unsat")
             print(trace_list[trace_index].get_pa())
-        elif (trace_list[trace_index].get_ta() == 2116):
-            print(s_check, ' and ', s_check2)
-            print('ori constraints >> ',solver)
-
-            print('neg constraints >> ',solver_)
-            sol = solver.model()
-            sol_ = solver_.model()
-            print("solution original\n", sol )
-            print("solution negation\n", sol_)
-
-    return
+    else :
+        print('==========', trace_list[trace_index].get_ta(), '==========')
+        print('EIP is not cond, Its opaque predicate')
 
 k = 0
 if sys.argv[2] is not None:
@@ -325,10 +269,7 @@ for i in range(0, len(cmp_jz_list)):
     cmp_jz_ta_list.append(real_ta)
 
 asmblocks, loc_db = construct_asmblock(binstr, trace_list)
-opaque_list = open('./opaque_list.txt', 'w')
 for trace_index in cmp_jz_list:
-#    print("=============", trace_index, "=============")
-    opaque_ta = is_unsat_ta(asmblocks, trace_index, trace_list, loc_db, int(k))
-    opaque_list.write('{}\n'.format(opaque_ta))
+    is_unsat_ta(asmblocks, trace_index, trace_list, loc_db, int(k))
 
 print(cmp_jz_ta_list)
