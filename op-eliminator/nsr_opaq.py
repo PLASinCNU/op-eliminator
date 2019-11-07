@@ -143,22 +143,18 @@ def makeConstraint_str(asmblocks, loc_db):
     sym_state = None
     sym_pc = None
 
+    ira = machine.ira(loc_db)
+    ircfg = ira.new_ircfg()
+    symb = SymbolicExecutionEngine(ira, regs_init)
+
     for asmblock in asmblocks:
-
-        offset, end =asmblock.get_range()
-
-        ira = machine.ira(loc_db)
-        ircfg = ira.new_ircfg()
+        offset, end = asmblock.get_range()
         ira.add_asmblock_to_ircfg(asmblock, ircfg)
-
-        symb = SymbolicExecutionEngine(ira, regs_init)
         sym_pc = symb.run_at(ircfg, offset)
-
         if sym_state is None:
             sym_state = symb.get_state()
         else:
             sym_state.merge(symb.get_state())
-
 
     return sym_state, sym_pc
 
@@ -166,22 +162,19 @@ def get_k_blocks(trace_index, trace_list, asmblocks, k):
     asmblock_index = trace_list[trace_index].asmblock_index
     #set index
     index = asmblock_index
-    start = 0
     end = index + 1
-    if( index < k):
+    if index < k :
         start = 0
+        kblocks = asmblocks[start: end]
     else :
         start = end - k
-    kblocks = asmblocks[start: end]
+        kblocks = asmblocks[start - 1: end]
 
     return kblocks
 
 def is_unsat_ta(asmblocks, trace_index, trace_list, loc_db, k = 10):
     try:
-        asmblock = trace_list[trace_index].asmblock
-        asmblocks.append(asmblock)
         constraint_asmblock = get_k_blocks(trace_index, trace_list, asmblocks, k)
-
         sym_state, sym_pc = makeConstraint_str(constraint_asmblock, loc_db)
 
         translator = TranslatorZ3(endianness="<", loc_db=loc_db)
