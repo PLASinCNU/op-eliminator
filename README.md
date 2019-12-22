@@ -1,4 +1,4 @@
-DBB-DSE (Dynamic Backward Bound Dynamic Symbolic Executor)
+A Dynamic Backward Bound Dynamic Symbolic Executor for Opaque Predicate Detection
 =============
 
 This is an opaque predicate detector using miasm. It can detect following opaque predicates
