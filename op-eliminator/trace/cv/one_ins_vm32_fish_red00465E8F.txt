@@ -1,0 +1,1474 @@
+#arch:x86_32
+Function:00465E8F Basic Blocks=[00465E8F,00465EAB,00465EB3,00465EC1,00465EDA,00465EE4,00465EEA,00465F0B,0045C326,0045C32D,0045C335,0045C62E,0045C9BD,0045C9B6,0045C9A8,0045D219,0045CE8B,0045CFCA,0045D0DC,0045CFC2] Entry Blocks=[00465E8F] Exit Blocks=[0045D219,0045D0DC]
+Basic Block:[00465E8F, 00465E97], in_edge:[], out_edge:[00465EAB], merged_bbs:[], executed
+00465E8F pushal # 60
+00465E90 push eax # 50
+00465E91 push edx # 52
+00465E92 jmp 0x465eab # E914000000
+
+Basic Block:[00465EAB, 00465EB3], in_edge:[00465E8F], out_edge:[00465EB3], merged_bbs:[], executed
+00465EAB rdtsc # 0F31
+00465EAD jb 0x465eb3 # 0F8200000000
+
+Basic Block:[00465EB3, 00465EC1], in_edge:[00465EAB], out_edge:[00465EC1], merged_bbs:[], executed
+00465EB3 pop edx # 5A
+00465EB4 pop eax # 58
+00465EB5 push eax # 50
+00465EB6 push edx # 52
+00465EB7 push edx # 52
+00465EB8 pop edx # 5A
+00465EB9 rdtsc # 0F31
+00465EBB jnp 0x465ec1 # 0F8B00000000
+
+Basic Block:[00465EC1, 00465EC8], in_edge:[00465EB3], out_edge:[00465EDA], merged_bbs:[], executed
+00465EC1 pop edx # 5A
+00465EC2 pop eax # 58
+00465EC3 jmp 0x465eda # E912000000
+
+Basic Block:[00465EDA, 00465EE4], in_edge:[00465EC1], out_edge:[00465EE4], merged_bbs:[], executed
+00465EDA popal # 61
+00465EDB push eax # 50
+00465EDC push edx # 52
+00465EDD pushal # 60
+00465EDE jl 0x465ee4 # 0F8C00000000
+
+Basic Block:[00465EE4, 00465EEA], in_edge:[00465EDA], out_edge:[00465EEA], merged_bbs:[], executed
+00465EE4 jl 0x465eea # 0F8C00000000
+
+Basic Block:[00465EEA, 00465F01], in_edge:[00465EE4], out_edge:[00465F0B], merged_bbs:[], executed
+00465EEA push eax # 50
+00465EEB push edx # 52
+00465EEC rdtsc # 0F31
+00465EEE pop edx # 5A
+00465EEF pop eax # 58
+00465EF0 push eax # 50
+00465EF1 push edx # 52
+00465EF2 rdtsc # 0F31
+00465EF4 pop edx # 5A
+00465EF5 pop eax # 58
+00465EF6 popal # 61
+00465EF7 rdtsc # 0F31
+00465EF9 pushal # 60
+00465EFA pushal # 60
+00465EFB popal # 61
+00465EFC jmp 0x465f0b # E90A000000
+
+Basic Block:[00465F0B, 0046603E], in_edge:[00465EEA], out_edge:[0045C326], merged_bbs:[], executed
+00465F0B push eax # 50
+00465F0C push edx # 52
+00465F0D rdtsc # 0F31
+00465F0F pop edx # 5A
+00465F10 pop eax # 58
+00465F11 popal # 61
+00465F12 pop edx # 5A
+00465F13 pop eax # 58
+00465F14 pushfd # 9C
+00465F15 push 0x73ac7657 # 685776AC73
+00465F1A mov dword ptr [esp], edx # 891424
+00465F1D push 0x7c52a510 # 6810A5527C
+00465F22 mov dword ptr [esp], ebp # 892C24
+00465F25 push ebx # 53
+00465F26 mov ebx, 0x67 # BB67000000
+00465F2B mov ebp, ebx # 89DD
+00465F2D pop ebx # 5B
+00465F2E mov dword ptr [esp + 4], ebp # 896C2404
+00465F32 pop ebp # 5D
+00465F33 push 0x53624bc0 # 68C04B6253
+00465F38 mov dword ptr [esp], ebp # 892C24
+00465F3B mov dword ptr [esp], 0x65e8b41d # C704241DB4E865
+00465F42 shl dword ptr [esp], 2 # C1242402
+00465F46 sub dword ptr [esp], 0x7f7f1540 # 812C2440157F7F
+00465F4D inc dword ptr [esp] # FF0424
+00465F50 xchg dword ptr [esp], ecx # 870C24
+00465F53 xchg ecx, ebx # 87D9
+00465F55 not ebx # F7D3
+00465F57 xchg ecx, ebx # 87D9
+00465F59 xchg dword ptr [esp], ecx # 870C24
+00465F5C xor dword ptr [esp], 0xe7da1df7 # 813424F71DDAE7
+00465F63 push edi # 57
+00465F64 mov edi, esp # 89E7
+00465F66 push ecx # 51
+00465F67 mov ecx, 4 # B904000000
+00465F6C add edi, 0x7fffab21 # 81C721ABFF7F
+00465F72 add edi, ecx # 01CF
+00465F74 sub edi, 0x7fffab21 # 81EF21ABFF7F
+00465F7A pop ecx # 59
+00465F7B sub edi, 4 # 83EF04
+00465F7E xchg dword ptr [esp], edi # 873C24
+00465F81 pop esp # 5C
+00465F82 mov dword ptr [esp], esi # 893424
+00465F85 mov dword ptr [esp], eax # 890424
+00465F88 push ecx # 51
+00465F89 mov dword ptr [esp], 0x7fa71275 # C704247512A77F
+00465F90 inc dword ptr [esp] # FF0424
+00465F93 xchg dword ptr [esp], edx # 871424
+00465F96 not edx # F7D2
+00465F98 xchg dword ptr [esp], edx # 871424
+00465F9B inc dword ptr [esp] # FF0424
+00465F9E sub dword ptr [esp], 0x6fff9a0f # 812C240F9AFF6F
+00465FA5 add dword ptr [esp], 0x174e68e4 # 810424E4684E17
+00465FAC mov dword ptr [esp], ebx # 891C24
+00465FAF push dword ptr [esp + 0x10] # FF742410
+00465FB3 mov eax, dword ptr [esp] # 8B0424
+00465FB6 push edx # 52
+00465FB7 mov edx, esp # 89E2
+00465FB9 push ecx # 51
+00465FBA mov ecx, 4 # B904000000
+00465FBF add edx, ecx # 01CA
+00465FC1 pop ecx # 59
+00465FC2 add edx, 4 # 83C204
+00465FC5 xchg dword ptr [esp], edx # 871424
+00465FC8 mov esp, dword ptr [esp] # 8B2424
+00465FCB push dword ptr [esp + 8] # FF742408
+00465FCF push dword ptr [esp] # FF3424
+00465FD2 pop ebx # 5B
+00465FD3 push ecx # 51
+00465FD4 mov ecx, esp # 89E1
+00465FD6 add ecx, 4 # 81C104000000
+00465FDC add ecx, 4 # 81C104000000
+00465FE2 xor ecx, dword ptr [esp] # 330C24
+00465FE5 xor dword ptr [esp], ecx # 310C24
+00465FE8 xor ecx, dword ptr [esp] # 330C24
+00465FEB pop esp # 5C
+00465FEC mov dword ptr [esp + 8], eax # 89442408
+00465FF0 mov dword ptr [esp + 0x10], ebx # 895C2410
+00465FF4 mov ebx, dword ptr [esp] # 8B1C24
+00465FF7 push esi # 56
+00465FF8 mov esi, esp # 89E6
+00465FFA add esi, 4 # 81C604000000
+00466000 push ebx # 53
+00466001 push esi # 56
+00466002 mov esi, 4 # BE04000000
+00466007 mov ebx, esi # 89F3
+00466009 pop esi # 5E
+0046600A add esi, ebx # 01DE
+0046600C pop ebx # 5B
+0046600D xchg dword ptr [esp], esi # 873424
+00466010 mov esp, dword ptr [esp] # 8B2424
+00466013 mov eax, dword ptr [esp] # 8B0424
+00466016 push eax # 50
+00466017 mov dword ptr [esp], 0x3b9fe55e # C704245EE59F3B
+0046601E mov dword ptr [esp], esi # 893424
+00466021 mov esi, esp # 89E6
+00466023 add esi, 4 # 81C604000000
+00466029 add esi, 4 # 81C604000000
+0046602F xor esi, dword ptr [esp] # 333424
+00466032 xor dword ptr [esp], esi # 313424
+00466035 xor esi, dword ptr [esp] # 333424
+00466038 pop esp # 5C
+00466039 jmp 0x45c326 # E9E862FFFF
+
+Basic Block:[0045C326, 0045C32D], in_edge:[00465F0B], out_edge:[0045C32D,0045C335], merged_bbs:[], executed
+0045C326 pushal # 60
+0045C327 jle 0x45c335 # 0F8E08000000
+
+Basic Block:[0045C32D, 0045C335], in_edge:[0045C326], out_edge:[0045C335], merged_bbs:[], executed
+0045C32D push edx # 52
+0045C32E pop edx # 5A
+0045C32F jo 0x45c335 # 0F8000000000
+
+Basic Block:[0045C335, 0045C62E], in_edge:[0045C32D,0045C326], out_edge:[0045C62E], merged_bbs:[], executed
+0045C335 pushal # 60
+0045C336 push esi # 56
+0045C337 pop esi # 5E
+0045C338 push eax # 50
+0045C339 push edx # 52
+0045C33A rdtsc # 0F31
+0045C33C pop edx # 5A
+0045C33D pop eax # 58
+0045C33E push eax # 50
+0045C33F push edx # 52
+0045C340 rdtsc # 0F31
+0045C342 pop edx # 5A
+0045C343 pop eax # 58
+0045C344 push eax # 50
+0045C345 push edx # 52
+0045C346 rdtsc # 0F31
+0045C348 pop edx # 5A
+0045C349 pop eax # 58
+0045C34A popal # 61
+0045C34B popal # 61
+0045C34C push eax # 50
+0045C34D mov dword ptr [esp], ebp # 892C24
+0045C350 mov dword ptr [esp], 0x7377c87a # C704247AC87773
+0045C357 push 0x65fb784b # 684B78FB65
+0045C35C mov dword ptr [esp], eax # 890424
+0045C35F mov eax, 0x3fefc0b7 # B8B7C0EF3F
+0045C364 or dword ptr [esp + 4], eax # 09442404
+0045C368 push dword ptr [esp] # FF3424
+0045C36B mov eax, dword ptr [esp] # 8B0424
+0045C36E push ebx # 53
+0045C36F mov ebx, esp # 89E3
+0045C371 add ebx, 4 # 81C304000000
+0045C377 add ebx, 4 # 81C304000000
+0045C37D xchg dword ptr [esp], ebx # 871C24
+0045C380 pop esp # 5C
+0045C381 add esp, 4 # 81C404000000
+0045C387 push edx # 52
+0045C388 mov edx, 0x2e6af2ff # BAFFF26A2E
+0045C38D sub dword ptr [esp + 4], edx # 29542404
+0045C391 pop edx # 5A
+0045C392 mov dword ptr [esp], edx # 891424
+0045C395 mov dword ptr [esp], eax # 890424
+0045C398 push edx # 52
+0045C399 mov dword ptr [esp], 0x3fff1da7 # C70424A71DFF3F
+0045C3A0 or dword ptr [esp], 0x7b1171f9 # 810C24F971117B
+0045C3A7 shr dword ptr [esp], 6 # C12C2406
+0045C3AB not dword ptr [esp] # F71424
+0045C3AE push eax # 50
+0045C3AF mov eax, 0x2f7ff63a # B83AF67F2F
+0045C3B4 and dword ptr [esp + 4], eax # 21442404
+0045C3B8 pop eax # 58
+0045C3B9 push ecx # 51
+0045C3BA mov ecx, 0x7df6924a # B94A92F67D
+0045C3BF and dword ptr [esp + 4], ecx # 214C2404
+0045C3C3 pop ecx # 59
+0045C3C4 xor dword ptr [esp], 0x5c47cfe8 # 813424E8CF475C
+0045C3CB mov dword ptr [esp], edx # 891424
+0045C3CE mov dword ptr [esp], edi # 893C24
+0045C3D1 mov dword ptr [esp], 0x4ff7c16b # C704246BC1F74F
+0045C3D8 xor dword ptr [esp], 0x7bdc5b8f # 8134248F5BDC7B
+0045C3DF and dword ptr [esp], 0x7ff3f777 # 81242477F7F37F
+0045C3E6 shr dword ptr [esp], 3 # C12C2403
+0045C3EA neg dword ptr [esp] # F71C24
+0045C3ED shl dword ptr [esp], 4 # C1242404
+0045C3F1 sub dword ptr [esp], 0x19ea4093 # 812C249340EA19
+0045C3F8 sub dword ptr [esp], 0x5e3701d5 # 812C24D501375E
+0045C3FF or dword ptr [esp], 0x7fe7ac00 # 810C2400ACE77F
+0045C406 add dword ptr [esp], 0xfc818b6f # 8104246F8B81FC
+0045C40D mov dword ptr [esp], ecx # 890C24
+0045C410 mov dword ptr [esp], eax # 890424
+0045C413 mov dword ptr [esp], ecx # 890C24
+0045C416 push eax # 50
+0045C417 mov eax, esp # 89E0
+0045C419 push edi # 57
+0045C41A push edx # 52
+0045C41B push ebx # 53
+0045C41C push ecx # 51
+0045C41D mov ecx, 0x4dbf6af1 # B9F16ABF4D
+0045C422 mov ebx, ecx # 89CB
+0045C424 mov ecx, dword ptr [esp] # 8B0C24
+0045C427 add esp, 4 # 81C404000000
+0045C42D shr ebx, 5 # C1EB05
+0045C430 inc ebx # 43
+0045C431 dec ebx # 4B
+0045C432 add ebx, 0x77e7dd71 # 81C371DDE777
+0045C438 neg ebx # F7DB
+0045C43A sub ebx, 0xaeaad0c # 81EB0CADEA0A
+0045C440 push ebp # 55
+0045C441 mov ebp, ebx # 89DD
+0045C443 mov edx, ebp # 89EA
+0045C445 pop ebp # 5D
+0045C446 pop ebx # 5B
+0045C447 inc edx # 42
+0045C448 sub edx, 0x4ffb4f81 # 81EA814FFB4F
+0045C44E dec edx # 4A
+0045C44F inc edx # 42
+0045C450 sub edx, 0x7fbf627c # 81EA7C62BF7F
+0045C456 add edx, 0x8ccc336a # 81C26A33CC8C
+0045C45C mov edi, edx # 89D7
+0045C45E mov edx, dword ptr [esp] # 8B1424
+0045C461 add esp, 4 # 81C404000000
+0045C467 add edi, 0xc82f046a # 81C76A042FC8
+0045C46D sub eax, 0x17f31ed1 # 2DD11EF317
+0045C472 add eax, edi # 01F8
+0045C474 add eax, 0x17f31ed1 # 05D11EF317
+0045C479 pop edi # 5F
+0045C47A sub eax, 4 # 2D04000000
+0045C47F xor eax, dword ptr [esp] # 330424
+0045C482 xor dword ptr [esp], eax # 310424
+0045C485 xor eax, dword ptr [esp] # 330424
+0045C488 pop esp # 5C
+0045C489 mov dword ptr [esp], edi # 893C24
+0045C48C mov dword ptr [esp], edx # 891424
+0045C48F push ebp # 55
+0045C490 push esp # 54
+0045C491 pop ebp # 5D
+0045C492 push esi # 56
+0045C493 mov esi, 0x3ffc2f01 # BE012FFC3F
+0045C498 add esi, 0xc003d103 # 81C603D103C0
+0045C49E add ebp, esi # 01F5
+0045C4A0 pop esi # 5E
+0045C4A1 sub ebp, 4 # 81ED04000000
+0045C4A7 xor ebp, dword ptr [esp] # 332C24
+0045C4AA xor dword ptr [esp], ebp # 312C24
+0045C4AD xor ebp, dword ptr [esp] # 332C24
+0045C4B0 pop esp # 5C
+0045C4B1 mov dword ptr [esp], ecx # 890C24
+0045C4B4 sub esp, 4 # 81EC04000000
+0045C4BA mov dword ptr [esp], ecx # 890C24
+0045C4BD mov ecx, 0x47380e01 # B9010E3847
+0045C4C2 mov dword ptr [esp + 4], ecx # 894C2404
+0045C4C6 pop ecx # 59
+0045C4C7 push edx # 52
+0045C4C8 mov edx, 0x7bf75f0b # BA0B5FF77B
+0045C4CD and dword ptr [esp + 4], edx # 21542404
+0045C4D1 pop edx # 5A
+0045C4D2 neg dword ptr [esp] # F71C24
+0045C4D5 add dword ptr [esp], 0xc328ab13 # 81042413AB28C3
+0045C4DC mov dword ptr [esp], ecx # 890C24
+0045C4DF mov dword ptr [esp], ebx # 891C24
+0045C4E2 sub esp, 4 # 81EC04000000
+0045C4E8 mov dword ptr [esp], edx # 891424
+0045C4EB mov dword ptr [esp], edi # 893C24
+0045C4EE mov dword ptr [esp], 0x5bb7ae70 # C7042470AEB75B
+0045C4F5 push esi # 56
+0045C4F6 mov esi, 0x7f7ea1fa # BEFAA17E7F
+0045C4FB add dword ptr [esp + 4], esi # 01742404
+0045C4FF pop esi # 5E
+0045C500 and dword ptr [esp], 0x4db73f94 # 812424943FB74D
+0045C507 sub dword ptr [esp], 0xd83bd646 # 812C2446D63BD8
+0045C50E push esi # 56
+0045C50F push dword ptr [esp + 4] # FF742404
+0045C513 pop esi # 5E
+0045C514 pop dword ptr [esp] # 8F0424
+0045C517 push 0x4be0c78d # 688DC7E04B
+0045C51C mov dword ptr [esp], esi # 893424
+0045C51F not dword ptr [esp] # F71424
+0045C522 pop esi # 5E
+0045C523 xor dword ptr [esp], esi # 313424
+0045C526 xor esi, dword ptr [esp] # 333424
+0045C529 xor dword ptr [esp], esi # 313424
+0045C52C sub dword ptr [esp], 0x23812345 # 812C2445238123
+0045C533 mov dword ptr [esp], ebx # 891C24
+0045C536 push 0x61501867 # 6867185061
+0045C53B mov dword ptr [esp], esi # 893424
+0045C53E mov dword ptr [esp], 0x5f0e8c37 # C70424378C0E5F
+0045C545 mov dword ptr [esp], esi # 893424
+0045C548 sub esp, 4 # 83EC04
+0045C54B mov dword ptr [esp], esp # 892424
+0045C54E add dword ptr [esp], 4 # 83042404
+0045C552 push dword ptr [esp] # FF3424
+0045C555 pop esi # 5E
+0045C556 add esp, 4 # 81C404000000
+0045C55C push edx # 52
+0045C55D mov edx, 0x7f7b17dd # BADD177B7F
+0045C562 xor edx, 0x7f7b17d9 # 81F2D9177B7F
+0045C568 add esi, edx # 01D6
+0045C56A pop edx # 5A
+0045C56B sub esi, 4 # 81EE04000000
+0045C571 xor esi, dword ptr [esp] # 333424
+0045C574 xor dword ptr [esp], esi # 313424
+0045C577 xor esi, dword ptr [esp] # 333424
+0045C57A mov esp, dword ptr [esp] # 8B2424
+0045C57D mov dword ptr [esp], ebp # 892C24
+0045C580 push edx # 52
+0045C581 mov dword ptr [esp], ebx # 891C24
+0045C584 mov ebx, esp # 89E3
+0045C586 push ecx # 51
+0045C587 mov ecx, 0x3cef092e # B92E09EF3C
+0045C58C sub ecx, 0x3cef092a # 81E92A09EF3C
+0045C592 add ebx, ecx # 01CB
+0045C594 pop ecx # 59
+0045C595 sub esp, 4 # 81EC04000000
+0045C59B mov dword ptr [esp], edx # 891424
+0045C59E push ecx # 51
+0045C59F push 0x1dfed5a # 685AEDDF01
+0045C5A4 pop ecx # 59
+0045C5A5 not ecx # F7D1
+0045C5A7 dec ecx # 49
+0045C5A8 sub ecx, 0xfe2012a0 # 81E9A01220FE
+0045C5AE mov edx, ecx # 89CA
+0045C5B0 pop ecx # 59
+0045C5B1 sub ebx, edx # 29D3
+0045C5B3 mov edx, dword ptr [esp] # 8B1424
+0045C5B6 add esp, 4 # 83C404
+0045C5B9 xchg dword ptr [esp], ebx # 871C24
+0045C5BC mov esp, dword ptr [esp] # 8B2424
+0045C5BF mov dword ptr [esp], edx # 891424
+0045C5C2 mov edx, esp # 89E2
+0045C5C4 push ebx # 53
+0045C5C5 mov ebx, 4 # BB04000000
+0045C5CA add edx, ebx # 01DA
+0045C5CC pop ebx # 5B
+0045C5CD sub edx, 4 # 83EA04
+0045C5D0 xchg dword ptr [esp], edx # 871424
+0045C5D3 pop esp # 5C
+0045C5D4 mov dword ptr [esp], esi # 893424
+0045C5D7 push edi # 57
+0045C5D8 mov dword ptr [esp], 0x7fbd4a01 # C70424014ABD7F
+0045C5DF shl dword ptr [esp], 1 # C1242401
+0045C5E3 push edx # 52
+0045C5E4 mov edx, 0x207f94a3 # BAA3947F20
+0045C5E9 or dword ptr [esp + 4], edx # 09542404
+0045C5ED pop edx # 5A
+0045C5EE push ebp # 55
+0045C5EF push ebx # 53
+0045C5F0 mov ebx, 0x4fd59300 # BB0093D54F
+0045C5F5 mov ebp, ebx # 89DD
+0045C5F7 pop ebx # 5B
+0045C5F8 dec ebp # 4D
+0045C5F9 xor ebp, 0x476a9afe # 81F5FE9A6A47
+0045C5FF xor dword ptr [esp + 4], ebp # 316C2404
+0045C603 pop ebp # 5D
+0045C604 push esi # 56
+0045C605 push eax # 50
+0045C606 mov eax, 0x75dba3ea # B8EAA3DB75
+0045C60B push edx # 52
+0045C60C mov edx, eax # 89C2
+0045C60E mov esi, edx # 89D6
+0045C610 pop edx # 5A
+0045C611 mov eax, dword ptr [esp] # 8B0424
+0045C614 add esp, 4 # 83C404
+0045C617 xor dword ptr [esp + 4], esi # 31742404
+0045C61B pop esi # 5E
+0045C61C add dword ptr [esp], 0xbbabc68f # 8104248FC6ABBB
+0045C623 mov dword ptr [esp], eax # 890424
+0045C626 mov dword ptr [esp], edi # 893C24
+0045C629 call 0x45c62e # E800000000
+
+Basic Block:[0045C62E, 0045C9A8], in_edge:[0045C335], out_edge:[0045C9A8], merged_bbs:[], executed
+0045C62E push dword ptr [esp] # FF3424
+0045C631 pop ecx # 59
+0045C632 push ebx # 53
+0045C633 push eax # 50
+0045C634 mov dword ptr [esp], esp # 892424
+0045C637 push ebp # 55
+0045C638 push edi # 57
+0045C639 push 0x55d569dd # 68DD69D555
+0045C63E pop edi # 5F
+0045C63F sub edi, 0x55d569d9 # 81EFD969D555
+0045C645 mov ebp, edi # 89FD
+0045C647 pop edi # 5F
+0045C648 add dword ptr [esp + 4], ebp # 016C2404
+0045C64C pop ebp # 5D
+0045C64D pop ebx # 5B
+0045C64E push edx # 52
+0045C64F mov edx, 4 # BA04000000
+0045C654 add ebx, edx # 01D3
+0045C656 pop edx # 5A
+0045C657 push ecx # 51
+0045C658 mov ecx, 4 # B904000000
+0045C65D add ebx, ecx # 01CB
+0045C65F pop ecx # 59
+0045C660 xor ebx, dword ptr [esp] # 331C24
+0045C663 xor dword ptr [esp], ebx # 311C24
+0045C666 xor ebx, dword ptr [esp] # 331C24
+0045C669 mov esp, dword ptr [esp] # 8B2424
+0045C66C push edx # 52
+0045C66D mov edx, 0x3b635394 # BA9453633B
+0045C672 and edx, 0x77db8f23 # 81E2238FDB77
+0045C678 push 0x454e9c3e # 683E9C4E45
+0045C67D mov dword ptr [esp], eax # 890424
+0045C680 push edi # 57
+0045C681 mov edi, 0x5e74927a # BF7A92745E
+0045C686 mov eax, edi # 89F8
+0045C688 pop edi # 5F
+0045C689 add edx, eax # 01C2
+0045C68B pop eax # 58
+0045C68C dec edx # 4A
+0045C68D push edi # 57
+0045C68E mov edi, 0x7f35419d # BF9D41357F
+0045C693 sub edx, edi # 29FA
+0045C695 pop edi # 5F
+0045C696 push 0x3459c970 # 6870C95934
+0045C69B mov dword ptr [esp], ebx # 891C24
+0045C69E mov ebx, 0x357d60ba # BBBA607D35
+0045C6A3 and ebx, 0x4bf99aa4 # 81E3A49AF94B
+0045C6A9 add ebx, 0xec04ae8c # 81C38CAE04EC
+0045C6AF sub edx, 0x6dff501e # 81EA1E50FF6D
+0045C6B5 add edx, ebx # 01DA
+0045C6B7 add edx, 0x6dff501e # 81C21E50FF6D
+0045C6BD pop ebx # 5B
+0045C6BE add ecx, 0x3eef7a2d # 81C12D7AEF3E
+0045C6C4 sub ecx, 0x7dff1aee # 81E9EE1AFF7D
+0045C6CA add ecx, 0x7677ffb7 # 81C1B7FF7776
+0045C6D0 sub ecx, edx # 29D1
+0045C6D2 push esi # 56
+0045C6D3 mov esi, 0x5fec3eb6 # BEB63EEC5F
+0045C6D8 or esi, 0x725eedb1 # 81CEB1ED5E72
+0045C6DE and esi, 0x76bafcf8 # 81E6F8FCBA76
+0045C6E4 dec esi # 4E
+0045C6E5 sub esi, 0x42fcf8 # 81EEF8FC4200
+0045C6EB sub ecx, esi # 29F1
+0045C6ED pop esi # 5E
+0045C6EE add ecx, 0x7dff1aee # 81C1EE1AFF7D
+0045C6F4 sub ecx, 0x3eef7a2d # 81E92D7AEF3E
+0045C6FA pop edx # 5A
+0045C6FB push eax # 50
+0045C6FC push ebx # 53
+0045C6FD push esi # 56
+0045C6FE mov esi, 0x7f7ffc59 # BE59FC7F7F
+0045C703 mov ebx, 0x25743b6b # BB6B3B7425
+0045C708 xor ebx, esi # 31F3
+0045C70A pop esi # 5E
+0045C70B mov eax, 0x5a118a58 # B8588A115A
+0045C710 push edx # 52
+0045C711 mov edx, 0x7e1fdeaf # BAAFDE1F7E
+0045C716 sub eax, 0x3f979d28 # 2D289D973F
+0045C71B sub eax, edx # 29D0
+0045C71D push edx # 52
+0045C71E mov edx, 0x7affbc00 # BA00BCFF7A
+0045C723 push ecx # 51
+0045C724 mov ecx, 0x2bfe5ada # B9DA5AFE2B
+0045C729 sub ecx, 0x6b7f9b18 # 81E9189B7F6B
+0045C72F shr ecx, 6 # C1E906
+0045C732 shr ecx, 6 # C1E906
+0045C735 neg ecx # F7D9
+0045C737 add ecx, 0x7d3f72d7 # 81C1D7723F7D
+0045C73D add ecx, 0x9e4bce18 # 81C118CE4B9E
+0045C743 sub edx, ecx # 29CA
+0045C745 pop ecx # 59
+0045C746 push esi # 56
+0045C747 mov esi, 0x23d7cf20 # BE20CFD723
+0045C74C and edx, esi # 21F2
+0045C74E pop esi # 5E
+0045C74F xchg edx, edi # 87FA
+0045C751 neg edi # F7DF
+0045C753 xchg edx, edi # 87FA
+0045C755 sub esp, 4 # 81EC04000000
+0045C75B mov dword ptr [esp], edi # 893C24
+0045C75E mov edi, 0x7fb392c5 # BFC592B37F
+0045C763 sub edx, edi # 29FA
+0045C765 pop edi # 5F
+0045C766 add edx, 0x77cf1bc5 # 81C2C51BCF77
+0045C76C xor edx, 0xcb0c9bc8 # 81F2C89B0CCB
+0045C772 add eax, edx # 01D0
+0045C774 pop edx # 5A
+0045C775 pop edx # 5A
+0045C776 sub eax, ebx # 29D8
+0045C778 add eax, 0x7e1fdeaf # 05AFDE1F7E
+0045C77D pop ebx # 5B
+0045C77E sub ecx, eax # 29C1
+0045C780 pop eax # 58
+0045C781 push edi # 57
+0045C782 push edx # 52
+0045C783 push 0x2ded55e6 # 68E655ED2D
+0045C788 mov edx, dword ptr [esp] # 8B1424
+0045C78B add esp, 4 # 83C404
+0045C78E add edx, 1 # 83C201
+0045C791 inc edx # 42
+0045C792 and edx, 0x797f3a01 # 81E2013A7F79
+0045C798 push edi # 57
+0045C799 push eax # 50
+0045C79A mov eax, 0x3c93b680 # B880B6933C
+0045C79F not eax # F7D0
+0045C7A1 sub eax, 0x7ebe03de # 2DDE03BE7E
+0045C7A6 add eax, -1 # 83C0FF
+0045C7A9 push ebp # 55
+0045C7AA mov ebp, 0x7fff63fa # BDFA63FF7F
+0045C7AF shl ebp, 3 # C1E503
+0045C7B2 shr ebp, 8 # C1ED08
+0045C7B5 sub ebp, 0x811c9345 # 81ED45931C81
+0045C7BB xor eax, ebp # 31E8
+0045C7BD pop ebp # 5D
+0045C7BE push ebx # 53
+0045C7BF mov ebx, 0x6fff167d # BB7D16FF6F
+0045C7C4 xchg ebx, ecx # 87CB
+0045C7C6 not ecx # F7D1
+0045C7C8 xchg ebx, ecx # 87CB
+0045C7CA add ebx, 0xb2395238 # 81C3385239B2
+0045C7D0 xor eax, ebx # 31D8
+0045C7D2 pop ebx # 5B
+0045C7D3 mov edi, eax # 89C7
+0045C7D5 pop eax # 58
+0045C7D6 shr edi, 3 # C1EF03
+0045C7D9 shr edi, 7 # C1EF07
+0045C7DC dec edi # 4F
+0045C7DD shr edi, 8 # C1EF08
+0045C7E0 shr edi, 7 # C1EF07
+0045C7E3 xor edi, 0x296d423c # 81F73C426D29
+0045C7E9 xor edx, edi # 31FA
+0045C7EB pop edi # 5F
+0045C7EC push ebx # 53
+0045C7ED push edx # 52
+0045C7EE pop ebx # 5B
+0045C7EF mov edi, ebx # 89DF
+0045C7F1 pop ebx # 5B
+0045C7F2 pop edx # 5A
+0045C7F3 mov ebp, edi # 89FD
+0045C7F5 pop edi # 5F
+0045C7F6 add ebp, 0x24bf6be4 # 81C5E46BBF24
+0045C7FC push 0x7366a8d5 # 68D5A86673
+0045C801 mov dword ptr [esp], edi # 893C24
+0045C804 mov dword ptr [esp], 0x3aaa043e # C704243E04AA3A
+0045C80B mov dword ptr [esp], ebx # 891C24
+0045C80E sub esp, 4 # 81EC04000000
+0045C814 mov dword ptr [esp], esi # 893424
+0045C817 mov esi, 0x7dd1a141 # BE41A1D17D
+0045C81C mov ebx, 0xed9d9c95 # BB959C9DED
+0045C821 push ecx # 51
+0045C822 mov ecx, 0x5ffe20c2 # B9C220FE5F
+0045C827 or ecx, 0x6ffd9661 # 81C96196FD6F
+0045C82D or ecx, 0x3fdf7707 # 81C90777DF3F
+0045C833 sub ecx, 0x1441890b # 81E90B894114
+0045C839 add ebx, ecx # 01CB
+0045C83B pop ecx # 59
+0045C83C add ebx, esi # 01F3
+0045C83E sub ebx, 0x6bbe6edc # 81EBDC6EBE6B
+0045C844 mov esi, dword ptr [esp] # 8B3424
+0045C847 add esp, 4 # 81C404000000
+0045C84D sub ebp, ebx # 29DD
+0045C84F pop ebx # 5B
+0045C850 add ebp, 0x78fb2027 # 81C52720FB78
+0045C856 add ebp, ecx # 01CD
+0045C858 sub ebp, 0x78fb2027 # 81ED2720FB78
+0045C85E add ebp, 0x6b6f3dd6 # 81C5D63D6F6B
+0045C864 sub ebp, 0x24bf6be4 # 81EDE46BBF24
+0045C86A push ebp # 55
+0045C86B push esp # 54
+0045C86C mov ebp, dword ptr [esp] # 8B2C24
+0045C86F push eax # 50
+0045C870 mov eax, esp # 89E0
+0045C872 push ebx # 53
+0045C873 mov ebx, 0x3d59e8b8 # BBB8E8593D
+0045C878 shl ebx, 4 # C1E304
+0045C87B xor ebx, 0x57ff8c53 # 81F3538CFF57
+0045C881 shr ebx, 7 # C1EB07
+0045C884 neg ebx # F7DB
+0045C886 sub ebx, 0xfefb3ded # 81EBED3DFBFE
+0045C88C add eax, ebx # 01D8
+0045C88E pop ebx # 5B
+0045C88F add eax, 4 # 83C004
+0045C892 xchg dword ptr [esp], eax # 870424
+0045C895 pop esp # 5C
+0045C896 add ebp, 4 # 81C504000000
+0045C89C push 0x37c8a401 # 6801A4C837
+0045C8A1 mov dword ptr [esp], eax # 890424
+0045C8A4 push edi # 57
+0045C8A5 mov edi, 4 # BF04000000
+0045C8AA mov eax, edi # 89F8
+0045C8AC pop edi # 5F
+0045C8AD sub ebp, eax # 29C5
+0045C8AF pop eax # 58
+0045C8B0 push ebp # 55
+0045C8B1 push dword ptr [esp + 4] # FF742404
+0045C8B5 mov ebp, dword ptr [esp] # 8B2C24
+0045C8B8 push esi # 56
+0045C8B9 mov esi, esp # 89E6
+0045C8BB add esi, 4 # 81C604000000
+0045C8C1 add esi, 4 # 81C604000000
+0045C8C7 xchg dword ptr [esp], esi # 873424
+0045C8CA pop esp # 5C
+0045C8CB pop dword ptr [esp] # 8F0424
+0045C8CE pop esp # 5C
+0045C8CF mov dword ptr [esp], ecx # 890C24
+0045C8D2 push eax # 50
+0045C8D3 push 0x43cd8bb8 # 68B88BCD43
+0045C8D8 mov dword ptr [esp], ebp # 892C24
+0045C8DB mov dword ptr [esp], 0x7dfbab9a # C704249AABFB7D
+0045C8E2 pop eax # 58
+0045C8E3 push edx # 52
+0045C8E4 mov edx, 0x7bf7dd71 # BA71DDF77B
+0045C8E9 xor edx, 0x47087c8e # 81F28E7C0847
+0045C8EF xor eax, edx # 31D0
+0045C8F1 pop edx # 5A
+0045C8F2 push esi # 56
+0045C8F3 push eax # 50
+0045C8F4 mov eax, 0x77bdbcf2 # B8F2BCBD77
+0045C8F9 mov esi, eax # 89C6
+0045C8FB pop eax # 58
+0045C8FC and esi, 0x7afff332 # 81E632F3FF7A
+0045C902 shl esi, 2 # C1E602
+0045C905 shl esi, 1 # C1E601
+0045C908 push ecx # 51
+0045C909 mov ecx, 0 # B900000000
+0045C90E sub ecx, esi # 29F1
+0045C910 mov esi, ecx # 89CE
+0045C912 pop ecx # 59
+0045C913 add esi, 0x54e9772c # 81C62C77E954
+0045C919 sub eax, 0x17e7d35b # 2D5BD3E717
+0045C91E add eax, esi # 01F0
+0045C920 add eax, 0x17e7d35b # 055BD3E717
+0045C925 mov esi, dword ptr [esp] # 8B3424
+0045C928 add esp, 4 # 83C404
+0045C92B push eax # 50
+0045C92C sub dword ptr [esp], 0x7fcbe621 # 812C2421E6CB7F
+0045C933 mov ecx, dword ptr [esp] # 8B0C24
+0045C936 add esp, 4 # 83C404
+0045C939 add ecx, 0x7fcbe621 # 81C121E6CB7F
+0045C93F pop eax # 58
+0045C940 push ecx # 51
+0045C941 mov ecx, 0x797f0f97 # B9970F7F79
+0045C946 mov ebx, 0x373f17f7 # BBF7173F37
+0045C94B xor ebx, ecx # 31CB
+0045C94D pop ecx # 59
+0045C94E push eax # 50
+0045C94F push ebp # 55
+0045C950 mov dword ptr [esp], edx # 891424
+0045C953 push ebx # 53
+0045C954 mov ebx, 0x7dddca96 # BB96CADD7D
+0045C959 sub ebx, 0x3797a2da # 81EBDAA29737
+0045C95F not ebx # F7D3
+0045C961 inc ebx # 43
+0045C962 and ebx, 0x17efcc86 # 81E386CCEF17
+0045C968 add ebx, 0x62011c73 # 81C3731C0162
+0045C96E mov edx, ebx # 89DA
+0045C970 pop ebx # 5B
+0045C971 mov eax, edx # 89D0
+0045C973 push dword ptr [esp] # FF3424
+0045C976 pop edx # 5A
+0045C977 add esp, 4 # 83C404
+0045C97A sub esp, 4 # 81EC04000000
+0045C980 mov dword ptr [esp], edx # 891424
+0045C983 mov edx, 0x7ef48acd # BACD8AF47E
+0045C988 and eax, edx # 21D0
+0045C98A pop edx # 5A
+0045C98B push 0x382cac59 # 6859AC2C38
+0045C990 mov dword ptr [esp], ebx # 891C24
+0045C993 mov ebx, 0x1f8bd5b3 # BBB3D58B1F
+0045C998 and eax, ebx # 21D8
+0045C99A pop ebx # 5B
+0045C99B or eax, 0x3bcf2958 # 0D5829CF3B
+0045C9A0 add eax, 0x12706ee9 # 05E96E7012
+0045C9A5 sub ebx, eax # 29C3
+0045C9A7 pop eax # 58
+
+Basic Block:[0045C9BD, 0045CE8B], in_edge:[0045C9A8], out_edge:[0045D219,0045CE8B], merged_bbs:[], executed
+0045C9BD mov ecx, dword ptr [esp] # 8B0C24
+0045C9C0 push 0x25dd6cb3 # 68B36CDD25
+0045C9C5 mov dword ptr [esp], ebx # 891C24
+0045C9C8 push esp # 54
+0045C9C9 mov ebx, dword ptr [esp] # 8B1C24
+0045C9CC add esp, 4 # 83C404
+0045C9CF push eax # 50
+0045C9D0 mov eax, 0x7fffc0a3 # B8A3C0FF7F
+0045C9D5 or eax, 0x6df6e3cf # 0DCFE3F66D
+0045C9DA xor eax, 0x7fab1985 # 358519AB7F
+0045C9DF add eax, 0xbfb14ef # 05EF14FB0B
+0045C9E4 not eax # F7D0
+0045C9E6 sub eax, 0xf3aff0a2 # 2DA2F0AFF3
+0045C9EB add ebx, eax # 01C3
+0045C9ED pop eax # 58
+0045C9EE push ebx # 53
+0045C9EF mov dword ptr [esp], 0x5e9b0442 # C7042442049B5E
+0045C9F6 mov dword ptr [esp], edx # 891424
+0045C9F9 push ebp # 55
+0045C9FA mov ebp, 0x6efd1f0e # BD0E1FFD6E
+0045C9FF mov edx, 0x6efd1f0a # BA0A1FFD6E
+0045CA04 xor edx, ebp # 31EA
+0045CA06 pop ebp # 5D
+0045CA07 add ebx, edx # 01D3
+0045CA09 pop edx # 5A
+0045CA0A push ebx # 53
+0045CA0B push dword ptr [esp + 4] # FF742404
+0045CA0F pop ebx # 5B
+0045CA10 pop dword ptr [esp] # 8F0424
+0045CA13 mov esp, dword ptr [esp] # 8B2424
+0045CA16 push eax # 50
+0045CA17 mov dword ptr [esp], 0x87 # C7042487000000
+0045CA1E push dword ptr [esp] # FF3424
+0045CA21 pop ebx # 5B
+0045CA22 push eax # 50
+0045CA23 mov dword ptr [esp], ecx # 890C24
+0045CA26 mov ecx, esp # 89E1
+0045CA28 add ecx, 4 # 81C104000000
+0045CA2E push 0x1196d719 # 6819D79611
+0045CA33 mov dword ptr [esp], ebx # 891C24
+0045CA36 mov dword ptr [esp], eax # 890424
+0045CA39 push ecx # 51
+0045CA3A mov ecx, 4 # B904000000
+0045CA3F mov eax, ecx # 89C8
+0045CA41 mov ecx, dword ptr [esp] # 8B0C24
+0045CA44 add esp, 4 # 83C404
+0045CA47 sub ecx, 0x4eff1e80 # 81E9801EFF4E
+0045CA4D add ecx, eax # 01C1
+0045CA4F add ecx, 0x4eff1e80 # 81C1801EFF4E
+0045CA55 pop eax # 58
+0045CA56 xchg dword ptr [esp], ecx # 870C24
+0045CA59 pop esp # 5C
+0045CA5A push ecx # 51
+0045CA5B mov ecx, esp # 89E1
+0045CA5D add ecx, 4 # 81C104000000
+0045CA63 sub ecx, 4 # 83E904
+0045CA66 xchg dword ptr [esp], ecx # 870C24
+0045CA69 pop esp # 5C
+0045CA6A mov dword ptr [esp], edx # 891424
+0045CA6D mov edx, ebx # 89DA
+0045CA6F push esi # 56
+0045CA70 push ebx # 53
+0045CA71 push edx # 52
+0045CA72 mov dword ptr [esp], 0x7fcd642a # C704242A64CD7F
+0045CA79 pop ebx # 5B
+0045CA7A add ebx, 0xf81191b8 # 81C3B89111F8
+0045CA80 mov esi, ebx # 89DE
+0045CA82 mov ebx, dword ptr [esp] # 8B1C24
+0045CA85 add esp, 4 # 81C404000000
+0045CA8B sub esi, 0x76df1ea6 # 81EEA61EDF76
+0045CA91 add esi, 0x2bbf1b32 # 81C6321BBF2B
+0045CA97 sub esi, 0x5fe93e45 # 81EE453EE95F
+0045CA9D push edx # 52
+0045CA9E mov edx, 0x7f7b3c5f # BA5F3C7B7F
+0045CAA3 shl edx, 3 # C1E203
+0045CAA6 not edx # F7D2
+0045CAA8 inc edx # 42
+0045CAA9 inc edx # 42
+0045CAAA xor edx, 0x7f53c03c # 81F23CC0537F
+0045CAB0 sub esi, edx # 29D6
+0045CAB2 pop edx # 5A
+0045CAB3 dec esi # 4E
+0045CAB4 push edx # 52
+0045CAB5 mov edx, 0x515fd6f3 # BAF3D65F51
+0045CABA xor esi, edx # 31D6
+0045CABC pop edx # 5A
+0045CABD add edx, esi # 01F2
+0045CABF pop esi # 5E
+0045CAC0 add edx, ebp # 01EA
+0045CAC2 mov dword ptr [edx], ecx # 890A
+0045CAC4 push dword ptr [esp] # FF3424
+0045CAC7 pop edx # 5A
+0045CAC8 add esp, 4 # 83C404
+0045CACB push eax # 50
+0045CACC push ecx # 51
+0045CACD mov dword ptr [esp], 0xa5 # C70424A5000000
+0045CAD4 push dword ptr [esp] # FF3424
+0045CAD7 pop eax # 58
+0045CAD8 push eax # 50
+0045CAD9 push esp # 54
+0045CADA pop eax # 58
+0045CADB add eax, 4 # 0504000000
+0045CAE0 add eax, 4 # 83C004
+0045CAE3 xor eax, dword ptr [esp] # 330424
+0045CAE6 xor dword ptr [esp], eax # 310424
+0045CAE9 xor eax, dword ptr [esp] # 330424
+0045CAEC pop esp # 5C
+0045CAED mov ebx, eax # 89C3
+0045CAEF mov eax, dword ptr [esp] # 8B0424
+0045CAF2 push 0x48a6577d # 687D57A648
+0045CAF7 mov dword ptr [esp], ecx # 890C24
+0045CAFA mov ecx, esp # 89E1
+0045CAFC add ecx, 4 # 81C104000000
+0045CB02 push edi # 57
+0045CB03 mov edi, 4 # BF04000000
+0045CB08 add ecx, edi # 01F9
+0045CB0A pop edi # 5F
+0045CB0B xchg dword ptr [esp], ecx # 870C24
+0045CB0E pop esp # 5C
+0045CB0F push edx # 52
+0045CB10 push 0x78ca8413 # 681384CA78
+0045CB15 pop edx # 5A
+0045CB16 push eax # 50
+0045CB17 mov eax, 0x4f6f8404 # B804846F4F
+0045CB1C xor edx, eax # 31C2
+0045CB1E mov eax, dword ptr [esp] # 8B0424
+0045CB21 push edx # 52
+0045CB22 mov edx, esp # 89E2
+0045CB24 add edx, 4 # 81C204000000
+0045CB2A add edx, 4 # 83C204
+0045CB2D xchg dword ptr [esp], edx # 871424
+0045CB30 pop esp # 5C
+0045CB31 sub esp, 4 # 81EC04000000
+0045CB37 mov dword ptr [esp], edi # 893C24
+0045CB3A mov edi, 0x78ef62d4 # BFD462EF78
+0045CB3F xor edx, edi # 31FA
+0045CB41 pop edi # 5F
+0045CB42 xor edx, 0x4f0a62c3 # 81F2C3620A4F
+0045CB48 push ecx # 51
+0045CB49 mov ecx, edx # 89D1
+0045CB4B mov dword ptr [ebp + ebx], ecx # 894C1D00
+0045CB4F pop ecx # 59
+0045CB50 mov edx, dword ptr [esp] # 8B1424
+0045CB53 push edx # 52
+0045CB54 mov edx, esp # 89E2
+0045CB56 add edx, 4 # 81C204000000
+0045CB5C push ebp # 55
+0045CB5D push esi # 56
+0045CB5E mov dword ptr [esp], 4 # C7042404000000
+0045CB65 pop ebp # 5D
+0045CB66 add edx, ebp # 01EA
+0045CB68 pop ebp # 5D
+0045CB69 xchg dword ptr [esp], edx # 871424
+0045CB6C pop esp # 5C
+0045CB6D push edx # 52
+0045CB6E push ebp # 55
+0045CB6F push ebx # 53
+0045CB70 mov dword ptr [esp], 0x3b7b08db # C70424DB087B3B
+0045CB77 xor dword ptr [esp], 0x2fbc171e # 8134241E17BC2F
+0045CB7E xor dword ptr [esp], 0x52c72623 # 8134242326C752
+0045CB85 xor dword ptr [esp], 0x3d85667f # 8134247F66853D
+0045CB8C pop ebp # 5D
+0045CB8D push esi # 56
+0045CB8E mov esi, 0x5dfbb5b1 # BEB1B5FB5D
+0045CB93 sub esi, 0x5db3eea9 # 81EEA9EEB35D
+0045CB99 dec esi # 4E
+0045CB9A shl esi, 6 # C1E606
+0045CB9D push esi # 56
+0045CB9E not dword ptr [esp] # F71424
+0045CBA1 mov esi, dword ptr [esp] # 8B3424
+0045CBA4 add esp, 4 # 81C404000000
+0045CBAA xor esi, 0x958b6175 # 81F675618B95
+0045CBB0 sub ebp, 0x17ff7816 # 81ED1678FF17
+0045CBB6 sub ebp, esi # 29F5
+0045CBB8 add ebp, 0x17ff7816 # 81C51678FF17
+0045CBBE push dword ptr [esp] # FF3424
+0045CBC1 mov esi, dword ptr [esp] # 8B3424
+0045CBC4 add esp, 4 # 83C404
+0045CBC7 add esp, 4 # 81C404000000
+0045CBCD push ebp # 55
+0045CBCE pop edx # 5A
+0045CBCF pop ebp # 5D
+0045CBD0 mov ebx, edx # 89D3
+0045CBD2 pop edx # 5A
+0045CBD3 push dword ptr [esp + 0x28] # FF742428
+0045CBD7 push dword ptr [esp] # FF3424
+0045CBDA push dword ptr [esp] # FF3424
+0045CBDD mov eax, dword ptr [esp] # 8B0424
+0045CBE0 add esp, 4 # 81C404000000
+0045CBE6 add esp, 4 # 81C404000000
+0045CBEC push 0x62ec9a69 # 68699AEC62
+0045CBF1 mov dword ptr [esp], edx # 891424
+0045CBF4 push esp # 54
+0045CBF5 pop edx # 5A
+0045CBF6 push eax # 50
+0045CBF7 mov eax, 0x7f7d42f7 # B8F7427D7F
+0045CBFC shr eax, 8 # C1E808
+0045CBFF shl eax, 8 # C1E008
+0045CC02 neg eax # F7D8
+0045CC04 add eax, 0x6fd347ee # 05EE47D36F
+0045CC09 xor eax, 0xf05605ea # 35EA0556F0
+0045CC0E add edx, eax # 01C2
+0045CC10 pop eax # 58
+0045CC11 add edx, 4 # 83C204
+0045CC14 xchg dword ptr [esp], edx # 871424
+0045CC17 pop esp # 5C
+0045CC18 sub esp, 4 # 83EC04
+0045CC1B mov dword ptr [esp], edx # 891424
+0045CC1E mov dword ptr [esp], ebp # 892C24
+0045CC21 push 0x73fcba92 # 6892BAFC73
+0045CC26 mov dword ptr [esp], ebx # 891C24
+0045CC29 mov ebx, 0x77de3297 # BB9732DE77
+0045CC2E shl ebx, 4 # C1E304
+0045CC31 inc ebx # 43
+0045CC32 and ebx, 0x7d7de961 # 81E361E97D7D
+0045CC38 xor ebx, 0x59c7ffd6 # 81F3D6FFC759
+0045CC3E add ebx, 0x49190292 # 81C392021949
+0045CC44 push esi # 56
+0045CC45 mov dword ptr [esp], ebx # 891C24
+0045CC48 pop ebp # 5D
+0045CC49 push dword ptr [esp] # FF3424
+0045CC4C pop ebx # 5B
+0045CC4D add esp, 4 # 81C404000000
+0045CC53 add eax, ebp # 01E8
+0045CC55 mov ebp, dword ptr [esp] # 8B2C24
+0045CC58 add esp, 4 # 83C404
+0045CC5B add eax, ecx # 01C8
+0045CC5D sub eax, 0x6dbfd949 # 2D49D9BF6D
+0045CC62 push edx # 52
+0045CC63 push ebp # 55
+0045CC64 mov ebp, ebx # 89DD
+0045CC66 mov edx, ebp # 89EA
+0045CC68 pop ebp # 5D
+0045CC69 add edx, 0 # 81C200000000
+0045CC6F sub edx, 0x2017f4dc # 81EADCF41720
+0045CC75 add edx, ebp # 01EA
+0045CC77 push ecx # 51
+0045CC78 mov ecx, 0x3fef4ef7 # B9F74EEF3F
+0045CC7D neg ecx # F7D9
+0045CC7F sub ecx, 0x3cb74423 # 81E92344B73C
+0045CC85 add ecx, 0x76ebd192 # 81C192D1EB76
+0045CC8B push ebx # 53
+0045CC8C mov ebx, 0xda2d499c # BB9C492DDA
+0045CC91 sub ecx, ebx # 29D9
+0045CC93 pop ebx # 5B
+0045CC94 add edx, ecx # 01CA
+0045CC96 pop ecx # 59
+0045CC97 sub esp, 4 # 81EC04000000
+0045CC9D mov dword ptr [esp], edi # 893C24
+0045CCA0 mov edi, eax # 89C7
+0045CCA2 push ecx # 51
+0045CCA3 mov ecx, 0 # B900000000
+0045CCA8 add ecx, edx # 01D1
+0045CCAA mov dword ptr [ecx], edi # 8939
+0045CCAC mov ecx, dword ptr [esp] # 8B0C24
+0045CCAF add esp, 4 # 81C404000000
+0045CCB5 mov edi, dword ptr [esp] # 8B3C24
+0045CCB8 add esp, 4 # 83C404
+0045CCBB mov edx, dword ptr [esp] # 8B1424
+0045CCBE push ecx # 51
+0045CCBF mov ecx, esp # 89E1
+0045CCC1 add ecx, 4 # 81C104000000
+0045CCC7 add ecx, 4 # 81C104000000
+0045CCCD xchg dword ptr [esp], ecx # 870C24
+0045CCD0 pop esp # 5C
+0045CCD1 push ebx # 53
+0045CCD2 push esp # 54
+0045CCD3 pop ebx # 5B
+0045CCD4 add ebx, 4 # 81C304000000
+0045CCDA sub ebx, 4 # 83EB04
+0045CCDD xor ebx, dword ptr [esp] # 331C24
+0045CCE0 xor dword ptr [esp], ebx # 311C24
+0045CCE3 xor ebx, dword ptr [esp] # 331C24
+0045CCE6 mov esp, dword ptr [esp] # 8B2424
+0045CCE9 mov dword ptr [esp], ebp # 892C24
+0045CCEC mov ebp, 0x59bea # BDEA9B0500
+0045CCF1 push ebp # 55
+0045CCF2 add dword ptr [esp], 0x77efb0b8 # 810424B8B0EF77
+0045CCF9 push dword ptr [esp] # FF3424
+0045CCFC mov eax, dword ptr [esp] # 8B0424
+0045CCFF add esp, 4 # 81C404000000
+0045CD05 add esp, 4 # 83C404
+0045CD08 sub eax, 0x77efb0b8 # 2DB8B0EF77
+0045CD0D push dword ptr [esp] # FF3424
+0045CD10 pop ebp # 5D
+0045CD11 add esp, 4 # 83C404
+0045CD14 sub eax, 0x6cffa923 # 2D23A9FF6C
+0045CD19 push edx # 52
+0045CD1A mov edx, 0x5fef8e99 # BA998EEF5F
+0045CD1F sub edx, 0x4260f05a # 81EA5AF06042
+0045CD25 add eax, 0x36f745fb # 05FB45F736
+0045CD2A sub eax, edx # 29D0
+0045CD2C sub eax, 0x36f745fb # 2DFB45F736
+0045CD31 mov edx, dword ptr [esp] # 8B1424
+0045CD34 add esp, 4 # 83C404
+0045CD37 push esi # 56
+0045CD38 mov esi, 0x7fb5e753 # BE53E7B57F
+0045CD3D add eax, esi # 01F0
+0045CD3F pop esi # 5E
+0045CD40 add eax, 0x67eb1c3b # 053B1CEB67
+0045CD45 add eax, ecx # 01C8
+0045CD47 sub eax, 0x67eb1c3b # 2D3B1CEB67
+0045CD4C sub eax, 0x7fb5e753 # 2D53E7B57F
+0045CD51 push esi # 56
+0045CD52 mov esi, 0x3d7561c5 # BEC561753D
+0045CD57 add esi, 0x65fb9b4a # 81C64A9BFB65
+0045CD5D sub esi, 0x27b496bd # 81EEBD96B427
+0045CD63 not esi # F7D6
+0045CD65 inc esi # 46
+0045CD66 add esi, 0x994b0491 # 81C691044B99
+0045CD6C add eax, esi # 01F0
+0045CD6E pop esi # 5E
+0045CD6F push edi # 57
+0045CD70 mov edi, 0x7bb5c7f1 # BFF1C7B57B
+0045CD75 neg edi # F7DF
+0045CD77 push eax # 50
+0045CD78 mov eax, 0x1dcdafc1 # B8C1AFCD1D
+0045CD7D add eax, 0x5fd4c1c1 # 05C1C1D45F
+0045CD82 dec eax # 48
+0045CD83 add eax, 0x7b339df8 # 05F89D337B
+0045CD88 add eax, 0x777fc400 # 0500C47F77
+0045CD8D sub eax, 0x2964279 # 2D79429602
+0045CD92 and edi, eax # 21C7
+0045CD94 pop eax # 58
+0045CD95 sub edi, 0x970a66dd # 81EFDD660A97
+0045CD9B add eax, edi # 01F8
+0045CD9D pop edi # 5F
+0045CD9E sub esp, 4 # 83EC04
+0045CDA1 mov dword ptr [esp], edi # 893C24
+0045CDA4 push ebp # 55
+0045CDA5 mov ebp, 0x7ffea000 # BD00A0FE7F
+0045CDAA mov edi, ebp # 89EF
+0045CDAC pop ebp # 5D
+0045CDAD not edi # F7D7
+0045CDAF or edi, 0x66657592 # 81CF92756566
+0045CDB5 add edi, 0x7ba74700 # 81C70047A77B
+0045CDBB and edi, 0x3fdf4955 # 81E75549DF3F
+0045CDC1 shr edi, 8 # C1EF08
+0045CDC4 push 0x3dc0e46e # 686EE4C03D
+0045CDC9 mov dword ptr [esp], ebx # 891C24
+0045CDCC mov ebx, 0xffddf44d # BB4DF4DDFF
+0045CDD1 sub edi, 0x5fdf0b81 # 81EF810BDF5F
+0045CDD7 sub edi, 0x6f7fe3e2 # 81EFE2E37F6F
+0045CDDD sub edi, 0x54fe66ab # 81EFAB66FE54
+0045CDE3 add edi, ebx # 01DF
+0045CDE5 add edi, 0x54fe66ab # 81C7AB66FE54
+0045CDEB add edi, 0x6f7fe3e2 # 81C7E2E37F6F
+0045CDF1 push ebp # 55
+0045CDF2 push edx # 52
+0045CDF3 mov edx, 0x6f9614f7 # BAF714966F
+0045CDF8 mov ebp, 0xb68f753 # BD53F7680B
+0045CDFD add ebp, edx # 01D5
+0045CDFF pop edx # 5A
+0045CE00 dec ebp # 4D
+0045CE01 add ebp, 0xe4dfff38 # 81C538FFDFE4
+0045CE07 add edi, ebp # 01EF
+0045CE09 pop ebp # 5D
+0045CE0A push dword ptr [esp] # FF3424
+0045CE0D pop ebx # 5B
+0045CE0E add esp, 4 # 81C404000000
+0045CE14 mov ebx, edi # 89FB
+0045CE16 pop edi # 5F
+0045CE17 push dword ptr [ebp + ebx] # FF741D00
+0045CE1B mov edx, dword ptr [esp] # 8B1424
+0045CE1E push 0x765c3044 # 6844305C76
+0045CE23 mov dword ptr [esp], eax # 890424
+0045CE26 mov eax, esp # 89E0
+0045CE28 add eax, 4 # 0504000000
+0045CE2D push ecx # 51
+0045CE2E push edx # 52
+0045CE2F push 0x66ef2776 # 687627EF66
+0045CE34 mov edx, dword ptr [esp] # 8B1424
+0045CE37 add esp, 4 # 83C404
+0045CE3A sub edx, 0x176158f2 # 81EAF2586117
+0045CE40 mov ecx, edx # 89D1
+0045CE42 pop edx # 5A
+0045CE43 not ecx # F7D1
+0045CE45 sub ecx, 0xffffffff # 81E9FFFFFFFF
+0045CE4B neg ecx # F7D9
+0045CE4D and ecx, 0x79ff8da0 # 81E1A08DFF79
+0045CE53 push edi # 57
+0045CE54 mov edi, 0x6edf3931 # BF3139DF6E
+0045CE59 inc edi # 47
+0045CE5A shr edi, 4 # C1EF04
+0045CE5D shl edi, 4 # C1E704
+0045CE60 push edi # 57
+0045CE61 not dword ptr [esp] # F71424
+0045CE64 pop edi # 5F
+0045CE65 xor edi, 0xca33d026 # 81F726D033CA
+0045CE6B or ecx, edi # 09F9
+0045CE6D pop edi # 5F
+0045CE6E add ecx, 0xa460611b # 81C11B6160A4
+0045CE74 add eax, ecx # 01C8
+0045CE76 pop ecx # 59
+0045CE77 xor eax, dword ptr [esp] # 330424
+0045CE7A xor dword ptr [esp], eax # 310424
+0045CE7D xor eax, dword ptr [esp] # 330424
+0045CE80 mov esp, dword ptr [esp] # 8B2424
+0045CE83 cmp edx, eax # 39C2
+0045CE85 je 0x45d219 # 0F848E030000
+
+Basic Block:[0045C9B6, 0045C9BD], in_edge:[0045C9A8], out_edge:[0045C9A8], merged_bbs:[]
+0045C9B6 pause # F390
+0045C9B8 jmp 0x45c9a8 # E9EBFFFFFF
+
+Basic Block:[0045C9A8, 0045C9B6], in_edge:[0045C9B6,0045C62E], out_edge:[0045C9BD,0045C9B6], merged_bbs:[]
+0045C9A8 xor eax, eax # 31C0
+0045C9AA lock cmpxchg dword ptr [ebp + ebx], ecx # F00FB14C1D00
+0045C9B0 je 0x45c9bd # 0F8407000000
+
+Basic Block:[0045D219, 0045D2DE], in_edge:[0045C9BD], out_edge:[], merged_bbs:[]
+0045D219 push dword ptr [esp + 0x24] # FF742424
+0045D21D mov ebx, dword ptr [esp] # 8B1C24
+0045D220 sub esp, 4 # 83EC04
+0045D223 mov dword ptr [esp], esi # 893424
+0045D226 push esp # 54
+0045D227 pop esi # 5E
+0045D228 add esi, 4 # 81C604000000
+0045D22E sub esp, 4 # 83EC04
+0045D231 mov dword ptr [esp], ebx # 891C24
+0045D234 mov ebx, 4 # BB04000000
+0045D239 add esi, 0x7ffd21c1 # 81C6C121FD7F
+0045D23F add esi, ebx # 01DE
+0045D241 push eax # 50
+0045D242 mov eax, 0x7ffd21c1 # B8C121FD7F
+0045D247 add esi, 0x3e6d68dc # 81C6DC686D3E
+0045D24D sub esi, eax # 29C6
+0045D24F sub esi, 0x3e6d68dc # 81EEDC686D3E
+0045D255 pop eax # 58
+0045D256 pop ebx # 5B
+0045D257 xor esi, dword ptr [esp] # 333424
+0045D25A xor dword ptr [esp], esi # 313424
+0045D25D xor esi, dword ptr [esp] # 333424
+0045D260 mov esp, dword ptr [esp] # 8B2424
+0045D263 shl ebx, 2 # C1E302
+0045D266 push esi # 56
+0045D267 push ebp # 55
+0045D268 push 0x65ffb543 # 6843B5FF65
+0045D26D pop ebp # 5D
+0045D26E push ecx # 51
+0045D26F mov ecx, 0xb8baf5bb # B9BBF5BAB8
+0045D274 add ebp, ecx # 01CD
+0045D276 pop ecx # 59
+0045D277 mov esi, ebp # 89EE
+0045D279 pop ebp # 5D
+0045D27A add eax, esi # 01F0
+0045D27C pop esi # 5E
+0045D27D add eax, 0x5fff094a # 054A09FF5F
+0045D282 push edx # 52
+0045D283 mov edx, 0x3bb960eb # BAEB60B93B
+0045D288 and edx, 0x7fe76713 # 81E21367E77F
+0045D28E push edi # 57
+0045D28F mov edi, 0x3ef6b526 # BF26B5F63E
+0045D294 and edx, edi # 21FA
+0045D296 pop edi # 5F
+0045D297 sub edx, 0xfb439a8d # 81EA8D9A43FB
+0045D29D add eax, edx # 01D0
+0045D29F pop edx # 5A
+0045D2A0 add eax, ebx # 01D8
+0045D2A2 push 0x1e62503f # 683F50621E
+0045D2A7 mov dword ptr [esp], esi # 893424
+0045D2AA mov esi, 0x73e7679a # BE9A67E773
+0045D2AF sub esi, 0x387b2e92 # 81EE922E7B38
+0045D2B5 xor esi, 0x7bd747b # 81F67B74BD07
+0045D2BB xor esi, 0x38dc806 # 81F606C88D03
+0045D2C1 sub eax, esi # 29F0
+0045D2C3 pop esi # 5E
+0045D2C4 push ebx # 53
+0045D2C5 mov ebx, 0x5fff094a # BB4A09FF5F
+0045D2CA add eax, 0x98f6028 # 0528608F09
+0045D2CF sub eax, ebx # 29D8
+0045D2D1 sub eax, 0x98f6028 # 2D28608F09
+0045D2D6 pop ebx # 5B
+0045D2D7 sub eax, 0x1ebaaafe # 2DFEAABA1E
+0045D2DC jmp dword ptr [eax] # FF20
+
+Basic Block:[0045CE8B, 0045CFC2], in_edge:[0045C9BD], out_edge:[0045CFC2], merged_bbs:[], executed
+0045CE8B push eax # 50
+0045CE8C mov dword ptr [esp], 0x2ada0caa # C70424AA0CDA2A
+0045CE93 mov dword ptr [esp], edi # 893C24
+0045CE96 mov dword ptr [esp], eax # 890424
+0045CE99 mov dword ptr [esp], 0x7d77f1f0 # C70424F0F1777D
+0045CEA0 dec dword ptr [esp] # FF0C24
+0045CEA3 or dword ptr [esp], 0x7f7b4be3 # 810C24E34B7B7F
+0045CEAA shl dword ptr [esp], 1 # C1242401
+0045CEAE inc dword ptr [esp] # FF0424
+0045CEB1 push edx # 52
+0045CEB2 mov edx, 0xd2930865 # BA650893D2
+0045CEB7 sub dword ptr [esp + 4], edx # 29542404
+0045CEBB pop edx # 5A
+0045CEBC neg dword ptr [esp] # F71C24
+0045CEBF sub dword ptr [esp], 0x660673e1 # 812C24E1730666
+0045CEC6 push edx # 52
+0045CEC7 mov edx, 0x2532e03 # BA032E5302
+0045CECC add dword ptr [esp + 4], edx # 01542404
+0045CED0 pop edx # 5A
+0045CED1 shl dword ptr [esp], 2 # C1242402
+0045CED5 and dword ptr [esp], 0x7b7ff0b3 # 812424B3F07F7B
+0045CEDC add dword ptr [esp], 0x7fffc5d8 # 810424D8C5FF7F
+0045CEE3 shr dword ptr [esp], 4 # C12C2404
+0045CEE7 not dword ptr [esp] # F71424
+0045CEEA push eax # 50
+0045CEEB mov eax, 0x369ba566 # B866A59B36
+0045CEF0 add dword ptr [esp + 4], 0x6a788d9c # 814424049C8D786A
+0045CEF8 add dword ptr [esp + 4], eax # 01442404
+0045CEFC sub dword ptr [esp + 4], 0x6a788d9c # 816C24049C8D786A
+0045CF04 pop eax # 58
+0045CF05 mov dword ptr [esp], ebx # 891C24
+0045CF08 push 0x380336d4 # 68D4360338
+0045CF0D mov dword ptr [esp], ebx # 891C24
+0045CF10 push esp # 54
+0045CF11 pop ebx # 5B
+0045CF12 add ebx, 4 # 81C304000000
+0045CF18 sub ebx, 4 # 81EB04000000
+0045CF1E xor ebx, dword ptr [esp] # 331C24
+0045CF21 xor dword ptr [esp], ebx # 311C24
+0045CF24 xor ebx, dword ptr [esp] # 331C24
+0045CF27 pop esp # 5C
+0045CF28 mov dword ptr [esp], esi # 893424
+0045CF2B push edx # 52
+0045CF2C mov edx, 0x40fc32d8 # BAD832FC40
+0045CF31 inc edx # 42
+0045CF32 and edx, 0x6fbfbf98 # 81E298BFBF6F
+0045CF38 or edx, 0x3f97e6a3 # 81CAA3E6973F
+0045CF3E and edx, 0x5ffabf9f # 81E29FBFFA5F
+0045CF44 xor edx, 0x5fbab5fb # 81F2FBB5BA5F
+0045CF4A mov esi, edx # 89D6
+0045CF4C pop edx # 5A
+0045CF4D push esi # 56
+0045CF4E mov ebx, dword ptr [esp] # 8B1C24
+0045CF51 push edi # 57
+0045CF52 mov edi, esp # 89E7
+0045CF54 add edi, 4 # 81C704000000
+0045CF5A add edi, 4 # 81C704000000
+0045CF60 xchg dword ptr [esp], edi # 873C24
+0045CF63 pop esp # 5C
+0045CF64 push dword ptr [esp] # FF3424
+0045CF67 pop esi # 5E
+0045CF68 add esp, 4 # 83C404
+0045CF6B shr ebx, 2 # C1EB02
+0045CF6E push ecx # 51
+0045CF6F mov dword ptr [esp], ebx # 891C24
+0045CF72 push 0x6eb4e66b # 686BE6B46E
+0045CF77 mov dword ptr [esp], ecx # 890C24
+0045CF7A mov dword ptr [esp], esi # 893424
+0045CF7D mov dword ptr [esp], 0x6ffaf960 # C7042460F9FA6F
+0045CF84 add dword ptr [esp], 0xc8ea981c # 8104241C98EAC8
+0045CF8B mov dword ptr [esp], ecx # 890C24
+0045CF8E push esi # 56
+0045CF8F mov esi, 0x57fbeb2b # BE2BEBFB57
+0045CF94 xor esi, 0x7ec3c0f1 # 81F6F1C0C37E
+0045CF9A xchg esi, ecx # 87CE
+0045CF9C not ecx # F7D1
+0045CF9E xchg esi, ecx # 87CE
+0045CFA0 add esi, 0x7fb385b0 # 81C6B085B37F
+0045CFA6 dec esi # 4E
+0045CFA7 sub esi, 0x781de693 # 81EE93E61D78
+0045CFAD xor esi, 0xaf47068b # 81F68B0647AF
+0045CFB3 push ebx # 53
+0045CFB4 mov ebx, esi # 89F3
+0045CFB6 mov ecx, ebx # 89D9
+0045CFB8 pop ebx # 5B
+0045CFB9 pop esi # 5E
+0045CFBA mov dword ptr [esp + 4], ecx # 894C2404
+0045CFBE pop ecx # 59
+0045CFBF mov dword ptr [esp], eax # 890424
+
+Basic Block:[0045CFCA, 0045D0DC], in_edge:[0045CFC2], out_edge:[0045CFC2], merged_bbs:[], executed
+0045CFCA push esi # 56
+0045CFCB mov dword ptr [esp], 0x6694fe85 # C7042485FE9466
+0045CFD2 mov dword ptr [esp], edx # 891424
+0045CFD5 sub esp, 4 # 83EC04
+0045CFD8 mov dword ptr [esp], esi # 893424
+0045CFDB mov dword ptr [esp], 0 # C7042400000000
+0045CFE2 push dword ptr [esp] # FF3424
+0045CFE5 mov edx, dword ptr [esp] # 8B1424
+0045CFE8 add esp, 4 # 83C404
+0045CFEB push ecx # 51
+0045CFEC mov ecx, esp # 89E1
+0045CFEE add ecx, 4 # 81C104000000
+0045CFF4 add ecx, 4 # 83C104
+0045CFF7 xchg dword ptr [esp], ecx # 870C24
+0045CFFA pop esp # 5C
+0045CFFB add edx, eax # 01C2
+0045CFFD push ebx # 53
+0045CFFE mov ebx, 0 # BB00000000
+0045D003 add ebx, edx # 01D3
+0045D005 add dword ptr [ebx], ecx # 010B
+0045D007 pop ebx # 5B
+0045D008 mov edx, dword ptr [esp] # 8B1424
+0045D00B add esp, 4 # 81C404000000
+0045D011 push edx # 52
+0045D012 mov edx, 4 # BA04000000
+0045D017 sub eax, 0x2ff118e1 # 2DE118F12F
+0045D01C push edx # 52
+0045D01D mov dword ptr [esp], ecx # 890C24
+0045D020 push 0x79fb557d # 687D55FB79
+0045D025 pop ecx # 59
+0045D026 sub eax, 0x7cfecb3a # 2D3ACBFE7C
+0045D02B sub eax, ecx # 29C8
+0045D02D add eax, 0x7cfecb3a # 053ACBFE7C
+0045D032 pop ecx # 59
+0045D033 add eax, edx # 01D0
+0045D035 add eax, 0x79fb557d # 057D55FB79
+0045D03A add eax, 0x2ff118e1 # 05E118F12F
+0045D03F push dword ptr [esp] # FF3424
+0045D042 mov edx, dword ptr [esp] # 8B1424
+0045D045 add esp, 4 # 81C404000000
+0045D04B push ecx # 51
+0045D04C push esp # 54
+0045D04D pop ecx # 59
+0045D04E add ecx, 4 # 81C104000000
+0045D054 add ecx, 4 # 81C104000000
+0045D05A xchg dword ptr [esp], ecx # 870C24
+0045D05D pop esp # 5C
+0045D05E push ebp # 55
+0045D05F push 0x50965f57 # 68575F9650
+0045D064 mov dword ptr [esp], ebx # 891C24
+0045D067 push eax # 50
+0045D068 mov dword ptr [esp], 0x653f9627 # C7042427963F65
+0045D06F neg dword ptr [esp] # F71C24
+0045D072 xor dword ptr [esp], 0x4fdc83f6 # 813424F683DC4F
+0045D079 xor dword ptr [esp], 0x7f96c5b # 8134245B6CF907
+0045D080 xor dword ptr [esp], 0xb72b09ed # 813424ED092BB7
+0045D087 dec dword ptr [esp] # FF0C24
+0045D08A xor dword ptr [esp], 0x3b9faa4a # 8134244AAA9F3B
+0045D091 neg dword ptr [esp] # F71C24
+0045D094 xor dword ptr [esp], 0x57f63f77 # 813424773FF657
+0045D09B add dword ptr [esp], 0x3b26ace0 # 810424E0AC263B
+0045D0A2 shr dword ptr [esp], 5 # C12C2405
+0045D0A6 xor dword ptr [esp], 0x728c60c1 # 813424C1608C72
+0045D0AD pop ebx # 5B
+0045D0AE add ebx, 0x8cf863b1 # 81C3B163F88C
+0045D0B4 mov ebp, ebx # 89DD
+0045D0B6 pop ebx # 5B
+0045D0B7 sub ebx, ebp # 29EB
+0045D0B9 mov ebp, dword ptr [esp] # 8B2C24
+0045D0BC push ebx # 53
+0045D0BD push 0x76d1d321 # 6821D3D176
+0045D0C2 mov dword ptr [esp], esp # 892424
+0045D0C5 add dword ptr [esp], 4 # 83042404
+0045D0C9 pop ebx # 5B
+0045D0CA add ebx, 4 # 81C304000000
+0045D0D0 add ebx, 4 # 83C304
+0045D0D3 xchg dword ptr [esp], ebx # 871C24
+0045D0D6 pop esp # 5C
+0045D0D7 jmp 0x45cfc2 # E9E6FEFFFF
+
+Basic Block:[0045D0DC, 0045D2DE], in_edge:[0045CFC2], out_edge:[], merged_bbs:[], executed
+0045D0DC push dword ptr [esp] # FF3424
+0045D0DF mov eax, dword ptr [esp] # 8B0424
+0045D0E2 add esp, 4 # 83C404
+0045D0E5 push eax # 50
+0045D0E6 mov eax, esp # 89E0
+0045D0E8 push esi # 56
+0045D0E9 mov dword ptr [esp], ebp # 892C24
+0045D0EC mov ebp, 0x74be3091 # BD9130BE74
+0045D0F1 shr ebp, 1 # C1ED01
+0045D0F4 and ebp, 0x3bedc743 # 81E543C7ED3B
+0045D0FA add ebp, 0x73759507 # 81C507957573
+0045D100 dec ebp # 4D
+0045D101 add ebp, 0x523d6abe # 81C5BE6A3D52
+0045D107 add eax, ebp # 01E8
+0045D109 mov ebp, dword ptr [esp] # 8B2C24
+0045D10C add esp, 4 # 81C404000000
+0045D112 sub esp, 4 # 83EC04
+0045D115 mov dword ptr [esp], edi # 893C24
+0045D118 push eax # 50
+0045D119 push edx # 52
+0045D11A push 0x5f1f000c # 680C001F5F
+0045D11F pop edx # 5A
+0045D120 or edx, 0x75e53b90 # 81CA903BE575
+0045D126 add edx, 0xcfe035a4 # 81C2A435E0CF
+0045D12C mov eax, edx # 89D0
+0045D12E pop edx # 5A
+0045D12F mov edi, 0x102a9695 # BF95962A10
+0045D134 xor edi, eax # 31C7
+0045D136 pop eax # 58
+0045D137 xor edi, 0x5ff5e7d1 # 81F7D1E7F55F
+0045D13D add eax, edi # 01F8
+0045D13F pop edi # 5F
+0045D140 xor eax, dword ptr [esp] # 330424
+0045D143 xor dword ptr [esp], eax # 310424
+0045D146 xor eax, dword ptr [esp] # 330424
+0045D149 pop esp # 5C
+0045D14A push dword ptr [esp] # FF3424
+0045D14D mov ebx, dword ptr [esp] # 8B1C24
+0045D150 push ecx # 51
+0045D151 push esp # 54
+0045D152 mov ecx, dword ptr [esp] # 8B0C24
+0045D155 push esi # 56
+0045D156 mov esi, esp # 89E6
+0045D158 add esi, 4 # 81C604000000
+0045D15E add esi, 4 # 83C604
+0045D161 xchg dword ptr [esp], esi # 873424
+0045D164 pop esp # 5C
+0045D165 add ecx, 4 # 81C104000000
+0045D16B add ecx, 4 # 81C104000000
+0045D171 xchg dword ptr [esp], ecx # 870C24
+0045D174 pop esp # 5C
+0045D175 push ecx # 51
+0045D176 mov ecx, esp # 89E1
+0045D178 add ecx, 4 # 81C104000000
+0045D17E push esi # 56
+0045D17F mov esi, 0x76db802a # BE2A80DB76
+0045D184 xor esi, 0x6e65f37b # 81F67BF3656E
+0045D18A push eax # 50
+0045D18B mov eax, 0x73fd0e9c # B89C0EFD73
+0045D190 shl eax, 4 # C1E004
+0045D193 shl eax, 5 # C1E005
+0045D196 and eax, 0x6fdd9d01 # 25019DDD6F
+0045D19B xor eax, 0x1de21e67 # 35671EE21D
+0045D1A0 shr eax, 7 # C1E807
+0045D1A3 shl eax, 1 # C1E001
+0045D1A6 not eax # F7D0
+0045D1A8 add eax, 0xa5af82a6 # 05A682AFA5
+0045D1AD sub esi, eax # 29C6
+0045D1AF pop eax # 58
+0045D1B0 sub esi, 0x5adb2e00 # 81EE002EDB5A
+0045D1B6 add esi, 0xe5ec4140 # 81C64041ECE5
+0045D1BC add ecx, esi # 01F1
+0045D1BE pop esi # 5E
+0045D1BF xchg dword ptr [esp], ecx # 870C24
+0045D1C2 pop esp # 5C
+0045D1C3 push 0x48895267 # 6867528948
+0045D1C8 mov dword ptr [esp], edi # 893C24
+0045D1CB mov dword ptr [esp], ecx # 890C24
+0045D1CE push edx # 52
+0045D1CF mov edx, ebx # 89DA
+0045D1D1 mov ecx, edx # 89D1
+0045D1D3 push dword ptr [esp] # FF3424
+0045D1D6 push dword ptr [esp] # FF3424
+0045D1D9 pop edx # 5A
+0045D1DA add esp, 4 # 83C404
+0045D1DD push esi # 56
+0045D1DE mov esi, esp # 89E6
+0045D1E0 add esi, 4 # 81C604000000
+0045D1E6 add esi, 4 # 83C604
+0045D1E9 xchg dword ptr [esp], esi # 873424
+0045D1EC pop esp # 5C
+0045D1ED add ecx, 0 # 81C100000000
+0045D1F3 sub ecx, 0x7fbf7934 # 81E93479BF7F
+0045D1F9 add ecx, 0x7fde4cc4 # 81C1C44CDE7F
+0045D1FF add ecx, ebp # 01E9
+0045D201 sub ecx, 0x7fde4cc4 # 81E9C44CDE7F
+0045D207 add ecx, 0x7fbf7934 # 81C13479BF7F
+0045D20D push edx # 52
+0045D20E mov edx, 0 # BA00000000
+0045D213 add edx, ecx # 01CA
+0045D215 mov dword ptr [edx], eax # 8902
+0045D217 pop edx # 5A
+0045D218 pop ecx # 59
+
+Basic Block:[0045CFC2, 0045CFCA], in_edge:[0045CFCA,0045CE8B], out_edge:[0045CFCA,0045D0DC], merged_bbs:[], executed
+0045CFC2 test ebx, ebx # 85DB
+0045CFC4 je 0x45d0dc # 0F8412010000
+

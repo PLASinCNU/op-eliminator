@@ -1,0 +1,3306 @@
+0;1301046;\xe9\x55\x11\x00\x00;jmp 0x13021a0
+1;13021a0;\x55;push ebp
+2;13021a1;\x8b\xec;mov ebp, esp
+3;13021a3;\xe8\xd8\xfc\xff\xff;call 0x1301e80
+4;1301e80;\x55;push ebp
+5;1301e81;\x8b\xec;mov ebp, esp
+6;1301e83;\xe8\x6c\xf3\xff\xff;call 0x13011f4
+7;13011f4;\xe9\x97\x22\x00\x00;jmp 0x1303490
+8;1303490;\x55;push ebp
+9;1303491;\x8b\xec;mov ebp, esp
+10;1303493;\x83\xec\x14;sub esp, 0x14
+11;1303496;\xc7\x45\xf4\x00\x00\x00\x00;mov dword ptr [ebp-0xc], 0x0
+12;130349d;\xc7\x45\xf8\x00\x00\x00\x00;mov dword ptr [ebp-0x8], 0x0
+13;13034a4;\x81\x3d\x24\x90\x30\x01\x4e\xe6\x40\xbb;cmp dword ptr [0x1309024], 0xbb40e64e
+14;13034ae;\x74\x1f;jz 0x13034cf
+15;13034b0;\xa1\x24\x90\x30\x01;mov eax, dword ptr [0x1309024]
+16;13034b5;\x25\x00\x00\xff\xff;and eax, 0xffff0000
+17;13034ba;\x74\x13;jz 0x13034cf
+18;13034bc;\x8b\x0d\x24\x90\x30\x01;mov ecx, dword ptr [0x1309024]
+19;13034c2;\xf7\xd1;not ecx
+20;13034c4;\x89\x0d\x20\x90\x30\x01;mov dword ptr [0x1309020], ecx
+21;13034ca;\xe9\x9a\x00\x00\x00;jmp 0x1303569
+22;1303569;\x8b\xe5;mov esp, ebp
+23;130356b;\x5d;pop ebp
+24;130356c;\xc3;ret 
+25;1301e88;\xe8\x13\x00\x00\x00;call 0x1301ea0
+26;1301ea0;\x55;push ebp
+27;1301ea1;\x8b\xec;mov ebp, esp
+28;1301ea3;\x6a\xfe;push 0xfffffffe
+29;1301ea5;\x68\x88\x7e\x30\x01;push 0x1307e88
+30;1301eaa;\x68\x50\x3b\x30\x01;push 0x1303b50
+31;1301eaf;\x64\xa1\x00\x00\x00\x00;mov eax, dword ptr fs:[0x0]
+32;1301eb5;\x50;push eax
+33;1301eb6;\x83\xc4\xd0;add esp, 0xffffffd0
+34;1301eb9;\x53;push ebx
+35;1301eba;\x56;push esi
+36;1301ebb;\x57;push edi
+37;1301ebc;\xa1\x24\x90\x30\x01;mov eax, dword ptr [0x1309024]
+38;1301ec1;\x31\x45\xf8;xor dword ptr [ebp-0x8], eax
+39;1301ec4;\x33\xc5;xor eax, ebp
+40;1301ec6;\x50;push eax
+41;1301ec7;\x8d\x45\xf0;lea eax, ptr [ebp-0x10]
+42;1301eca;\x64\xa3\x00\x00\x00\x00;mov dword ptr fs:[0x0], eax
+43;1301ed0;\x89\x65\xe8;mov dword ptr [ebp-0x18], esp
+44;1301ed3;\x6a\x01;push 0x1
+45;1301ed5;\xe8\xa6\xf3\xff\xff;call 0x1301280
+46;1301280;\xe9\x7b\x1d\x00\x00;jmp 0x1303000
+47;1303000;\x55;push ebp
+48;1303001;\x8b\xec;mov ebp, esp
+49;1303003;\x83\x7d\x08\x00;cmp dword ptr [ebp+0x8], 0x0
+50;1303007;\x75\x07;jnz 0x1303010
+51;1303010;\xe8\xf4\xe0\xff\xff;call 0x1301109
+52;1301109;\xe9\x82\x34\x00\x00;jmp 0x1304590
+53;1304590;\x55;push ebp
+54;1304591;\x8b\xec;mov ebp, esp
+55;1304593;\x83\xec\x40;sub esp, 0x40
+56;1304596;\xa1\x24\x90\x30\x01;mov eax, dword ptr [0x1309024]
+57;130459b;\x33\xc5;xor eax, ebp
+58;130459d;\x89\x45\xfc;mov dword ptr [ebp-0x4], eax
+59;13045a0;\x53;push ebx
+60;13045a1;\x56;push esi
+61;13045a2;\xc7\x05\xa8\x91\x30\x01\x00\x00\x00\x00;mov dword ptr [0x13091a8], 0x0
+62;13045ac;\xa1\x2c\x90\x30\x01;mov eax, dword ptr [0x130902c]
+63;13045b1;\x83\xc8\x01;or eax, 0x1
+64;13045b4;\xa3\x2c\x90\x30\x01;mov dword ptr [0x130902c], eax
+65;13045b9;\x6a\x0a;push 0xa
+66;13045bb;\xe8\x33\xcd\xff\xff;call 0x13012f3
+67;13012f3;\xe9\xfa\x3b\x00\x00;jmp 0x1304ef2
+68;1304ef2;\xff\x25\x40\xa0\x30\x01;jmp dword ptr [0x130a040]
+69;13045c0;\x85\xc0;test eax, eax
+70;13045c2;\x75\x07;jnz 0x13045cb
+71;13045cb;\xc7\x45\xf0\x00\x00\x00\x00;mov dword ptr [ebp-0x10], 0x0
+72;13045d2;\xc7\x45\xf4\x00\x00\x00\x00;mov dword ptr [ebp-0xc], 0x0
+73;13045d9;\xc7\x45\xf8\x00\x00\x00\x00;mov dword ptr [ebp-0x8], 0x0
+74;13045e0;\xc7\x05\xa8\x91\x30\x01\x01\x00\x00\x00;mov dword ptr [0x13091a8], 0x1
+75;13045ea;\x8b\x0d\x2c\x90\x30\x01;mov ecx, dword ptr [0x130902c]
+76;13045f0;\x83\xc9\x02;or ecx, 0x2
+77;13045f3;\x89\x0d\x2c\x90\x30\x01;mov dword ptr [0x130902c], ecx
+78;13045f9;\x8d\x75\xe0;lea esi, ptr [ebp-0x20]
+79;13045fc;\x33\xc0;xor eax, eax
+80;13045fe;\x33\xc9;xor ecx, ecx
+82;1304602;\x89\x06;mov dword ptr [esi], eax
+83;1304604;\x89\x5e\x04;mov dword ptr [esi+0x4], ebx
+84;1304607;\x89\x4e\x08;mov dword ptr [esi+0x8], ecx
+85;130460a;\x89\x56\x0c;mov dword ptr [esi+0xc], edx
+86;130460d;\xba\x04\x00\x00\x00;mov edx, 0x4
+87;1304612;\x6b\xc2\x00;imul eax, edx, 0x0
+88;1304615;\x8b\x4c\x05\xe0;mov ecx, dword ptr [ebp+eax*1-0x20]
+89;1304619;\x89\x4d\xd0;mov dword ptr [ebp-0x30], ecx
+90;130461c;\xba\x04\x00\x00\x00;mov edx, 0x4
+91;1304621;\xc1\xe2\x00;shl edx, 0x0
+92;1304624;\x8b\x44\x15\xe0;mov eax, dword ptr [ebp+edx*1-0x20]
+93;1304628;\x35\x47\x65\x6e\x75;xor eax, 0x756e6547
+94;130462d;\xb9\x04\x00\x00\x00;mov ecx, 0x4
+95;1304632;\x6b\xd1\x03;imul edx, ecx, 0x3
+96;1304635;\x8b\x4c\x15\xe0;mov ecx, dword ptr [ebp+edx*1-0x20]
+97;1304639;\x81\xf1\x69\x6e\x65\x49;xor ecx, 0x49656e69
+98;130463f;\x0b\xc1;or eax, ecx
+99;1304641;\xba\x04\x00\x00\x00;mov edx, 0x4
+100;1304646;\xd1\xe2;shl edx, 0x1
+101;1304648;\x8b\x4c\x15\xe0;mov ecx, dword ptr [ebp+edx*1-0x20]
+102;130464c;\x81\xf1\x6e\x74\x65\x6c;xor ecx, 0x6c65746e
+103;1304652;\x0b\xc1;or eax, ecx
+104;1304654;\x75\x09;jnz 0x130465f
+105;1304656;\xc7\x45\xd4\x01\x00\x00\x00;mov dword ptr [ebp-0x2c], 0x1
+106;130465d;\xeb\x07;jmp 0x1304666
+107;1304666;\x8a\x55\xd4;mov dl, byte ptr [ebp-0x2c]
+108;1304669;\x88\x55\xdf;mov byte ptr [ebp-0x21], dl
+109;130466c;\x8d\x75\xe0;lea esi, ptr [ebp-0x20]
+110;130466f;\xb8\x01\x00\x00\x00;mov eax, 0x1
+111;1304674;\x33\xc9;xor ecx, ecx
+113;1304678;\x89\x06;mov dword ptr [esi], eax
+114;130467a;\x89\x5e\x04;mov dword ptr [esi+0x4], ebx
+115;130467d;\x89\x4e\x08;mov dword ptr [esi+0x8], ecx
+116;1304680;\x89\x56\x0c;mov dword ptr [esi+0xc], edx
+117;1304683;\xb8\x04\x00\x00\x00;mov eax, 0x4
+118;1304688;\x6b\xc8\x00;imul ecx, eax, 0x0
+119;130468b;\x8b\x54\x0d\xe0;mov edx, dword ptr [ebp+ecx*1-0x20]
+120;130468f;\x89\x55\xd8;mov dword ptr [ebp-0x28], edx
+121;1304692;\x0f\xb6\x45\xdf;movzx eax, byte ptr [ebp-0x21]
+122;1304696;\x85\xc0;test eax, eax
+123;1304698;\x74\x71;jz 0x130470b
+124;130469a;\x8b\x4d\xd8;mov ecx, dword ptr [ebp-0x28]
+125;130469d;\x81\xe1\xf0\x3f\xff\x0f;and ecx, 0xfff3ff0
+126;13046a3;\x81\xf9\xc0\x06\x01\x00;cmp ecx, 0x106c0
+127;13046a9;\x74\x51;jz 0x13046fc
+128;13046ab;\x8b\x55\xd8;mov edx, dword ptr [ebp-0x28]
+129;13046ae;\x81\xe2\xf0\x3f\xff\x0f;and edx, 0xfff3ff0
+130;13046b4;\x81\xfa\x60\x06\x02\x00;cmp edx, 0x20660
+131;13046ba;\x74\x40;jz 0x13046fc
+132;13046bc;\x8b\x45\xd8;mov eax, dword ptr [ebp-0x28]
+133;13046bf;\x25\xf0\x3f\xff\x0f;and eax, 0xfff3ff0
+134;13046c4;\x3d\x70\x06\x02\x00;cmp eax, 0x20670
+135;13046c9;\x74\x31;jz 0x13046fc
+136;13046cb;\x8b\x4d\xd8;mov ecx, dword ptr [ebp-0x28]
+137;13046ce;\x81\xe1\xf0\x3f\xff\x0f;and ecx, 0xfff3ff0
+138;13046d4;\x81\xf9\x50\x06\x03\x00;cmp ecx, 0x30650
+139;13046da;\x74\x20;jz 0x13046fc
+140;13046dc;\x8b\x55\xd8;mov edx, dword ptr [ebp-0x28]
+141;13046df;\x81\xe2\xf0\x3f\xff\x0f;and edx, 0xfff3ff0
+142;13046e5;\x81\xfa\x60\x06\x03\x00;cmp edx, 0x30660
+143;13046eb;\x74\x0f;jz 0x13046fc
+144;13046ed;\x8b\x45\xd8;mov eax, dword ptr [ebp-0x28]
+145;13046f0;\x25\xf0\x3f\xff\x0f;and eax, 0xfff3ff0
+146;13046f5;\x3d\x70\x06\x03\x00;cmp eax, 0x30670
+147;13046fa;\x75\x0f;jnz 0x130470b
+148;130470b;\xba\x04\x00\x00\x00;mov edx, 0x4
+149;1304710;\x6b\xc2\x03;imul eax, edx, 0x3
+150;1304713;\xb9\x04\x00\x00\x00;mov ecx, 0x4
+151;1304718;\x6b\xd1\x00;imul edx, ecx, 0x0
+152;130471b;\x8b\x44\x05\xe0;mov eax, dword ptr [ebp+eax*1-0x20]
+153;130471f;\x89\x44\x15\xf0;mov dword ptr [ebp+edx*1-0x10], eax
+154;1304723;\xb9\x04\x00\x00\x00;mov ecx, 0x4
+155;1304728;\xd1\xe1;shl ecx, 0x1
+156;130472a;\xba\x04\x00\x00\x00;mov edx, 0x4
+157;130472f;\xc1\xe2\x00;shl edx, 0x0
+158;1304732;\x8b\x44\x0d\xe0;mov eax, dword ptr [ebp+ecx*1-0x20]
+159;1304736;\x89\x44\x15\xf0;mov dword ptr [ebp+edx*1-0x10], eax
+160;130473a;\x83\x7d\xd0\x07;cmp dword ptr [ebp-0x30], 0x7
+161;130473e;\x7c\x4f;jl 0x130478f
+162;1304740;\x8d\x75\xe0;lea esi, ptr [ebp-0x20]
+163;1304743;\xb8\x07\x00\x00\x00;mov eax, 0x7
+164;1304748;\x33\xc9;xor ecx, ecx
+166;130474c;\x89\x06;mov dword ptr [esi], eax
+167;130474e;\x89\x5e\x04;mov dword ptr [esi+0x4], ebx
+168;1304751;\x89\x4e\x08;mov dword ptr [esi+0x8], ecx
+169;1304754;\x89\x56\x0c;mov dword ptr [esi+0xc], edx
+170;1304757;\xb9\x04\x00\x00\x00;mov ecx, 0x4
+171;130475c;\xc1\xe1\x00;shl ecx, 0x0
+172;130475f;\xba\x04\x00\x00\x00;mov edx, 0x4
+173;1304764;\xd1\xe2;shl edx, 0x1
+174;1304766;\x8b\x44\x0d\xe0;mov eax, dword ptr [ebp+ecx*1-0x20]
+175;130476a;\x89\x44\x15\xf0;mov dword ptr [ebp+edx*1-0x10], eax
+176;130476e;\xb9\x04\x00\x00\x00;mov ecx, 0x4
+177;1304773;\xc1\xe1\x00;shl ecx, 0x0
+178;1304776;\x8b\x54\x0d\xe0;mov edx, dword ptr [ebp+ecx*1-0x20]
+179;130477a;\x81\xe2\x00\x02\x00\x00;and edx, 0x200
+180;1304780;\x74\x0d;jz 0x130478f
+181;1304782;\xa1\xac\x91\x30\x01;mov eax, dword ptr [0x13091ac]
+182;1304787;\x83\xc8\x02;or eax, 0x2
+183;130478a;\xa3\xac\x91\x30\x01;mov dword ptr [0x13091ac], eax
+184;130478f;\xb9\x04\x00\x00\x00;mov ecx, 0x4
+185;1304794;\xc1\xe1\x00;shl ecx, 0x0
+186;1304797;\x8b\x54\x0d\xf0;mov edx, dword ptr [ebp+ecx*1-0x10]
+187;130479b;\x81\xe2\x00\x00\x10\x00;and edx, 0x100000
+188;13047a1;\x0f\x84\xaa\x00\x00\x00;jz 0x1304851
+189;13047a7;\xc7\x05\xa8\x91\x30\x01\x02\x00\x00\x00;mov dword ptr [0x13091a8], 0x2
+190;13047b1;\xa1\x2c\x90\x30\x01;mov eax, dword ptr [0x130902c]
+191;13047b6;\x83\xc8\x04;or eax, 0x4
+192;13047b9;\xa3\x2c\x90\x30\x01;mov dword ptr [0x130902c], eax
+193;13047be;\xb9\x04\x00\x00\x00;mov ecx, 0x4
+194;13047c3;\xc1\xe1\x00;shl ecx, 0x0
+195;13047c6;\x8b\x54\x0d\xf0;mov edx, dword ptr [ebp+ecx*1-0x10]
+196;13047ca;\x81\xe2\x00\x00\x00\x08;and edx, 0x8000000
+197;13047d0;\x74\x7f;jz 0x1304851
+198;13047d2;\xb8\x04\x00\x00\x00;mov eax, 0x4
+199;13047d7;\xc1\xe0\x00;shl eax, 0x0
+200;13047da;\x8b\x4c\x05\xf0;mov ecx, dword ptr [ebp+eax*1-0x10]
+201;13047de;\x81\xe1\x00\x00\x00\x10;and ecx, 0x10000000
+202;13047e4;\x74\x6b;jz 0x1304851
+203;13047e6;\x33\xc9;xor ecx, ecx
+205;13047eb;\x89\x45\xc8;mov dword ptr [ebp-0x38], eax
+206;13047ee;\x89\x55\xcc;mov dword ptr [ebp-0x34], edx
+207;13047f1;\x8b\x55\xc8;mov edx, dword ptr [ebp-0x38]
+208;13047f4;\x8b\x45\xcc;mov eax, dword ptr [ebp-0x34]
+209;13047f7;\x83\xe2\x06;and edx, 0x6
+210;13047fa;\x83\xe0\x00;and eax, 0x0
+211;13047fd;\x89\x55\xc0;mov dword ptr [ebp-0x40], edx
+212;1304800;\x89\x45\xc4;mov dword ptr [ebp-0x3c], eax
+213;1304803;\x83\x7d\xc0\x06;cmp dword ptr [ebp-0x40], 0x6
+214;1304807;\x75\x48;jnz 0x1304851
+215;1304809;\x83\x7d\xc4\x00;cmp dword ptr [ebp-0x3c], 0x0
+216;130480d;\x75\x42;jnz 0x1304851
+217;130480f;\xc7\x05\xa8\x91\x30\x01\x03\x00\x00\x00;mov dword ptr [0x13091a8], 0x3
+218;1304819;\x8b\x0d\x2c\x90\x30\x01;mov ecx, dword ptr [0x130902c]
+219;130481f;\x83\xc9\x08;or ecx, 0x8
+220;1304822;\x89\x0d\x2c\x90\x30\x01;mov dword ptr [0x130902c], ecx
+221;1304828;\xba\x04\x00\x00\x00;mov edx, 0x4
+222;130482d;\xd1\xe2;shl edx, 0x1
+223;130482f;\x8b\x44\x15\xf0;mov eax, dword ptr [ebp+edx*1-0x10]
+224;1304833;\x83\xe0\x20;and eax, 0x20
+225;1304836;\x74\x19;jz 0x1304851
+226;1304838;\xc7\x05\xa8\x91\x30\x01\x05\x00\x00\x00;mov dword ptr [0x13091a8], 0x5
+227;1304842;\x8b\x0d\x2c\x90\x30\x01;mov ecx, dword ptr [0x130902c]
+228;1304848;\x83\xc9\x20;or ecx, 0x20
+229;130484b;\x89\x0d\x2c\x90\x30\x01;mov dword ptr [0x130902c], ecx
+230;1304851;\x33\xc0;xor eax, eax
+231;1304853;\x5e;pop esi
+232;1304854;\x5b;pop ebx
+233;1304855;\x8b\x4d\xfc;mov ecx, dword ptr [ebp-0x4]
+234;1304858;\x33\xcd;xor ecx, ebp
+235;130485a;\xe8\x12\xca\xff\xff;call 0x1301271
+236;1301271;\xe9\xfa\x32\x00\x00;jmp 0x1304570
+237;1304570;\x3b\x0d\x24\x90\x30\x01;cmp ecx, dword ptr [0x1309024]
+238;1304576;\xf2\x75\x02;bnd jnz 0x130457b
+239;1304579;\xf2\xc3;bnd ret 
+240;130485f;\x8b\xe5;mov esp, ebp
+241;1304861;\x5d;pop ebp
+242;1304862;\xc3;ret 
+243;1303015;\xe8\xfd\xe1\xff\xff;call 0x1301217
+244;1301217;\xe9\x24\x3d\x00\x00;jmp 0x1304f40
+245;1304f40;\x55;push ebp
+246;1304f41;\x8b\xec;mov ebp, esp
+247;1304f43;\xb0\x01;mov al, 0x1
+248;1304f45;\x5d;pop ebp
+249;1304f46;\xc3;ret 
+250;130301a;\x0f\xb6\xc0;movzx eax, al
+251;130301d;\x85\xc0;test eax, eax
+252;130301f;\x75\x04;jnz 0x1303025
+253;1303025;\xe8\xf9\xdf\xff\xff;call 0x1301023
+254;1301023;\xe9\x18\x3f\x00\x00;jmp 0x1304f40
+255;1304f40;\x55;push ebp
+256;1304f41;\x8b\xec;mov ebp, esp
+257;1304f43;\xb0\x01;mov al, 0x1
+258;1304f45;\x5d;pop ebp
+259;1304f46;\xc3;ret 
+260;130302a;\x0f\xb6\xc8;movzx ecx, al
+261;130302d;\x85\xc9;test ecx, ecx
+262;130302f;\x75\x0e;jnz 0x130303f
+263;130303f;\xb0\x01;mov al, 0x1
+264;1303041;\x5d;pop ebp
+265;1303042;\xc3;ret 
+266;1301eda;\x83\xc4\x04;add esp, 0x4
+267;1301edd;\x0f\xb6\xc0;movzx eax, al
+268;1301ee0;\x85\xc0;test eax, eax
+269;1301ee2;\x75\x07;jnz 0x1301eeb
+270;1301eeb;\xc6\x45\xe7\x00;mov byte ptr [ebp-0x19], 0x0
+271;1301eef;\xc7\x45\xfc\x00\x00\x00\x00;mov dword ptr [ebp-0x4], 0x0
+272;1301ef6;\xe8\x1b\xf4\xff\xff;call 0x1301316
+273;1301316;\xe9\xf5\x1a\x00\x00;jmp 0x1302e10
+274;1302e10;\x55;push ebp
+275;1302e11;\x8b\xec;mov ebp, esp
+276;1302e13;\x83\xec\x08;sub esp, 0x8
+277;1302e16;\xe8\x44\xe2\xff\xff;call 0x130105f
+278;130105f;\xe9\xbc\x38\x00\x00;jmp 0x1304920
+279;1304920;\x55;push ebp
+280;1304921;\x8b\xec;mov ebp, esp
+281;1304923;\x51;push ecx
+282;1304924;\x83\x3d\x30\x90\x30\x01\x00;cmp dword ptr [0x1309030], 0x0
+283;130492b;\x74\x09;jz 0x1304936
+284;130492d;\xc7\x45\xfc\x01\x00\x00\x00;mov dword ptr [ebp-0x4], 0x1
+285;1304934;\xeb\x07;jmp 0x130493d
+286;130493d;\x8b\x45\xfc;mov eax, dword ptr [ebp-0x4]
+287;1304940;\x8b\xe5;mov esp, ebp
+288;1304942;\x5d;pop ebp
+289;1304943;\xc3;ret 
+290;1302e1b;\x85\xc0;test eax, eax
+291;1302e1d;\x75\x04;jnz 0x1302e23
+292;1302e23;\xe8\x41\xe2\xff\xff;call 0x1301069
+293;1301069;\xe9\x92\x1d\x00\x00;jmp 0x1302e00
+294;1302e00;\x55;push ebp
+295;1302e01;\x8b\xec;mov ebp, esp
+296;1302e03;\x64\xa1\x18\x00\x00\x00;mov eax, dword ptr fs:[0x18]
+297;1302e09;\x5d;pop ebp
+298;1302e0a;\xc3;ret 
+299;1302e28;\x8b\x40\x04;mov eax, dword ptr [eax+0x4]
+300;1302e2b;\x89\x45\xfc;mov dword ptr [ebp-0x4], eax
+301;1302e2e;\x8b\x4d\xfc;mov ecx, dword ptr [ebp-0x4]
+302;1302e31;\xba\x5c\x91\x30\x01;mov edx, 0x130915c
+303;1302e36;\x33\xc0;xor eax, eax
+304;1302e38;\xf0\x0f\xb1\x0a;lock cmpxchg dword ptr [edx], ecx
+305;1302e3c;\x89\x45\xf8;mov dword ptr [ebp-0x8], eax
+306;1302e3f;\x83\x7d\xf8\x00;cmp dword ptr [ebp-0x8], 0x0
+307;1302e43;\x74\x0e;jz 0x1302e53
+308;1302e53;\x32\xc0;xor al, al
+309;1302e55;\x8b\xe5;mov esp, ebp
+310;1302e57;\x5d;pop ebp
+311;1302e58;\xc3;ret 
+312;1301efb;\x88\x45\xe6;mov byte ptr [ebp-0x1a], al
+313;1301efe;\x83\x3d\x58\x91\x30\x01\x01;cmp dword ptr [0x1309158], 0x1
+314;1301f05;\x75\x09;jnz 0x1301f10
+315;1301f10;\x83\x3d\x58\x91\x30\x01\x00;cmp dword ptr [0x1309158], 0x0
+316;1301f17;\x75\x54;jnz 0x1301f6d
+317;1301f19;\xc7\x05\x58\x91\x30\x01\x01\x00\x00\x00;mov dword ptr [0x1309158], 0x1
+318;1301f23;\x68\x18\x66\x30\x01;push 0x1306618
+319;1301f28;\x68\x0c\x63\x30\x01;push 0x130630c
+320;1301f2d;\xe8\x55\xf1\xff\xff;call 0x1301087
+321;1301087;\xe9\x8e\x3d\x00\x00;jmp 0x1304e1a
+322;1304e1a;\xff\x25\x38\xa1\x30\x01;jmp dword ptr [0x130a138]
+323;1301d60;\x55;push ebp
+324;1301d61;\x8b\xec;mov ebp, esp
+325;1301d63;\x56;push esi
+326;1301d64;\xe8\x3c\xf3\xff\xff;call 0x13010a5
+327;13010a5;\xe9\xa6\x10\x00\x00;jmp 0x1302150
+328;1302150;\x55;push ebp
+329;1302151;\x8b\xec;mov ebp, esp
+330;1302153;\xb8\x01\x00\x00\x00;mov eax, 0x1
+331;1302158;\x5d;pop ebp
+332;1302159;\xc3;ret 
+333;1301d69;\x50;push eax
+334;1301d6a;\xe8\x49\xf4\xff\xff;call 0x13011b8
+335;13011b8;\xe9\x39\x3c\x00\x00;jmp 0x1304df6
+336;1304df6;\xff\x25\x50\xa1\x30\x01;jmp dword ptr [0x130a150]
+337;1301d6f;\x83\xc4\x04;add esp, 0x4
+338;1301d72;\xe8\xd1\xf5\xff\xff;call 0x1301348
+339;1301348;\xe9\x93\x22\x00\x00;jmp 0x13035e0
+340;13035e0;\x55;push ebp
+341;13035e1;\x8b\xec;mov ebp, esp
+342;13035e3;\xb8\x00\x40\x00\x00;mov eax, 0x4000
+343;13035e8;\x5d;pop ebp
+344;13035e9;\xc3;ret 
+345;1301d77;\x50;push eax
+346;1301d78;\xe8\x69\xf3\xff\xff;call 0x13010e6
+347;13010e6;\xe9\x41\x3d\x00\x00;jmp 0x1304e2c
+348;1304e2c;\xff\x25\x2c\xa1\x30\x01;jmp dword ptr [0x130a12c]
+349;1301d7d;\x83\xc4\x04;add esp, 0x4
+350;1301d80;\xe8\xe9\xf2\xff\xff;call 0x130106e
+351;130106e;\xe9\x5d\x25\x00\x00;jmp 0x13035d0
+352;13035d0;\x55;push ebp
+353;13035d1;\x8b\xec;mov ebp, esp
+354;13035d3;\x33\xc0;xor eax, eax
+355;13035d5;\x5d;pop ebp
+356;13035d6;\xc3;ret 
+357;1301d85;\x8b\xf0;mov esi, eax
+358;1301d87;\xe8\x73\xf3\xff\xff;call 0x13010ff
+359;13010ff;\xe9\x58\x3d\x00\x00;jmp 0x1304e5c
+360;1304e5c;\xff\x25\xec\xa0\x30\x01;jmp dword ptr [0x130a0ec]
+361;1301d8c;\x89\x30;mov dword ptr [eax], esi
+362;1301d8e;\x6a\x01;push 0x1
+363;1301d90;\xe8\x87\xf4\xff\xff;call 0x130121c
+364;130121c;\xe9\x3f\x1e\x00\x00;jmp 0x1303060
+365;1303060;\x55;push ebp
+366;1303061;\x8b\xec;mov ebp, esp
+367;1303063;\x83\xec\x1c;sub esp, 0x1c
+368;1303066;\x83\x7d\x08\x00;cmp dword ptr [ebp+0x8], 0x0
+369;130306a;\x74\x0d;jz 0x1303079
+370;130306c;\x83\x7d\x08\x01;cmp dword ptr [ebp+0x8], 0x1
+371;1303070;\x74\x07;jz 0x1303079
+372;1303079;\xe8\xe1\xdf\xff\xff;call 0x130105f
+373;130105f;\xe9\xbc\x38\x00\x00;jmp 0x1304920
+374;1304920;\x55;push ebp
+375;1304921;\x8b\xec;mov ebp, esp
+376;1304923;\x51;push ecx
+377;1304924;\x83\x3d\x30\x90\x30\x01\x00;cmp dword ptr [0x1309030], 0x0
+378;130492b;\x74\x09;jz 0x1304936
+379;130492d;\xc7\x45\xfc\x01\x00\x00\x00;mov dword ptr [ebp-0x4], 0x1
+380;1304934;\xeb\x07;jmp 0x130493d
+381;130493d;\x8b\x45\xfc;mov eax, dword ptr [ebp-0x4]
+382;1304940;\x8b\xe5;mov esp, ebp
+383;1304942;\x5d;pop ebp
+384;1304943;\xc3;ret 
+385;130307e;\x85\xc0;test eax, eax
+386;1303080;\x74\x39;jz 0x13030bb
+387;1303082;\x83\x7d\x08\x00;cmp dword ptr [ebp+0x8], 0x0
+388;1303086;\x75\x33;jnz 0x13030bb
+389;13030bb;\x6a\xff;push 0xffffffff
+390;13030bd;\xe8\x2c\xe2\xff\xff;call 0x13012ee
+391;13012ee;\xe9\x7d\x19\x00\x00;jmp 0x1302c70
+392;1302c70;\x55;push ebp
+393;1302c71;\x8b\xec;mov ebp, esp
+394;1302c73;\xa1\x24\x90\x30\x01;mov eax, dword ptr [0x1309024]
+395;1302c78;\x33\xd2;xor edx, edx
+396;1302c7a;\xb9\x20\x00\x00\x00;mov ecx, 0x20
+397;1302c7f;\xf7\xf1;div ecx
+398;1302c81;\xb8\x20\x00\x00\x00;mov eax, 0x20
+399;1302c86;\x2b\xc2;sub eax, edx
+400;1302c88;\x50;push eax
+401;1302c89;\x8b\x4d\x08;mov ecx, dword ptr [ebp+0x8]
+402;1302c8c;\x51;push ecx
+403;1302c8d;\xe8\x03\xe5\xff\xff;call 0x1301195
+404;1301195;\xe9\x16\x1b\x00\x00;jmp 0x1302cb0
+405;1302cb0;\x55;push ebp
+406;1302cb1;\x8b\xec;mov ebp, esp
+407;1302cb3;\x8b\x45\x08;mov eax, dword ptr [ebp+0x8]
+408;1302cb6;\x8b\x4d\x0c;mov ecx, dword ptr [ebp+0xc]
+409;1302cb9;\xd3\xc8;ror eax, cl
+410;1302cbb;\x5d;pop ebp
+411;1302cbc;\xc3;ret 
+412;1302c92;\x83\xc4\x08;add esp, 0x8
+413;1302c95;\x33\x05\x24\x90\x30\x01;xor eax, dword ptr [0x1309024]
+414;1302c9b;\x5d;pop ebp
+415;1302c9c;\xc3;ret 
+416;13030c2;\x83\xc4\x04;add esp, 0x4
+417;13030c5;\x89\x45\xfc;mov dword ptr [ebp-0x4], eax
+418;13030c8;\x8b\x45\xfc;mov eax, dword ptr [ebp-0x4]
+419;13030cb;\x89\x45\xf0;mov dword ptr [ebp-0x10], eax
+420;13030ce;\x8b\x4d\xfc;mov ecx, dword ptr [ebp-0x4]
+421;13030d1;\x89\x4d\xf4;mov dword ptr [ebp-0xc], ecx
+422;13030d4;\x8b\x55\xfc;mov edx, dword ptr [ebp-0x4]
+423;13030d7;\x89\x55\xf8;mov dword ptr [ebp-0x8], edx
+424;13030da;\x8b\x45\xf0;mov eax, dword ptr [ebp-0x10]
+425;13030dd;\xa3\x60\x91\x30\x01;mov dword ptr [0x1309160], eax
+426;13030e2;\x8b\x4d\xf4;mov ecx, dword ptr [ebp-0xc]
+427;13030e5;\x89\x0d\x64\x91\x30\x01;mov dword ptr [0x1309164], ecx
+428;13030eb;\x8b\x55\xf8;mov edx, dword ptr [ebp-0x8]
+429;13030ee;\x89\x15\x68\x91\x30\x01;mov dword ptr [0x1309168], edx
+430;13030f4;\x8b\x45\xfc;mov eax, dword ptr [ebp-0x4]
+431;13030f7;\x89\x45\xe4;mov dword ptr [ebp-0x1c], eax
+432;13030fa;\x8b\x4d\xfc;mov ecx, dword ptr [ebp-0x4]
+433;13030fd;\x89\x4d\xe8;mov dword ptr [ebp-0x18], ecx
+434;1303100;\x8b\x55\xfc;mov edx, dword ptr [ebp-0x4]
+435;1303103;\x89\x55\xec;mov dword ptr [ebp-0x14], edx
+436;1303106;\x8b\x45\xe4;mov eax, dword ptr [ebp-0x1c]
+437;1303109;\xa3\x6c\x91\x30\x01;mov dword ptr [0x130916c], eax
+438;130310e;\x8b\x4d\xe8;mov ecx, dword ptr [ebp-0x18]
+439;1303111;\x89\x0d\x70\x91\x30\x01;mov dword ptr [0x1309170], ecx
+440;1303117;\x8b\x55\xec;mov edx, dword ptr [ebp-0x14]
+441;130311a;\x89\x15\x74\x91\x30\x01;mov dword ptr [0x1309174], edx
+442;1303120;\xb0\x01;mov al, 0x1
+443;1303122;\x8b\xe5;mov esp, ebp
+444;1303124;\x5d;pop ebp
+445;1303125;\xc3;ret 
+446;1301d95;\x83\xc4\x04;add esp, 0x4
+447;1301d98;\x0f\xb6\xc0;movzx eax, al
+448;1301d9b;\x85\xc0;test eax, eax
+449;1301d9d;\x75\x07;jnz 0x1301da6
+450;1301da6;\xdb\xe2;fnclex 
+451;1301da8;\xe8\x20\xf3\xff\xff;call 0x13010cd
+452;13010cd;\xe9\xde\x29\x00\x00;jmp 0x1303ab0
+453;1303ab0;\x56;push esi
+454;1303ab1;\xbe\x74\x78\x30\x01;mov esi, 0x1307874
+455;1303ab6;\x8b\xc6;mov eax, esi
+456;1303ab8;\x3d\x78\x7a\x30\x01;cmp eax, 0x1307a78
+457;1303abd;\x73\x1c;jnb 0x1303adb
+458;1303abf;\x57;push edi
+459;1303ac0;\x8b\x3e;mov edi, dword ptr [esi]
+460;1303ac2;\x85\xff;test edi, edi
+461;1303ac4;\x74\x09;jz 0x1303acf
+462;1303acf;\x83\xc6\x04;add esi, 0x4
+463;1303ad2;\x81\xfe\x78\x7a\x30\x01;cmp esi, 0x1307a78
+464;1303ad8;\x72\xe6;jb 0x1303ac0
+465;1303ac0;\x8b\x3e;mov edi, dword ptr [esi]
+466;1303ac2;\x85\xff;test edi, edi
+467;1303ac4;\x74\x09;jz 0x1303acf
+468;1303acf;\x83\xc6\x04;add esi, 0x4
+469;1303ad2;\x81\xfe\x78\x7a\x30\x01;cmp esi, 0x1307a78
+470;1303ad8;\x72\xe6;jb 0x1303ac0
+471;1303ac0;\x8b\x3e;mov edi, dword ptr [esi]
+472;1303ac2;\x85\xff;test edi, edi
+473;1303ac4;\x74\x09;jz 0x1303acf
+474;1303acf;\x83\xc6\x04;add esi, 0x4
+475;1303ad2;\x81\xfe\x78\x7a\x30\x01;cmp esi, 0x1307a78
+476;1303ad8;\x72\xe6;jb 0x1303ac0
+477;1303ac0;\x8b\x3e;mov edi, dword ptr [esi]
+478;1303ac2;\x85\xff;test edi, edi
+479;1303ac4;\x74\x09;jz 0x1303acf
+480;1303acf;\x83\xc6\x04;add esi, 0x4
+481;1303ad2;\x81\xfe\x78\x7a\x30\x01;cmp esi, 0x1307a78
+482;1303ad8;\x72\xe6;jb 0x1303ac0
+483;1303ac0;\x8b\x3e;mov edi, dword ptr [esi]
+484;1303ac2;\x85\xff;test edi, edi
+485;1303ac4;\x74\x09;jz 0x1303acf
+486;1303acf;\x83\xc6\x04;add esi, 0x4
+487;1303ad2;\x81\xfe\x78\x7a\x30\x01;cmp esi, 0x1307a78
+488;1303ad8;\x72\xe6;jb 0x1303ac0
+489;1303ac0;\x8b\x3e;mov edi, dword ptr [esi]
+490;1303ac2;\x85\xff;test edi, edi
+491;1303ac4;\x74\x09;jz 0x1303acf
+492;1303acf;\x83\xc6\x04;add esi, 0x4
+493;1303ad2;\x81\xfe\x78\x7a\x30\x01;cmp esi, 0x1307a78
+494;1303ad8;\x72\xe6;jb 0x1303ac0
+495;1303ac0;\x8b\x3e;mov edi, dword ptr [esi]
+496;1303ac2;\x85\xff;test edi, edi
+497;1303ac4;\x74\x09;jz 0x1303acf
+498;1303acf;\x83\xc6\x04;add esi, 0x4
+499;1303ad2;\x81\xfe\x78\x7a\x30\x01;cmp esi, 0x1307a78
+500;1303ad8;\x72\xe6;jb 0x1303ac0
+501;1303ac0;\x8b\x3e;mov edi, dword ptr [esi]
+502;1303ac2;\x85\xff;test edi, edi
+503;1303ac4;\x74\x09;jz 0x1303acf
+504;1303acf;\x83\xc6\x04;add esi, 0x4
+505;1303ad2;\x81\xfe\x78\x7a\x30\x01;cmp esi, 0x1307a78
+506;1303ad8;\x72\xe6;jb 0x1303ac0
+507;1303ac0;\x8b\x3e;mov edi, dword ptr [esi]
+508;1303ac2;\x85\xff;test edi, edi
+509;1303ac4;\x74\x09;jz 0x1303acf
+510;1303acf;\x83\xc6\x04;add esi, 0x4
+511;1303ad2;\x81\xfe\x78\x7a\x30\x01;cmp esi, 0x1307a78
+512;1303ad8;\x72\xe6;jb 0x1303ac0
+513;1303ac0;\x8b\x3e;mov edi, dword ptr [esi]
+514;1303ac2;\x85\xff;test edi, edi
+515;1303ac4;\x74\x09;jz 0x1303acf
+516;1303acf;\x83\xc6\x04;add esi, 0x4
+517;1303ad2;\x81\xfe\x78\x7a\x30\x01;cmp esi, 0x1307a78
+518;1303ad8;\x72\xe6;jb 0x1303ac0
+519;1303ac0;\x8b\x3e;mov edi, dword ptr [esi]
+520;1303ac2;\x85\xff;test edi, edi
+521;1303ac4;\x74\x09;jz 0x1303acf
+522;1303acf;\x83\xc6\x04;add esi, 0x4
+523;1303ad2;\x81\xfe\x78\x7a\x30\x01;cmp esi, 0x1307a78
+524;1303ad8;\x72\xe6;jb 0x1303ac0
+525;1303ac0;\x8b\x3e;mov edi, dword ptr [esi]
+526;1303ac2;\x85\xff;test edi, edi
+527;1303ac4;\x74\x09;jz 0x1303acf
+528;1303acf;\x83\xc6\x04;add esi, 0x4
+529;1303ad2;\x81\xfe\x78\x7a\x30\x01;cmp esi, 0x1307a78
+530;1303ad8;\x72\xe6;jb 0x1303ac0
+531;1303ac0;\x8b\x3e;mov edi, dword ptr [esi]
+532;1303ac2;\x85\xff;test edi, edi
+533;1303ac4;\x74\x09;jz 0x1303acf
+534;1303acf;\x83\xc6\x04;add esi, 0x4
+535;1303ad2;\x81\xfe\x78\x7a\x30\x01;cmp esi, 0x1307a78
+536;1303ad8;\x72\xe6;jb 0x1303ac0
+537;1303ac0;\x8b\x3e;mov edi, dword ptr [esi]
+538;1303ac2;\x85\xff;test edi, edi
+539;1303ac4;\x74\x09;jz 0x1303acf
+540;1303acf;\x83\xc6\x04;add esi, 0x4
+541;1303ad2;\x81\xfe\x78\x7a\x30\x01;cmp esi, 0x1307a78
+542;1303ad8;\x72\xe6;jb 0x1303ac0
+543;1303ac0;\x8b\x3e;mov edi, dword ptr [esi]
+544;1303ac2;\x85\xff;test edi, edi
+545;1303ac4;\x74\x09;jz 0x1303acf
+546;1303acf;\x83\xc6\x04;add esi, 0x4
+547;1303ad2;\x81\xfe\x78\x7a\x30\x01;cmp esi, 0x1307a78
+548;1303ad8;\x72\xe6;jb 0x1303ac0
+549;1303ac0;\x8b\x3e;mov edi, dword ptr [esi]
+550;1303ac2;\x85\xff;test edi, edi
+551;1303ac4;\x74\x09;jz 0x1303acf
+552;1303acf;\x83\xc6\x04;add esi, 0x4
+553;1303ad2;\x81\xfe\x78\x7a\x30\x01;cmp esi, 0x1307a78
+554;1303ad8;\x72\xe6;jb 0x1303ac0
+555;1303ac0;\x8b\x3e;mov edi, dword ptr [esi]
+556;1303ac2;\x85\xff;test edi, edi
+557;1303ac4;\x74\x09;jz 0x1303acf
+558;1303acf;\x83\xc6\x04;add esi, 0x4
+559;1303ad2;\x81\xfe\x78\x7a\x30\x01;cmp esi, 0x1307a78
+560;1303ad8;\x72\xe6;jb 0x1303ac0
+561;1303ac0;\x8b\x3e;mov edi, dword ptr [esi]
+562;1303ac2;\x85\xff;test edi, edi
+563;1303ac4;\x74\x09;jz 0x1303acf
+564;1303acf;\x83\xc6\x04;add esi, 0x4
+565;1303ad2;\x81\xfe\x78\x7a\x30\x01;cmp esi, 0x1307a78
+566;1303ad8;\x72\xe6;jb 0x1303ac0
+567;1303ac0;\x8b\x3e;mov edi, dword ptr [esi]
+568;1303ac2;\x85\xff;test edi, edi
+569;1303ac4;\x74\x09;jz 0x1303acf
+570;1303acf;\x83\xc6\x04;add esi, 0x4
+571;1303ad2;\x81\xfe\x78\x7a\x30\x01;cmp esi, 0x1307a78
+572;1303ad8;\x72\xe6;jb 0x1303ac0
+573;1303ac0;\x8b\x3e;mov edi, dword ptr [esi]
+574;1303ac2;\x85\xff;test edi, edi
+575;1303ac4;\x74\x09;jz 0x1303acf
+576;1303acf;\x83\xc6\x04;add esi, 0x4
+577;1303ad2;\x81\xfe\x78\x7a\x30\x01;cmp esi, 0x1307a78
+578;1303ad8;\x72\xe6;jb 0x1303ac0
+579;1303ac0;\x8b\x3e;mov edi, dword ptr [esi]
+580;1303ac2;\x85\xff;test edi, edi
+581;1303ac4;\x74\x09;jz 0x1303acf
+582;1303acf;\x83\xc6\x04;add esi, 0x4
+583;1303ad2;\x81\xfe\x78\x7a\x30\x01;cmp esi, 0x1307a78
+584;1303ad8;\x72\xe6;jb 0x1303ac0
+585;1303ac0;\x8b\x3e;mov edi, dword ptr [esi]
+586;1303ac2;\x85\xff;test edi, edi
+587;1303ac4;\x74\x09;jz 0x1303acf
+588;1303acf;\x83\xc6\x04;add esi, 0x4
+589;1303ad2;\x81\xfe\x78\x7a\x30\x01;cmp esi, 0x1307a78
+590;1303ad8;\x72\xe6;jb 0x1303ac0
+591;1303ac0;\x8b\x3e;mov edi, dword ptr [esi]
+592;1303ac2;\x85\xff;test edi, edi
+593;1303ac4;\x74\x09;jz 0x1303acf
+594;1303acf;\x83\xc6\x04;add esi, 0x4
+595;1303ad2;\x81\xfe\x78\x7a\x30\x01;cmp esi, 0x1307a78
+596;1303ad8;\x72\xe6;jb 0x1303ac0
+597;1303ac0;\x8b\x3e;mov edi, dword ptr [esi]
+598;1303ac2;\x85\xff;test edi, edi
+599;1303ac4;\x74\x09;jz 0x1303acf
+600;1303acf;\x83\xc6\x04;add esi, 0x4
+601;1303ad2;\x81\xfe\x78\x7a\x30\x01;cmp esi, 0x1307a78
+602;1303ad8;\x72\xe6;jb 0x1303ac0
+603;1303ac0;\x8b\x3e;mov edi, dword ptr [esi]
+604;1303ac2;\x85\xff;test edi, edi
+605;1303ac4;\x74\x09;jz 0x1303acf
+606;1303acf;\x83\xc6\x04;add esi, 0x4
+607;1303ad2;\x81\xfe\x78\x7a\x30\x01;cmp esi, 0x1307a78
+608;1303ad8;\x72\xe6;jb 0x1303ac0
+609;1303ac0;\x8b\x3e;mov edi, dword ptr [esi]
+610;1303ac2;\x85\xff;test edi, edi
+611;1303ac4;\x74\x09;jz 0x1303acf
+612;1303acf;\x83\xc6\x04;add esi, 0x4
+613;1303ad2;\x81\xfe\x78\x7a\x30\x01;cmp esi, 0x1307a78
+614;1303ad8;\x72\xe6;jb 0x1303ac0
+615;1303ac0;\x8b\x3e;mov edi, dword ptr [esi]
+616;1303ac2;\x85\xff;test edi, edi
+617;1303ac4;\x74\x09;jz 0x1303acf
+618;1303acf;\x83\xc6\x04;add esi, 0x4
+619;1303ad2;\x81\xfe\x78\x7a\x30\x01;cmp esi, 0x1307a78
+620;1303ad8;\x72\xe6;jb 0x1303ac0
+621;1303ac0;\x8b\x3e;mov edi, dword ptr [esi]
+622;1303ac2;\x85\xff;test edi, edi
+623;1303ac4;\x74\x09;jz 0x1303acf
+624;1303acf;\x83\xc6\x04;add esi, 0x4
+625;1303ad2;\x81\xfe\x78\x7a\x30\x01;cmp esi, 0x1307a78
+626;1303ad8;\x72\xe6;jb 0x1303ac0
+627;1303ac0;\x8b\x3e;mov edi, dword ptr [esi]
+628;1303ac2;\x85\xff;test edi, edi
+629;1303ac4;\x74\x09;jz 0x1303acf
+630;1303acf;\x83\xc6\x04;add esi, 0x4
+631;1303ad2;\x81\xfe\x78\x7a\x30\x01;cmp esi, 0x1307a78
+632;1303ad8;\x72\xe6;jb 0x1303ac0
+633;1303ac0;\x8b\x3e;mov edi, dword ptr [esi]
+634;1303ac2;\x85\xff;test edi, edi
+635;1303ac4;\x74\x09;jz 0x1303acf
+636;1303acf;\x83\xc6\x04;add esi, 0x4
+637;1303ad2;\x81\xfe\x78\x7a\x30\x01;cmp esi, 0x1307a78
+638;1303ad8;\x72\xe6;jb 0x1303ac0
+639;1303ac0;\x8b\x3e;mov edi, dword ptr [esi]
+640;1303ac2;\x85\xff;test edi, edi
+641;1303ac4;\x74\x09;jz 0x1303acf
+642;1303acf;\x83\xc6\x04;add esi, 0x4
+643;1303ad2;\x81\xfe\x78\x7a\x30\x01;cmp esi, 0x1307a78
+644;1303ad8;\x72\xe6;jb 0x1303ac0
+645;1303ac0;\x8b\x3e;mov edi, dword ptr [esi]
+646;1303ac2;\x85\xff;test edi, edi
+647;1303ac4;\x74\x09;jz 0x1303acf
+648;1303acf;\x83\xc6\x04;add esi, 0x4
+649;1303ad2;\x81\xfe\x78\x7a\x30\x01;cmp esi, 0x1307a78
+650;1303ad8;\x72\xe6;jb 0x1303ac0
+651;1303ac0;\x8b\x3e;mov edi, dword ptr [esi]
+652;1303ac2;\x85\xff;test edi, edi
+653;1303ac4;\x74\x09;jz 0x1303acf
+654;1303acf;\x83\xc6\x04;add esi, 0x4
+655;1303ad2;\x81\xfe\x78\x7a\x30\x01;cmp esi, 0x1307a78
+656;1303ad8;\x72\xe6;jb 0x1303ac0
+657;1303ac0;\x8b\x3e;mov edi, dword ptr [esi]
+658;1303ac2;\x85\xff;test edi, edi
+659;1303ac4;\x74\x09;jz 0x1303acf
+660;1303acf;\x83\xc6\x04;add esi, 0x4
+661;1303ad2;\x81\xfe\x78\x7a\x30\x01;cmp esi, 0x1307a78
+662;1303ad8;\x72\xe6;jb 0x1303ac0
+663;1303ac0;\x8b\x3e;mov edi, dword ptr [esi]
+664;1303ac2;\x85\xff;test edi, edi
+665;1303ac4;\x74\x09;jz 0x1303acf
+666;1303acf;\x83\xc6\x04;add esi, 0x4
+667;1303ad2;\x81\xfe\x78\x7a\x30\x01;cmp esi, 0x1307a78
+668;1303ad8;\x72\xe6;jb 0x1303ac0
+669;1303ac0;\x8b\x3e;mov edi, dword ptr [esi]
+670;1303ac2;\x85\xff;test edi, edi
+671;1303ac4;\x74\x09;jz 0x1303acf
+672;1303acf;\x83\xc6\x04;add esi, 0x4
+673;1303ad2;\x81\xfe\x78\x7a\x30\x01;cmp esi, 0x1307a78
+674;1303ad8;\x72\xe6;jb 0x1303ac0
+675;1303ac0;\x8b\x3e;mov edi, dword ptr [esi]
+676;1303ac2;\x85\xff;test edi, edi
+677;1303ac4;\x74\x09;jz 0x1303acf
+678;1303acf;\x83\xc6\x04;add esi, 0x4
+679;1303ad2;\x81\xfe\x78\x7a\x30\x01;cmp esi, 0x1307a78
+680;1303ad8;\x72\xe6;jb 0x1303ac0
+681;1303ac0;\x8b\x3e;mov edi, dword ptr [esi]
+682;1303ac2;\x85\xff;test edi, edi
+683;1303ac4;\x74\x09;jz 0x1303acf
+684;1303acf;\x83\xc6\x04;add esi, 0x4
+685;1303ad2;\x81\xfe\x78\x7a\x30\x01;cmp esi, 0x1307a78
+686;1303ad8;\x72\xe6;jb 0x1303ac0
+687;1303ac0;\x8b\x3e;mov edi, dword ptr [esi]
+688;1303ac2;\x85\xff;test edi, edi
+689;1303ac4;\x74\x09;jz 0x1303acf
+690;1303acf;\x83\xc6\x04;add esi, 0x4
+691;1303ad2;\x81\xfe\x78\x7a\x30\x01;cmp esi, 0x1307a78
+692;1303ad8;\x72\xe6;jb 0x1303ac0
+693;1303ac0;\x8b\x3e;mov edi, dword ptr [esi]
+694;1303ac2;\x85\xff;test edi, edi
+695;1303ac4;\x74\x09;jz 0x1303acf
+696;1303acf;\x83\xc6\x04;add esi, 0x4
+697;1303ad2;\x81\xfe\x78\x7a\x30\x01;cmp esi, 0x1307a78
+698;1303ad8;\x72\xe6;jb 0x1303ac0
+699;1303ac0;\x8b\x3e;mov edi, dword ptr [esi]
+700;1303ac2;\x85\xff;test edi, edi
+701;1303ac4;\x74\x09;jz 0x1303acf
+702;1303acf;\x83\xc6\x04;add esi, 0x4
+703;1303ad2;\x81\xfe\x78\x7a\x30\x01;cmp esi, 0x1307a78
+704;1303ad8;\x72\xe6;jb 0x1303ac0
+705;1303ac0;\x8b\x3e;mov edi, dword ptr [esi]
+706;1303ac2;\x85\xff;test edi, edi
+707;1303ac4;\x74\x09;jz 0x1303acf
+708;1303acf;\x83\xc6\x04;add esi, 0x4
+709;1303ad2;\x81\xfe\x78\x7a\x30\x01;cmp esi, 0x1307a78
+710;1303ad8;\x72\xe6;jb 0x1303ac0
+711;1303ac0;\x8b\x3e;mov edi, dword ptr [esi]
+712;1303ac2;\x85\xff;test edi, edi
+713;1303ac4;\x74\x09;jz 0x1303acf
+714;1303acf;\x83\xc6\x04;add esi, 0x4
+715;1303ad2;\x81\xfe\x78\x7a\x30\x01;cmp esi, 0x1307a78
+716;1303ad8;\x72\xe6;jb 0x1303ac0
+717;1303ac0;\x8b\x3e;mov edi, dword ptr [esi]
+718;1303ac2;\x85\xff;test edi, edi
+719;1303ac4;\x74\x09;jz 0x1303acf
+720;1303acf;\x83\xc6\x04;add esi, 0x4
+721;1303ad2;\x81\xfe\x78\x7a\x30\x01;cmp esi, 0x1307a78
+722;1303ad8;\x72\xe6;jb 0x1303ac0
+723;1303ac0;\x8b\x3e;mov edi, dword ptr [esi]
+724;1303ac2;\x85\xff;test edi, edi
+725;1303ac4;\x74\x09;jz 0x1303acf
+726;1303acf;\x83\xc6\x04;add esi, 0x4
+727;1303ad2;\x81\xfe\x78\x7a\x30\x01;cmp esi, 0x1307a78
+728;1303ad8;\x72\xe6;jb 0x1303ac0
+729;1303ac0;\x8b\x3e;mov edi, dword ptr [esi]
+730;1303ac2;\x85\xff;test edi, edi
+731;1303ac4;\x74\x09;jz 0x1303acf
+732;1303acf;\x83\xc6\x04;add esi, 0x4
+733;1303ad2;\x81\xfe\x78\x7a\x30\x01;cmp esi, 0x1307a78
+734;1303ad8;\x72\xe6;jb 0x1303ac0
+735;1303ac0;\x8b\x3e;mov edi, dword ptr [esi]
+736;1303ac2;\x85\xff;test edi, edi
+737;1303ac4;\x74\x09;jz 0x1303acf
+738;1303acf;\x83\xc6\x04;add esi, 0x4
+739;1303ad2;\x81\xfe\x78\x7a\x30\x01;cmp esi, 0x1307a78
+740;1303ad8;\x72\xe6;jb 0x1303ac0
+741;1303ac0;\x8b\x3e;mov edi, dword ptr [esi]
+742;1303ac2;\x85\xff;test edi, edi
+743;1303ac4;\x74\x09;jz 0x1303acf
+744;1303acf;\x83\xc6\x04;add esi, 0x4
+745;1303ad2;\x81\xfe\x78\x7a\x30\x01;cmp esi, 0x1307a78
+746;1303ad8;\x72\xe6;jb 0x1303ac0
+747;1303ac0;\x8b\x3e;mov edi, dword ptr [esi]
+748;1303ac2;\x85\xff;test edi, edi
+749;1303ac4;\x74\x09;jz 0x1303acf
+750;1303acf;\x83\xc6\x04;add esi, 0x4
+751;1303ad2;\x81\xfe\x78\x7a\x30\x01;cmp esi, 0x1307a78
+752;1303ad8;\x72\xe6;jb 0x1303ac0
+753;1303ac0;\x8b\x3e;mov edi, dword ptr [esi]
+754;1303ac2;\x85\xff;test edi, edi
+755;1303ac4;\x74\x09;jz 0x1303acf
+756;1303acf;\x83\xc6\x04;add esi, 0x4
+757;1303ad2;\x81\xfe\x78\x7a\x30\x01;cmp esi, 0x1307a78
+758;1303ad8;\x72\xe6;jb 0x1303ac0
+759;1303ac0;\x8b\x3e;mov edi, dword ptr [esi]
+760;1303ac2;\x85\xff;test edi, edi
+761;1303ac4;\x74\x09;jz 0x1303acf
+762;1303acf;\x83\xc6\x04;add esi, 0x4
+763;1303ad2;\x81\xfe\x78\x7a\x30\x01;cmp esi, 0x1307a78
+764;1303ad8;\x72\xe6;jb 0x1303ac0
+765;1303ac0;\x8b\x3e;mov edi, dword ptr [esi]
+766;1303ac2;\x85\xff;test edi, edi
+767;1303ac4;\x74\x09;jz 0x1303acf
+768;1303acf;\x83\xc6\x04;add esi, 0x4
+769;1303ad2;\x81\xfe\x78\x7a\x30\x01;cmp esi, 0x1307a78
+770;1303ad8;\x72\xe6;jb 0x1303ac0
+771;1303ac0;\x8b\x3e;mov edi, dword ptr [esi]
+772;1303ac2;\x85\xff;test edi, edi
+773;1303ac4;\x74\x09;jz 0x1303acf
+774;1303acf;\x83\xc6\x04;add esi, 0x4
+775;1303ad2;\x81\xfe\x78\x7a\x30\x01;cmp esi, 0x1307a78
+776;1303ad8;\x72\xe6;jb 0x1303ac0
+777;1303ac0;\x8b\x3e;mov edi, dword ptr [esi]
+778;1303ac2;\x85\xff;test edi, edi
+779;1303ac4;\x74\x09;jz 0x1303acf
+780;1303acf;\x83\xc6\x04;add esi, 0x4
+781;1303ad2;\x81\xfe\x78\x7a\x30\x01;cmp esi, 0x1307a78
+782;1303ad8;\x72\xe6;jb 0x1303ac0
+783;1303ac0;\x8b\x3e;mov edi, dword ptr [esi]
+784;1303ac2;\x85\xff;test edi, edi
+785;1303ac4;\x74\x09;jz 0x1303acf
+786;1303acf;\x83\xc6\x04;add esi, 0x4
+787;1303ad2;\x81\xfe\x78\x7a\x30\x01;cmp esi, 0x1307a78
+788;1303ad8;\x72\xe6;jb 0x1303ac0
+789;1303ac0;\x8b\x3e;mov edi, dword ptr [esi]
+790;1303ac2;\x85\xff;test edi, edi
+791;1303ac4;\x74\x09;jz 0x1303acf
+792;1303acf;\x83\xc6\x04;add esi, 0x4
+793;1303ad2;\x81\xfe\x78\x7a\x30\x01;cmp esi, 0x1307a78
+794;1303ad8;\x72\xe6;jb 0x1303ac0
+795;1303ac0;\x8b\x3e;mov edi, dword ptr [esi]
+796;1303ac2;\x85\xff;test edi, edi
+797;1303ac4;\x74\x09;jz 0x1303acf
+798;1303acf;\x83\xc6\x04;add esi, 0x4
+799;1303ad2;\x81\xfe\x78\x7a\x30\x01;cmp esi, 0x1307a78
+800;1303ad8;\x72\xe6;jb 0x1303ac0
+801;1303ac0;\x8b\x3e;mov edi, dword ptr [esi]
+802;1303ac2;\x85\xff;test edi, edi
+803;1303ac4;\x74\x09;jz 0x1303acf
+804;1303acf;\x83\xc6\x04;add esi, 0x4
+805;1303ad2;\x81\xfe\x78\x7a\x30\x01;cmp esi, 0x1307a78
+806;1303ad8;\x72\xe6;jb 0x1303ac0
+807;1303ac0;\x8b\x3e;mov edi, dword ptr [esi]
+808;1303ac2;\x85\xff;test edi, edi
+809;1303ac4;\x74\x09;jz 0x1303acf
+810;1303acf;\x83\xc6\x04;add esi, 0x4
+811;1303ad2;\x81\xfe\x78\x7a\x30\x01;cmp esi, 0x1307a78
+812;1303ad8;\x72\xe6;jb 0x1303ac0
+813;1303ac0;\x8b\x3e;mov edi, dword ptr [esi]
+814;1303ac2;\x85\xff;test edi, edi
+815;1303ac4;\x74\x09;jz 0x1303acf
+816;1303acf;\x83\xc6\x04;add esi, 0x4
+817;1303ad2;\x81\xfe\x78\x7a\x30\x01;cmp esi, 0x1307a78
+818;1303ad8;\x72\xe6;jb 0x1303ac0
+819;1303ac0;\x8b\x3e;mov edi, dword ptr [esi]
+820;1303ac2;\x85\xff;test edi, edi
+821;1303ac4;\x74\x09;jz 0x1303acf
+822;1303acf;\x83\xc6\x04;add esi, 0x4
+823;1303ad2;\x81\xfe\x78\x7a\x30\x01;cmp esi, 0x1307a78
+824;1303ad8;\x72\xe6;jb 0x1303ac0
+825;1303ac0;\x8b\x3e;mov edi, dword ptr [esi]
+826;1303ac2;\x85\xff;test edi, edi
+827;1303ac4;\x74\x09;jz 0x1303acf
+828;1303acf;\x83\xc6\x04;add esi, 0x4
+829;1303ad2;\x81\xfe\x78\x7a\x30\x01;cmp esi, 0x1307a78
+830;1303ad8;\x72\xe6;jb 0x1303ac0
+831;1303ac0;\x8b\x3e;mov edi, dword ptr [esi]
+832;1303ac2;\x85\xff;test edi, edi
+833;1303ac4;\x74\x09;jz 0x1303acf
+834;1303acf;\x83\xc6\x04;add esi, 0x4
+835;1303ad2;\x81\xfe\x78\x7a\x30\x01;cmp esi, 0x1307a78
+836;1303ad8;\x72\xe6;jb 0x1303ac0
+837;1303ac0;\x8b\x3e;mov edi, dword ptr [esi]
+838;1303ac2;\x85\xff;test edi, edi
+839;1303ac4;\x74\x09;jz 0x1303acf
+840;1303acf;\x83\xc6\x04;add esi, 0x4
+841;1303ad2;\x81\xfe\x78\x7a\x30\x01;cmp esi, 0x1307a78
+842;1303ad8;\x72\xe6;jb 0x1303ac0
+843;1303ac0;\x8b\x3e;mov edi, dword ptr [esi]
+844;1303ac2;\x85\xff;test edi, edi
+845;1303ac4;\x74\x09;jz 0x1303acf
+846;1303ac6;\x8b\xcf;mov ecx, edi
+847;1303ac8;\xe8\xf4\xd7\xff\xff;call 0x13012c1
+848;13012c1;\xe9\x6a\x28\x00\x00;jmp 0x1303b30
+849;1303b30;\x55;push ebp
+850;1303b31;\x8b\xec;mov ebp, esp
+851;1303b33;\x51;push ecx
+852;1303b34;\x89\x4d\xfc;mov dword ptr [ebp-0x4], ecx
+853;1303b37;\x8b\x4d\xfc;mov ecx, dword ptr [ebp-0x4]
+854;1303b3a;\xff\x15\x00\xc0\x30\x01;call dword ptr [0x130c000]
+855;1301285;\xe9\xc6\x36\x00\x00;jmp 0x1304950
+856;1304950;\x55;push ebp
+857;1304951;\x8b\xec;mov ebp, esp
+858;1304953;\x51;push ecx
+859;1304954;\x89\x4d\xfc;mov dword ptr [ebp-0x4], ecx
+860;1304957;\x8b\xe5;mov esp, ebp
+861;1304959;\x5d;pop ebp
+862;130495a;\xc3;ret 
+863;1303b40;\x8b\xe5;mov esp, ebp
+864;1303b42;\x5d;pop ebp
+865;1303b43;\xc3;ret 
+866;1303acd;\xff\xd7;call edi
+867;130111d;\xe9\xde\x0b\x00\x00;jmp 0x1301d00
+868;1301d00;\x80\x3d\x38\x91\x30\x01\x00;cmp byte ptr [0x1309138], 0x0
+869;1301d07;\x75\x1f;jnz 0x1301d28
+870;1301d09;\x6a\x00;push 0x0
+871;1301d0b;\x6a\x01;push 0x1
+872;1301d0d;\x6a\x00;push 0x0
+873;1301d0f;\x6a\x00;push 0x0
+874;1301d11;\x6a\x00;push 0x0
+875;1301d13;\xc6\x05\x38\x91\x30\x01\x01;mov byte ptr [0x1309138], 0x1
+876;1301d1a;\xe8\x36\xf3\xff\xff;call 0x1301055
+877;1301055;\xe9\x96\x0c\x00\x00;jmp 0x1301cf0
+878;1301cf0;\xb8\x62\x12\x30\x01;mov eax, 0x1301262
+879;1301cf5;\xc3;ret 
+880;1301d1f;\x50;push eax
+881;1301d20;\xe8\xbb\xf4\xff\xff;call 0x13011e0
+882;13011e0;\xe9\xfb\x19\x00\x00;jmp 0x1302be0
+883;1302be0;\x55;push ebp
+884;1302be1;\x8b\xec;mov ebp, esp
+885;1302be3;\xa1\x50\x91\x30\x01;mov eax, dword ptr [0x1309150]
+886;1302be8;\x8b\x4d\x08;mov ecx, dword ptr [ebp+0x8]
+887;1302beb;\x89\x0d\x50\x91\x30\x01;mov dword ptr [0x1309150], ecx
+888;1302bf1;\xc7\x05\x4c\x91\x30\x01\x00\x00\x00\x00;mov dword ptr [0x130914c], 0x0
+889;1302bfb;\x5d;pop ebp
+890;1302bfc;\xc3;ret 
+891;1301d25;\x83\xc4\x18;add esp, 0x18
+892;1301d28;\xc3;ret 
+893;1303acf;\x83\xc6\x04;add esi, 0x4
+894;1303ad2;\x81\xfe\x78\x7a\x30\x01;cmp esi, 0x1307a78
+895;1303ad8;\x72\xe6;jb 0x1303ac0
+896;1303ac0;\x8b\x3e;mov edi, dword ptr [esi]
+897;1303ac2;\x85\xff;test edi, edi
+898;1303ac4;\x74\x09;jz 0x1303acf
+899;1303acf;\x83\xc6\x04;add esi, 0x4
+900;1303ad2;\x81\xfe\x78\x7a\x30\x01;cmp esi, 0x1307a78
+901;1303ad8;\x72\xe6;jb 0x1303ac0
+902;1303ac0;\x8b\x3e;mov edi, dword ptr [esi]
+903;1303ac2;\x85\xff;test edi, edi
+904;1303ac4;\x74\x09;jz 0x1303acf
+905;1303acf;\x83\xc6\x04;add esi, 0x4
+906;1303ad2;\x81\xfe\x78\x7a\x30\x01;cmp esi, 0x1307a78
+907;1303ad8;\x72\xe6;jb 0x1303ac0
+908;1303ac0;\x8b\x3e;mov edi, dword ptr [esi]
+909;1303ac2;\x85\xff;test edi, edi
+910;1303ac4;\x74\x09;jz 0x1303acf
+911;1303acf;\x83\xc6\x04;add esi, 0x4
+912;1303ad2;\x81\xfe\x78\x7a\x30\x01;cmp esi, 0x1307a78
+913;1303ad8;\x72\xe6;jb 0x1303ac0
+914;1303ac0;\x8b\x3e;mov edi, dword ptr [esi]
+915;1303ac2;\x85\xff;test edi, edi
+916;1303ac4;\x74\x09;jz 0x1303acf
+917;1303acf;\x83\xc6\x04;add esi, 0x4
+918;1303ad2;\x81\xfe\x78\x7a\x30\x01;cmp esi, 0x1307a78
+919;1303ad8;\x72\xe6;jb 0x1303ac0
+920;1303ac0;\x8b\x3e;mov edi, dword ptr [esi]
+921;1303ac2;\x85\xff;test edi, edi
+922;1303ac4;\x74\x09;jz 0x1303acf
+923;1303acf;\x83\xc6\x04;add esi, 0x4
+924;1303ad2;\x81\xfe\x78\x7a\x30\x01;cmp esi, 0x1307a78
+925;1303ad8;\x72\xe6;jb 0x1303ac0
+926;1303ac0;\x8b\x3e;mov edi, dword ptr [esi]
+927;1303ac2;\x85\xff;test edi, edi
+928;1303ac4;\x74\x09;jz 0x1303acf
+929;1303acf;\x83\xc6\x04;add esi, 0x4
+930;1303ad2;\x81\xfe\x78\x7a\x30\x01;cmp esi, 0x1307a78
+931;1303ad8;\x72\xe6;jb 0x1303ac0
+932;1303ac0;\x8b\x3e;mov edi, dword ptr [esi]
+933;1303ac2;\x85\xff;test edi, edi
+934;1303ac4;\x74\x09;jz 0x1303acf
+935;1303acf;\x83\xc6\x04;add esi, 0x4
+936;1303ad2;\x81\xfe\x78\x7a\x30\x01;cmp esi, 0x1307a78
+937;1303ad8;\x72\xe6;jb 0x1303ac0
+938;1303ac0;\x8b\x3e;mov edi, dword ptr [esi]
+939;1303ac2;\x85\xff;test edi, edi
+940;1303ac4;\x74\x09;jz 0x1303acf
+941;1303acf;\x83\xc6\x04;add esi, 0x4
+942;1303ad2;\x81\xfe\x78\x7a\x30\x01;cmp esi, 0x1307a78
+943;1303ad8;\x72\xe6;jb 0x1303ac0
+944;1303ac0;\x8b\x3e;mov edi, dword ptr [esi]
+945;1303ac2;\x85\xff;test edi, edi
+946;1303ac4;\x74\x09;jz 0x1303acf
+947;1303acf;\x83\xc6\x04;add esi, 0x4
+948;1303ad2;\x81\xfe\x78\x7a\x30\x01;cmp esi, 0x1307a78
+949;1303ad8;\x72\xe6;jb 0x1303ac0
+950;1303ac0;\x8b\x3e;mov edi, dword ptr [esi]
+951;1303ac2;\x85\xff;test edi, edi
+952;1303ac4;\x74\x09;jz 0x1303acf
+953;1303acf;\x83\xc6\x04;add esi, 0x4
+954;1303ad2;\x81\xfe\x78\x7a\x30\x01;cmp esi, 0x1307a78
+955;1303ad8;\x72\xe6;jb 0x1303ac0
+956;1303ac0;\x8b\x3e;mov edi, dword ptr [esi]
+957;1303ac2;\x85\xff;test edi, edi
+958;1303ac4;\x74\x09;jz 0x1303acf
+959;1303acf;\x83\xc6\x04;add esi, 0x4
+960;1303ad2;\x81\xfe\x78\x7a\x30\x01;cmp esi, 0x1307a78
+961;1303ad8;\x72\xe6;jb 0x1303ac0
+962;1303ac0;\x8b\x3e;mov edi, dword ptr [esi]
+963;1303ac2;\x85\xff;test edi, edi
+964;1303ac4;\x74\x09;jz 0x1303acf
+965;1303acf;\x83\xc6\x04;add esi, 0x4
+966;1303ad2;\x81\xfe\x78\x7a\x30\x01;cmp esi, 0x1307a78
+967;1303ad8;\x72\xe6;jb 0x1303ac0
+968;1303ac0;\x8b\x3e;mov edi, dword ptr [esi]
+969;1303ac2;\x85\xff;test edi, edi
+970;1303ac4;\x74\x09;jz 0x1303acf
+971;1303acf;\x83\xc6\x04;add esi, 0x4
+972;1303ad2;\x81\xfe\x78\x7a\x30\x01;cmp esi, 0x1307a78
+973;1303ad8;\x72\xe6;jb 0x1303ac0
+974;1303ac0;\x8b\x3e;mov edi, dword ptr [esi]
+975;1303ac2;\x85\xff;test edi, edi
+976;1303ac4;\x74\x09;jz 0x1303acf
+977;1303acf;\x83\xc6\x04;add esi, 0x4
+978;1303ad2;\x81\xfe\x78\x7a\x30\x01;cmp esi, 0x1307a78
+979;1303ad8;\x72\xe6;jb 0x1303ac0
+980;1303ac0;\x8b\x3e;mov edi, dword ptr [esi]
+981;1303ac2;\x85\xff;test edi, edi
+982;1303ac4;\x74\x09;jz 0x1303acf
+983;1303acf;\x83\xc6\x04;add esi, 0x4
+984;1303ad2;\x81\xfe\x78\x7a\x30\x01;cmp esi, 0x1307a78
+985;1303ad8;\x72\xe6;jb 0x1303ac0
+986;1303ac0;\x8b\x3e;mov edi, dword ptr [esi]
+987;1303ac2;\x85\xff;test edi, edi
+988;1303ac4;\x74\x09;jz 0x1303acf
+989;1303acf;\x83\xc6\x04;add esi, 0x4
+990;1303ad2;\x81\xfe\x78\x7a\x30\x01;cmp esi, 0x1307a78
+991;1303ad8;\x72\xe6;jb 0x1303ac0
+992;1303ac0;\x8b\x3e;mov edi, dword ptr [esi]
+993;1303ac2;\x85\xff;test edi, edi
+994;1303ac4;\x74\x09;jz 0x1303acf
+995;1303acf;\x83\xc6\x04;add esi, 0x4
+996;1303ad2;\x81\xfe\x78\x7a\x30\x01;cmp esi, 0x1307a78
+997;1303ad8;\x72\xe6;jb 0x1303ac0
+998;1303ac0;\x8b\x3e;mov edi, dword ptr [esi]
+999;1303ac2;\x85\xff;test edi, edi
+1000;1303ac4;\x74\x09;jz 0x1303acf
+1001;1303acf;\x83\xc6\x04;add esi, 0x4
+1002;1303ad2;\x81\xfe\x78\x7a\x30\x01;cmp esi, 0x1307a78
+1003;1303ad8;\x72\xe6;jb 0x1303ac0
+1004;1303ac0;\x8b\x3e;mov edi, dword ptr [esi]
+1005;1303ac2;\x85\xff;test edi, edi
+1006;1303ac4;\x74\x09;jz 0x1303acf
+1007;1303acf;\x83\xc6\x04;add esi, 0x4
+1008;1303ad2;\x81\xfe\x78\x7a\x30\x01;cmp esi, 0x1307a78
+1009;1303ad8;\x72\xe6;jb 0x1303ac0
+1010;1303ac0;\x8b\x3e;mov edi, dword ptr [esi]
+1011;1303ac2;\x85\xff;test edi, edi
+1012;1303ac4;\x74\x09;jz 0x1303acf
+1013;1303acf;\x83\xc6\x04;add esi, 0x4
+1014;1303ad2;\x81\xfe\x78\x7a\x30\x01;cmp esi, 0x1307a78
+1015;1303ad8;\x72\xe6;jb 0x1303ac0
+1016;1303ac0;\x8b\x3e;mov edi, dword ptr [esi]
+1017;1303ac2;\x85\xff;test edi, edi
+1018;1303ac4;\x74\x09;jz 0x1303acf
+1019;1303acf;\x83\xc6\x04;add esi, 0x4
+1020;1303ad2;\x81\xfe\x78\x7a\x30\x01;cmp esi, 0x1307a78
+1021;1303ad8;\x72\xe6;jb 0x1303ac0
+1022;1303ac0;\x8b\x3e;mov edi, dword ptr [esi]
+1023;1303ac2;\x85\xff;test edi, edi
+1024;1303ac4;\x74\x09;jz 0x1303acf
+1025;1303acf;\x83\xc6\x04;add esi, 0x4
+1026;1303ad2;\x81\xfe\x78\x7a\x30\x01;cmp esi, 0x1307a78
+1027;1303ad8;\x72\xe6;jb 0x1303ac0
+1028;1303ac0;\x8b\x3e;mov edi, dword ptr [esi]
+1029;1303ac2;\x85\xff;test edi, edi
+1030;1303ac4;\x74\x09;jz 0x1303acf
+1031;1303acf;\x83\xc6\x04;add esi, 0x4
+1032;1303ad2;\x81\xfe\x78\x7a\x30\x01;cmp esi, 0x1307a78
+1033;1303ad8;\x72\xe6;jb 0x1303ac0
+1034;1303ac0;\x8b\x3e;mov edi, dword ptr [esi]
+1035;1303ac2;\x85\xff;test edi, edi
+1036;1303ac4;\x74\x09;jz 0x1303acf
+1037;1303acf;\x83\xc6\x04;add esi, 0x4
+1038;1303ad2;\x81\xfe\x78\x7a\x30\x01;cmp esi, 0x1307a78
+1039;1303ad8;\x72\xe6;jb 0x1303ac0
+1040;1303ac0;\x8b\x3e;mov edi, dword ptr [esi]
+1041;1303ac2;\x85\xff;test edi, edi
+1042;1303ac4;\x74\x09;jz 0x1303acf
+1043;1303acf;\x83\xc6\x04;add esi, 0x4
+1044;1303ad2;\x81\xfe\x78\x7a\x30\x01;cmp esi, 0x1307a78
+1045;1303ad8;\x72\xe6;jb 0x1303ac0
+1046;1303ac0;\x8b\x3e;mov edi, dword ptr [esi]
+1047;1303ac2;\x85\xff;test edi, edi
+1048;1303ac4;\x74\x09;jz 0x1303acf
+1049;1303acf;\x83\xc6\x04;add esi, 0x4
+1050;1303ad2;\x81\xfe\x78\x7a\x30\x01;cmp esi, 0x1307a78
+1051;1303ad8;\x72\xe6;jb 0x1303ac0
+1052;1303ac0;\x8b\x3e;mov edi, dword ptr [esi]
+1053;1303ac2;\x85\xff;test edi, edi
+1054;1303ac4;\x74\x09;jz 0x1303acf
+1055;1303acf;\x83\xc6\x04;add esi, 0x4
+1056;1303ad2;\x81\xfe\x78\x7a\x30\x01;cmp esi, 0x1307a78
+1057;1303ad8;\x72\xe6;jb 0x1303ac0
+1058;1303ac0;\x8b\x3e;mov edi, dword ptr [esi]
+1059;1303ac2;\x85\xff;test edi, edi
+1060;1303ac4;\x74\x09;jz 0x1303acf
+1061;1303acf;\x83\xc6\x04;add esi, 0x4
+1062;1303ad2;\x81\xfe\x78\x7a\x30\x01;cmp esi, 0x1307a78
+1063;1303ad8;\x72\xe6;jb 0x1303ac0
+1064;1303ac0;\x8b\x3e;mov edi, dword ptr [esi]
+1065;1303ac2;\x85\xff;test edi, edi
+1066;1303ac4;\x74\x09;jz 0x1303acf
+1067;1303acf;\x83\xc6\x04;add esi, 0x4
+1068;1303ad2;\x81\xfe\x78\x7a\x30\x01;cmp esi, 0x1307a78
+1069;1303ad8;\x72\xe6;jb 0x1303ac0
+1070;1303ac0;\x8b\x3e;mov edi, dword ptr [esi]
+1071;1303ac2;\x85\xff;test edi, edi
+1072;1303ac4;\x74\x09;jz 0x1303acf
+1073;1303acf;\x83\xc6\x04;add esi, 0x4
+1074;1303ad2;\x81\xfe\x78\x7a\x30\x01;cmp esi, 0x1307a78
+1075;1303ad8;\x72\xe6;jb 0x1303ac0
+1076;1303ac0;\x8b\x3e;mov edi, dword ptr [esi]
+1077;1303ac2;\x85\xff;test edi, edi
+1078;1303ac4;\x74\x09;jz 0x1303acf
+1079;1303acf;\x83\xc6\x04;add esi, 0x4
+1080;1303ad2;\x81\xfe\x78\x7a\x30\x01;cmp esi, 0x1307a78
+1081;1303ad8;\x72\xe6;jb 0x1303ac0
+1082;1303ac0;\x8b\x3e;mov edi, dword ptr [esi]
+1083;1303ac2;\x85\xff;test edi, edi
+1084;1303ac4;\x74\x09;jz 0x1303acf
+1085;1303acf;\x83\xc6\x04;add esi, 0x4
+1086;1303ad2;\x81\xfe\x78\x7a\x30\x01;cmp esi, 0x1307a78
+1087;1303ad8;\x72\xe6;jb 0x1303ac0
+1088;1303ac0;\x8b\x3e;mov edi, dword ptr [esi]
+1089;1303ac2;\x85\xff;test edi, edi
+1090;1303ac4;\x74\x09;jz 0x1303acf
+1091;1303acf;\x83\xc6\x04;add esi, 0x4
+1092;1303ad2;\x81\xfe\x78\x7a\x30\x01;cmp esi, 0x1307a78
+1093;1303ad8;\x72\xe6;jb 0x1303ac0
+1094;1303ac0;\x8b\x3e;mov edi, dword ptr [esi]
+1095;1303ac2;\x85\xff;test edi, edi
+1096;1303ac4;\x74\x09;jz 0x1303acf
+1097;1303acf;\x83\xc6\x04;add esi, 0x4
+1098;1303ad2;\x81\xfe\x78\x7a\x30\x01;cmp esi, 0x1307a78
+1099;1303ad8;\x72\xe6;jb 0x1303ac0
+1100;1303ac0;\x8b\x3e;mov edi, dword ptr [esi]
+1101;1303ac2;\x85\xff;test edi, edi
+1102;1303ac4;\x74\x09;jz 0x1303acf
+1103;1303acf;\x83\xc6\x04;add esi, 0x4
+1104;1303ad2;\x81\xfe\x78\x7a\x30\x01;cmp esi, 0x1307a78
+1105;1303ad8;\x72\xe6;jb 0x1303ac0
+1106;1303ac0;\x8b\x3e;mov edi, dword ptr [esi]
+1107;1303ac2;\x85\xff;test edi, edi
+1108;1303ac4;\x74\x09;jz 0x1303acf
+1109;1303acf;\x83\xc6\x04;add esi, 0x4
+1110;1303ad2;\x81\xfe\x78\x7a\x30\x01;cmp esi, 0x1307a78
+1111;1303ad8;\x72\xe6;jb 0x1303ac0
+1112;1303ac0;\x8b\x3e;mov edi, dword ptr [esi]
+1113;1303ac2;\x85\xff;test edi, edi
+1114;1303ac4;\x74\x09;jz 0x1303acf
+1115;1303acf;\x83\xc6\x04;add esi, 0x4
+1116;1303ad2;\x81\xfe\x78\x7a\x30\x01;cmp esi, 0x1307a78
+1117;1303ad8;\x72\xe6;jb 0x1303ac0
+1118;1303ac0;\x8b\x3e;mov edi, dword ptr [esi]
+1119;1303ac2;\x85\xff;test edi, edi
+1120;1303ac4;\x74\x09;jz 0x1303acf
+1121;1303acf;\x83\xc6\x04;add esi, 0x4
+1122;1303ad2;\x81\xfe\x78\x7a\x30\x01;cmp esi, 0x1307a78
+1123;1303ad8;\x72\xe6;jb 0x1303ac0
+1124;1303ac0;\x8b\x3e;mov edi, dword ptr [esi]
+1125;1303ac2;\x85\xff;test edi, edi
+1126;1303ac4;\x74\x09;jz 0x1303acf
+1127;1303acf;\x83\xc6\x04;add esi, 0x4
+1128;1303ad2;\x81\xfe\x78\x7a\x30\x01;cmp esi, 0x1307a78
+1129;1303ad8;\x72\xe6;jb 0x1303ac0
+1130;1303ac0;\x8b\x3e;mov edi, dword ptr [esi]
+1131;1303ac2;\x85\xff;test edi, edi
+1132;1303ac4;\x74\x09;jz 0x1303acf
+1133;1303acf;\x83\xc6\x04;add esi, 0x4
+1134;1303ad2;\x81\xfe\x78\x7a\x30\x01;cmp esi, 0x1307a78
+1135;1303ad8;\x72\xe6;jb 0x1303ac0
+1136;1303ac0;\x8b\x3e;mov edi, dword ptr [esi]
+1137;1303ac2;\x85\xff;test edi, edi
+1138;1303ac4;\x74\x09;jz 0x1303acf
+1139;1303acf;\x83\xc6\x04;add esi, 0x4
+1140;1303ad2;\x81\xfe\x78\x7a\x30\x01;cmp esi, 0x1307a78
+1141;1303ad8;\x72\xe6;jb 0x1303ac0
+1142;1303ac0;\x8b\x3e;mov edi, dword ptr [esi]
+1143;1303ac2;\x85\xff;test edi, edi
+1144;1303ac4;\x74\x09;jz 0x1303acf
+1145;1303acf;\x83\xc6\x04;add esi, 0x4
+1146;1303ad2;\x81\xfe\x78\x7a\x30\x01;cmp esi, 0x1307a78
+1147;1303ad8;\x72\xe6;jb 0x1303ac0
+1148;1303ac0;\x8b\x3e;mov edi, dword ptr [esi]
+1149;1303ac2;\x85\xff;test edi, edi
+1150;1303ac4;\x74\x09;jz 0x1303acf
+1151;1303acf;\x83\xc6\x04;add esi, 0x4
+1152;1303ad2;\x81\xfe\x78\x7a\x30\x01;cmp esi, 0x1307a78
+1153;1303ad8;\x72\xe6;jb 0x1303ac0
+1154;1303ac0;\x8b\x3e;mov edi, dword ptr [esi]
+1155;1303ac2;\x85\xff;test edi, edi
+1156;1303ac4;\x74\x09;jz 0x1303acf
+1157;1303acf;\x83\xc6\x04;add esi, 0x4
+1158;1303ad2;\x81\xfe\x78\x7a\x30\x01;cmp esi, 0x1307a78
+1159;1303ad8;\x72\xe6;jb 0x1303ac0
+1160;1303ac0;\x8b\x3e;mov edi, dword ptr [esi]
+1161;1303ac2;\x85\xff;test edi, edi
+1162;1303ac4;\x74\x09;jz 0x1303acf
+1163;1303acf;\x83\xc6\x04;add esi, 0x4
+1164;1303ad2;\x81\xfe\x78\x7a\x30\x01;cmp esi, 0x1307a78
+1165;1303ad8;\x72\xe6;jb 0x1303ac0
+1166;1303ac0;\x8b\x3e;mov edi, dword ptr [esi]
+1167;1303ac2;\x85\xff;test edi, edi
+1168;1303ac4;\x74\x09;jz 0x1303acf
+1169;1303acf;\x83\xc6\x04;add esi, 0x4
+1170;1303ad2;\x81\xfe\x78\x7a\x30\x01;cmp esi, 0x1307a78
+1171;1303ad8;\x72\xe6;jb 0x1303ac0
+1172;1303ac0;\x8b\x3e;mov edi, dword ptr [esi]
+1173;1303ac2;\x85\xff;test edi, edi
+1174;1303ac4;\x74\x09;jz 0x1303acf
+1175;1303acf;\x83\xc6\x04;add esi, 0x4
+1176;1303ad2;\x81\xfe\x78\x7a\x30\x01;cmp esi, 0x1307a78
+1177;1303ad8;\x72\xe6;jb 0x1303ac0
+1178;1303ac0;\x8b\x3e;mov edi, dword ptr [esi]
+1179;1303ac2;\x85\xff;test edi, edi
+1180;1303ac4;\x74\x09;jz 0x1303acf
+1181;1303acf;\x83\xc6\x04;add esi, 0x4
+1182;1303ad2;\x81\xfe\x78\x7a\x30\x01;cmp esi, 0x1307a78
+1183;1303ad8;\x72\xe6;jb 0x1303ac0
+1184;1303ac0;\x8b\x3e;mov edi, dword ptr [esi]
+1185;1303ac2;\x85\xff;test edi, edi
+1186;1303ac4;\x74\x09;jz 0x1303acf
+1187;1303acf;\x83\xc6\x04;add esi, 0x4
+1188;1303ad2;\x81\xfe\x78\x7a\x30\x01;cmp esi, 0x1307a78
+1189;1303ad8;\x72\xe6;jb 0x1303ac0
+1190;1303ac0;\x8b\x3e;mov edi, dword ptr [esi]
+1191;1303ac2;\x85\xff;test edi, edi
+1192;1303ac4;\x74\x09;jz 0x1303acf
+1193;1303acf;\x83\xc6\x04;add esi, 0x4
+1194;1303ad2;\x81\xfe\x78\x7a\x30\x01;cmp esi, 0x1307a78
+1195;1303ad8;\x72\xe6;jb 0x1303ac0
+1196;1303ac0;\x8b\x3e;mov edi, dword ptr [esi]
+1197;1303ac2;\x85\xff;test edi, edi
+1198;1303ac4;\x74\x09;jz 0x1303acf
+1199;1303acf;\x83\xc6\x04;add esi, 0x4
+1200;1303ad2;\x81\xfe\x78\x7a\x30\x01;cmp esi, 0x1307a78
+1201;1303ad8;\x72\xe6;jb 0x1303ac0
+1202;1303ac0;\x8b\x3e;mov edi, dword ptr [esi]
+1203;1303ac2;\x85\xff;test edi, edi
+1204;1303ac4;\x74\x09;jz 0x1303acf
+1205;1303acf;\x83\xc6\x04;add esi, 0x4
+1206;1303ad2;\x81\xfe\x78\x7a\x30\x01;cmp esi, 0x1307a78
+1207;1303ad8;\x72\xe6;jb 0x1303ac0
+1208;1303ac0;\x8b\x3e;mov edi, dword ptr [esi]
+1209;1303ac2;\x85\xff;test edi, edi
+1210;1303ac4;\x74\x09;jz 0x1303acf
+1211;1303acf;\x83\xc6\x04;add esi, 0x4
+1212;1303ad2;\x81\xfe\x78\x7a\x30\x01;cmp esi, 0x1307a78
+1213;1303ad8;\x72\xe6;jb 0x1303ac0
+1214;1303ac0;\x8b\x3e;mov edi, dword ptr [esi]
+1215;1303ac2;\x85\xff;test edi, edi
+1216;1303ac4;\x74\x09;jz 0x1303acf
+1217;1303acf;\x83\xc6\x04;add esi, 0x4
+1218;1303ad2;\x81\xfe\x78\x7a\x30\x01;cmp esi, 0x1307a78
+1219;1303ad8;\x72\xe6;jb 0x1303ac0
+1220;1303ac0;\x8b\x3e;mov edi, dword ptr [esi]
+1221;1303ac2;\x85\xff;test edi, edi
+1222;1303ac4;\x74\x09;jz 0x1303acf
+1223;1303acf;\x83\xc6\x04;add esi, 0x4
+1224;1303ad2;\x81\xfe\x78\x7a\x30\x01;cmp esi, 0x1307a78
+1225;1303ad8;\x72\xe6;jb 0x1303ac0
+1226;1303ac0;\x8b\x3e;mov edi, dword ptr [esi]
+1227;1303ac2;\x85\xff;test edi, edi
+1228;1303ac4;\x74\x09;jz 0x1303acf
+1229;1303acf;\x83\xc6\x04;add esi, 0x4
+1230;1303ad2;\x81\xfe\x78\x7a\x30\x01;cmp esi, 0x1307a78
+1231;1303ad8;\x72\xe6;jb 0x1303ac0
+1232;1303ac0;\x8b\x3e;mov edi, dword ptr [esi]
+1233;1303ac2;\x85\xff;test edi, edi
+1234;1303ac4;\x74\x09;jz 0x1303acf
+1235;1303acf;\x83\xc6\x04;add esi, 0x4
+1236;1303ad2;\x81\xfe\x78\x7a\x30\x01;cmp esi, 0x1307a78
+1237;1303ad8;\x72\xe6;jb 0x1303ac0
+1238;1303ac0;\x8b\x3e;mov edi, dword ptr [esi]
+1239;1303ac2;\x85\xff;test edi, edi
+1240;1303ac4;\x74\x09;jz 0x1303acf
+1241;1303acf;\x83\xc6\x04;add esi, 0x4
+1242;1303ad2;\x81\xfe\x78\x7a\x30\x01;cmp esi, 0x1307a78
+1243;1303ad8;\x72\xe6;jb 0x1303ac0
+1244;1303ac0;\x8b\x3e;mov edi, dword ptr [esi]
+1245;1303ac2;\x85\xff;test edi, edi
+1246;1303ac4;\x74\x09;jz 0x1303acf
+1247;1303acf;\x83\xc6\x04;add esi, 0x4
+1248;1303ad2;\x81\xfe\x78\x7a\x30\x01;cmp esi, 0x1307a78
+1249;1303ad8;\x72\xe6;jb 0x1303ac0
+1250;1303ac0;\x8b\x3e;mov edi, dword ptr [esi]
+1251;1303ac2;\x85\xff;test edi, edi
+1252;1303ac4;\x74\x09;jz 0x1303acf
+1253;1303acf;\x83\xc6\x04;add esi, 0x4
+1254;1303ad2;\x81\xfe\x78\x7a\x30\x01;cmp esi, 0x1307a78
+1255;1303ad8;\x72\xe6;jb 0x1303ac0
+1256;1303ac0;\x8b\x3e;mov edi, dword ptr [esi]
+1257;1303ac2;\x85\xff;test edi, edi
+1258;1303ac4;\x74\x09;jz 0x1303acf
+1259;1303acf;\x83\xc6\x04;add esi, 0x4
+1260;1303ad2;\x81\xfe\x78\x7a\x30\x01;cmp esi, 0x1307a78
+1261;1303ad8;\x72\xe6;jb 0x1303ac0
+1262;1303ac0;\x8b\x3e;mov edi, dword ptr [esi]
+1263;1303ac2;\x85\xff;test edi, edi
+1264;1303ac4;\x74\x09;jz 0x1303acf
+1265;1303acf;\x83\xc6\x04;add esi, 0x4
+1266;1303ad2;\x81\xfe\x78\x7a\x30\x01;cmp esi, 0x1307a78
+1267;1303ad8;\x72\xe6;jb 0x1303ac0
+1268;1303ac0;\x8b\x3e;mov edi, dword ptr [esi]
+1269;1303ac2;\x85\xff;test edi, edi
+1270;1303ac4;\x74\x09;jz 0x1303acf
+1271;1303acf;\x83\xc6\x04;add esi, 0x4
+1272;1303ad2;\x81\xfe\x78\x7a\x30\x01;cmp esi, 0x1307a78
+1273;1303ad8;\x72\xe6;jb 0x1303ac0
+1274;1303ac0;\x8b\x3e;mov edi, dword ptr [esi]
+1275;1303ac2;\x85\xff;test edi, edi
+1276;1303ac4;\x74\x09;jz 0x1303acf
+1277;1303acf;\x83\xc6\x04;add esi, 0x4
+1278;1303ad2;\x81\xfe\x78\x7a\x30\x01;cmp esi, 0x1307a78
+1279;1303ad8;\x72\xe6;jb 0x1303ac0
+1280;1303ada;\x5f;pop edi
+1281;1303adb;\x5e;pop esi
+1282;1303adc;\xc3;ret 
+1283;1301dad;\x68\x6d\x11\x30\x01;push 0x130116d
+1284;1301db2;\xe8\xf3\xf2\xff\xff;call 0x13010aa
+1285;13010aa;\xe9\xa1\x23\x00\x00;jmp 0x1303450
+1286;1303450;\x55;push ebp
+1287;1303451;\x8b\xec;mov ebp, esp
+1288;1303453;\x51;push ecx
+1289;1303454;\x8b\x45\x08;mov eax, dword ptr [ebp+0x8]
+1290;1303457;\x50;push eax
+1291;1303458;\xe8\xec\xdd\xff\xff;call 0x1301249
+1292;1301249;\xe9\x12\x21\x00\x00;jmp 0x1303360
+1293;1303360;\x55;push ebp
+1294;1303361;\x8b\xec;mov ebp, esp
+1295;1303363;\x83\xec\x0c;sub esp, 0xc
+1296;1303366;\xa1\x60\x91\x30\x01;mov eax, dword ptr [0x1309160]
+1297;130336b;\x50;push eax
+1298;130336c;\xe8\xb1\xdd\xff\xff;call 0x1301122
+1299;1301122;\xe9\x19\x1b\x00\x00;jmp 0x1302c40
+1300;1302c40;\x55;push ebp
+1301;1302c41;\x8b\xec;mov ebp, esp
+1302;1302c43;\xa1\x24\x90\x30\x01;mov eax, dword ptr [0x1309024]
+1303;1302c48;\x33\xd2;xor edx, edx
+1304;1302c4a;\xb9\x20\x00\x00\x00;mov ecx, 0x20
+1305;1302c4f;\xf7\xf1;div ecx
+1306;1302c51;\x52;push edx
+1307;1302c52;\x8b\x55\x08;mov edx, dword ptr [ebp+0x8]
+1308;1302c55;\x33\x15\x24\x90\x30\x01;xor edx, dword ptr [0x1309024]
+1309;1302c5b;\x52;push edx
+1310;1302c5c;\xe8\x34\xe5\xff\xff;call 0x1301195
+1311;1301195;\xe9\x16\x1b\x00\x00;jmp 0x1302cb0
+1312;1302cb0;\x55;push ebp
+1313;1302cb1;\x8b\xec;mov ebp, esp
+1314;1302cb3;\x8b\x45\x08;mov eax, dword ptr [ebp+0x8]
+1315;1302cb6;\x8b\x4d\x0c;mov ecx, dword ptr [ebp+0xc]
+1316;1302cb9;\xd3\xc8;ror eax, cl
+1317;1302cbb;\x5d;pop ebp
+1318;1302cbc;\xc3;ret 
+1319;1302c61;\x83\xc4\x08;add esp, 0x8
+1320;1302c64;\x5d;pop ebp
+1321;1302c65;\xc3;ret 
+1322;1303371;\x83\xc4\x04;add esp, 0x4
+1323;1303374;\x89\x45\xf4;mov dword ptr [ebp-0xc], eax
+1324;1303377;\x83\x7d\xf4\xff;cmp dword ptr [ebp-0xc], 0xffffffff
+1325;130337b;\x75\x26;jnz 0x13033a3
+1326;130337d;\x8b\x4d\x08;mov ecx, dword ptr [ebp+0x8]
+1327;1303380;\x51;push ecx
+1328;1303381;\xe8\x95\xdf\xff\xff;call 0x130131b
+1329;130131b;\xe9\x60\x3b\x00\x00;jmp 0x1304e80
+1330;1304e80;\xff\x25\xf4\xa0\x30\x01;jmp dword ptr [0x130a0f4]
+1331;1303386;\x83\xc4\x04;add esp, 0x4
+1332;1303389;\x85\xc0;test eax, eax
+1333;130338b;\x75\x08;jnz 0x1303395
+1334;130338d;\x8b\x55\x08;mov edx, dword ptr [ebp+0x8]
+1335;1303390;\x89\x55\xfc;mov dword ptr [ebp-0x4], edx
+1336;1303393;\xeb\x07;jmp 0x130339c
+1337;130339c;\x8b\x45\xfc;mov eax, dword ptr [ebp-0x4]
+1338;130339f;\xeb\x29;jmp 0x13033ca
+1339;13033ca;\x8b\xe5;mov esp, ebp
+1340;13033cc;\x5d;pop ebp
+1341;13033cd;\xc3;ret 
+1342;130345d;\x83\xc4\x04;add esp, 0x4
+1343;1303460;\x85\xc0;test eax, eax
+1344;1303462;\x74\x09;jz 0x130346d
+1345;1303464;\xc7\x45\xfc\x00\x00\x00\x00;mov dword ptr [ebp-0x4], 0x0
+1346;130346b;\xeb\x07;jmp 0x1303474
+1347;1303474;\x8b\x45\xfc;mov eax, dword ptr [ebp-0x4]
+1348;1303477;\x8b\xe5;mov esp, ebp
+1349;1303479;\x5d;pop ebp
+1350;130347a;\xc3;ret 
+1351;1301db7;\x83\xc4\x04;add esp, 0x4
+1352;1301dba;\xe8\x85\xf4\xff\xff;call 0x1301244
+1353;1301244;\xe9\xe7\x0e\x00\x00;jmp 0x1302130
+1354;1302130;\x55;push ebp
+1355;1302131;\x8b\xec;mov ebp, esp
+1356;1302133;\xe8\xdc\xee\xff\xff;call 0x1301014
+1357;1301014;\xe9\xa7\x25\x00\x00;jmp 0x13035c0
+1358;13035c0;\x55;push ebp
+1359;13035c1;\x8b\xec;mov ebp, esp
+1360;13035c3;\xb8\x01\x00\x00\x00;mov eax, 0x1
+1361;13035c8;\x5d;pop ebp
+1362;13035c9;\xc3;ret 
+1363;1302138;\x50;push eax
+1364;1302139;\xe8\x97\xf1\xff\xff;call 0x13012d5
+1365;13012d5;\xe9\x28\x3b\x00\x00;jmp 0x1304e02
+1366;1304e02;\xff\x25\x48\xa1\x30\x01;jmp dword ptr [0x130a148]
+1367;130213e;\x83\xc4\x04;add esp, 0x4
+1368;1302141;\x5d;pop ebp
+1369;1302142;\xc3;ret 
+1370;1301dbf;\x85\xc0;test eax, eax
+1371;1301dc1;\x74\x07;jz 0x1301dca
+1372;1301dca;\xe8\x34\xf4\xff\xff;call 0x1301203
+1373;1301203;\xe9\x08\x24\x00\x00;jmp 0x1303610
+1374;1303610;\x55;push ebp
+1375;1303611;\x8b\xec;mov ebp, esp
+1376;1303613;\x68\x80\x91\x30\x01;push 0x1309180
+1377;1303618;\xff\x15\x50\xa0\x30\x01;call dword ptr [0x130a050]
+1378;130361e;\x5d;pop ebp
+1379;130361f;\xc3;ret 
+1380;1301dcf;\xe8\x30\xf3\xff\xff;call 0x1301104
+1381;1301104;\xe9\xf7\x25\x00\x00;jmp 0x1303700
+1382;1303700;\x55;push ebp
+1383;1303701;\x8b\xec;mov ebp, esp
+1384;1303703;\x51;push ecx
+1385;1303704;\x83\x3d\x1c\x90\x30\x01\x00;cmp dword ptr [0x130901c], 0x0
+1386;130370b;\x75\x09;jnz 0x1303716
+1387;1303716;\xc7\x45\xfc\x00\x00\x00\x00;mov dword ptr [ebp-0x4], 0x0
+1388;130371d;\x8b\x45\xfc;mov eax, dword ptr [ebp-0x4]
+1389;1303720;\x8b\xe5;mov esp, ebp
+1390;1303722;\x5d;pop ebp
+1391;1303723;\xc3;ret 
+1392;1301dd4;\x85\xc0;test eax, eax
+1393;1301dd6;\x74\x0d;jz 0x1301de5
+1394;1301de5;\xe8\x8d\xf3\xff\xff;call 0x1301177
+1395;1301177;\xe9\x14\x25\x00\x00;jmp 0x1303690
+1396;1303690;\x55;push ebp
+1397;1303691;\x8b\xec;mov ebp, esp
+1398;1303693;\x5d;pop ebp
+1399;1303694;\xc3;ret 
+1400;1301dea;\xe8\xe2\xf3\xff\xff;call 0x13011d1
+1401;13011d1;\xe9\xca\x24\x00\x00;jmp 0x13036a0
+1402;13036a0;\x55;push ebp
+1403;13036a1;\x8b\xec;mov ebp, esp
+1404;13036a3;\x5d;pop ebp
+1405;13036a4;\xc3;ret 
+1406;1301def;\xe8\x4d\xf2\xff\xff;call 0x1301041
+1407;1301041;\xe9\x1a\x26\x00\x00;jmp 0x1303660
+1408;1303660;\x55;push ebp
+1409;1303661;\x8b\xec;mov ebp, esp
+1410;1303663;\x68\x00\x00\x03\x00;push 0x30000
+1411;1303668;\x68\x00\x00\x01\x00;push 0x10000
+1412;130366d;\x6a\x00;push 0x0
+1413;130366f;\xe8\xb2\xdb\xff\xff;call 0x1301226
+1414;1301226;\xe9\x61\x3c\x00\x00;jmp 0x1304e8c
+1415;1304e8c;\xff\x25\xfc\xa0\x30\x01;jmp dword ptr [0x130a0fc]
+1416;1303674;\x83\xc4\x0c;add esp, 0xc
+1417;1303677;\x85\xc0;test eax, eax
+1418;1303679;\x74\x07;jz 0x1303682
+1419;1303682;\x5d;pop ebp
+1420;1303683;\xc3;ret 
+1421;1301df4;\xe8\x9d\xf2\xff\xff;call 0x1301096
+1422;1301096;\xe9\x65\x25\x00\x00;jmp 0x1303600
+1423;1303600;\x55;push ebp
+1424;1303601;\x8b\xec;mov ebp, esp
+1425;1303603;\x33\xc0;xor eax, eax
+1426;1303605;\x5d;pop ebp
+1427;1303606;\xc3;ret 
+1428;1301df9;\x50;push eax
+1429;1301dfa;\xe8\x2e\xf2\xff\xff;call 0x130102d
+1430;130102d;\xe9\x1e\x3e\x00\x00;jmp 0x1304e50
+1431;1304e50;\xff\x25\x14\xa1\x30\x01;jmp dword ptr [0x130a114]
+1432;1301dff;\x83\xc4\x04;add esp, 0x4
+1433;1301e02;\xe8\x55\xf5\xff\xff;call 0x130135c
+1434;130135c;\xe9\xef\x22\x00\x00;jmp 0x1303650
+1435;1303650;\x55;push ebp
+1436;1303651;\x8b\xec;mov ebp, esp
+1437;1303653;\xb0\x01;mov al, 0x1
+1438;1303655;\x5d;pop ebp
+1439;1303656;\xc3;ret 
+1440;1301e07;\x0f\xb6\xc8;movzx ecx, al
+1441;1301e0a;\x85\xc9;test ecx, ecx
+1442;1301e0c;\x74\x05;jz 0x1301e13
+1443;1301e0e;\xe8\x4d\x03\x00\x00;call 0x1302160
+1444;1302160;\x55;push ebp
+1445;1302161;\x8b\xec;mov ebp, esp
+1446;1302163;\xe8\x82\xf0\xff\xff;call 0x13011ea
+1447;13011ea;\xe9\x19\x3c\x00\x00;jmp 0x1304e08
+1448;1304e08;\xff\x25\x44\xa1\x30\x01;jmp dword ptr [0x130a144]
+1449;1302168;\x5d;pop ebp
+1450;1302169;\xc3;ret 
+1451;1301e13;\xe8\x74\xf2\xff\xff;call 0x130108c
+1452;130108c;\xe9\x9f\x28\x00\x00;jmp 0x1303930
+1453;1303930;\x55;push ebp
+1454;1303931;\x8b\xec;mov ebp, esp
+1455;1303933;\x33\xc0;xor eax, eax
+1456;1303935;\x5d;pop ebp
+1457;1303936;\xc3;ret 
+1458;1301e18;\x33\xc0;xor eax, eax
+1459;1301e1a;\x5e;pop esi
+1460;1301e1b;\x5d;pop ebp
+1461;1301e1c;\xc3;ret 
+1462;1301e50;\x55;push ebp
+1463;1301e51;\x8b\xec;mov ebp, esp
+1464;1301e53;\xe8\xe7\xf3\xff\xff;call 0x130123f
+1465;130123f;\xe9\x6c\x24\x00\x00;jmp 0x13036b0
+1466;13036b0;\x55;push ebp
+1467;13036b1;\x8b\xec;mov ebp, esp
+1468;13036b3;\x83\xec\x08;sub esp, 0x8
+1469;13036b6;\xe8\x7e\xdc\xff\xff;call 0x1301339
+1470;1301339;\xe9\x92\x03\x00\x00;jmp 0x13016d0
+1471;13016d0;\x55;push ebp
+1472;13016d1;\x8b\xec;mov ebp, esp
+1473;13016d3;\x81\xec\xc0\x00\x00\x00;sub esp, 0xc0
+1474;13016d9;\x53;push ebx
+1475;13016da;\x56;push esi
+1476;13016db;\x57;push edi
+1477;13016dc;\x8d\xbd\x40\xff\xff\xff;lea edi, ptr [ebp-0xc0]
+1478;13016e2;\xb9\x30\x00\x00\x00;mov ecx, 0x30
+1479;13016e7;\xb8\xcc\xcc\xcc\xcc;mov eax, 0xcccccccc
+1480;13016ec;\xf3\xab;rep stosd dword ptr [edi]
+1481;13016ec;\xf3\xab;rep stosd dword ptr [edi]
+1482;13016ec;\xf3\xab;rep stosd dword ptr [edi]
+1483;13016ec;\xf3\xab;rep stosd dword ptr [edi]
+1484;13016ec;\xf3\xab;rep stosd dword ptr [edi]
+1485;13016ec;\xf3\xab;rep stosd dword ptr [edi]
+1486;13016ec;\xf3\xab;rep stosd dword ptr [edi]
+1487;13016ec;\xf3\xab;rep stosd dword ptr [edi]
+1488;13016ec;\xf3\xab;rep stosd dword ptr [edi]
+1489;13016ec;\xf3\xab;rep stosd dword ptr [edi]
+1490;13016ec;\xf3\xab;rep stosd dword ptr [edi]
+1491;13016ec;\xf3\xab;rep stosd dword ptr [edi]
+1492;13016ec;\xf3\xab;rep stosd dword ptr [edi]
+1493;13016ec;\xf3\xab;rep stosd dword ptr [edi]
+1494;13016ec;\xf3\xab;rep stosd dword ptr [edi]
+1495;13016ec;\xf3\xab;rep stosd dword ptr [edi]
+1496;13016ec;\xf3\xab;rep stosd dword ptr [edi]
+1497;13016ec;\xf3\xab;rep stosd dword ptr [edi]
+1498;13016ec;\xf3\xab;rep stosd dword ptr [edi]
+1499;13016ec;\xf3\xab;rep stosd dword ptr [edi]
+1500;13016ec;\xf3\xab;rep stosd dword ptr [edi]
+1501;13016ec;\xf3\xab;rep stosd dword ptr [edi]
+1502;13016ec;\xf3\xab;rep stosd dword ptr [edi]
+1503;13016ec;\xf3\xab;rep stosd dword ptr [edi]
+1504;13016ec;\xf3\xab;rep stosd dword ptr [edi]
+1505;13016ec;\xf3\xab;rep stosd dword ptr [edi]
+1506;13016ec;\xf3\xab;rep stosd dword ptr [edi]
+1507;13016ec;\xf3\xab;rep stosd dword ptr [edi]
+1508;13016ec;\xf3\xab;rep stosd dword ptr [edi]
+1509;13016ec;\xf3\xab;rep stosd dword ptr [edi]
+1510;13016ec;\xf3\xab;rep stosd dword ptr [edi]
+1511;13016ec;\xf3\xab;rep stosd dword ptr [edi]
+1512;13016ec;\xf3\xab;rep stosd dword ptr [edi]
+1513;13016ec;\xf3\xab;rep stosd dword ptr [edi]
+1514;13016ec;\xf3\xab;rep stosd dword ptr [edi]
+1515;13016ec;\xf3\xab;rep stosd dword ptr [edi]
+1516;13016ec;\xf3\xab;rep stosd dword ptr [edi]
+1517;13016ec;\xf3\xab;rep stosd dword ptr [edi]
+1518;13016ec;\xf3\xab;rep stosd dword ptr [edi]
+1519;13016ec;\xf3\xab;rep stosd dword ptr [edi]
+1520;13016ec;\xf3\xab;rep stosd dword ptr [edi]
+1521;13016ec;\xf3\xab;rep stosd dword ptr [edi]
+1522;13016ec;\xf3\xab;rep stosd dword ptr [edi]
+1523;13016ec;\xf3\xab;rep stosd dword ptr [edi]
+1524;13016ec;\xf3\xab;rep stosd dword ptr [edi]
+1525;13016ec;\xf3\xab;rep stosd dword ptr [edi]
+1526;13016ec;\xf3\xab;rep stosd dword ptr [edi]
+1527;13016ec;\xf3\xab;rep stosd dword ptr [edi]
+1528;13016ee;\xb8\x90\x95\x30\x01;mov eax, 0x1309590
+1529;13016f3;\x5f;pop edi
+1530;13016f4;\x5e;pop esi
+1531;13016f5;\x5b;pop ebx
+1532;13016f6;\x8b\xe5;mov esp, ebp
+1533;13016f8;\x5d;pop ebp
+1534;13016f9;\xc3;ret 
+1535;13036bb;\x89\x45\xfc;mov dword ptr [ebp-0x4], eax
+1536;13036be;\x8b\x45\xfc;mov eax, dword ptr [ebp-0x4]
+1537;13036c1;\x8b\x08;mov ecx, dword ptr [eax]
+1538;13036c3;\x83\xc9\x04;or ecx, 0x4
+1539;13036c6;\x8b\x50\x04;mov edx, dword ptr [eax+0x4]
+1540;13036c9;\x8b\x45\xfc;mov eax, dword ptr [ebp-0x4]
+1541;13036cc;\x89\x08;mov dword ptr [eax], ecx
+1542;13036ce;\x89\x50\x04;mov dword ptr [eax+0x4], edx
+1543;13036d1;\xe8\x19\xdb\xff\xff;call 0x13011ef
+1544;13011ef;\xe9\x1c\x05\x00\x00;jmp 0x1301710
+1545;1301710;\x55;push ebp
+1546;1301711;\x8b\xec;mov ebp, esp
+1547;1301713;\x81\xec\xc0\x00\x00\x00;sub esp, 0xc0
+1548;1301719;\x53;push ebx
+1549;130171a;\x56;push esi
+1550;130171b;\x57;push edi
+1551;130171c;\x8d\xbd\x40\xff\xff\xff;lea edi, ptr [ebp-0xc0]
+1552;1301722;\xb9\x30\x00\x00\x00;mov ecx, 0x30
+1553;1301727;\xb8\xcc\xcc\xcc\xcc;mov eax, 0xcccccccc
+1554;130172c;\xf3\xab;rep stosd dword ptr [edi]
+1555;130172c;\xf3\xab;rep stosd dword ptr [edi]
+1556;130172c;\xf3\xab;rep stosd dword ptr [edi]
+1557;130172c;\xf3\xab;rep stosd dword ptr [edi]
+1558;130172c;\xf3\xab;rep stosd dword ptr [edi]
+1559;130172c;\xf3\xab;rep stosd dword ptr [edi]
+1560;130172c;\xf3\xab;rep stosd dword ptr [edi]
+1561;130172c;\xf3\xab;rep stosd dword ptr [edi]
+1562;130172c;\xf3\xab;rep stosd dword ptr [edi]
+1563;130172c;\xf3\xab;rep stosd dword ptr [edi]
+1564;130172c;\xf3\xab;rep stosd dword ptr [edi]
+1565;130172c;\xf3\xab;rep stosd dword ptr [edi]
+1566;130172c;\xf3\xab;rep stosd dword ptr [edi]
+1567;130172c;\xf3\xab;rep stosd dword ptr [edi]
+1568;130172c;\xf3\xab;rep stosd dword ptr [edi]
+1569;130172c;\xf3\xab;rep stosd dword ptr [edi]
+1570;130172c;\xf3\xab;rep stosd dword ptr [edi]
+1571;130172c;\xf3\xab;rep stosd dword ptr [edi]
+1572;130172c;\xf3\xab;rep stosd dword ptr [edi]
+1573;130172c;\xf3\xab;rep stosd dword ptr [edi]
+1574;130172c;\xf3\xab;rep stosd dword ptr [edi]
+1575;130172c;\xf3\xab;rep stosd dword ptr [edi]
+1576;130172c;\xf3\xab;rep stosd dword ptr [edi]
+1577;130172c;\xf3\xab;rep stosd dword ptr [edi]
+1578;130172c;\xf3\xab;rep stosd dword ptr [edi]
+1579;130172c;\xf3\xab;rep stosd dword ptr [edi]
+1580;130172c;\xf3\xab;rep stosd dword ptr [edi]
+1581;130172c;\xf3\xab;rep stosd dword ptr [edi]
+1582;130172c;\xf3\xab;rep stosd dword ptr [edi]
+1583;130172c;\xf3\xab;rep stosd dword ptr [edi]
+1584;130172c;\xf3\xab;rep stosd dword ptr [edi]
+1585;130172c;\xf3\xab;rep stosd dword ptr [edi]
+1586;130172c;\xf3\xab;rep stosd dword ptr [edi]
+1587;130172c;\xf3\xab;rep stosd dword ptr [edi]
+1588;130172c;\xf3\xab;rep stosd dword ptr [edi]
+1589;130172c;\xf3\xab;rep stosd dword ptr [edi]
+1590;130172c;\xf3\xab;rep stosd dword ptr [edi]
+1591;130172c;\xf3\xab;rep stosd dword ptr [edi]
+1592;130172c;\xf3\xab;rep stosd dword ptr [edi]
+1593;130172c;\xf3\xab;rep stosd dword ptr [edi]
+1594;130172c;\xf3\xab;rep stosd dword ptr [edi]
+1595;130172c;\xf3\xab;rep stosd dword ptr [edi]
+1596;130172c;\xf3\xab;rep stosd dword ptr [edi]
+1597;130172c;\xf3\xab;rep stosd dword ptr [edi]
+1598;130172c;\xf3\xab;rep stosd dword ptr [edi]
+1599;130172c;\xf3\xab;rep stosd dword ptr [edi]
+1600;130172c;\xf3\xab;rep stosd dword ptr [edi]
+1601;130172c;\xf3\xab;rep stosd dword ptr [edi]
+1602;130172e;\xb8\x78\x95\x30\x01;mov eax, 0x1309578
+1603;1301733;\x5f;pop edi
+1604;1301734;\x5e;pop esi
+1605;1301735;\x5b;pop ebx
+1606;1301736;\x8b\xe5;mov esp, ebp
+1607;1301738;\x5d;pop ebp
+1608;1301739;\xc3;ret 
+1609;13036d6;\x89\x45\xf8;mov dword ptr [ebp-0x8], eax
+1610;13036d9;\x8b\x4d\xf8;mov ecx, dword ptr [ebp-0x8]
+1611;13036dc;\x8b\x11;mov edx, dword ptr [ecx]
+1612;13036de;\x83\xca\x02;or edx, 0x2
+1613;13036e1;\x8b\x41\x04;mov eax, dword ptr [ecx+0x4]
+1614;13036e4;\x8b\x4d\xf8;mov ecx, dword ptr [ebp-0x8]
+1615;13036e7;\x89\x11;mov dword ptr [ecx], edx
+1616;13036e9;\x89\x41\x04;mov dword ptr [ecx+0x4], eax
+1617;13036ec;\x8b\xe5;mov esp, ebp
+1618;13036ee;\x5d;pop ebp
+1619;13036ef;\xc3;ret 
+1620;1301e58;\x33\xc0;xor eax, eax
+1621;1301e5a;\x5d;pop ebp
+1622;1301e5b;\xc3;ret 
+1623;1301f32;\x83\xc4\x08;add esp, 0x8
+1624;1301f35;\x85\xc0;test eax, eax
+1625;1301f37;\x74\x16;jz 0x1301f4f
+1626;1301f4f;\x68\x08\x62\x30\x01;push 0x1306208
+1627;1301f54;\x68\x00\x60\x30\x01;push 0x1306000
+1628;1301f59;\xe8\x72\xf3\xff\xff;call 0x13012d0
+1629;13012d0;\xe9\x3f\x3b\x00\x00;jmp 0x1304e14
+1630;1304e14;\xff\x25\x3c\xa1\x30\x01;jmp dword ptr [0x130a13c]
+1631;1301e60;\x55;push ebp
+1632;1301e61;\x8b\xec;mov ebp, esp
+1633;1301e63;\xe8\xec\xf2\xff\xff;call 0x1301154
+1634;1301154;\xe9\x97\x28\x00\x00;jmp 0x13039f0
+1635;13039f0;\x55;push ebp
+1636;13039f1;\x8b\xec;mov ebp, esp
+1637;13039f3;\x68\x36\x11\x30\x01;push 0x1301136
+1638;13039f8;\xff\x15\x48\xa0\x30\x01;call dword ptr [0x130a048]
+1639;13039fe;\x5d;pop ebp
+1640;13039ff;\xc3;ret 
+1641;1301e68;\xe8\x32\xf3\xff\xff;call 0x130119f
+1642;130119f;\xe9\x4c\x24\x00\x00;jmp 0x13035f0
+1643;13035f0;\x55;push ebp
+1644;13035f1;\x8b\xec;mov ebp, esp
+1645;13035f3;\x33\xc0;xor eax, eax
+1646;13035f5;\x5d;pop ebp
+1647;13035f6;\xc3;ret 
+1648;1301e6d;\x50;push eax
+1649;1301e6e;\xe8\x0e\xf3\xff\xff;call 0x1301181
+1650;1301181;\xe9\xd0\x3c\x00\x00;jmp 0x1304e56
+1651;1304e56;\xff\x25\x10\xa1\x30\x01;jmp dword ptr [0x130a110]
+1652;1301e73;\x83\xc4\x04;add esp, 0x4
+1653;1301e76;\x5d;pop ebp
+1654;1301e77;\xc3;ret 
+1655;1301f5e;\x83\xc4\x08;add esp, 0x8
+1656;1301f61;\xc7\x05\x58\x91\x30\x01\x02\x00\x00\x00;mov dword ptr [0x1309158], 0x2
+1657;1301f6b;\xeb\x04;jmp 0x1301f71
+1658;1301f71;\x0f\xb6\x4d\xe6;movzx ecx, byte ptr [ebp-0x1a]
+1659;1301f75;\x51;push ecx
+1660;1301f76;\xe8\x91\xf3\xff\xff;call 0x130130c
+1661;130130c;\xe9\xcf\x1f\x00\x00;jmp 0x13032e0
+1662;13032e0;\x55;push ebp
+1663;13032e1;\x8b\xec;mov ebp, esp
+1664;13032e3;\xe8\x77\xdd\xff\xff;call 0x130105f
+1665;130105f;\xe9\xbc\x38\x00\x00;jmp 0x1304920
+1666;1304920;\x55;push ebp
+1667;1304921;\x8b\xec;mov ebp, esp
+1668;1304923;\x51;push ecx
+1669;1304924;\x83\x3d\x30\x90\x30\x01\x00;cmp dword ptr [0x1309030], 0x0
+1670;130492b;\x74\x09;jz 0x1304936
+1671;130492d;\xc7\x45\xfc\x01\x00\x00\x00;mov dword ptr [ebp-0x4], 0x1
+1672;1304934;\xeb\x07;jmp 0x130493d
+1673;130493d;\x8b\x45\xfc;mov eax, dword ptr [ebp-0x4]
+1674;1304940;\x8b\xe5;mov esp, ebp
+1675;1304942;\x5d;pop ebp
+1676;1304943;\xc3;ret 
+1677;13032e8;\x85\xc0;test eax, eax
+1678;13032ea;\x75\x02;jnz 0x13032ee
+1679;13032ee;\x0f\xb6\x45\x08;movzx eax, byte ptr [ebp+0x8]
+1680;13032f2;\x85\xc0;test eax, eax
+1681;13032f4;\x74\x02;jz 0x13032f8
+1682;13032f8;\x33\xc9;xor ecx, ecx
+1683;13032fa;\xba\x5c\x91\x30\x01;mov edx, 0x130915c
+1684;13032ff;\x87\x0a;xchg dword ptr [edx], ecx
+1685;1303301;\x5d;pop ebp
+1686;1303302;\xc3;ret 
+1687;1301f7b;\x83\xc4\x04;add esp, 0x4
+1688;1301f7e;\xe8\xf3\xf2\xff\xff;call 0x1301276
+1689;1301276;\xe9\xb5\x24\x00\x00;jmp 0x1303730
+1690;1303730;\x55;push ebp
+1691;1303731;\x8b\xec;mov ebp, esp
+1692;1303733;\xb8\xa4\x95\x30\x01;mov eax, 0x13095a4
+1693;1303738;\x5d;pop ebp
+1694;1303739;\xc3;ret 
+1695;1301f83;\x89\x45\xe0;mov dword ptr [ebp-0x20], eax
+1696;1301f86;\x8b\x55\xe0;mov edx, dword ptr [ebp-0x20]
+1697;1301f89;\x83\x3a\x00;cmp dword ptr [edx], 0x0
+1698;1301f8c;\x74\x2c;jz 0x1301fba
+1699;1301fba;\xe8\x04\xf1\xff\xff;call 0x13010c3
+1700;13010c3;\xe9\x78\x26\x00\x00;jmp 0x1303740
+1701;1303740;\x55;push ebp
+1702;1303741;\x8b\xec;mov ebp, esp
+1703;1303743;\xb8\x98\x95\x30\x01;mov eax, 0x1309598
+1704;1303748;\x5d;pop ebp
+1705;1303749;\xc3;ret 
+1706;1301fbf;\x89\x45\xdc;mov dword ptr [ebp-0x24], eax
+1707;1301fc2;\x8b\x4d\xdc;mov ecx, dword ptr [ebp-0x24]
+1708;1301fc5;\x83\x39\x00;cmp dword ptr [ecx], 0x0
+1709;1301fc8;\x74\x21;jz 0x1301feb
+1710;1301feb;\xe8\x80\x01\x00\x00;call 0x1302170
+1711;1302170;\x55;push ebp
+1712;1302171;\x8b\xec;mov ebp, esp
+1713;1302173;\xe8\xbf\xee\xff\xff;call 0x1301037
+1714;1301037;\xe9\xd2\x3d\x00\x00;jmp 0x1304e0e
+1715;1304e0e;\xff\x25\x40\xa1\x30\x01;jmp dword ptr [0x130a140]
+1716;1302178;\x50;push eax
+1717;1302179;\xe8\xee\xf0\xff\xff;call 0x130126c
+1718;130126c;\xe9\xc7\x3b\x00\x00;jmp 0x1304e38
+1719;1304e38;\xff\x25\x24\xa1\x30\x01;jmp dword ptr [0x130a124]
+1720;130217e;\x8b\x00;mov eax, dword ptr [eax]
+1721;1302180;\x50;push eax
+1722;1302181;\xe8\xe1\xf0\xff\xff;call 0x1301267
+1723;1301267;\xe9\xc6\x3b\x00\x00;jmp 0x1304e32
+1724;1304e32;\xff\x25\x28\xa1\x30\x01;jmp dword ptr [0x130a128]
+1725;1302186;\x8b\x08;mov ecx, dword ptr [eax]
+1726;1302188;\x51;push ecx
+1727;1302189;\xe8\x0b\xf1\xff\xff;call 0x1301299
+1728;1301299;\xe9\x62\x06\x00\x00;jmp 0x1301900
+1729;1301900;\x55;push ebp
+1730;1301901;\x8b\xec;mov ebp, esp
+1731;1301903;\x81\xec\xd8\x00\x00\x00;sub esp, 0xd8
+1732;1301909;\x53;push ebx
+1733;130190a;\x56;push esi
+1734;130190b;\x57;push edi
+1735;130190c;\x8d\xbd\x28\xff\xff\xff;lea edi, ptr [ebp-0xd8]
+1736;1301912;\xb9\x36\x00\x00\x00;mov ecx, 0x36
+1737;1301917;\xb8\xcc\xcc\xcc\xcc;mov eax, 0xcccccccc
+1738;130191c;\xf3\xab;rep stosd dword ptr [edi]
+1739;130191c;\xf3\xab;rep stosd dword ptr [edi]
+1740;130191c;\xf3\xab;rep stosd dword ptr [edi]
+1741;130191c;\xf3\xab;rep stosd dword ptr [edi]
+1742;130191c;\xf3\xab;rep stosd dword ptr [edi]
+1743;130191c;\xf3\xab;rep stosd dword ptr [edi]
+1744;130191c;\xf3\xab;rep stosd dword ptr [edi]
+1745;130191c;\xf3\xab;rep stosd dword ptr [edi]
+1746;130191c;\xf3\xab;rep stosd dword ptr [edi]
+1747;130191c;\xf3\xab;rep stosd dword ptr [edi]
+1748;130191c;\xf3\xab;rep stosd dword ptr [edi]
+1749;130191c;\xf3\xab;rep stosd dword ptr [edi]
+1750;130191c;\xf3\xab;rep stosd dword ptr [edi]
+1751;130191c;\xf3\xab;rep stosd dword ptr [edi]
+1752;130191c;\xf3\xab;rep stosd dword ptr [edi]
+1753;130191c;\xf3\xab;rep stosd dword ptr [edi]
+1754;130191c;\xf3\xab;rep stosd dword ptr [edi]
+1755;130191c;\xf3\xab;rep stosd dword ptr [edi]
+1756;130191c;\xf3\xab;rep stosd dword ptr [edi]
+1757;130191c;\xf3\xab;rep stosd dword ptr [edi]
+1758;130191c;\xf3\xab;rep stosd dword ptr [edi]
+1759;130191c;\xf3\xab;rep stosd dword ptr [edi]
+1760;130191c;\xf3\xab;rep stosd dword ptr [edi]
+1761;130191c;\xf3\xab;rep stosd dword ptr [edi]
+1762;130191c;\xf3\xab;rep stosd dword ptr [edi]
+1763;130191c;\xf3\xab;rep stosd dword ptr [edi]
+1764;130191c;\xf3\xab;rep stosd dword ptr [edi]
+1765;130191c;\xf3\xab;rep stosd dword ptr [edi]
+1766;130191c;\xf3\xab;rep stosd dword ptr [edi]
+1767;130191c;\xf3\xab;rep stosd dword ptr [edi]
+1768;130191c;\xf3\xab;rep stosd dword ptr [edi]
+1769;130191c;\xf3\xab;rep stosd dword ptr [edi]
+1770;130191c;\xf3\xab;rep stosd dword ptr [edi]
+1771;130191c;\xf3\xab;rep stosd dword ptr [edi]
+1772;130191c;\xf3\xab;rep stosd dword ptr [edi]
+1773;130191c;\xf3\xab;rep stosd dword ptr [edi]
+1774;130191c;\xf3\xab;rep stosd dword ptr [edi]
+1775;130191c;\xf3\xab;rep stosd dword ptr [edi]
+1776;130191c;\xf3\xab;rep stosd dword ptr [edi]
+1777;130191c;\xf3\xab;rep stosd dword ptr [edi]
+1778;130191c;\xf3\xab;rep stosd dword ptr [edi]
+1779;130191c;\xf3\xab;rep stosd dword ptr [edi]
+1780;130191c;\xf3\xab;rep stosd dword ptr [edi]
+1781;130191c;\xf3\xab;rep stosd dword ptr [edi]
+1782;130191c;\xf3\xab;rep stosd dword ptr [edi]
+1783;130191c;\xf3\xab;rep stosd dword ptr [edi]
+1784;130191c;\xf3\xab;rep stosd dword ptr [edi]
+1785;130191c;\xf3\xab;rep stosd dword ptr [edi]
+1786;130191c;\xf3\xab;rep stosd dword ptr [edi]
+1787;130191c;\xf3\xab;rep stosd dword ptr [edi]
+1788;130191c;\xf3\xab;rep stosd dword ptr [edi]
+1789;130191c;\xf3\xab;rep stosd dword ptr [edi]
+1790;130191c;\xf3\xab;rep stosd dword ptr [edi]
+1791;130191c;\xf3\xab;rep stosd dword ptr [edi]
+1792;130191e;\x8d\x45\xf8;lea eax, ptr [ebp-0x8]
+1793;1301921;\x50;push eax
+1794;1301922;\x68\x30\x6b\x30\x01;push 0x1306b30
+1795;1301927;\xe8\xff\xf8\xff\xff;call 0x130122b
+1796;130122b;\xe9\x20\x08\x00\x00;jmp 0x1301a50
+1797;1301a50;\x55;push ebp
+1798;1301a51;\x8b\xec;mov ebp, esp
+1799;1301a53;\x81\xec\xd8\x00\x00\x00;sub esp, 0xd8
+1800;1301a59;\x53;push ebx
+1801;1301a5a;\x56;push esi
+1802;1301a5b;\x57;push edi
+1803;1301a5c;\x8d\xbd\x28\xff\xff\xff;lea edi, ptr [ebp-0xd8]
+1804;1301a62;\xb9\x36\x00\x00\x00;mov ecx, 0x36
+1805;1301a67;\xb8\xcc\xcc\xcc\xcc;mov eax, 0xcccccccc
+1806;1301a6c;\xf3\xab;rep stosd dword ptr [edi]
+1807;1301a6c;\xf3\xab;rep stosd dword ptr [edi]
+1808;1301a6c;\xf3\xab;rep stosd dword ptr [edi]
+1809;1301a6c;\xf3\xab;rep stosd dword ptr [edi]
+1810;1301a6c;\xf3\xab;rep stosd dword ptr [edi]
+1811;1301a6c;\xf3\xab;rep stosd dword ptr [edi]
+1812;1301a6c;\xf3\xab;rep stosd dword ptr [edi]
+1813;1301a6c;\xf3\xab;rep stosd dword ptr [edi]
+1814;1301a6c;\xf3\xab;rep stosd dword ptr [edi]
+1815;1301a6c;\xf3\xab;rep stosd dword ptr [edi]
+1816;1301a6c;\xf3\xab;rep stosd dword ptr [edi]
+1817;1301a6c;\xf3\xab;rep stosd dword ptr [edi]
+1818;1301a6c;\xf3\xab;rep stosd dword ptr [edi]
+1819;1301a6c;\xf3\xab;rep stosd dword ptr [edi]
+1820;1301a6c;\xf3\xab;rep stosd dword ptr [edi]
+1821;1301a6c;\xf3\xab;rep stosd dword ptr [edi]
+1822;1301a6c;\xf3\xab;rep stosd dword ptr [edi]
+1823;1301a6c;\xf3\xab;rep stosd dword ptr [edi]
+1824;1301a6c;\xf3\xab;rep stosd dword ptr [edi]
+1825;1301a6c;\xf3\xab;rep stosd dword ptr [edi]
+1826;1301a6c;\xf3\xab;rep stosd dword ptr [edi]
+1827;1301a6c;\xf3\xab;rep stosd dword ptr [edi]
+1828;1301a6c;\xf3\xab;rep stosd dword ptr [edi]
+1829;1301a6c;\xf3\xab;rep stosd dword ptr [edi]
+1830;1301a6c;\xf3\xab;rep stosd dword ptr [edi]
+1831;1301a6c;\xf3\xab;rep stosd dword ptr [edi]
+1832;1301a6c;\xf3\xab;rep stosd dword ptr [edi]
+1833;1301a6c;\xf3\xab;rep stosd dword ptr [edi]
+1834;1301a6c;\xf3\xab;rep stosd dword ptr [edi]
+1835;1301a6c;\xf3\xab;rep stosd dword ptr [edi]
+1836;1301a6c;\xf3\xab;rep stosd dword ptr [edi]
+1837;1301a6c;\xf3\xab;rep stosd dword ptr [edi]
+1838;1301a6c;\xf3\xab;rep stosd dword ptr [edi]
+1839;1301a6c;\xf3\xab;rep stosd dword ptr [edi]
+1840;1301a6c;\xf3\xab;rep stosd dword ptr [edi]
+1841;1301a6c;\xf3\xab;rep stosd dword ptr [edi]
+1842;1301a6c;\xf3\xab;rep stosd dword ptr [edi]
+1843;1301a6c;\xf3\xab;rep stosd dword ptr [edi]
+1844;1301a6c;\xf3\xab;rep stosd dword ptr [edi]
+1845;1301a6c;\xf3\xab;rep stosd dword ptr [edi]
+1846;1301a6c;\xf3\xab;rep stosd dword ptr [edi]
+1847;1301a6c;\xf3\xab;rep stosd dword ptr [edi]
+1848;1301a6c;\xf3\xab;rep stosd dword ptr [edi]
+1849;1301a6c;\xf3\xab;rep stosd dword ptr [edi]
+1850;1301a6c;\xf3\xab;rep stosd dword ptr [edi]
+1851;1301a6c;\xf3\xab;rep stosd dword ptr [edi]
+1852;1301a6c;\xf3\xab;rep stosd dword ptr [edi]
+1853;1301a6c;\xf3\xab;rep stosd dword ptr [edi]
+1854;1301a6c;\xf3\xab;rep stosd dword ptr [edi]
+1855;1301a6c;\xf3\xab;rep stosd dword ptr [edi]
+1856;1301a6c;\xf3\xab;rep stosd dword ptr [edi]
+1857;1301a6c;\xf3\xab;rep stosd dword ptr [edi]
+1858;1301a6c;\xf3\xab;rep stosd dword ptr [edi]
+1859;1301a6c;\xf3\xab;rep stosd dword ptr [edi]
+1860;1301a6e;\x8d\x45\x0c;lea eax, ptr [ebp+0xc]
+1861;1301a71;\x89\x45\xec;mov dword ptr [ebp-0x14], eax
+1862;1301a74;\x8b\x45\xec;mov eax, dword ptr [ebp-0x14]
+1863;1301a77;\x50;push eax
+1864;1301a78;\x6a\x00;push 0x0
+1865;1301a7a;\x8b\x4d\x08;mov ecx, dword ptr [ebp+0x8]
+1866;1301a7d;\x51;push ecx
+1867;1301a7e;\x8b\xf4;mov esi, esp
+1868;1301a80;\x6a\x00;push 0x0
+1869;1301a82;\xff\x15\x68\xa1\x30\x01;call dword ptr [0x130a168]
+1870;1301a88;\x83\xc4\x04;add esp, 0x4
+1871;1301a8b;\x3b\xf4;cmp esi, esp
+1872;1301a8d;\xe8\x7c\xf6\xff\xff;call 0x130110e
+1873;130110e;\xe9\x8d\x0b\x00\x00;jmp 0x1301ca0
+1874;1301ca0;\xf2\x75\x02;bnd jnz 0x1301ca5
+1875;1301ca3;\xf2\xc3;bnd ret 
+1876;1301a92;\x50;push eax
+1877;1301a93;\xe8\xa6\xf8\xff\xff;call 0x130133e
+1878;130133e;\xe9\x8d\x04\x00\x00;jmp 0x13017d0
+1879;13017d0;\x55;push ebp
+1880;13017d1;\x8b\xec;mov ebp, esp
+1881;13017d3;\x81\xec\xc0\x00\x00\x00;sub esp, 0xc0
+1882;13017d9;\x53;push ebx
+1883;13017da;\x56;push esi
+1884;13017db;\x57;push edi
+1885;13017dc;\x8d\xbd\x40\xff\xff\xff;lea edi, ptr [ebp-0xc0]
+1886;13017e2;\xb9\x30\x00\x00\x00;mov ecx, 0x30
+1887;13017e7;\xb8\xcc\xcc\xcc\xcc;mov eax, 0xcccccccc
+1888;13017ec;\xf3\xab;rep stosd dword ptr [edi]
+1889;13017ec;\xf3\xab;rep stosd dword ptr [edi]
+1890;13017ec;\xf3\xab;rep stosd dword ptr [edi]
+1891;13017ec;\xf3\xab;rep stosd dword ptr [edi]
+1892;13017ec;\xf3\xab;rep stosd dword ptr [edi]
+1893;13017ec;\xf3\xab;rep stosd dword ptr [edi]
+1894;13017ec;\xf3\xab;rep stosd dword ptr [edi]
+1895;13017ec;\xf3\xab;rep stosd dword ptr [edi]
+1896;13017ec;\xf3\xab;rep stosd dword ptr [edi]
+1897;13017ec;\xf3\xab;rep stosd dword ptr [edi]
+1898;13017ec;\xf3\xab;rep stosd dword ptr [edi]
+1899;13017ec;\xf3\xab;rep stosd dword ptr [edi]
+1900;13017ec;\xf3\xab;rep stosd dword ptr [edi]
+1901;13017ec;\xf3\xab;rep stosd dword ptr [edi]
+1902;13017ec;\xf3\xab;rep stosd dword ptr [edi]
+1903;13017ec;\xf3\xab;rep stosd dword ptr [edi]
+1904;13017ec;\xf3\xab;rep stosd dword ptr [edi]
+1905;13017ec;\xf3\xab;rep stosd dword ptr [edi]
+1906;13017ec;\xf3\xab;rep stosd dword ptr [edi]
+1907;13017ec;\xf3\xab;rep stosd dword ptr [edi]
+1908;13017ec;\xf3\xab;rep stosd dword ptr [edi]
+1909;13017ec;\xf3\xab;rep stosd dword ptr [edi]
+1910;13017ec;\xf3\xab;rep stosd dword ptr [edi]
+1911;13017ec;\xf3\xab;rep stosd dword ptr [edi]
+1912;13017ec;\xf3\xab;rep stosd dword ptr [edi]
+1913;13017ec;\xf3\xab;rep stosd dword ptr [edi]
+1914;13017ec;\xf3\xab;rep stosd dword ptr [edi]
+1915;13017ec;\xf3\xab;rep stosd dword ptr [edi]
+1916;13017ec;\xf3\xab;rep stosd dword ptr [edi]
+1917;13017ec;\xf3\xab;rep stosd dword ptr [edi]
+1918;13017ec;\xf3\xab;rep stosd dword ptr [edi]
+1919;13017ec;\xf3\xab;rep stosd dword ptr [edi]
+1920;13017ec;\xf3\xab;rep stosd dword ptr [edi]
+1921;13017ec;\xf3\xab;rep stosd dword ptr [edi]
+1922;13017ec;\xf3\xab;rep stosd dword ptr [edi]
+1923;13017ec;\xf3\xab;rep stosd dword ptr [edi]
+1924;13017ec;\xf3\xab;rep stosd dword ptr [edi]
+1925;13017ec;\xf3\xab;rep stosd dword ptr [edi]
+1926;13017ec;\xf3\xab;rep stosd dword ptr [edi]
+1927;13017ec;\xf3\xab;rep stosd dword ptr [edi]
+1928;13017ec;\xf3\xab;rep stosd dword ptr [edi]
+1929;13017ec;\xf3\xab;rep stosd dword ptr [edi]
+1930;13017ec;\xf3\xab;rep stosd dword ptr [edi]
+1931;13017ec;\xf3\xab;rep stosd dword ptr [edi]
+1932;13017ec;\xf3\xab;rep stosd dword ptr [edi]
+1933;13017ec;\xf3\xab;rep stosd dword ptr [edi]
+1934;13017ec;\xf3\xab;rep stosd dword ptr [edi]
+1935;13017ec;\xf3\xab;rep stosd dword ptr [edi]
+1936;13017ee;\x8b\xf4;mov esi, esp
+1937;13017f0;\x8b\x45\x14;mov eax, dword ptr [ebp+0x14]
+1938;13017f3;\x50;push eax
+1939;13017f4;\x8b\x4d\x10;mov ecx, dword ptr [ebp+0x10]
+1940;13017f7;\x51;push ecx
+1941;13017f8;\x8b\x55\x0c;mov edx, dword ptr [ebp+0xc]
+1942;13017fb;\x52;push edx
+1943;13017fc;\x8b\x45\x08;mov eax, dword ptr [ebp+0x8]
+1944;13017ff;\x50;push eax
+1945;1301800;\xe8\xea\xf9\xff\xff;call 0x13011ef
+1946;13011ef;\xe9\x1c\x05\x00\x00;jmp 0x1301710
+1947;1301710;\x55;push ebp
+1948;1301711;\x8b\xec;mov ebp, esp
+1949;1301713;\x81\xec\xc0\x00\x00\x00;sub esp, 0xc0
+1950;1301719;\x53;push ebx
+1951;130171a;\x56;push esi
+1952;130171b;\x57;push edi
+1953;130171c;\x8d\xbd\x40\xff\xff\xff;lea edi, ptr [ebp-0xc0]
+1954;1301722;\xb9\x30\x00\x00\x00;mov ecx, 0x30
+1955;1301727;\xb8\xcc\xcc\xcc\xcc;mov eax, 0xcccccccc
+1956;130172c;\xf3\xab;rep stosd dword ptr [edi]
+1957;130172c;\xf3\xab;rep stosd dword ptr [edi]
+1958;130172c;\xf3\xab;rep stosd dword ptr [edi]
+1959;130172c;\xf3\xab;rep stosd dword ptr [edi]
+1960;130172c;\xf3\xab;rep stosd dword ptr [edi]
+1961;130172c;\xf3\xab;rep stosd dword ptr [edi]
+1962;130172c;\xf3\xab;rep stosd dword ptr [edi]
+1963;130172c;\xf3\xab;rep stosd dword ptr [edi]
+1964;130172c;\xf3\xab;rep stosd dword ptr [edi]
+1965;130172c;\xf3\xab;rep stosd dword ptr [edi]
+1966;130172c;\xf3\xab;rep stosd dword ptr [edi]
+1967;130172c;\xf3\xab;rep stosd dword ptr [edi]
+1968;130172c;\xf3\xab;rep stosd dword ptr [edi]
+1969;130172c;\xf3\xab;rep stosd dword ptr [edi]
+1970;130172c;\xf3\xab;rep stosd dword ptr [edi]
+1971;130172c;\xf3\xab;rep stosd dword ptr [edi]
+1972;130172c;\xf3\xab;rep stosd dword ptr [edi]
+1973;130172c;\xf3\xab;rep stosd dword ptr [edi]
+1974;130172c;\xf3\xab;rep stosd dword ptr [edi]
+1975;130172c;\xf3\xab;rep stosd dword ptr [edi]
+1976;130172c;\xf3\xab;rep stosd dword ptr [edi]
+1977;130172c;\xf3\xab;rep stosd dword ptr [edi]
+1978;130172c;\xf3\xab;rep stosd dword ptr [edi]
+1979;130172c;\xf3\xab;rep stosd dword ptr [edi]
+1980;130172c;\xf3\xab;rep stosd dword ptr [edi]
+1981;130172c;\xf3\xab;rep stosd dword ptr [edi]
+1982;130172c;\xf3\xab;rep stosd dword ptr [edi]
+1983;130172c;\xf3\xab;rep stosd dword ptr [edi]
+1984;130172c;\xf3\xab;rep stosd dword ptr [edi]
+1985;130172c;\xf3\xab;rep stosd dword ptr [edi]
+1986;130172c;\xf3\xab;rep stosd dword ptr [edi]
+1987;130172c;\xf3\xab;rep stosd dword ptr [edi]
+1988;130172c;\xf3\xab;rep stosd dword ptr [edi]
+1989;130172c;\xf3\xab;rep stosd dword ptr [edi]
+1990;130172c;\xf3\xab;rep stosd dword ptr [edi]
+1991;130172c;\xf3\xab;rep stosd dword ptr [edi]
+1992;130172c;\xf3\xab;rep stosd dword ptr [edi]
+1993;130172c;\xf3\xab;rep stosd dword ptr [edi]
+1994;130172c;\xf3\xab;rep stosd dword ptr [edi]
+1995;130172c;\xf3\xab;rep stosd dword ptr [edi]
+1996;130172c;\xf3\xab;rep stosd dword ptr [edi]
+1997;130172c;\xf3\xab;rep stosd dword ptr [edi]
+1998;130172c;\xf3\xab;rep stosd dword ptr [edi]
+1999;130172c;\xf3\xab;rep stosd dword ptr [edi]
+2000;130172c;\xf3\xab;rep stosd dword ptr [edi]
+2001;130172c;\xf3\xab;rep stosd dword ptr [edi]
+2002;130172c;\xf3\xab;rep stosd dword ptr [edi]
+2003;130172c;\xf3\xab;rep stosd dword ptr [edi]
+2004;130172e;\xb8\x78\x95\x30\x01;mov eax, 0x1309578
+2005;1301733;\x5f;pop edi
+2006;1301734;\x5e;pop esi
+2007;1301735;\x5b;pop ebx
+2008;1301736;\x8b\xe5;mov esp, ebp
+2009;1301738;\x5d;pop ebp
+2010;1301739;\xc3;ret 
+2011;1301805;\x8b\x48\x04;mov ecx, dword ptr [eax+0x4]
+2012;1301808;\x51;push ecx
+2013;1301809;\x8b\x10;mov edx, dword ptr [eax]
+2014;130180b;\x52;push edx
+2015;130180c;\xff\x15\x60\xa1\x30\x01;call dword ptr [0x130a160]
+2016;1301812;\x83\xc4\x18;add esp, 0x18
+2017;1301815;\x3b\xf4;cmp esi, esp
+2018;1301817;\xe8\xf2\xf8\xff\xff;call 0x130110e
+2019;130110e;\xe9\x8d\x0b\x00\x00;jmp 0x1301ca0
+2020;1301ca0;\xf2\x75\x02;bnd jnz 0x1301ca5
+2021;1301ca3;\xf2\xc3;bnd ret 
+2022;130181c;\x5f;pop edi
+2023;130181d;\x5e;pop esi
+2024;130181e;\x5b;pop ebx
+2025;130181f;\x81\xc4\xc0\x00\x00\x00;add esp, 0xc0
+2026;1301825;\x3b\xec;cmp ebp, esp
+2027;1301827;\xe8\xe2\xf8\xff\xff;call 0x130110e
+2028;130110e;\xe9\x8d\x0b\x00\x00;jmp 0x1301ca0
+2029;1301ca0;\xf2\x75\x02;bnd jnz 0x1301ca5
+2030;1301ca3;\xf2\xc3;bnd ret 
+2031;130182c;\x8b\xe5;mov esp, ebp
+2032;130182e;\x5d;pop ebp
+2033;130182f;\xc3;ret 
+2034;1301a98;\x83\xc4\x10;add esp, 0x10
+2035;1301a9b;\x89\x45\xf8;mov dword ptr [ebp-0x8], eax
+2036;1301a9e;\xc7\x45\xec\x00\x00\x00\x00;mov dword ptr [ebp-0x14], 0x0
+2037;1301aa5;\x8b\x45\xf8;mov eax, dword ptr [ebp-0x8]
+2038;1301aa8;\x5f;pop edi
+2039;1301aa9;\x5e;pop esi
+2040;1301aaa;\x5b;pop ebx
+2041;1301aab;\x81\xc4\xd8\x00\x00\x00;add esp, 0xd8
+2042;1301ab1;\x3b\xec;cmp ebp, esp
+2043;1301ab3;\xe8\x56\xf6\xff\xff;call 0x130110e
+2044;130110e;\xe9\x8d\x0b\x00\x00;jmp 0x1301ca0
+2045;1301ca0;\xf2\x75\x02;bnd jnz 0x1301ca5
+2046;1301ca3;\xf2\xc3;bnd ret 
+2047;1301ab8;\x8b\xe5;mov esp, ebp
+2048;1301aba;\x5d;pop ebp
+2049;1301abb;\xc3;ret 
+2050;130192c;\x83\xc4\x08;add esp, 0x8
+2051;130192f;\x8b\x45\xf8;mov eax, dword ptr [ebp-0x8]
+2052;1301932;\x50;push eax
+2053;1301933;\xe8\xef\xf7\xff\xff;call 0x1301127
+2054;1301127;\xe9\x24\x07\x00\x00;jmp 0x1301850
+2055;1301850;\x55;push ebp
+2056;1301851;\x8b\xec;mov ebp, esp
+2057;1301853;\x81\xec\xcc\x00\x00\x00;sub esp, 0xcc
+2058;1301859;\x53;push ebx
+2059;130185a;\x56;push esi
+2060;130185b;\x57;push edi
+2061;130185c;\x8d\xbd\x34\xff\xff\xff;lea edi, ptr [ebp-0xcc]
+2062;1301862;\xb9\x33\x00\x00\x00;mov ecx, 0x33
+2063;1301867;\xb8\xcc\xcc\xcc\xcc;mov eax, 0xcccccccc
+2064;130186c;\xf3\xab;rep stosd dword ptr [edi]
+2065;130186c;\xf3\xab;rep stosd dword ptr [edi]
+2066;130186c;\xf3\xab;rep stosd dword ptr [edi]
+2067;130186c;\xf3\xab;rep stosd dword ptr [edi]
+2068;130186c;\xf3\xab;rep stosd dword ptr [edi]
+2069;130186c;\xf3\xab;rep stosd dword ptr [edi]
+2070;130186c;\xf3\xab;rep stosd dword ptr [edi]
+2071;130186c;\xf3\xab;rep stosd dword ptr [edi]
+2072;130186c;\xf3\xab;rep stosd dword ptr [edi]
+2073;130186c;\xf3\xab;rep stosd dword ptr [edi]
+2074;130186c;\xf3\xab;rep stosd dword ptr [edi]
+2075;130186c;\xf3\xab;rep stosd dword ptr [edi]
+2076;130186c;\xf3\xab;rep stosd dword ptr [edi]
+2077;130186c;\xf3\xab;rep stosd dword ptr [edi]
+2078;130186c;\xf3\xab;rep stosd dword ptr [edi]
+2079;130186c;\xf3\xab;rep stosd dword ptr [edi]
+2080;130186c;\xf3\xab;rep stosd dword ptr [edi]
+2081;130186c;\xf3\xab;rep stosd dword ptr [edi]
+2082;130186c;\xf3\xab;rep stosd dword ptr [edi]
+2083;130186c;\xf3\xab;rep stosd dword ptr [edi]
+2084;130186c;\xf3\xab;rep stosd dword ptr [edi]
+2085;130186c;\xf3\xab;rep stosd dword ptr [edi]
+2086;130186c;\xf3\xab;rep stosd dword ptr [edi]
+2087;130186c;\xf3\xab;rep stosd dword ptr [edi]
+2088;130186c;\xf3\xab;rep stosd dword ptr [edi]
+2089;130186c;\xf3\xab;rep stosd dword ptr [edi]
+2090;130186c;\xf3\xab;rep stosd dword ptr [edi]
+2091;130186c;\xf3\xab;rep stosd dword ptr [edi]
+2092;130186c;\xf3\xab;rep stosd dword ptr [edi]
+2093;130186c;\xf3\xab;rep stosd dword ptr [edi]
+2094;130186c;\xf3\xab;rep stosd dword ptr [edi]
+2095;130186c;\xf3\xab;rep stosd dword ptr [edi]
+2096;130186c;\xf3\xab;rep stosd dword ptr [edi]
+2097;130186c;\xf3\xab;rep stosd dword ptr [edi]
+2098;130186c;\xf3\xab;rep stosd dword ptr [edi]
+2099;130186c;\xf3\xab;rep stosd dword ptr [edi]
+2100;130186c;\xf3\xab;rep stosd dword ptr [edi]
+2101;130186c;\xf3\xab;rep stosd dword ptr [edi]
+2102;130186c;\xf3\xab;rep stosd dword ptr [edi]
+2103;130186c;\xf3\xab;rep stosd dword ptr [edi]
+2104;130186c;\xf3\xab;rep stosd dword ptr [edi]
+2105;130186c;\xf3\xab;rep stosd dword ptr [edi]
+2106;130186c;\xf3\xab;rep stosd dword ptr [edi]
+2107;130186c;\xf3\xab;rep stosd dword ptr [edi]
+2108;130186c;\xf3\xab;rep stosd dword ptr [edi]
+2109;130186c;\xf3\xab;rep stosd dword ptr [edi]
+2110;130186c;\xf3\xab;rep stosd dword ptr [edi]
+2111;130186c;\xf3\xab;rep stosd dword ptr [edi]
+2112;130186c;\xf3\xab;rep stosd dword ptr [edi]
+2113;130186c;\xf3\xab;rep stosd dword ptr [edi]
+2114;130186c;\xf3\xab;rep stosd dword ptr [edi]
+2115;130186e;\xe9\x19\x8c\x04\x00;jmp 0x134a48c
+2116;13018bf;\x5f;pop edi
+2117;13018c0;\x5e;pop esi
+2118;13018c1;\x5b;pop ebx
+2119;13018c2;\x81\xc4\xcc\x00\x00\x00;add esp, 0xcc
+2120;13018c8;\x3b\xec;cmp ebp, esp
+2121;13018ca;\xe8\x3f\xf8\xff\xff;call 0x130110e
+2122;130110e;\xe9\x8d\x0b\x00\x00;jmp 0x1301ca0
+2123;1301ca0;\xf2\x75\x02;bnd jnz 0x1301ca5
+2124;1301ca3;\xf2\xc3;bnd ret 
+2125;13018cf;\x8b\xe5;mov esp, ebp
+2126;13018d1;\x5d;pop ebp
+2127;13018d2;\xc3;ret 
+2128;1301938;\x83\xc4\x04;add esp, 0x4
+2129;130193b;\x89\x45\xec;mov dword ptr [ebp-0x14], eax
+2130;130193e;\x8b\x45\xec;mov eax, dword ptr [ebp-0x14]
+2131;1301941;\x50;push eax
+2132;1301942;\x68\x34\x6b\x30\x01;push 0x1306b34
+2133;1301947;\xe8\xd9\xf9\xff\xff;call 0x1301325
+2134;1301325;\xe9\x96\x06\x00\x00;jmp 0x13019c0
+2135;13019c0;\x55;push ebp
+2136;13019c1;\x8b\xec;mov ebp, esp
+2137;13019c3;\x81\xec\xd8\x00\x00\x00;sub esp, 0xd8
+2138;13019c9;\x53;push ebx
+2139;13019ca;\x56;push esi
+2140;13019cb;\x57;push edi
+2141;13019cc;\x8d\xbd\x28\xff\xff\xff;lea edi, ptr [ebp-0xd8]
+2142;13019d2;\xb9\x36\x00\x00\x00;mov ecx, 0x36
+2143;13019d7;\xb8\xcc\xcc\xcc\xcc;mov eax, 0xcccccccc
+2144;13019dc;\xf3\xab;rep stosd dword ptr [edi]
+2145;13019dc;\xf3\xab;rep stosd dword ptr [edi]
+2146;13019dc;\xf3\xab;rep stosd dword ptr [edi]
+2147;13019dc;\xf3\xab;rep stosd dword ptr [edi]
+2148;13019dc;\xf3\xab;rep stosd dword ptr [edi]
+2149;13019dc;\xf3\xab;rep stosd dword ptr [edi]
+2150;13019dc;\xf3\xab;rep stosd dword ptr [edi]
+2151;13019dc;\xf3\xab;rep stosd dword ptr [edi]
+2152;13019dc;\xf3\xab;rep stosd dword ptr [edi]
+2153;13019dc;\xf3\xab;rep stosd dword ptr [edi]
+2154;13019dc;\xf3\xab;rep stosd dword ptr [edi]
+2155;13019dc;\xf3\xab;rep stosd dword ptr [edi]
+2156;13019dc;\xf3\xab;rep stosd dword ptr [edi]
+2157;13019dc;\xf3\xab;rep stosd dword ptr [edi]
+2158;13019dc;\xf3\xab;rep stosd dword ptr [edi]
+2159;13019dc;\xf3\xab;rep stosd dword ptr [edi]
+2160;13019dc;\xf3\xab;rep stosd dword ptr [edi]
+2161;13019dc;\xf3\xab;rep stosd dword ptr [edi]
+2162;13019dc;\xf3\xab;rep stosd dword ptr [edi]
+2163;13019dc;\xf3\xab;rep stosd dword ptr [edi]
+2164;13019dc;\xf3\xab;rep stosd dword ptr [edi]
+2165;13019dc;\xf3\xab;rep stosd dword ptr [edi]
+2166;13019dc;\xf3\xab;rep stosd dword ptr [edi]
+2167;13019dc;\xf3\xab;rep stosd dword ptr [edi]
+2168;13019dc;\xf3\xab;rep stosd dword ptr [edi]
+2169;13019dc;\xf3\xab;rep stosd dword ptr [edi]
+2170;13019dc;\xf3\xab;rep stosd dword ptr [edi]
+2171;13019dc;\xf3\xab;rep stosd dword ptr [edi]
+2172;13019dc;\xf3\xab;rep stosd dword ptr [edi]
+2173;13019dc;\xf3\xab;rep stosd dword ptr [edi]
+2174;13019dc;\xf3\xab;rep stosd dword ptr [edi]
+2175;13019dc;\xf3\xab;rep stosd dword ptr [edi]
+2176;13019dc;\xf3\xab;rep stosd dword ptr [edi]
+2177;13019dc;\xf3\xab;rep stosd dword ptr [edi]
+2178;13019dc;\xf3\xab;rep stosd dword ptr [edi]
+2179;13019dc;\xf3\xab;rep stosd dword ptr [edi]
+2180;13019dc;\xf3\xab;rep stosd dword ptr [edi]
+2181;13019dc;\xf3\xab;rep stosd dword ptr [edi]
+2182;13019dc;\xf3\xab;rep stosd dword ptr [edi]
+2183;13019dc;\xf3\xab;rep stosd dword ptr [edi]
+2184;13019dc;\xf3\xab;rep stosd dword ptr [edi]
+2185;13019dc;\xf3\xab;rep stosd dword ptr [edi]
+2186;13019dc;\xf3\xab;rep stosd dword ptr [edi]
+2187;13019dc;\xf3\xab;rep stosd dword ptr [edi]
+2188;13019dc;\xf3\xab;rep stosd dword ptr [edi]
+2189;13019dc;\xf3\xab;rep stosd dword ptr [edi]
+2190;13019dc;\xf3\xab;rep stosd dword ptr [edi]
+2191;13019dc;\xf3\xab;rep stosd dword ptr [edi]
+2192;13019dc;\xf3\xab;rep stosd dword ptr [edi]
+2193;13019dc;\xf3\xab;rep stosd dword ptr [edi]
+2194;13019dc;\xf3\xab;rep stosd dword ptr [edi]
+2195;13019dc;\xf3\xab;rep stosd dword ptr [edi]
+2196;13019dc;\xf3\xab;rep stosd dword ptr [edi]
+2197;13019dc;\xf3\xab;rep stosd dword ptr [edi]
+2198;13019de;\x8d\x45\x0c;lea eax, ptr [ebp+0xc]
+2199;13019e1;\x89\x45\xec;mov dword ptr [ebp-0x14], eax
+2200;13019e4;\x8b\x45\xec;mov eax, dword ptr [ebp-0x14]
+2201;13019e7;\x50;push eax
+2202;13019e8;\x6a\x00;push 0x0
+2203;13019ea;\x8b\x4d\x08;mov ecx, dword ptr [ebp+0x8]
+2204;13019ed;\x51;push ecx
+2205;13019ee;\x8b\xf4;mov esi, esp
+2206;13019f0;\x6a\x01;push 0x1
+2207;13019f2;\xff\x15\x68\xa1\x30\x01;call dword ptr [0x130a168]
+2208;13019f8;\x83\xc4\x04;add esp, 0x4
+2209;13019fb;\x3b\xf4;cmp esi, esp
+2210;13019fd;\xe8\x0c\xf7\xff\xff;call 0x130110e
+2211;130110e;\xe9\x8d\x0b\x00\x00;jmp 0x1301ca0
+2212;1301ca0;\xf2\x75\x02;bnd jnz 0x1301ca5
+2213;1301ca3;\xf2\xc3;bnd ret 
+2214;1301a02;\x50;push eax
+2215;1301a03;\xe8\x88\xf7\xff\xff;call 0x1301190
+2216;1301190;\xe9\xbb\x05\x00\x00;jmp 0x1301750
+2217;1301750;\x55;push ebp
+2218;1301751;\x8b\xec;mov ebp, esp
+2219;1301753;\x81\xec\xc0\x00\x00\x00;sub esp, 0xc0
+2220;1301759;\x53;push ebx
+2221;130175a;\x56;push esi
+2222;130175b;\x57;push edi
+2223;130175c;\x8d\xbd\x40\xff\xff\xff;lea edi, ptr [ebp-0xc0]
+2224;1301762;\xb9\x30\x00\x00\x00;mov ecx, 0x30
+2225;1301767;\xb8\xcc\xcc\xcc\xcc;mov eax, 0xcccccccc
+2226;130176c;\xf3\xab;rep stosd dword ptr [edi]
+2227;130176c;\xf3\xab;rep stosd dword ptr [edi]
+2228;130176c;\xf3\xab;rep stosd dword ptr [edi]
+2229;130176c;\xf3\xab;rep stosd dword ptr [edi]
+2230;130176c;\xf3\xab;rep stosd dword ptr [edi]
+2231;130176c;\xf3\xab;rep stosd dword ptr [edi]
+2232;130176c;\xf3\xab;rep stosd dword ptr [edi]
+2233;130176c;\xf3\xab;rep stosd dword ptr [edi]
+2234;130176c;\xf3\xab;rep stosd dword ptr [edi]
+2235;130176c;\xf3\xab;rep stosd dword ptr [edi]
+2236;130176c;\xf3\xab;rep stosd dword ptr [edi]
+2237;130176c;\xf3\xab;rep stosd dword ptr [edi]
+2238;130176c;\xf3\xab;rep stosd dword ptr [edi]
+2239;130176c;\xf3\xab;rep stosd dword ptr [edi]
+2240;130176c;\xf3\xab;rep stosd dword ptr [edi]
+2241;130176c;\xf3\xab;rep stosd dword ptr [edi]
+2242;130176c;\xf3\xab;rep stosd dword ptr [edi]
+2243;130176c;\xf3\xab;rep stosd dword ptr [edi]
+2244;130176c;\xf3\xab;rep stosd dword ptr [edi]
+2245;130176c;\xf3\xab;rep stosd dword ptr [edi]
+2246;130176c;\xf3\xab;rep stosd dword ptr [edi]
+2247;130176c;\xf3\xab;rep stosd dword ptr [edi]
+2248;130176c;\xf3\xab;rep stosd dword ptr [edi]
+2249;130176c;\xf3\xab;rep stosd dword ptr [edi]
+2250;130176c;\xf3\xab;rep stosd dword ptr [edi]
+2251;130176c;\xf3\xab;rep stosd dword ptr [edi]
+2252;130176c;\xf3\xab;rep stosd dword ptr [edi]
+2253;130176c;\xf3\xab;rep stosd dword ptr [edi]
+2254;130176c;\xf3\xab;rep stosd dword ptr [edi]
+2255;130176c;\xf3\xab;rep stosd dword ptr [edi]
+2256;130176c;\xf3\xab;rep stosd dword ptr [edi]
+2257;130176c;\xf3\xab;rep stosd dword ptr [edi]
+2258;130176c;\xf3\xab;rep stosd dword ptr [edi]
+2259;130176c;\xf3\xab;rep stosd dword ptr [edi]
+2260;130176c;\xf3\xab;rep stosd dword ptr [edi]
+2261;130176c;\xf3\xab;rep stosd dword ptr [edi]
+2262;130176c;\xf3\xab;rep stosd dword ptr [edi]
+2263;130176c;\xf3\xab;rep stosd dword ptr [edi]
+2264;130176c;\xf3\xab;rep stosd dword ptr [edi]
+2265;130176c;\xf3\xab;rep stosd dword ptr [edi]
+2266;130176c;\xf3\xab;rep stosd dword ptr [edi]
+2267;130176c;\xf3\xab;rep stosd dword ptr [edi]
+2268;130176c;\xf3\xab;rep stosd dword ptr [edi]
+2269;130176c;\xf3\xab;rep stosd dword ptr [edi]
+2270;130176c;\xf3\xab;rep stosd dword ptr [edi]
+2271;130176c;\xf3\xab;rep stosd dword ptr [edi]
+2272;130176c;\xf3\xab;rep stosd dword ptr [edi]
+2273;130176c;\xf3\xab;rep stosd dword ptr [edi]
+2274;130176e;\x8b\xf4;mov esi, esp
+2275;1301770;\x8b\x45\x14;mov eax, dword ptr [ebp+0x14]
+2276;1301773;\x50;push eax
+2277;1301774;\x8b\x4d\x10;mov ecx, dword ptr [ebp+0x10]
+2278;1301777;\x51;push ecx
+2279;1301778;\x8b\x55\x0c;mov edx, dword ptr [ebp+0xc]
+2280;130177b;\x52;push edx
+2281;130177c;\x8b\x45\x08;mov eax, dword ptr [ebp+0x8]
+2282;130177f;\x50;push eax
+2283;1301780;\xe8\xb4\xfb\xff\xff;call 0x1301339
+2284;1301339;\xe9\x92\x03\x00\x00;jmp 0x13016d0
+2285;13016d0;\x55;push ebp
+2286;13016d1;\x8b\xec;mov ebp, esp
+2287;13016d3;\x81\xec\xc0\x00\x00\x00;sub esp, 0xc0
+2288;13016d9;\x53;push ebx
+2289;13016da;\x56;push esi
+2290;13016db;\x57;push edi
+2291;13016dc;\x8d\xbd\x40\xff\xff\xff;lea edi, ptr [ebp-0xc0]
+2292;13016e2;\xb9\x30\x00\x00\x00;mov ecx, 0x30
+2293;13016e7;\xb8\xcc\xcc\xcc\xcc;mov eax, 0xcccccccc
+2294;13016ec;\xf3\xab;rep stosd dword ptr [edi]
+2295;13016ec;\xf3\xab;rep stosd dword ptr [edi]
+2296;13016ec;\xf3\xab;rep stosd dword ptr [edi]
+2297;13016ec;\xf3\xab;rep stosd dword ptr [edi]
+2298;13016ec;\xf3\xab;rep stosd dword ptr [edi]
+2299;13016ec;\xf3\xab;rep stosd dword ptr [edi]
+2300;13016ec;\xf3\xab;rep stosd dword ptr [edi]
+2301;13016ec;\xf3\xab;rep stosd dword ptr [edi]
+2302;13016ec;\xf3\xab;rep stosd dword ptr [edi]
+2303;13016ec;\xf3\xab;rep stosd dword ptr [edi]
+2304;13016ec;\xf3\xab;rep stosd dword ptr [edi]
+2305;13016ec;\xf3\xab;rep stosd dword ptr [edi]
+2306;13016ec;\xf3\xab;rep stosd dword ptr [edi]
+2307;13016ec;\xf3\xab;rep stosd dword ptr [edi]
+2308;13016ec;\xf3\xab;rep stosd dword ptr [edi]
+2309;13016ec;\xf3\xab;rep stosd dword ptr [edi]
+2310;13016ec;\xf3\xab;rep stosd dword ptr [edi]
+2311;13016ec;\xf3\xab;rep stosd dword ptr [edi]
+2312;13016ec;\xf3\xab;rep stosd dword ptr [edi]
+2313;13016ec;\xf3\xab;rep stosd dword ptr [edi]
+2314;13016ec;\xf3\xab;rep stosd dword ptr [edi]
+2315;13016ec;\xf3\xab;rep stosd dword ptr [edi]
+2316;13016ec;\xf3\xab;rep stosd dword ptr [edi]
+2317;13016ec;\xf3\xab;rep stosd dword ptr [edi]
+2318;13016ec;\xf3\xab;rep stosd dword ptr [edi]
+2319;13016ec;\xf3\xab;rep stosd dword ptr [edi]
+2320;13016ec;\xf3\xab;rep stosd dword ptr [edi]
+2321;13016ec;\xf3\xab;rep stosd dword ptr [edi]
+2322;13016ec;\xf3\xab;rep stosd dword ptr [edi]
+2323;13016ec;\xf3\xab;rep stosd dword ptr [edi]
+2324;13016ec;\xf3\xab;rep stosd dword ptr [edi]
+2325;13016ec;\xf3\xab;rep stosd dword ptr [edi]
+2326;13016ec;\xf3\xab;rep stosd dword ptr [edi]
+2327;13016ec;\xf3\xab;rep stosd dword ptr [edi]
+2328;13016ec;\xf3\xab;rep stosd dword ptr [edi]
+2329;13016ec;\xf3\xab;rep stosd dword ptr [edi]
+2330;13016ec;\xf3\xab;rep stosd dword ptr [edi]
+2331;13016ec;\xf3\xab;rep stosd dword ptr [edi]
+2332;13016ec;\xf3\xab;rep stosd dword ptr [edi]
+2333;13016ec;\xf3\xab;rep stosd dword ptr [edi]
+2334;13016ec;\xf3\xab;rep stosd dword ptr [edi]
+2335;13016ec;\xf3\xab;rep stosd dword ptr [edi]
+2336;13016ec;\xf3\xab;rep stosd dword ptr [edi]
+2337;13016ec;\xf3\xab;rep stosd dword ptr [edi]
+2338;13016ec;\xf3\xab;rep stosd dword ptr [edi]
+2339;13016ec;\xf3\xab;rep stosd dword ptr [edi]
+2340;13016ec;\xf3\xab;rep stosd dword ptr [edi]
+2341;13016ec;\xf3\xab;rep stosd dword ptr [edi]
+2342;13016ee;\xb8\x90\x95\x30\x01;mov eax, 0x1309590
+2343;13016f3;\x5f;pop edi
+2344;13016f4;\x5e;pop esi
+2345;13016f5;\x5b;pop ebx
+2346;13016f6;\x8b\xe5;mov esp, ebp
+2347;13016f8;\x5d;pop ebp
+2348;13016f9;\xc3;ret 
+2349;1301785;\x8b\x48\x04;mov ecx, dword ptr [eax+0x4]
+2350;1301788;\x51;push ecx
+2351;1301789;\x8b\x10;mov edx, dword ptr [eax]
+2352;130178b;\x52;push edx
+2353;130178c;\xff\x15\x64\xa1\x30\x01;call dword ptr [0x130a164]
+2354;1301792;\x83\xc4\x18;add esp, 0x18
+2355;1301795;\x3b\xf4;cmp esi, esp
+2356;1301797;\xe8\x72\xf9\xff\xff;call 0x130110e
+2357;130110e;\xe9\x8d\x0b\x00\x00;jmp 0x1301ca0
+2358;1301ca0;\xf2\x75\x02;bnd jnz 0x1301ca5
+2359;1301ca3;\xf2\xc3;bnd ret 
+2360;130179c;\x5f;pop edi
+2361;130179d;\x5e;pop esi
+2362;130179e;\x5b;pop ebx
+2363;130179f;\x81\xc4\xc0\x00\x00\x00;add esp, 0xc0
+2364;13017a5;\x3b\xec;cmp ebp, esp
+2365;13017a7;\xe8\x62\xf9\xff\xff;call 0x130110e
+2366;130110e;\xe9\x8d\x0b\x00\x00;jmp 0x1301ca0
+2367;1301ca0;\xf2\x75\x02;bnd jnz 0x1301ca5
+2368;1301ca3;\xf2\xc3;bnd ret 
+2369;13017ac;\x8b\xe5;mov esp, ebp
+2370;13017ae;\x5d;pop ebp
+2371;13017af;\xc3;ret 
+2372;1301a08;\x83\xc4\x10;add esp, 0x10
+2373;1301a0b;\x89\x45\xf8;mov dword ptr [ebp-0x8], eax
+2374;1301a0e;\xc7\x45\xec\x00\x00\x00\x00;mov dword ptr [ebp-0x14], 0x0
+2375;1301a15;\x8b\x45\xf8;mov eax, dword ptr [ebp-0x8]
+2376;1301a18;\x5f;pop edi
+2377;1301a19;\x5e;pop esi
+2378;1301a1a;\x5b;pop ebx
+2379;1301a1b;\x81\xc4\xd8\x00\x00\x00;add esp, 0xd8
+2380;1301a21;\x3b\xec;cmp ebp, esp
+2381;1301a23;\xe8\xe6\xf6\xff\xff;call 0x130110e
+2382;130110e;\xe9\x8d\x0b\x00\x00;jmp 0x1301ca0
+2383;1301ca0;\xf2\x75\x02;bnd jnz 0x1301ca5
+2384;1301ca3;\xf2\xc3;bnd ret 
+2385;1301a28;\x8b\xe5;mov esp, ebp
+2386;1301a2a;\x5d;pop ebp
+2387;1301a2b;\xc3;ret 
+2388;130194c;\x83\xc4\x08;add esp, 0x8
+2389;130194f;\x33\xc0;xor eax, eax
+2390;1301951;\x52;push edx
+2391;1301952;\x8b\xcd;mov ecx, ebp
+2392;1301954;\x50;push eax
+2393;1301955;\x8d\x15\x78\x19\x30\x01;lea edx, ptr [0x1301978]
+2394;130195b;\xe8\xfd\xf8\xff\xff;call 0x130125d
+2395;130125d;\xe9\xce\x09\x00\x00;jmp 0x1301c30
+2396;1301c30;\x55;push ebp
+2397;1301c31;\x8b\xec;mov ebp, esp
+2398;1301c33;\x51;push ecx
+2399;1301c34;\x53;push ebx
+2400;1301c35;\x8b\xda;mov ebx, edx
+2401;1301c37;\x89\x4d\xfc;mov dword ptr [ebp-0x4], ecx
+2402;1301c3a;\x56;push esi
+2403;1301c3b;\x33\xf6;xor esi, esi
+2404;1301c3d;\x39\x33;cmp dword ptr [ebx], esi
+2405;1301c3f;\x7e\x41;jle 0x1301c82
+2406;1301c41;\x57;push edi
+2407;1301c42;\x33\xff;xor edi, edi
+2408;1301c44;\x8b\x4b\x04;mov ecx, dword ptr [ebx+0x4]
+2409;1301c47;\x8b\x45\xfc;mov eax, dword ptr [ebp-0x4]
+2410;1301c4a;\x8b\x14\x39;mov edx, dword ptr [ecx+edi*1]
+2411;1301c4d;\x81\x7c\x02\xfc\xcc\xcc\xcc\xcc;cmp dword ptr [edx+eax*1-0x4], 0xcccccccc
+2412;1301c55;\x75\x12;jnz 0x1301c69
+2413;1301c57;\x8b\x44\x39\x04;mov eax, dword ptr [ecx+edi*1+0x4]
+2414;1301c5b;\x03\xc2;add eax, edx
+2415;1301c5d;\x8b\x55\xfc;mov edx, dword ptr [ebp-0x4]
+2416;1301c60;\x81\x3c\x10\xcc\xcc\xcc\xcc;cmp dword ptr [eax+edx*1], 0xcccccccc
+2417;1301c67;\x74\x10;jz 0x1301c79
+2418;1301c79;\x46;inc esi
+2419;1301c7a;\x83\xc7\x0c;add edi, 0xc
+2420;1301c7d;\x3b\x33;cmp esi, dword ptr [ebx]
+2421;1301c7f;\x7c\xc3;jl 0x1301c44
+2422;1301c81;\x5f;pop edi
+2423;1301c82;\x5e;pop esi
+2424;1301c83;\x5b;pop ebx
+2425;1301c84;\x8b\xe5;mov esp, ebp
+2426;1301c86;\x5d;pop ebp
+2427;1301c87;\xc3;ret 
+2428;1301960;\x58;pop eax
+2429;1301961;\x5a;pop edx
+2430;1301962;\x5f;pop edi
+2431;1301963;\x5e;pop esi
+2432;1301964;\x5b;pop ebx
+2433;1301965;\x81\xc4\xd8\x00\x00\x00;add esp, 0xd8
+2434;130196b;\x3b\xec;cmp ebp, esp
+2435;130196d;\xe8\x9c\xf7\xff\xff;call 0x130110e
+2436;130110e;\xe9\x8d\x0b\x00\x00;jmp 0x1301ca0
+2437;1301ca0;\xf2\x75\x02;bnd jnz 0x1301ca5
+2438;1301ca3;\xf2\xc3;bnd ret 
+2439;1301972;\x8b\xe5;mov esp, ebp
+2440;1301974;\x5d;pop ebp
+2441;1301975;\xc3;ret 
+2442;130218e;\x83\xc4\x0c;add esp, 0xc
+2443;1302191;\x5d;pop ebp
+2444;1302192;\xc3;ret 
+2445;1301ff0;\x89\x45\xd4;mov dword ptr [ebp-0x2c], eax
+2446;1301ff3;\xe8\x20\xf1\xff\xff;call 0x1301118
+2447;1301118;\xe9\x23\x28\x00\x00;jmp 0x1303940
+2448;1303940;\x55;push ebp
+2449;1303941;\x8b\xec;mov ebp, esp
+2450;1303943;\x83\xec\x08;sub esp, 0x8
+2451;1303946;\x6a\x00;push 0x0
+2452;1303948;\xff\x15\x3c\xa0\x30\x01;call dword ptr [0x130a03c]
+2453;130394e;\x89\x45\xfc;mov dword ptr [ebp-0x4], eax
+2454;1303951;\x83\x7d\xfc\x00;cmp dword ptr [ebp-0x4], 0x0
+2455;1303955;\x75\x04;jnz 0x130395b
+2456;130395b;\x8b\x45\xfc;mov eax, dword ptr [ebp-0x4]
+2457;130395e;\x0f\xb7\x08;movzx ecx, word ptr [eax]
+2458;1303961;\x81\xf9\x4d\x5a\x00\x00;cmp ecx, 0x5a4d
+2459;1303967;\x74\x04;jz 0x130396d
+2460;130396d;\x8b\x55\xfc;mov edx, dword ptr [ebp-0x4]
+2461;1303970;\x8b\x45\xfc;mov eax, dword ptr [ebp-0x4]
+2462;1303973;\x03\x42\x3c;add eax, dword ptr [edx+0x3c]
+2463;1303976;\x89\x45\xf8;mov dword ptr [ebp-0x8], eax
+2464;1303979;\x8b\x4d\xf8;mov ecx, dword ptr [ebp-0x8]
+2465;130397c;\x81\x39\x50\x45\x00\x00;cmp dword ptr [ecx], 0x4550
+2466;1303982;\x74\x04;jz 0x1303988
+2467;1303988;\x8b\x55\xf8;mov edx, dword ptr [ebp-0x8]
+2468;130398b;\x0f\xb7\x42\x18;movzx eax, word ptr [edx+0x18]
+2469;130398f;\x3d\x0b\x01\x00\x00;cmp eax, 0x10b
+2470;1303994;\x74\x04;jz 0x130399a
+2471;130399a;\x8b\x4d\xf8;mov ecx, dword ptr [ebp-0x8]
+2472;130399d;\x83\x79\x74\x0e;cmp dword ptr [ecx+0x74], 0xe
+2473;13039a1;\x77\x04;jnbe 0x13039a7
+2474;13039a7;\xba\x08\x00\x00\x00;mov edx, 0x8
+2475;13039ac;\x6b\xc2\x0e;imul eax, edx, 0xe
+2476;13039af;\x8b\x4d\xf8;mov ecx, dword ptr [ebp-0x8]
+2477;13039b2;\x83\x7c\x01\x78\x00;cmp dword ptr [ecx+eax*1+0x78], 0x0
+2478;13039b7;\x75\x04;jnz 0x13039bd
+2479;13039b9;\x32\xc0;xor al, al
+2480;13039bb;\xeb\x02;jmp 0x13039bf
+2481;13039bf;\x8b\xe5;mov esp, ebp
+2482;13039c1;\x5d;pop ebp
+2483;13039c2;\xc3;ret 
+2484;1301ff8;\x0f\xb6\xc0;movzx eax, al
+2485;1301ffb;\x85\xc0;test eax, eax
+2486;1301ffd;\x75\x09;jnz 0x1302008
+2487;1301fff;\x8b\x4d\xd4;mov ecx, dword ptr [ebp-0x2c]
+2488;1302002;\x51;push ecx
+2489;1302003;\xe8\xc3\xf2\xff\xff;call 0x13012cb
+2490;13012cb;\xe9\x50\x3b\x00\x00;jmp 0x1304e20
+2491;1304e20;\xff\x25\x34\xa1\x30\x01;jmp dword ptr [0x130a134]
+2492;130116d;\xe9\x7e\x29\x00\x00;jmp 0x1303af0
+2493;1303af0;\x56;push esi
+2494;1303af1;\xbe\x80\x7b\x30\x01;mov esi, 0x1307b80
+2495;1303af6;\x8b\xc6;mov eax, esi
+2496;1303af8;\x3d\x84\x7d\x30\x01;cmp eax, 0x1307d84
+2497;1303afd;\x73\x1c;jnb 0x1303b1b
+2498;1303aff;\x57;push edi
+2499;1303b00;\x8b\x3e;mov edi, dword ptr [esi]
+2500;1303b02;\x85\xff;test edi, edi
+2501;1303b04;\x74\x09;jz 0x1303b0f
+2502;1303b0f;\x83\xc6\x04;add esi, 0x4
+2503;1303b12;\x81\xfe\x84\x7d\x30\x01;cmp esi, 0x1307d84
+2504;1303b18;\x72\xe6;jb 0x1303b00
+2505;1303b00;\x8b\x3e;mov edi, dword ptr [esi]
+2506;1303b02;\x85\xff;test edi, edi
+2507;1303b04;\x74\x09;jz 0x1303b0f
+2508;1303b0f;\x83\xc6\x04;add esi, 0x4
+2509;1303b12;\x81\xfe\x84\x7d\x30\x01;cmp esi, 0x1307d84
+2510;1303b18;\x72\xe6;jb 0x1303b00
+2511;1303b00;\x8b\x3e;mov edi, dword ptr [esi]
+2512;1303b02;\x85\xff;test edi, edi
+2513;1303b04;\x74\x09;jz 0x1303b0f
+2514;1303b0f;\x83\xc6\x04;add esi, 0x4
+2515;1303b12;\x81\xfe\x84\x7d\x30\x01;cmp esi, 0x1307d84
+2516;1303b18;\x72\xe6;jb 0x1303b00
+2517;1303b00;\x8b\x3e;mov edi, dword ptr [esi]
+2518;1303b02;\x85\xff;test edi, edi
+2519;1303b04;\x74\x09;jz 0x1303b0f
+2520;1303b0f;\x83\xc6\x04;add esi, 0x4
+2521;1303b12;\x81\xfe\x84\x7d\x30\x01;cmp esi, 0x1307d84
+2522;1303b18;\x72\xe6;jb 0x1303b00
+2523;1303b00;\x8b\x3e;mov edi, dword ptr [esi]
+2524;1303b02;\x85\xff;test edi, edi
+2525;1303b04;\x74\x09;jz 0x1303b0f
+2526;1303b0f;\x83\xc6\x04;add esi, 0x4
+2527;1303b12;\x81\xfe\x84\x7d\x30\x01;cmp esi, 0x1307d84
+2528;1303b18;\x72\xe6;jb 0x1303b00
+2529;1303b00;\x8b\x3e;mov edi, dword ptr [esi]
+2530;1303b02;\x85\xff;test edi, edi
+2531;1303b04;\x74\x09;jz 0x1303b0f
+2532;1303b0f;\x83\xc6\x04;add esi, 0x4
+2533;1303b12;\x81\xfe\x84\x7d\x30\x01;cmp esi, 0x1307d84
+2534;1303b18;\x72\xe6;jb 0x1303b00
+2535;1303b00;\x8b\x3e;mov edi, dword ptr [esi]
+2536;1303b02;\x85\xff;test edi, edi
+2537;1303b04;\x74\x09;jz 0x1303b0f
+2538;1303b0f;\x83\xc6\x04;add esi, 0x4
+2539;1303b12;\x81\xfe\x84\x7d\x30\x01;cmp esi, 0x1307d84
+2540;1303b18;\x72\xe6;jb 0x1303b00
+2541;1303b00;\x8b\x3e;mov edi, dword ptr [esi]
+2542;1303b02;\x85\xff;test edi, edi
+2543;1303b04;\x74\x09;jz 0x1303b0f
+2544;1303b0f;\x83\xc6\x04;add esi, 0x4
+2545;1303b12;\x81\xfe\x84\x7d\x30\x01;cmp esi, 0x1307d84
+2546;1303b18;\x72\xe6;jb 0x1303b00
+2547;1303b00;\x8b\x3e;mov edi, dword ptr [esi]
+2548;1303b02;\x85\xff;test edi, edi
+2549;1303b04;\x74\x09;jz 0x1303b0f
+2550;1303b0f;\x83\xc6\x04;add esi, 0x4
+2551;1303b12;\x81\xfe\x84\x7d\x30\x01;cmp esi, 0x1307d84
+2552;1303b18;\x72\xe6;jb 0x1303b00
+2553;1303b00;\x8b\x3e;mov edi, dword ptr [esi]
+2554;1303b02;\x85\xff;test edi, edi
+2555;1303b04;\x74\x09;jz 0x1303b0f
+2556;1303b0f;\x83\xc6\x04;add esi, 0x4
+2557;1303b12;\x81\xfe\x84\x7d\x30\x01;cmp esi, 0x1307d84
+2558;1303b18;\x72\xe6;jb 0x1303b00
+2559;1303b00;\x8b\x3e;mov edi, dword ptr [esi]
+2560;1303b02;\x85\xff;test edi, edi
+2561;1303b04;\x74\x09;jz 0x1303b0f
+2562;1303b0f;\x83\xc6\x04;add esi, 0x4
+2563;1303b12;\x81\xfe\x84\x7d\x30\x01;cmp esi, 0x1307d84
+2564;1303b18;\x72\xe6;jb 0x1303b00
+2565;1303b00;\x8b\x3e;mov edi, dword ptr [esi]
+2566;1303b02;\x85\xff;test edi, edi
+2567;1303b04;\x74\x09;jz 0x1303b0f
+2568;1303b0f;\x83\xc6\x04;add esi, 0x4
+2569;1303b12;\x81\xfe\x84\x7d\x30\x01;cmp esi, 0x1307d84
+2570;1303b18;\x72\xe6;jb 0x1303b00
+2571;1303b00;\x8b\x3e;mov edi, dword ptr [esi]
+2572;1303b02;\x85\xff;test edi, edi
+2573;1303b04;\x74\x09;jz 0x1303b0f
+2574;1303b0f;\x83\xc6\x04;add esi, 0x4
+2575;1303b12;\x81\xfe\x84\x7d\x30\x01;cmp esi, 0x1307d84
+2576;1303b18;\x72\xe6;jb 0x1303b00
+2577;1303b00;\x8b\x3e;mov edi, dword ptr [esi]
+2578;1303b02;\x85\xff;test edi, edi
+2579;1303b04;\x74\x09;jz 0x1303b0f
+2580;1303b0f;\x83\xc6\x04;add esi, 0x4
+2581;1303b12;\x81\xfe\x84\x7d\x30\x01;cmp esi, 0x1307d84
+2582;1303b18;\x72\xe6;jb 0x1303b00
+2583;1303b00;\x8b\x3e;mov edi, dword ptr [esi]
+2584;1303b02;\x85\xff;test edi, edi
+2585;1303b04;\x74\x09;jz 0x1303b0f
+2586;1303b0f;\x83\xc6\x04;add esi, 0x4
+2587;1303b12;\x81\xfe\x84\x7d\x30\x01;cmp esi, 0x1307d84
+2588;1303b18;\x72\xe6;jb 0x1303b00
+2589;1303b00;\x8b\x3e;mov edi, dword ptr [esi]
+2590;1303b02;\x85\xff;test edi, edi
+2591;1303b04;\x74\x09;jz 0x1303b0f
+2592;1303b0f;\x83\xc6\x04;add esi, 0x4
+2593;1303b12;\x81\xfe\x84\x7d\x30\x01;cmp esi, 0x1307d84
+2594;1303b18;\x72\xe6;jb 0x1303b00
+2595;1303b00;\x8b\x3e;mov edi, dword ptr [esi]
+2596;1303b02;\x85\xff;test edi, edi
+2597;1303b04;\x74\x09;jz 0x1303b0f
+2598;1303b0f;\x83\xc6\x04;add esi, 0x4
+2599;1303b12;\x81\xfe\x84\x7d\x30\x01;cmp esi, 0x1307d84
+2600;1303b18;\x72\xe6;jb 0x1303b00
+2601;1303b00;\x8b\x3e;mov edi, dword ptr [esi]
+2602;1303b02;\x85\xff;test edi, edi
+2603;1303b04;\x74\x09;jz 0x1303b0f
+2604;1303b0f;\x83\xc6\x04;add esi, 0x4
+2605;1303b12;\x81\xfe\x84\x7d\x30\x01;cmp esi, 0x1307d84
+2606;1303b18;\x72\xe6;jb 0x1303b00
+2607;1303b00;\x8b\x3e;mov edi, dword ptr [esi]
+2608;1303b02;\x85\xff;test edi, edi
+2609;1303b04;\x74\x09;jz 0x1303b0f
+2610;1303b0f;\x83\xc6\x04;add esi, 0x4
+2611;1303b12;\x81\xfe\x84\x7d\x30\x01;cmp esi, 0x1307d84
+2612;1303b18;\x72\xe6;jb 0x1303b00
+2613;1303b00;\x8b\x3e;mov edi, dword ptr [esi]
+2614;1303b02;\x85\xff;test edi, edi
+2615;1303b04;\x74\x09;jz 0x1303b0f
+2616;1303b0f;\x83\xc6\x04;add esi, 0x4
+2617;1303b12;\x81\xfe\x84\x7d\x30\x01;cmp esi, 0x1307d84
+2618;1303b18;\x72\xe6;jb 0x1303b00
+2619;1303b00;\x8b\x3e;mov edi, dword ptr [esi]
+2620;1303b02;\x85\xff;test edi, edi
+2621;1303b04;\x74\x09;jz 0x1303b0f
+2622;1303b0f;\x83\xc6\x04;add esi, 0x4
+2623;1303b12;\x81\xfe\x84\x7d\x30\x01;cmp esi, 0x1307d84
+2624;1303b18;\x72\xe6;jb 0x1303b00
+2625;1303b00;\x8b\x3e;mov edi, dword ptr [esi]
+2626;1303b02;\x85\xff;test edi, edi
+2627;1303b04;\x74\x09;jz 0x1303b0f
+2628;1303b0f;\x83\xc6\x04;add esi, 0x4
+2629;1303b12;\x81\xfe\x84\x7d\x30\x01;cmp esi, 0x1307d84
+2630;1303b18;\x72\xe6;jb 0x1303b00
+2631;1303b00;\x8b\x3e;mov edi, dword ptr [esi]
+2632;1303b02;\x85\xff;test edi, edi
+2633;1303b04;\x74\x09;jz 0x1303b0f
+2634;1303b0f;\x83\xc6\x04;add esi, 0x4
+2635;1303b12;\x81\xfe\x84\x7d\x30\x01;cmp esi, 0x1307d84
+2636;1303b18;\x72\xe6;jb 0x1303b00
+2637;1303b00;\x8b\x3e;mov edi, dword ptr [esi]
+2638;1303b02;\x85\xff;test edi, edi
+2639;1303b04;\x74\x09;jz 0x1303b0f
+2640;1303b0f;\x83\xc6\x04;add esi, 0x4
+2641;1303b12;\x81\xfe\x84\x7d\x30\x01;cmp esi, 0x1307d84
+2642;1303b18;\x72\xe6;jb 0x1303b00
+2643;1303b00;\x8b\x3e;mov edi, dword ptr [esi]
+2644;1303b02;\x85\xff;test edi, edi
+2645;1303b04;\x74\x09;jz 0x1303b0f
+2646;1303b0f;\x83\xc6\x04;add esi, 0x4
+2647;1303b12;\x81\xfe\x84\x7d\x30\x01;cmp esi, 0x1307d84
+2648;1303b18;\x72\xe6;jb 0x1303b00
+2649;1303b00;\x8b\x3e;mov edi, dword ptr [esi]
+2650;1303b02;\x85\xff;test edi, edi
+2651;1303b04;\x74\x09;jz 0x1303b0f
+2652;1303b0f;\x83\xc6\x04;add esi, 0x4
+2653;1303b12;\x81\xfe\x84\x7d\x30\x01;cmp esi, 0x1307d84
+2654;1303b18;\x72\xe6;jb 0x1303b00
+2655;1303b00;\x8b\x3e;mov edi, dword ptr [esi]
+2656;1303b02;\x85\xff;test edi, edi
+2657;1303b04;\x74\x09;jz 0x1303b0f
+2658;1303b0f;\x83\xc6\x04;add esi, 0x4
+2659;1303b12;\x81\xfe\x84\x7d\x30\x01;cmp esi, 0x1307d84
+2660;1303b18;\x72\xe6;jb 0x1303b00
+2661;1303b00;\x8b\x3e;mov edi, dword ptr [esi]
+2662;1303b02;\x85\xff;test edi, edi
+2663;1303b04;\x74\x09;jz 0x1303b0f
+2664;1303b0f;\x83\xc6\x04;add esi, 0x4
+2665;1303b12;\x81\xfe\x84\x7d\x30\x01;cmp esi, 0x1307d84
+2666;1303b18;\x72\xe6;jb 0x1303b00
+2667;1303b00;\x8b\x3e;mov edi, dword ptr [esi]
+2668;1303b02;\x85\xff;test edi, edi
+2669;1303b04;\x74\x09;jz 0x1303b0f
+2670;1303b0f;\x83\xc6\x04;add esi, 0x4
+2671;1303b12;\x81\xfe\x84\x7d\x30\x01;cmp esi, 0x1307d84
+2672;1303b18;\x72\xe6;jb 0x1303b00
+2673;1303b00;\x8b\x3e;mov edi, dword ptr [esi]
+2674;1303b02;\x85\xff;test edi, edi
+2675;1303b04;\x74\x09;jz 0x1303b0f
+2676;1303b0f;\x83\xc6\x04;add esi, 0x4
+2677;1303b12;\x81\xfe\x84\x7d\x30\x01;cmp esi, 0x1307d84
+2678;1303b18;\x72\xe6;jb 0x1303b00
+2679;1303b00;\x8b\x3e;mov edi, dword ptr [esi]
+2680;1303b02;\x85\xff;test edi, edi
+2681;1303b04;\x74\x09;jz 0x1303b0f
+2682;1303b0f;\x83\xc6\x04;add esi, 0x4
+2683;1303b12;\x81\xfe\x84\x7d\x30\x01;cmp esi, 0x1307d84
+2684;1303b18;\x72\xe6;jb 0x1303b00
+2685;1303b00;\x8b\x3e;mov edi, dword ptr [esi]
+2686;1303b02;\x85\xff;test edi, edi
+2687;1303b04;\x74\x09;jz 0x1303b0f
+2688;1303b0f;\x83\xc6\x04;add esi, 0x4
+2689;1303b12;\x81\xfe\x84\x7d\x30\x01;cmp esi, 0x1307d84
+2690;1303b18;\x72\xe6;jb 0x1303b00
+2691;1303b00;\x8b\x3e;mov edi, dword ptr [esi]
+2692;1303b02;\x85\xff;test edi, edi
+2693;1303b04;\x74\x09;jz 0x1303b0f
+2694;1303b0f;\x83\xc6\x04;add esi, 0x4
+2695;1303b12;\x81\xfe\x84\x7d\x30\x01;cmp esi, 0x1307d84
+2696;1303b18;\x72\xe6;jb 0x1303b00
+2697;1303b00;\x8b\x3e;mov edi, dword ptr [esi]
+2698;1303b02;\x85\xff;test edi, edi
+2699;1303b04;\x74\x09;jz 0x1303b0f
+2700;1303b0f;\x83\xc6\x04;add esi, 0x4
+2701;1303b12;\x81\xfe\x84\x7d\x30\x01;cmp esi, 0x1307d84
+2702;1303b18;\x72\xe6;jb 0x1303b00
+2703;1303b00;\x8b\x3e;mov edi, dword ptr [esi]
+2704;1303b02;\x85\xff;test edi, edi
+2705;1303b04;\x74\x09;jz 0x1303b0f
+2706;1303b0f;\x83\xc6\x04;add esi, 0x4
+2707;1303b12;\x81\xfe\x84\x7d\x30\x01;cmp esi, 0x1307d84
+2708;1303b18;\x72\xe6;jb 0x1303b00
+2709;1303b00;\x8b\x3e;mov edi, dword ptr [esi]
+2710;1303b02;\x85\xff;test edi, edi
+2711;1303b04;\x74\x09;jz 0x1303b0f
+2712;1303b0f;\x83\xc6\x04;add esi, 0x4
+2713;1303b12;\x81\xfe\x84\x7d\x30\x01;cmp esi, 0x1307d84
+2714;1303b18;\x72\xe6;jb 0x1303b00
+2715;1303b00;\x8b\x3e;mov edi, dword ptr [esi]
+2716;1303b02;\x85\xff;test edi, edi
+2717;1303b04;\x74\x09;jz 0x1303b0f
+2718;1303b0f;\x83\xc6\x04;add esi, 0x4
+2719;1303b12;\x81\xfe\x84\x7d\x30\x01;cmp esi, 0x1307d84
+2720;1303b18;\x72\xe6;jb 0x1303b00
+2721;1303b00;\x8b\x3e;mov edi, dword ptr [esi]
+2722;1303b02;\x85\xff;test edi, edi
+2723;1303b04;\x74\x09;jz 0x1303b0f
+2724;1303b0f;\x83\xc6\x04;add esi, 0x4
+2725;1303b12;\x81\xfe\x84\x7d\x30\x01;cmp esi, 0x1307d84
+2726;1303b18;\x72\xe6;jb 0x1303b00
+2727;1303b00;\x8b\x3e;mov edi, dword ptr [esi]
+2728;1303b02;\x85\xff;test edi, edi
+2729;1303b04;\x74\x09;jz 0x1303b0f
+2730;1303b0f;\x83\xc6\x04;add esi, 0x4
+2731;1303b12;\x81\xfe\x84\x7d\x30\x01;cmp esi, 0x1307d84
+2732;1303b18;\x72\xe6;jb 0x1303b00
+
+2733;1303b00;\x8b\x3e;mov edi, dword ptr [esi]
+2734;1303b02;\x85\xff;test edi, edi
+2735;1303b04;\x74\x09;jz 0x1303b0f
+2736;1303b0f;\x83\xc6\x04;add esi, 0x4
+2737;1303b12;\x81\xfe\x84\x7d\x30\x01;cmp esi, 0x1307d84
+2738;1303b18;\x72\xe6;jb 0x1303b00
+2739;1303b00;\x8b\x3e;mov edi, dword ptr [esi]
+2740;1303b02;\x85\xff;test edi, edi
+2741;1303b04;\x74\x09;jz 0x1303b0f
+2742;1303b0f;\x83\xc6\x04;add esi, 0x4
+2743;1303b12;\x81\xfe\x84\x7d\x30\x01;cmp esi, 0x1307d84
+2744;1303b18;\x72\xe6;jb 0x1303b00
+2745;1303b00;\x8b\x3e;mov edi, dword ptr [esi]
+2746;1303b02;\x85\xff;test edi, edi
+2747;1303b04;\x74\x09;jz 0x1303b0f
+2748;1303b0f;\x83\xc6\x04;add esi, 0x4
+2749;1303b12;\x81\xfe\x84\x7d\x30\x01;cmp esi, 0x1307d84
+2750;1303b18;\x72\xe6;jb 0x1303b00
+2751;1303b00;\x8b\x3e;mov edi, dword ptr [esi]
+2752;1303b02;\x85\xff;test edi, edi
+2753;1303b04;\x74\x09;jz 0x1303b0f
+2754;1303b0f;\x83\xc6\x04;add esi, 0x4
+2755;1303b12;\x81\xfe\x84\x7d\x30\x01;cmp esi, 0x1307d84
+2756;1303b18;\x72\xe6;jb 0x1303b00
+2757;1303b00;\x8b\x3e;mov edi, dword ptr [esi]
+2758;1303b02;\x85\xff;test edi, edi
+2759;1303b04;\x74\x09;jz 0x1303b0f
+2760;1303b0f;\x83\xc6\x04;add esi, 0x4
+2761;1303b12;\x81\xfe\x84\x7d\x30\x01;cmp esi, 0x1307d84
+2762;1303b18;\x72\xe6;jb 0x1303b00
+2763;1303b00;\x8b\x3e;mov edi, dword ptr [esi]
+2764;1303b02;\x85\xff;test edi, edi
+2765;1303b04;\x74\x09;jz 0x1303b0f
+2766;1303b0f;\x83\xc6\x04;add esi, 0x4
+2767;1303b12;\x81\xfe\x84\x7d\x30\x01;cmp esi, 0x1307d84
+2768;1303b18;\x72\xe6;jb 0x1303b00
+2769;1303b00;\x8b\x3e;mov edi, dword ptr [esi]
+2770;1303b02;\x85\xff;test edi, edi
+2771;1303b04;\x74\x09;jz 0x1303b0f
+2772;1303b0f;\x83\xc6\x04;add esi, 0x4
+2773;1303b12;\x81\xfe\x84\x7d\x30\x01;cmp esi, 0x1307d84
+2774;1303b18;\x72\xe6;jb 0x1303b00
+2775;1303b00;\x8b\x3e;mov edi, dword ptr [esi]
+2776;1303b02;\x85\xff;test edi, edi
+2777;1303b04;\x74\x09;jz 0x1303b0f
+2778;1303b0f;\x83\xc6\x04;add esi, 0x4
+2779;1303b12;\x81\xfe\x84\x7d\x30\x01;cmp esi, 0x1307d84
+2780;1303b18;\x72\xe6;jb 0x1303b00
+2781;1303b00;\x8b\x3e;mov edi, dword ptr [esi]
+2782;1303b02;\x85\xff;test edi, edi
+2783;1303b04;\x74\x09;jz 0x1303b0f
+2784;1303b0f;\x83\xc6\x04;add esi, 0x4
+2785;1303b12;\x81\xfe\x84\x7d\x30\x01;cmp esi, 0x1307d84
+2786;1303b18;\x72\xe6;jb 0x1303b00
+2787;1303b00;\x8b\x3e;mov edi, dword ptr [esi]
+2788;1303b02;\x85\xff;test edi, edi
+2789;1303b04;\x74\x09;jz 0x1303b0f
+2790;1303b0f;\x83\xc6\x04;add esi, 0x4
+2791;1303b12;\x81\xfe\x84\x7d\x30\x01;cmp esi, 0x1307d84
+2792;1303b18;\x72\xe6;jb 0x1303b00
+2793;1303b00;\x8b\x3e;mov edi, dword ptr [esi]
+2794;1303b02;\x85\xff;test edi, edi
+2795;1303b04;\x74\x09;jz 0x1303b0f
+2796;1303b0f;\x83\xc6\x04;add esi, 0x4
+2797;1303b12;\x81\xfe\x84\x7d\x30\x01;cmp esi, 0x1307d84
+2798;1303b18;\x72\xe6;jb 0x1303b00
+2799;1303b00;\x8b\x3e;mov edi, dword ptr [esi]
+2800;1303b02;\x85\xff;test edi, edi
+2801;1303b04;\x74\x09;jz 0x1303b0f
+2802;1303b0f;\x83\xc6\x04;add esi, 0x4
+2803;1303b12;\x81\xfe\x84\x7d\x30\x01;cmp esi, 0x1307d84
+2804;1303b18;\x72\xe6;jb 0x1303b00
+2805;1303b00;\x8b\x3e;mov edi, dword ptr [esi]
+2806;1303b02;\x85\xff;test edi, edi
+2807;1303b04;\x74\x09;jz 0x1303b0f
+2808;1303b0f;\x83\xc6\x04;add esi, 0x4
+2809;1303b12;\x81\xfe\x84\x7d\x30\x01;cmp esi, 0x1307d84
+2810;1303b18;\x72\xe6;jb 0x1303b00
+2811;1303b00;\x8b\x3e;mov edi, dword ptr [esi]
+2812;1303b02;\x85\xff;test edi, edi
+2813;1303b04;\x74\x09;jz 0x1303b0f
+2814;1303b0f;\x83\xc6\x04;add esi, 0x4
+2815;1303b12;\x81\xfe\x84\x7d\x30\x01;cmp esi, 0x1307d84
+2816;1303b18;\x72\xe6;jb 0x1303b00
+2817;1303b00;\x8b\x3e;mov edi, dword ptr [esi]
+2818;1303b02;\x85\xff;test edi, edi
+2819;1303b04;\x74\x09;jz 0x1303b0f
+2820;1303b0f;\x83\xc6\x04;add esi, 0x4
+2821;1303b12;\x81\xfe\x84\x7d\x30\x01;cmp esi, 0x1307d84
+2822;1303b18;\x72\xe6;jb 0x1303b00
+2823;1303b00;\x8b\x3e;mov edi, dword ptr [esi]
+2824;1303b02;\x85\xff;test edi, edi
+2825;1303b04;\x74\x09;jz 0x1303b0f
+2826;1303b0f;\x83\xc6\x04;add esi, 0x4
+2827;1303b12;\x81\xfe\x84\x7d\x30\x01;cmp esi, 0x1307d84
+2828;1303b18;\x72\xe6;jb 0x1303b00
+2829;1303b00;\x8b\x3e;mov edi, dword ptr [esi]
+2830;1303b02;\x85\xff;test edi, edi
+2831;1303b04;\x74\x09;jz 0x1303b0f
+2832;1303b0f;\x83\xc6\x04;add esi, 0x4
+2833;1303b12;\x81\xfe\x84\x7d\x30\x01;cmp esi, 0x1307d84
+2834;1303b18;\x72\xe6;jb 0x1303b00
+2835;1303b00;\x8b\x3e;mov edi, dword ptr [esi]
+2836;1303b02;\x85\xff;test edi, edi
+2837;1303b04;\x74\x09;jz 0x1303b0f
+2838;1303b0f;\x83\xc6\x04;add esi, 0x4
+2839;1303b12;\x81\xfe\x84\x7d\x30\x01;cmp esi, 0x1307d84
+2840;1303b18;\x72\xe6;jb 0x1303b00
+2841;1303b00;\x8b\x3e;mov edi, dword ptr [esi]
+2842;1303b02;\x85\xff;test edi, edi
+2843;1303b04;\x74\x09;jz 0x1303b0f
+2844;1303b0f;\x83\xc6\x04;add esi, 0x4
+2845;1303b12;\x81\xfe\x84\x7d\x30\x01;cmp esi, 0x1307d84
+2846;1303b18;\x72\xe6;jb 0x1303b00
+2847;1303b00;\x8b\x3e;mov edi, dword ptr [esi]
+2848;1303b02;\x85\xff;test edi, edi
+2849;1303b04;\x74\x09;jz 0x1303b0f
+2850;1303b0f;\x83\xc6\x04;add esi, 0x4
+2851;1303b12;\x81\xfe\x84\x7d\x30\x01;cmp esi, 0x1307d84
+2852;1303b18;\x72\xe6;jb 0x1303b00
+2853;1303b00;\x8b\x3e;mov edi, dword ptr [esi]
+2854;1303b02;\x85\xff;test edi, edi
+2855;1303b04;\x74\x09;jz 0x1303b0f
+2856;1303b0f;\x83\xc6\x04;add esi, 0x4
+2857;1303b12;\x81\xfe\x84\x7d\x30\x01;cmp esi, 0x1307d84
+2858;1303b18;\x72\xe6;jb 0x1303b00
+2859;1303b00;\x8b\x3e;mov edi, dword ptr [esi]
+2860;1303b02;\x85\xff;test edi, edi
+2861;1303b04;\x74\x09;jz 0x1303b0f
+2862;1303b0f;\x83\xc6\x04;add esi, 0x4
+2863;1303b12;\x81\xfe\x84\x7d\x30\x01;cmp esi, 0x1307d84
+2864;1303b18;\x72\xe6;jb 0x1303b00
+2865;1303b00;\x8b\x3e;mov edi, dword ptr [esi]
+2866;1303b02;\x85\xff;test edi, edi
+2867;1303b04;\x74\x09;jz 0x1303b0f
+2868;1303b0f;\x83\xc6\x04;add esi, 0x4
+2869;1303b12;\x81\xfe\x84\x7d\x30\x01;cmp esi, 0x1307d84
+2870;1303b18;\x72\xe6;jb 0x1303b00
+2871;1303b00;\x8b\x3e;mov edi, dword ptr [esi]
+2872;1303b02;\x85\xff;test edi, edi
+2873;1303b04;\x74\x09;jz 0x1303b0f
+2874;1303b0f;\x83\xc6\x04;add esi, 0x4
+2875;1303b12;\x81\xfe\x84\x7d\x30\x01;cmp esi, 0x1307d84
+2876;1303b18;\x72\xe6;jb 0x1303b00
+2877;1303b00;\x8b\x3e;mov edi, dword ptr [esi]
+2878;1303b02;\x85\xff;test edi, edi
+2879;1303b04;\x74\x09;jz 0x1303b0f
+2880;1303b0f;\x83\xc6\x04;add esi, 0x4
+2881;1303b12;\x81\xfe\x84\x7d\x30\x01;cmp esi, 0x1307d84
+2882;1303b18;\x72\xe6;jb 0x1303b00
+2883;1303b00;\x8b\x3e;mov edi, dword ptr [esi]
+2884;1303b02;\x85\xff;test edi, edi
+2885;1303b04;\x74\x09;jz 0x1303b0f
+2886;1303b06;\x8b\xcf;mov ecx, edi
+2887;1303b08;\xe8\xb4\xd7\xff\xff;call 0x13012c1
+2888;13012c1;\xe9\x6a\x28\x00\x00;jmp 0x1303b30
+2889;1303b30;\x55;push ebp
+2890;1303b31;\x8b\xec;mov ebp, esp
+2891;1303b33;\x51;push ecx
+2892;1303b34;\x89\x4d\xfc;mov dword ptr [ebp-0x4], ecx
+2893;1303b37;\x8b\x4d\xfc;mov ecx, dword ptr [ebp-0x4]
+2894;1303b3a;\xff\x15\x00\xc0\x30\x01;call dword ptr [0x130c000]
+2895;1301285;\xe9\xc6\x36\x00\x00;jmp 0x1304950
+2896;1304950;\x55;push ebp
+2897;1304951;\x8b\xec;mov ebp, esp
+2898;1304953;\x51;push ecx
+2899;1304954;\x89\x4d\xfc;mov dword ptr [ebp-0x4], ecx
+2900;1304957;\x8b\xe5;mov esp, ebp
+2901;1304959;\x5d;pop ebp
+2902;130495a;\xc3;ret 
+2903;1303b40;\x8b\xe5;mov esp, ebp
+2904;1303b42;\x5d;pop ebp
+2905;1303b43;\xc3;ret 
+2906;1303b0d;\xff\xd7;call edi
+2907;1301113;\xe9\x28\x0c\x00\x00;jmp 0x1301d40
+2908;1301d40;\x6a\x01;push 0x1
+2909;1301d42;\x6a\x01;push 0x1
+2910;1301d44;\x6a\x00;push 0x0
+2911;1301d46;\x6a\x00;push 0x0
+2912;1301d48;\x6a\x00;push 0x0
+2913;1301d4a;\xe8\x06\xf3\xff\xff;call 0x1301055
+2914;1301055;\xe9\x96\x0c\x00\x00;jmp 0x1301cf0
+2915;1301cf0;\xb8\x62\x12\x30\x01;mov eax, 0x1301262
+2916;1301cf5;\xc3;ret 
+2917;1301d4f;\x83\xc4\x14;add esp, 0x14
+2918;1301d52;\xc3;ret 
+2919;1303b0f;\x83\xc6\x04;add esi, 0x4
+2920;1303b12;\x81\xfe\x84\x7d\x30\x01;cmp esi, 0x1307d84
+2921;1303b18;\x72\xe6;jb 0x1303b00
+2922;1303b00;\x8b\x3e;mov edi, dword ptr [esi]
+2923;1303b02;\x85\xff;test edi, edi
+2924;1303b04;\x74\x09;jz 0x1303b0f
+2925;1303b0f;\x83\xc6\x04;add esi, 0x4
+2926;1303b12;\x81\xfe\x84\x7d\x30\x01;cmp esi, 0x1307d84
+2927;1303b18;\x72\xe6;jb 0x1303b00
+2928;1303b00;\x8b\x3e;mov edi, dword ptr [esi]
+2929;1303b02;\x85\xff;test edi, edi
+2930;1303b04;\x74\x09;jz 0x1303b0f
+2931;1303b0f;\x83\xc6\x04;add esi, 0x4
+2932;1303b12;\x81\xfe\x84\x7d\x30\x01;cmp esi, 0x1307d84
+2933;1303b18;\x72\xe6;jb 0x1303b00
+2934;1303b00;\x8b\x3e;mov edi, dword ptr [esi]
+2935;1303b02;\x85\xff;test edi, edi
+2936;1303b04;\x74\x09;jz 0x1303b0f
+2937;1303b0f;\x83\xc6\x04;add esi, 0x4
+2938;1303b12;\x81\xfe\x84\x7d\x30\x01;cmp esi, 0x1307d84
+2939;1303b18;\x72\xe6;jb 0x1303b00
+2940;1303b00;\x8b\x3e;mov edi, dword ptr [esi]
+2941;1303b02;\x85\xff;test edi, edi
+2942;1303b04;\x74\x09;jz 0x1303b0f
+2943;1303b0f;\x83\xc6\x04;add esi, 0x4
+2944;1303b12;\x81\xfe\x84\x7d\x30\x01;cmp esi, 0x1307d84
+2945;1303b18;\x72\xe6;jb 0x1303b00
+2946;1303b00;\x8b\x3e;mov edi, dword ptr [esi]
+2947;1303b02;\x85\xff;test edi, edi
+2948;1303b04;\x74\x09;jz 0x1303b0f
+2949;1303b0f;\x83\xc6\x04;add esi, 0x4
+2950;1303b12;\x81\xfe\x84\x7d\x30\x01;cmp esi, 0x1307d84
+2951;1303b18;\x72\xe6;jb 0x1303b00
+2952;1303b00;\x8b\x3e;mov edi, dword ptr [esi]
+2953;1303b02;\x85\xff;test edi, edi
+2954;1303b04;\x74\x09;jz 0x1303b0f
+2955;1303b0f;\x83\xc6\x04;add esi, 0x4
+2956;1303b12;\x81\xfe\x84\x7d\x30\x01;cmp esi, 0x1307d84
+2957;1303b18;\x72\xe6;jb 0x1303b00
+2958;1303b00;\x8b\x3e;mov edi, dword ptr [esi]
+2959;1303b02;\x85\xff;test edi, edi
+2960;1303b04;\x74\x09;jz 0x1303b0f
+2961;1303b0f;\x83\xc6\x04;add esi, 0x4
+2962;1303b12;\x81\xfe\x84\x7d\x30\x01;cmp esi, 0x1307d84
+2963;1303b18;\x72\xe6;jb 0x1303b00
+2964;1303b00;\x8b\x3e;mov edi, dword ptr [esi]
+2965;1303b02;\x85\xff;test edi, edi
+2966;1303b04;\x74\x09;jz 0x1303b0f
+2967;1303b0f;\x83\xc6\x04;add esi, 0x4
+2968;1303b12;\x81\xfe\x84\x7d\x30\x01;cmp esi, 0x1307d84
+2969;1303b18;\x72\xe6;jb 0x1303b00
+2970;1303b00;\x8b\x3e;mov edi, dword ptr [esi]
+2971;1303b02;\x85\xff;test edi, edi
+2972;1303b04;\x74\x09;jz 0x1303b0f
+2973;1303b0f;\x83\xc6\x04;add esi, 0x4
+2974;1303b12;\x81\xfe\x84\x7d\x30\x01;cmp esi, 0x1307d84
+2975;1303b18;\x72\xe6;jb 0x1303b00
+2976;1303b00;\x8b\x3e;mov edi, dword ptr [esi]
+2977;1303b02;\x85\xff;test edi, edi
+2978;1303b04;\x74\x09;jz 0x1303b0f
+2979;1303b0f;\x83\xc6\x04;add esi, 0x4
+2980;1303b12;\x81\xfe\x84\x7d\x30\x01;cmp esi, 0x1307d84
+2981;1303b18;\x72\xe6;jb 0x1303b00
+2982;1303b00;\x8b\x3e;mov edi, dword ptr [esi]
+2983;1303b02;\x85\xff;test edi, edi
+2984;1303b04;\x74\x09;jz 0x1303b0f
+2985;1303b0f;\x83\xc6\x04;add esi, 0x4
+2986;1303b12;\x81\xfe\x84\x7d\x30\x01;cmp esi, 0x1307d84
+2987;1303b18;\x72\xe6;jb 0x1303b00
+2988;1303b00;\x8b\x3e;mov edi, dword ptr [esi]
+2989;1303b02;\x85\xff;test edi, edi
+2990;1303b04;\x74\x09;jz 0x1303b0f
+2991;1303b0f;\x83\xc6\x04;add esi, 0x4
+2992;1303b12;\x81\xfe\x84\x7d\x30\x01;cmp esi, 0x1307d84
+2993;1303b18;\x72\xe6;jb 0x1303b00
+2994;1303b00;\x8b\x3e;mov edi, dword ptr [esi]
+2995;1303b02;\x85\xff;test edi, edi
+2996;1303b04;\x74\x09;jz 0x1303b0f
+2997;1303b0f;\x83\xc6\x04;add esi, 0x4
+2998;1303b12;\x81\xfe\x84\x7d\x30\x01;cmp esi, 0x1307d84
+2999;1303b18;\x72\xe6;jb 0x1303b00
+3000;1303b00;\x8b\x3e;mov edi, dword ptr [esi]
+3001;1303b02;\x85\xff;test edi, edi
+3002;1303b04;\x74\x09;jz 0x1303b0f
+3003;1303b0f;\x83\xc6\x04;add esi, 0x4
+3004;1303b12;\x81\xfe\x84\x7d\x30\x01;cmp esi, 0x1307d84
+3005;1303b18;\x72\xe6;jb 0x1303b00
+3006;1303b00;\x8b\x3e;mov edi, dword ptr [esi]
+3007;1303b02;\x85\xff;test edi, edi
+3008;1303b04;\x74\x09;jz 0x1303b0f
+3009;1303b0f;\x83\xc6\x04;add esi, 0x4
+3010;1303b12;\x81\xfe\x84\x7d\x30\x01;cmp esi, 0x1307d84
+3011;1303b18;\x72\xe6;jb 0x1303b00
+3012;1303b00;\x8b\x3e;mov edi, dword ptr [esi]
+3013;1303b02;\x85\xff;test edi, edi
+3014;1303b04;\x74\x09;jz 0x1303b0f
+3015;1303b0f;\x83\xc6\x04;add esi, 0x4
+3016;1303b12;\x81\xfe\x84\x7d\x30\x01;cmp esi, 0x1307d84
+3017;1303b18;\x72\xe6;jb 0x1303b00
+3018;1303b00;\x8b\x3e;mov edi, dword ptr [esi]
+3019;1303b02;\x85\xff;test edi, edi
+3020;1303b04;\x74\x09;jz 0x1303b0f
+3021;1303b0f;\x83\xc6\x04;add esi, 0x4
+3022;1303b12;\x81\xfe\x84\x7d\x30\x01;cmp esi, 0x1307d84
+3023;1303b18;\x72\xe6;jb 0x1303b00
+3024;1303b00;\x8b\x3e;mov edi, dword ptr [esi]
+3025;1303b02;\x85\xff;test edi, edi
+3026;1303b04;\x74\x09;jz 0x1303b0f
+3027;1303b0f;\x83\xc6\x04;add esi, 0x4
+3028;1303b12;\x81\xfe\x84\x7d\x30\x01;cmp esi, 0x1307d84
+3029;1303b18;\x72\xe6;jb 0x1303b00
+3030;1303b00;\x8b\x3e;mov edi, dword ptr [esi]
+3031;1303b02;\x85\xff;test edi, edi
+3032;1303b04;\x74\x09;jz 0x1303b0f
+3033;1303b0f;\x83\xc6\x04;add esi, 0x4
+3034;1303b12;\x81\xfe\x84\x7d\x30\x01;cmp esi, 0x1307d84
+3035;1303b18;\x72\xe6;jb 0x1303b00
+3036;1303b00;\x8b\x3e;mov edi, dword ptr [esi]
+3037;1303b02;\x85\xff;test edi, edi
+3038;1303b04;\x74\x09;jz 0x1303b0f
+3039;1303b0f;\x83\xc6\x04;add esi, 0x4
+3040;1303b12;\x81\xfe\x84\x7d\x30\x01;cmp esi, 0x1307d84
+3041;1303b18;\x72\xe6;jb 0x1303b00
+3042;1303b00;\x8b\x3e;mov edi, dword ptr [esi]
+3043;1303b02;\x85\xff;test edi, edi
+3044;1303b04;\x74\x09;jz 0x1303b0f
+3045;1303b0f;\x83\xc6\x04;add esi, 0x4
+3046;1303b12;\x81\xfe\x84\x7d\x30\x01;cmp esi, 0x1307d84
+3047;1303b18;\x72\xe6;jb 0x1303b00
+3048;1303b00;\x8b\x3e;mov edi, dword ptr [esi]
+3049;1303b02;\x85\xff;test edi, edi
+3050;1303b04;\x74\x09;jz 0x1303b0f
+3051;1303b0f;\x83\xc6\x04;add esi, 0x4
+3052;1303b12;\x81\xfe\x84\x7d\x30\x01;cmp esi, 0x1307d84
+3053;1303b18;\x72\xe6;jb 0x1303b00
+3054;1303b00;\x8b\x3e;mov edi, dword ptr [esi]
+3055;1303b02;\x85\xff;test edi, edi
+3056;1303b04;\x74\x09;jz 0x1303b0f
+3057;1303b0f;\x83\xc6\x04;add esi, 0x4
+3058;1303b12;\x81\xfe\x84\x7d\x30\x01;cmp esi, 0x1307d84
+3059;1303b18;\x72\xe6;jb 0x1303b00
+3060;1303b00;\x8b\x3e;mov edi, dword ptr [esi]
+3061;1303b02;\x85\xff;test edi, edi
+3062;1303b04;\x74\x09;jz 0x1303b0f
+3063;1303b0f;\x83\xc6\x04;add esi, 0x4
+3064;1303b12;\x81\xfe\x84\x7d\x30\x01;cmp esi, 0x1307d84
+3065;1303b18;\x72\xe6;jb 0x1303b00
+3066;1303b00;\x8b\x3e;mov edi, dword ptr [esi]
+3067;1303b02;\x85\xff;test edi, edi
+3068;1303b04;\x74\x09;jz 0x1303b0f
+3069;1303b0f;\x83\xc6\x04;add esi, 0x4
+3070;1303b12;\x81\xfe\x84\x7d\x30\x01;cmp esi, 0x1307d84
+3071;1303b18;\x72\xe6;jb 0x1303b00
+3072;1303b00;\x8b\x3e;mov edi, dword ptr [esi]
+3073;1303b02;\x85\xff;test edi, edi
+3074;1303b04;\x74\x09;jz 0x1303b0f
+3075;1303b0f;\x83\xc6\x04;add esi, 0x4
+3076;1303b12;\x81\xfe\x84\x7d\x30\x01;cmp esi, 0x1307d84
+3077;1303b18;\x72\xe6;jb 0x1303b00
+3078;1303b00;\x8b\x3e;mov edi, dword ptr [esi]
+3079;1303b02;\x85\xff;test edi, edi
+3080;1303b04;\x74\x09;jz 0x1303b0f
+3081;1303b0f;\x83\xc6\x04;add esi, 0x4
+3082;1303b12;\x81\xfe\x84\x7d\x30\x01;cmp esi, 0x1307d84
+3083;1303b18;\x72\xe6;jb 0x1303b00
+3084;1303b00;\x8b\x3e;mov edi, dword ptr [esi]
+3085;1303b02;\x85\xff;test edi, edi
+3086;1303b04;\x74\x09;jz 0x1303b0f
+3087;1303b0f;\x83\xc6\x04;add esi, 0x4
+3088;1303b12;\x81\xfe\x84\x7d\x30\x01;cmp esi, 0x1307d84
+3089;1303b18;\x72\xe6;jb 0x1303b00
+3090;1303b00;\x8b\x3e;mov edi, dword ptr [esi]
+3091;1303b02;\x85\xff;test edi, edi
+3092;1303b04;\x74\x09;jz 0x1303b0f
+3093;1303b0f;\x83\xc6\x04;add esi, 0x4
+3094;1303b12;\x81\xfe\x84\x7d\x30\x01;cmp esi, 0x1307d84
+3095;1303b18;\x72\xe6;jb 0x1303b00
+3096;1303b00;\x8b\x3e;mov edi, dword ptr [esi]
+3097;1303b02;\x85\xff;test edi, edi
+3098;1303b04;\x74\x09;jz 0x1303b0f
+3099;1303b0f;\x83\xc6\x04;add esi, 0x4
+3100;1303b12;\x81\xfe\x84\x7d\x30\x01;cmp esi, 0x1307d84
+3101;1303b18;\x72\xe6;jb 0x1303b00
+3102;1303b00;\x8b\x3e;mov edi, dword ptr [esi]
+3103;1303b02;\x85\xff;test edi, edi
+3104;1303b04;\x74\x09;jz 0x1303b0f
+3105;1303b0f;\x83\xc6\x04;add esi, 0x4
+3106;1303b12;\x81\xfe\x84\x7d\x30\x01;cmp esi, 0x1307d84
+3107;1303b18;\x72\xe6;jb 0x1303b00
+3108;1303b00;\x8b\x3e;mov edi, dword ptr [esi]
+3109;1303b02;\x85\xff;test edi, edi
+3110;1303b04;\x74\x09;jz 0x1303b0f
+3111;1303b0f;\x83\xc6\x04;add esi, 0x4
+3112;1303b12;\x81\xfe\x84\x7d\x30\x01;cmp esi, 0x1307d84
+3113;1303b18;\x72\xe6;jb 0x1303b00
+3114;1303b00;\x8b\x3e;mov edi, dword ptr [esi]
+3115;1303b02;\x85\xff;test edi, edi
+3116;1303b04;\x74\x09;jz 0x1303b0f
+3117;1303b0f;\x83\xc6\x04;add esi, 0x4
+3118;1303b12;\x81\xfe\x84\x7d\x30\x01;cmp esi, 0x1307d84
+3119;1303b18;\x72\xe6;jb 0x1303b00
+3120;1303b00;\x8b\x3e;mov edi, dword ptr [esi]
+3121;1303b02;\x85\xff;test edi, edi
+3122;1303b04;\x74\x09;jz 0x1303b0f
+3123;1303b0f;\x83\xc6\x04;add esi, 0x4
+3124;1303b12;\x81\xfe\x84\x7d\x30\x01;cmp esi, 0x1307d84
+3125;1303b18;\x72\xe6;jb 0x1303b00
+3126;1303b00;\x8b\x3e;mov edi, dword ptr [esi]
+3127;1303b02;\x85\xff;test edi, edi
+3128;1303b04;\x74\x09;jz 0x1303b0f
+3129;1303b0f;\x83\xc6\x04;add esi, 0x4
+3130;1303b12;\x81\xfe\x84\x7d\x30\x01;cmp esi, 0x1307d84
+3131;1303b18;\x72\xe6;jb 0x1303b00
+3132;1303b00;\x8b\x3e;mov edi, dword ptr [esi]
+3133;1303b02;\x85\xff;test edi, edi
+3134;1303b04;\x74\x09;jz 0x1303b0f
+3135;1303b0f;\x83\xc6\x04;add esi, 0x4
+3136;1303b12;\x81\xfe\x84\x7d\x30\x01;cmp esi, 0x1307d84
+3137;1303b18;\x72\xe6;jb 0x1303b00
+3138;1303b00;\x8b\x3e;mov edi, dword ptr [esi]
+3139;1303b02;\x85\xff;test edi, edi
+3140;1303b04;\x74\x09;jz 0x1303b0f
+3141;1303b0f;\x83\xc6\x04;add esi, 0x4
+3142;1303b12;\x81\xfe\x84\x7d\x30\x01;cmp esi, 0x1307d84
+3143;1303b18;\x72\xe6;jb 0x1303b00
+3144;1303b00;\x8b\x3e;mov edi, dword ptr [esi]
+3145;1303b02;\x85\xff;test edi, edi
+3146;1303b04;\x74\x09;jz 0x1303b0f
+3147;1303b0f;\x83\xc6\x04;add esi, 0x4
+3148;1303b12;\x81\xfe\x84\x7d\x30\x01;cmp esi, 0x1307d84
+3149;1303b18;\x72\xe6;jb 0x1303b00
+3150;1303b00;\x8b\x3e;mov edi, dword ptr [esi]
+3151;1303b02;\x85\xff;test edi, edi
+3152;1303b04;\x74\x09;jz 0x1303b0f
+3153;1303b0f;\x83\xc6\x04;add esi, 0x4
+3154;1303b12;\x81\xfe\x84\x7d\x30\x01;cmp esi, 0x1307d84
+3155;1303b18;\x72\xe6;jb 0x1303b00
+3156;1303b00;\x8b\x3e;mov edi, dword ptr [esi]
+3157;1303b02;\x85\xff;test edi, edi
+3158;1303b04;\x74\x09;jz 0x1303b0f
+3159;1303b0f;\x83\xc6\x04;add esi, 0x4
+3160;1303b12;\x81\xfe\x84\x7d\x30\x01;cmp esi, 0x1307d84
+3161;1303b18;\x72\xe6;jb 0x1303b00
+3162;1303b00;\x8b\x3e;mov edi, dword ptr [esi]
+3163;1303b02;\x85\xff;test edi, edi
+3164;1303b04;\x74\x09;jz 0x1303b0f
+3165;1303b0f;\x83\xc6\x04;add esi, 0x4
+3166;1303b12;\x81\xfe\x84\x7d\x30\x01;cmp esi, 0x1307d84
+3167;1303b18;\x72\xe6;jb 0x1303b00
+3168;1303b00;\x8b\x3e;mov edi, dword ptr [esi]
+3169;1303b02;\x85\xff;test edi, edi
+3170;1303b04;\x74\x09;jz 0x1303b0f
+3171;1303b0f;\x83\xc6\x04;add esi, 0x4
+3172;1303b12;\x81\xfe\x84\x7d\x30\x01;cmp esi, 0x1307d84
+3173;1303b18;\x72\xe6;jb 0x1303b00
+3174;1303b00;\x8b\x3e;mov edi, dword ptr [esi]
+3175;1303b02;\x85\xff;test edi, edi
+3176;1303b04;\x74\x09;jz 0x1303b0f
+3177;1303b0f;\x83\xc6\x04;add esi, 0x4
+3178;1303b12;\x81\xfe\x84\x7d\x30\x01;cmp esi, 0x1307d84
+3179;1303b18;\x72\xe6;jb 0x1303b00
+3180;1303b00;\x8b\x3e;mov edi, dword ptr [esi]
+3181;1303b02;\x85\xff;test edi, edi
+3182;1303b04;\x74\x09;jz 0x1303b0f
+3183;1303b0f;\x83\xc6\x04;add esi, 0x4
+3184;1303b12;\x81\xfe\x84\x7d\x30\x01;cmp esi, 0x1307d84
+3185;1303b18;\x72\xe6;jb 0x1303b00
+3186;1303b00;\x8b\x3e;mov edi, dword ptr [esi]
+3187;1303b02;\x85\xff;test edi, edi
+3188;1303b04;\x74\x09;jz 0x1303b0f
+3189;1303b0f;\x83\xc6\x04;add esi, 0x4
+3190;1303b12;\x81\xfe\x84\x7d\x30\x01;cmp esi, 0x1307d84
+3191;1303b18;\x72\xe6;jb 0x1303b00
+3192;1303b00;\x8b\x3e;mov edi, dword ptr [esi]
+3193;1303b02;\x85\xff;test edi, edi
+3194;1303b04;\x74\x09;jz 0x1303b0f
+3195;1303b0f;\x83\xc6\x04;add esi, 0x4
+3196;1303b12;\x81\xfe\x84\x7d\x30\x01;cmp esi, 0x1307d84
+3197;1303b18;\x72\xe6;jb 0x1303b00
+3198;1303b00;\x8b\x3e;mov edi, dword ptr [esi]
+3199;1303b02;\x85\xff;test edi, edi
+3200;1303b04;\x74\x09;jz 0x1303b0f
+3201;1303b0f;\x83\xc6\x04;add esi, 0x4
+3202;1303b12;\x81\xfe\x84\x7d\x30\x01;cmp esi, 0x1307d84
+3203;1303b18;\x72\xe6;jb 0x1303b00
+3204;1303b00;\x8b\x3e;mov edi, dword ptr [esi]
+3205;1303b02;\x85\xff;test edi, edi
+3206;1303b04;\x74\x09;jz 0x1303b0f
+3207;1303b0f;\x83\xc6\x04;add esi, 0x4
+3208;1303b12;\x81\xfe\x84\x7d\x30\x01;cmp esi, 0x1307d84
+3209;1303b18;\x72\xe6;jb 0x1303b00
+3210;1303b00;\x8b\x3e;mov edi, dword ptr [esi]
+3211;1303b02;\x85\xff;test edi, edi
+3212;1303b04;\x74\x09;jz 0x1303b0f
+3213;1303b0f;\x83\xc6\x04;add esi, 0x4
+3214;1303b12;\x81\xfe\x84\x7d\x30\x01;cmp esi, 0x1307d84
+3215;1303b18;\x72\xe6;jb 0x1303b00
+3216;1303b00;\x8b\x3e;mov edi, dword ptr [esi]
+3217;1303b02;\x85\xff;test edi, edi
+3218;1303b04;\x74\x09;jz 0x1303b0f
+3219;1303b0f;\x83\xc6\x04;add esi, 0x4
+3220;1303b12;\x81\xfe\x84\x7d\x30\x01;cmp esi, 0x1307d84
+3221;1303b18;\x72\xe6;jb 0x1303b00
+3222;1303b00;\x8b\x3e;mov edi, dword ptr [esi]
+3223;1303b02;\x85\xff;test edi, edi
+3224;1303b04;\x74\x09;jz 0x1303b0f
+3225;1303b0f;\x83\xc6\x04;add esi, 0x4
+3226;1303b12;\x81\xfe\x84\x7d\x30\x01;cmp esi, 0x1307d84
+3227;1303b18;\x72\xe6;jb 0x1303b00
+3228;1303b00;\x8b\x3e;mov edi, dword ptr [esi]
+3229;1303b02;\x85\xff;test edi, edi
+3230;1303b04;\x74\x09;jz 0x1303b0f
+3231;1303b0f;\x83\xc6\x04;add esi, 0x4
+3232;1303b12;\x81\xfe\x84\x7d\x30\x01;cmp esi, 0x1307d84
+3233;1303b18;\x72\xe6;jb 0x1303b00
+3234;1303b00;\x8b\x3e;mov edi, dword ptr [esi]
+3235;1303b02;\x85\xff;test edi, edi
+3236;1303b04;\x74\x09;jz 0x1303b0f
+3237;1303b0f;\x83\xc6\x04;add esi, 0x4
+3238;1303b12;\x81\xfe\x84\x7d\x30\x01;cmp esi, 0x1307d84
+3239;1303b18;\x72\xe6;jb 0x1303b00
+3240;1303b00;\x8b\x3e;mov edi, dword ptr [esi]
+3241;1303b02;\x85\xff;test edi, edi
+3242;1303b04;\x74\x09;jz 0x1303b0f
+3243;1303b0f;\x83\xc6\x04;add esi, 0x4
+3244;1303b12;\x81\xfe\x84\x7d\x30\x01;cmp esi, 0x1307d84
+3245;1303b18;\x72\xe6;jb 0x1303b00
+3246;1303b00;\x8b\x3e;mov edi, dword ptr [esi]
+3247;1303b02;\x85\xff;test edi, edi
+3248;1303b04;\x74\x09;jz 0x1303b0f
+3249;1303b0f;\x83\xc6\x04;add esi, 0x4
+3250;1303b12;\x81\xfe\x84\x7d\x30\x01;cmp esi, 0x1307d84
+3251;1303b18;\x72\xe6;jb 0x1303b00
+3252;1303b00;\x8b\x3e;mov edi, dword ptr [esi]
+3253;1303b02;\x85\xff;test edi, edi
+3254;1303b04;\x74\x09;jz 0x1303b0f
+3255;1303b0f;\x83\xc6\x04;add esi, 0x4
+3256;1303b12;\x81\xfe\x84\x7d\x30\x01;cmp esi, 0x1307d84
+3257;1303b18;\x72\xe6;jb 0x1303b00
+3258;1303b00;\x8b\x3e;mov edi, dword ptr [esi]
+3259;1303b02;\x85\xff;test edi, edi
+3260;1303b04;\x74\x09;jz 0x1303b0f
+3261;1303b0f;\x83\xc6\x04;add esi, 0x4
+3262;1303b12;\x81\xfe\x84\x7d\x30\x01;cmp esi, 0x1307d84
+3263;1303b18;\x72\xe6;jb 0x1303b00
+3264;1303b00;\x8b\x3e;mov edi, dword ptr [esi]
+3265;1303b02;\x85\xff;test edi, edi
+3266;1303b04;\x74\x09;jz 0x1303b0f
+3267;1303b0f;\x83\xc6\x04;add esi, 0x4
+3268;1303b12;\x81\xfe\x84\x7d\x30\x01;cmp esi, 0x1307d84
+3269;1303b18;\x72\xe6;jb 0x1303b00
+3270;1303b00;\x8b\x3e;mov edi, dword ptr [esi]
+3271;1303b02;\x85\xff;test edi, edi
+3272;1303b04;\x74\x09;jz 0x1303b0f
+3273;1303b0f;\x83\xc6\x04;add esi, 0x4
+3274;1303b12;\x81\xfe\x84\x7d\x30\x01;cmp esi, 0x1307d84
+3275;1303b18;\x72\xe6;jb 0x1303b00
+3276;1303b00;\x8b\x3e;mov edi, dword ptr [esi]
+3277;1303b02;\x85\xff;test edi, edi
+3278;1303b04;\x74\x09;jz 0x1303b0f
+3279;1303b0f;\x83\xc6\x04;add esi, 0x4
+3280;1303b12;\x81\xfe\x84\x7d\x30\x01;cmp esi, 0x1307d84
+3281;1303b18;\x72\xe6;jb 0x1303b00
+3282;1303b00;\x8b\x3e;mov edi, dword ptr [esi]
+3283;1303b02;\x85\xff;test edi, edi
+3284;1303b04;\x74\x09;jz 0x1303b0f
+3285;1303b0f;\x83\xc6\x04;add esi, 0x4
+3286;1303b12;\x81\xfe\x84\x7d\x30\x01;cmp esi, 0x1307d84
+3287;1303b18;\x72\xe6;jb 0x1303b00
+3288;1303b00;\x8b\x3e;mov edi, dword ptr [esi]
+3289;1303b02;\x85\xff;test edi, edi
+3290;1303b04;\x74\x09;jz 0x1303b0f
+3291;1303b0f;\x83\xc6\x04;add esi, 0x4
+3292;1303b12;\x81\xfe\x84\x7d\x30\x01;cmp esi, 0x1307d84
+3293;1303b18;\x72\xe6;jb 0x1303b00
+3294;1303b00;\x8b\x3e;mov edi, dword ptr [esi]
+3295;1303b02;\x85\xff;test edi, edi
+3296;1303b04;\x74\x09;jz 0x1303b0f
+3297;1303b0f;\x83\xc6\x04;add esi, 0x4
+3298;1303b12;\x81\xfe\x84\x7d\x30\x01;cmp esi, 0x1307d84
+3299;1303b18;\x72\xe6;jb 0x1303b00
+3300;1303b00;\x8b\x3e;mov edi, dword ptr [esi]
+3301;1303b02;\x85\xff;test edi, edi
+3302;1303b04;\x74\x09;jz 0x1303b0f
+3303;1303b0f;\x83\xc6\x04;add esi, 0x4
+3304;1303b12;\x81\xfe\x84\x7d\x30\x01;cmp esi, 0x1307d84
+3305;1303b18;\x72\xe6;jb 0x1303b00
+3306;1303b1a;\x5f;pop edi
+3307;1303b1b;\x5e;pop esi
+3308;1303b1c;\xc3;ret 
