@@ -430,7 +430,7 @@ def pa_write(pa_set, opaque_predicates):
     f_output = open(out_path, "w")
     for pa in pa_set:
         f_output.write(pa + "\n")
-    f_output.write(opaque_predicates.keys())
+    f_output.write(",".join(opaque_predicates.keys()))
     f_output.close()
 
 
