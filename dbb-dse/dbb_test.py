@@ -1,11 +1,11 @@
 from __future__ import print_function
-import sys
+# import sys
 import os
 import csv
 import z3
-import timeit
+# import timeit
 from miasm.arch.x86.arch import *
-from miasm.arch.x86.regs import regs_init
+# from miasm.arch.x86.regs import regs_init
 from miasm.analysis.binary import Container
 from miasm.analysis.machine import Machine
 from miasm.ir.symbexec import SymbolicExecutionEngine
@@ -13,7 +13,8 @@ from miasm.ir.translators.z3_ir import TranslatorZ3
 from miasm.expression.expression import *
 from criteria_opd import *
 from arch_opd import *
-import timeit
+from collections import Counter
+# import timeit
 
 def TraceFromFile_PLAS(filename):
     f = open(filename, "rw")
@@ -314,7 +315,7 @@ def FigureK(trace_list, cjmp_ta, k):
     elif cjmp in CX_JUMPS:
         factors, factor_ta = CX_Factor(trace_list, cjmp_ta)
 
-    influencing_instruction_ta_list = Recursive_BP(trace_list, factor_ta, cjmp_ta-300,  factors, k)
+    influencing_instruction_ta_list = Recursive_BP(trace_list, factor_ta, cjmp_ta-100,  factors, k)
     if influencing_instruction_ta_list is not None:
         ta_min = min(influencing_instruction_ta_list)
     else:
@@ -324,7 +325,7 @@ def FigureK(trace_list, cjmp_ta, k):
 
 
 def GetSymbVal(binstr):
-    machine = Machine('x86_64')
+    machine = Machine('x86_32')
     c = Container.from_string(binstr)
     mdis = machine.dis_engine(c.bin_stream)
     loc_db = mdis.loc_db
@@ -350,7 +351,7 @@ def GetSymbVal(binstr):
 
 
 def GetSymbVal2(binstr):
-    machine = Machine('x86_64')
+    machine = Machine('x86_32')
     c = Container.from_string(binstr)
     mdis = machine.dis_engine(c.bin_stream)
     loc_db = mdis.loc_db
@@ -434,30 +435,35 @@ def main():
         ta_op_cnt = 0
         pa_op_cnt = 0
         for trace_index in cjmp_index_list:
-            if pa_dict.keys() is not None:
-                if trace_list[trace_index].get_pa() in pa_dict:
-                    if pa_dict[trace_list[trace_index].get_pa()] == 1:
-                        print("loop detected at : ", trace_index)
-                        ta_op_cnt += 1
-                    else:
-                        pass
-                else:
-                    calk = FigureK(trace_list, trace_index, 15)
-                    bin_str = BinToStr(trace_list, calk, trace_index)
-                    is_op = IsUnsatTa(bin_str, trace_index, trace_list)
-                    ta_op_cnt += is_op
-                    pa_op_cnt += is_op
-                    pa_dict[trace_list[trace_index].get_pa()] = is_op
-            else:
-                calk = FigureK(trace_list, trace_index, k)
-                bin_str = BinToStr(trace_list, calk, trace_index)
-                is_op = IsUnsatTa(bin_str, trace_index, trace_list)
-                ta_op_cnt += is_op
-                pa_op_cnt += is_op
-                pa_dict[trace_list[trace_index].get_pa()] = is_op
-        merged_pa_dict += pa_dict
+            # print("trace index at : ", trace_index)
+            # if pa_dict.keys() is not None:
+            #     if trace_list[trace_index].get_pa() in pa_dict:
+            #         if pa_dict[trace_list[trace_index].get_pa()] == 1:
+            #             print("loop detected at : ", trace_index)
+            #             ta_op_cnt += 1
+            #         else:
+            #             pass
+            #     else:
+            #         calk = FigureK(trace_list, trace_index, 15)
+            #         bin_str = BinToStr(trace_list, calk, trace_index)
+            #         is_op = IsUnsatTa(bin_str, trace_index, trace_list)
+            #         ta_op_cnt += is_op
+            #         pa_op_cnt += is_op
+            #         pa_dict[trace_list[trace_index].get_pa()] = is_op
+            # else:
+            #     calk = FigureK(trace_list, trace_index, 15)
+            #     bin_str = BinToStr(trace_list, calk, trace_index)
+            #     is_op = IsUnsatTa(bin_str, trace_index, trace_list)
+            #     ta_op_cnt += is_op
+            #     pa_op_cnt += is_op
+            #     pa_dict[trace_list[trace_index].get_pa()] = is_op
+            cal_k = FigureK(trace_list, trace_index, 15)
+            bin_str = BinToStr(trace_list, cal_k, trace_index)
+            is_op = IsUnsatTa(bin_str, trace_index, trace_list)
+            pa_dict[trace_list[trace_index].get_pa()] = is_op
+        merged_pa_dict = Counter(merged_pa_dict) + Counter(pa_dict)
         # time_t = timeit.default_timer() - start
-        wr.writerow([pa_op_cnt, ta_op_cnt, pa_dict])
+        wr.writerow([pa_op_cnt, ta_op_cnt, pa_dict, len(cjmp_ta_list)])
         pa_dict.clear()
     for k, v in merged_pa_dict.items():
         wr.writerow([k, v])

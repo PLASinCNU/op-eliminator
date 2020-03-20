@@ -452,29 +452,33 @@ def main():
         # ta_op_cnt = 0
         # pa_op_cnt = 0
         for trace_index in cjmp_index_list:
+            calk = FigureK(trace_list, trace_index, 15)
+            bin_str = BinToStr(trace_list, calk, trace_index)
+            is_op = IsUnsatTa(bin_str, trace_index, trace_list)
+            pa_dict[trace_list[trace_index].get_pa()] = is_op
             # print("trace index at : ", trace_index)
-            if pa_dict.keys() is not None:
-                if trace_list[trace_index].get_pa() in pa_dict:
-                    pass
-                    # if pa_dict[trace_list[trace_index].get_pa()] == 1:
-                    #     # print("loop detected at : ", trace_index)
-                    #     # ta_op_cnt += 1
-                    # else:
-                    #     pass
-                else:
-                    calk = FigureK(trace_list, trace_index, 15)
-                    bin_str = BinToStr(trace_list, calk, trace_index)
-                    is_op = IsUnsatTa(bin_str, trace_index, trace_list)
-                    # ta_op_cnt += is_op
-                    # pa_op_cnt += is_op
-                    pa_dict[trace_list[trace_index].get_pa()] = is_op
-            else:
-                calk = FigureK(trace_list, trace_index, 15)
-                bin_str = BinToStr(trace_list, calk, trace_index)
-                is_op = IsUnsatTa(bin_str, trace_index, trace_list)
-                # ta_op_cnt += is_op
-                # pa_op_cnt += is_op
-                pa_dict[trace_list[trace_index].get_pa()] = is_op
+            # if pa_dict.keys() is not None:
+            #     if trace_list[trace_index].get_pa() in pa_dict:
+            #         pass
+            #         # if pa_dict[trace_list[trace_index].get_pa()] == 1:
+            #         #     # print("loop detected at : ", trace_index)
+            #         #     # ta_op_cnt += 1
+            #         # else:
+            #         #     pass
+            #     else:
+            #         calk = FigureK(trace_list, trace_index, 15)
+            #         bin_str = BinToStr(trace_list, calk, trace_index)
+            #         is_op = IsUnsatTa(bin_str, trace_index, trace_list)
+            #         # ta_op_cnt += is_op
+            #         # pa_op_cnt += is_op
+            #         pa_dict[trace_list[trace_index].get_pa()] = is_op
+            # else:
+            #     calk = FigureK(trace_list, trace_index, 15)
+            #     bin_str = BinToStr(trace_list, calk, trace_index)
+            #     is_op = IsUnsatTa(bin_str, trace_index, trace_list)
+            #     # ta_op_cnt += is_op
+            #     # pa_op_cnt += is_op
+            #     pa_dict[trace_list[trace_index].get_pa()] = is_op
         merged_pa_dict = merge_op(pa_dict, merged_pa_dict)
         pa_dict.clear()
     pa_write(pa_set, merged_pa_dict)
