@@ -229,7 +229,6 @@ def BackPropagation(trace_list, size, ta, max_ta, factors):
 
         regs = trace_list[bp_ta].get_operand()
         bp_opc = trace_list[bp_ta].get_name().upper()
-
         if bp_opc in OPERATORS:
             # print('regs', regs, 'bp_opc : ', bp_opc, trace_list[bp_ta].get_hex())
             if RegisterTranslator(regs[0].upper()) in bp_factors:
@@ -237,12 +236,36 @@ def BackPropagation(trace_list, size, ta, max_ta, factors):
                 for reg in regs:
                     if not reg.startswith("0x"):
                         bp_factors.append(RegisterTranslator(reg.upper()))
+                    if 'ptr' in reg:
+                        l_paren = reg.find('[')
+                        r_paren = reg.find(']')
+                        param = reg[l_paren+1:r_paren]
+                        if '+' in param:
+                            params = param.split('+')
+                            params = list(map(lambda v: v.strip(), params))
+                            for pr in params:
+                                if not pr.startswith("0x"):
+                                    bp_factors.append(RegisterTranslator(pr.upper()))
+                        else:
+                            bp_factors.append(RegisterTranslator(param.upper()))
         elif bp_opc in DATA_MOVEMENT:
             if RegisterTranslator(regs[0].upper()) in bp_factors:
                 influencing_ta_set.add(bp_ta)
                 bp_factors.remove(RegisterTranslator(regs[0].upper()))
                 if not regs[1].startswith("0x"):
                     bp_factors.append(RegisterTranslator(regs[1].upper()))
+                if 'ptr' in regs[1]:
+                    l_paren = regs[1].find('[')
+                    r_paren = regs[1].find(']')
+                    param = regs[1][l_paren+1:r_paren]
+                    if '+' in param:
+                        params = param.split('+')
+                        params = list(map(lambda v: v.strip(), params))
+                        for pr in params:
+                            if not pr.startswith("0x"):
+                                bp_factors.append(RegisterTranslator(pr.upper()))
+                    else:
+                        bp_factors.append(RegisterTranslator(param.upper()))
         elif bp_opc.startswith("CMOV"):
             if RegisterTranslator(regs[0].upper()) in bp_factors:
                 if bp_opc in OF_CMOVS:
@@ -374,8 +397,8 @@ def isOpaquePredicate(binary_string, trace_index, trace_list, pa_dict):
 def main():
     path_dir = '/home/ubuntu/synthesizer/miasm/choi/analysis'
     # path_dir = '/home/ubuntu/2019_obfus/trace/test'
-    out_path = '/home/ubuntu/sliced.csv'
-    # out_path = '/home/ubuntu/original.csv'
+    # out_path = '/home/ubuntu/sliced.csv'
+    out_path = '/home/ubuntu/original.csv'
     f_output = open(out_path, "w")
     wr = csv.writer(f_output)
 
