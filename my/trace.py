@@ -12,7 +12,7 @@ from pdb import pm
 from miasm.core import parse_asm    
 from future.utils import viewitems
 
-
+# these are very old version (don't use)
 class Asm_instruction:
     ta = int()
     pa = ""
