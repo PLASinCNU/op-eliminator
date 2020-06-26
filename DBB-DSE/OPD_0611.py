@@ -3,7 +3,7 @@ from __future__ import print_function
 import os
 import csv
 import z3
-import numpy as np
+# import numpy as np
 from miasm.analysis.binary import Container
 from miasm.analysis.machine import Machine
 from miasm.ir.symbexec import SymbolicExecutionEngine
@@ -64,13 +64,12 @@ def TraceFromFile_NSR(filename):
 def is_next_pa_neq(trace_list, index_list):
     next_pa = trace_list[index_list[0]+1].get_pa()
     for index in index_list:
-        if next_pa != trace_list(index+1).get_pa():
+        if next_pa != trace_list[index+1].get_pa():
             return True
     return False
 
 
 def findPredicates(trace_list):
-    predicate_ta_list = []
     predicate_index_list = []
     index_dict = dict()
 
@@ -86,29 +85,31 @@ def findPredicates(trace_list):
                     index_dict[pa] = new_list
             else:
                 index_dict[pa] = i
-
-    for key in filter(lambda k: isinstance(index_dict[k], list), index_dict.keys()):
+    for key in list(filter(lambda k: isinstance(index_dict[k], list), index_dict.keys())):
         if is_next_pa_neq(trace_list, index_dict[key]):
             del(index_dict[key])
 
-    for v in (np.array(index_dict.values())).sort():
-        predicate_ta_list.append(trace_list[v].get_ta())
-        predicate_index_list.append(v)
+    for v in index_dict.values():
+        if isinstance(v, list):
+            predicate_index_list.extend(v)
+        else:
+            predicate_index_list.append(v)
+    predicate_index_list.sort()
 
-    return predicate_ta_list, predicate_index_list
+    return predicate_index_list
 
 
 def BinToStr(trace_list, sliced_trace, predicate_ta):
     binary_string = ""
-    # min_ta = min(sliced_trace)
-    # max_ta = max(sliced_trace)
-    # while min_ta <= max_ta:
-    #     binary_string += trace_list[min_ta].get_hex();
-    #     min_ta += 1
-    for trace in sliced_trace:
-        binary_string += trace_list[trace].get_hex()
+    min_ta = min(sliced_trace)
+    max_ta = max(sliced_trace)
+    while min_ta <= max_ta:
+        binary_string += trace_list[min_ta].get_hex();
+        min_ta += 1
+    # for trace in sliced_trace:
+    #     binary_string += trace_list[trace].get_hex()
+
     binary_string += trace_list[predicate_ta].get_hex()
-    # print (binary_string)
 
     return str(bytearray.fromhex(binary_string))
 
@@ -372,13 +373,11 @@ def isOpaquePredicate(binary_string, trace_index, trace_list, pa_dict):
 
 def main():
     path_dir = '/home/ubuntu/synthesizer/miasm/choi/analysis'
-    # out_path = '/home/ubuntu/sliced.csv'
-    out_path = '/home/ubuntu/original.csv'
-    # out_path2 = '/home/ubuntu/2019_obfus/trace/K_time3.csv'
+    # path_dir = '/home/ubuntu/2019_obfus/trace/test'
+    out_path = '/home/ubuntu/sliced.csv'
+    # out_path = '/home/ubuntu/original.csv'
     f_output = open(out_path, "w")
-    # f_output2 = open(out_path2, 'w')
     wr = csv.writer(f_output)
-    # wr2 = csv.writer(f_output2)
 
     pa_dict = dict()
     file_list = os.listdir(path_dir)
@@ -387,7 +386,8 @@ def main():
     for target in file_list:
         print("###################Testing ...  : ", target)
         trace_list = TraceFromFile_NSR(path_dir + "/" + target)
-        predicate_ta_list, predicate_index_list = findPredicates(trace_list)
+        # trace_list = TraceFromFile_PLAS(path_dir + "/" + target)
+        predicate_index_list = findPredicates(trace_list)
 
         k_list = [15]
         for k in k_list:
