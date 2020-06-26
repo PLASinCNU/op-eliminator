@@ -11,6 +11,8 @@ from miasm.ir.symbexec import SymbolicExecutionEngine
 from miasm.ir.translators.z3_ir import Z3Mem, TranslatorZ3
 from miasm.expression.expression import *
 
+# these are very old version. maybe KSC (don't use)
+
 class Asm_instruction:
     ta = int()
     pa = ""
