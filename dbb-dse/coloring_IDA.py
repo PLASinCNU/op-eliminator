@@ -15,7 +15,7 @@ from criteria_opd import *
 from arch_opd import *
 from collections import Counter
 # import timeit
-
+# these are for coloring BBs in IDA flatform
 def TraceFromFile_PLAS(filename, pa_set):
     f = open(filename, "rw")
     lines = f.readlines()
