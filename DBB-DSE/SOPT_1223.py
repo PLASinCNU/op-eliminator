@@ -72,11 +72,15 @@ def is_next_pa_neq(trace_list, index_list):
 def findPredicates(trace_list):
     predicate_index_list = []
     index_dict = dict()
-
+    j = 0
+    ta_set = set()
     for i in range(0, len(trace_list)):
         name = trace_list[i].get_name().upper()
         if name in CJMPS:
+            # predicate_index_list.append(i)
+            j += 1
             pa = trace_list[i].get_pa()
+            ta_set.add(pa)
             if pa in index_dict:
                 if isinstance(index_dict[pa], list):
                     index_dict[pa].append(i)
@@ -96,20 +100,28 @@ def findPredicates(trace_list):
             predicate_index_list.append(v)
     predicate_index_list.sort()
 
-    return predicate_index_list
+    return predicate_index_list, j, ta_set
 
 
-def BinToStr(trace_list, sliced_trace, predicate_ta):
+def BinToStrSOPT(trace_list, sliced_trace, predicate_ta):
     binary_string = ""
-    min_ta = min(sliced_trace)
-    max_ta = max(sliced_trace)
-    while min_ta <= max_ta:
-        binary_string += trace_list[min_ta].get_hex();
-        min_ta += 1
-    # for trace in sliced_trace:
-    #     binary_string += trace_list[trace].get_hex()
+    # min_ta = min(sliced_trace)
+    # max_ta = max(sliced_trace)
+    # while min_ta <= max_ta:
+    #     binary_string += trace_list[min_ta].get_hex();
+    #     min_ta += 1
+    for trace in sliced_trace:
+        binary_string += trace_list[trace].get_hex()
 
     binary_string += trace_list[predicate_ta].get_hex()
+
+    return str(bytearray.fromhex(binary_string))
+
+
+def BinToStrBBDSE(trace_list, k, predicate_ta):
+    binary_string = ""
+    for i in range(predicate_ta - k, predicate_ta+1):
+        binary_string += trace_list[i].get_hex()
 
     return str(bytearray.fromhex(binary_string))
 
@@ -131,6 +143,22 @@ def RegisterTranslator(reg):
         unified_reg = "ESI"
     elif reg in DESTINATION_REGISTERS:
         unified_reg = "EDX"
+    elif reg in R8_REGISTERS:
+        unified_reg = "R8"
+    elif reg in R9_REGISTERS:
+        unified_reg = "R9"
+    elif reg in R10_REGISTERS:
+        unified_reg = "R10"
+    elif reg in R11_REGISTERS:
+        unified_reg = "R11"
+    elif reg in R12_REGISTERS:
+        unified_reg = "R12"
+    elif reg in R13_REGISTERS:
+        unified_reg = "R13"
+    elif reg in R14_REGISTERS:
+        unified_reg = "R14"
+    elif reg in R15_REGISTERS:
+        unified_reg = "R15"
     else:
         unified_reg = reg
 
@@ -145,6 +173,24 @@ def OF_Factor(trace_list, predicate_ta):
             for reg in trace_list[ta].get_operand():
                 if not reg.startswith("0x"):
                     factors.append(RegisterTranslator(reg.upper()))
+                if 'ptr' in reg:
+                    l_paren = reg.find('[')
+                    r_paren = reg.find(']')
+                    param = reg[l_paren + 1:r_paren]
+                    if '+' in param:
+                        params = param.split('+')
+                        params = list(map(lambda v: v.strip(), params))
+                        for pr in params:
+                            if not pr.startswith("0x"):
+                                factors.append(RegisterTranslator(pr.upper()))
+                    elif '-' in param:
+                        params = param.split('-')
+                        params = list(map(lambda v: v.strip(), params))
+                        for pr in params:
+                            if not pr.startswith("0x"):
+                                factors.append(RegisterTranslator(pr.upper()))
+                    else:
+                        factors.append(RegisterTranslator(param.upper()))
             break
         ta -= 1
     return factors, ta
@@ -158,6 +204,24 @@ def SF_Factor(trace_list, predicate_ta):
             for reg in trace_list[ta].get_operand():
                 if not reg.startswith("0x"):
                     factors.append(RegisterTranslator(reg.upper()))
+                if 'ptr' in reg:
+                    l_paren = reg.find('[')
+                    r_paren = reg.find(']')
+                    param = reg[l_paren + 1:r_paren]
+                    if '+' in param:
+                        params = param.split('+')
+                        params = list(map(lambda v: v.strip(), params))
+                        for pr in params:
+                            if not pr.startswith("0x"):
+                                factors.append(RegisterTranslator(pr.upper()))
+                    elif '-' in param:
+                        params = param.split('-')
+                        params = list(map(lambda v: v.strip(), params))
+                        for pr in params:
+                            if not pr.startswith("0x"):
+                                factors.append(RegisterTranslator(pr.upper()))
+                    else:
+                        factors.append(RegisterTranslator(param.upper()))
             break
         ta -= 1
     return factors, ta
@@ -171,6 +235,24 @@ def CF_Factor(trace_list, predicate_ta):
             for reg in trace_list[ta].get_operand():
                 if not reg.startswith("0x"):
                     factors.append(RegisterTranslator(reg.upper()))
+                if 'ptr' in reg:
+                    l_paren = reg.find('[')
+                    r_paren = reg.find(']')
+                    param = reg[l_paren + 1:r_paren]
+                    if '+' in param:
+                        params = param.split('+')
+                        params = list(map(lambda v: v.strip(), params))
+                        for pr in params:
+                            if not pr.startswith("0x"):
+                                factors.append(RegisterTranslator(pr.upper()))
+                    elif '-' in param:
+                        params = param.split('-')
+                        params = list(map(lambda v: v.strip(), params))
+                        for pr in params:
+                            if not pr.startswith("0x"):
+                                factors.append(RegisterTranslator(pr.upper()))
+                    else:
+                        factors.append(RegisterTranslator(param.upper()))
             break
         ta -= 1
     return factors, ta
@@ -184,6 +266,24 @@ def ZF_Factor(trace_list, predicate_ta):
             for reg in trace_list[ta].get_operand():
                 if not reg.startswith("0x"):
                     factors.append(RegisterTranslator(reg.upper()))
+                if 'ptr' in reg:
+                    l_paren = reg.find('[')
+                    r_paren = reg.find(']')
+                    param = reg[l_paren + 1:r_paren]
+                    if '+' in param:
+                        params = param.split('+')
+                        params = list(map(lambda v: v.strip(), params))
+                        for pr in params:
+                            if not pr.startswith("0x"):
+                                factors.append(RegisterTranslator(pr.upper()))
+                    elif '-' in param:
+                        params = param.split('-')
+                        params = list(map(lambda v: v.strip(), params))
+                        for pr in params:
+                            if not pr.startswith("0x"):
+                                factors.append(RegisterTranslator(pr.upper()))
+                    else:
+                        factors.append(RegisterTranslator(param.upper()))
             break
         ta -= 1
     factors = list(set(factors))
@@ -195,7 +295,6 @@ def CX_Factor(trace_list, predicate_ta):
     ta = predicate_ta - 1
     while ta >= predicate_ta-10 and ta > 0:
         operand = trace_list[ta].get_operand()
-
         if RegisterTranslator(operand[0]) in COUNTER_REGISTERS:
             if trace_list[ta].get_name().upper() in ARITHMETIC_OPERATORS:
                 if not operand[1].startswith("0x"):
@@ -208,7 +307,6 @@ def CX_Factor(trace_list, predicate_ta):
     return factors, ta
 
 
-# new
 def BackPropagation(trace_list, size, ta, max_ta, factors):
     bp_factors = factors
     bp_ta = ta - 1
@@ -230,7 +328,6 @@ def BackPropagation(trace_list, size, ta, max_ta, factors):
         regs = trace_list[bp_ta].get_operand()
         bp_opc = trace_list[bp_ta].get_name().upper()
         if bp_opc in OPERATORS:
-            # print('regs', regs, 'bp_opc : ', bp_opc, trace_list[bp_ta].get_hex())
             if RegisterTranslator(regs[0].upper()) in bp_factors:
                 influencing_ta_set.add(bp_ta)
                 for reg in regs:
@@ -244,8 +341,12 @@ def BackPropagation(trace_list, size, ta, max_ta, factors):
                             params = param.split('+')
                             params = list(map(lambda v: v.strip(), params))
                             for pr in params:
-                                if not pr.startswith("0x"):
-                                    bp_factors.append(RegisterTranslator(pr.upper()))
+                                bp_factors.append(RegisterTranslator(pr.upper()))
+                        elif '-' in param:
+                            params = param.split('-')
+                            params = list(map(lambda v: v.strip(), params))
+                            for pr in params:
+                                bp_factors.append(RegisterTranslator(pr.upper()))
                         else:
                             bp_factors.append(RegisterTranslator(param.upper()))
         elif bp_opc in DATA_MOVEMENT:
@@ -262,8 +363,12 @@ def BackPropagation(trace_list, size, ta, max_ta, factors):
                         params = param.split('+')
                         params = list(map(lambda v: v.strip(), params))
                         for pr in params:
-                            if not pr.startswith("0x"):
-                                bp_factors.append(RegisterTranslator(pr.upper()))
+                            bp_factors.append(RegisterTranslator(pr.upper()))
+                    elif '-' in param:
+                        params = param.split('-')
+                        params = list(map(lambda v: v.strip(), params))
+                        for pr in params:
+                            bp_factors.append(RegisterTranslator(pr.upper()))
                     else:
                         bp_factors.append(RegisterTranslator(param.upper()))
         elif bp_opc.startswith("CMOV"):
@@ -281,6 +386,12 @@ def BackPropagation(trace_list, size, ta, max_ta, factors):
                 influencing_ta_set.add(bp_ta)
                 if not regs[1].startswith("0x"):
                     bp_factors.append(RegisterTranslator(regs[1].upper()))
+        elif bp_opc.startswith("CALL"):
+            if "EAX" in bp_factors:
+                influencing_ta_set.add(bp_ta)
+                bp_factors.remove("EAX")
+
+        bp_factors = list(set(bp_factors))
         if len(bp_factors) == 0:
             break
         if len(influencing_ta_set) >= size:
@@ -290,10 +401,8 @@ def BackPropagation(trace_list, size, ta, max_ta, factors):
     return influencing_ta_set
 
 
-# new
 def Recursive_BP(trace_list, factor_ta, max_ta, factors, k):
     influencing_ta_set = BackPropagation(trace_list, k, factor_ta, max_ta, factors)
-
     return influencing_ta_set
 
 
@@ -312,11 +421,11 @@ def FigureK(trace_list, predicate_ta, k):
     elif condition_jump_instruction in CX_JUMPS:
         factors, factor_ta = CX_Factor(trace_list, predicate_ta)
 
-    if predicate_ta-300 < 0:
+    if predicate_ta-100 < 0:
         min_ta = 0
     else:
-        min_ta = predicate_ta - 300
-
+        min_ta = predicate_ta - 100
+    # min_ta = 0
     influencing_instruction_ta_list = Recursive_BP(trace_list, factor_ta, min_ta, factors, k)
     # if influencing_instruction_ta_list is not None:
     #     ta_min = min(influencing_instruction_ta_list)
@@ -327,7 +436,8 @@ def FigureK(trace_list, predicate_ta, k):
 
 
 def GetSymbVal(binary_string):
-    machine = Machine('x86_32')
+    # machine = Machine('x86_32')
+    machine = Machine('x86_64')
     c = Container.from_string(binary_string)
     mdis = machine.dis_engine(c.bin_stream)
     loc_db = mdis.loc_db
@@ -353,14 +463,14 @@ def GetSymbVal(binary_string):
     return sym_state, symbolic_pc, loc_db
 
 
-def isOpaquePredicate(binary_string, trace_index, trace_list, pa_dict):
+def isOpaquePredicate(binary_string, trace_index, trace_list):
     op_cnt = 0
     # suns_ta = None
     # sun = None
     try:
         sym_state, sym_pc, loc_db = GetSymbVal(binary_string)
     except Exception as e:
-        print(trace_index, e)
+        print(trace_list[trace_index].get_pa(), e)
 
     translator = TranslatorZ3(endianness="<", loc_db=loc_db)
     solver = z3.Solver()
@@ -380,25 +490,24 @@ def isOpaquePredicate(binary_string, trace_index, trace_list, pa_dict):
                 print("It's opaque predicate, sat and unsat")
                 print(trace_list[trace_index].get_ta())
                 op_cnt += 1
-                pa_dict[trace_list[trace_index].get_pa()] = 1
                 # suns_ta = trace_list[trace_index].get_ta()
         except Exception as e:
-            print(e, " fffff")
+            print(e, "fffff")
     else:
         print('==========', trace_list[trace_index].get_pa(), '==========')
         print('PC is not cond, Its opaque predicate')
         # sun = trace_list[trace_index].get_ta()
         op_cnt += 1
-        pa_dict[trace_list[trace_index].get_pa()] = 1
 
-    return op_cnt, pa_dict
+    return op_cnt
 
 
 def main():
-    path_dir = '/home/ubuntu/synthesizer/miasm/choi/analysis'
+    path_dir = '/home/ubuntu/2019_obfus/OPtestfile/room'
     # path_dir = '/home/ubuntu/2019_obfus/trace/test'
     # out_path = '/home/ubuntu/sliced.csv'
-    out_path = '/home/ubuntu/original.csv'
+
+    out_path = '/home/ubuntu/2019_obfus/OPtestfile/csv/coreutil_1105.csv'
     f_output = open(out_path, "w")
     wr = csv.writer(f_output)
 
@@ -408,20 +517,30 @@ def main():
 
     for target in file_list:
         print("###################Testing ...  : ", target)
-        trace_list = TraceFromFile_NSR(path_dir + "/" + target)
-        # trace_list = TraceFromFile_PLAS(path_dir + "/" + target)
-        predicate_index_list = findPredicates(trace_list)
+        trace_list = TraceFromFile_PLAS(path_dir + "/" + target)
+        # trace_list = TraceFromFile_NSR(path_dir + "/" + target)
+        predicate_index_list, num_of_predicates, pa_set = findPredicates(trace_list)
 
-        k_list = [15]
+        # predicate_pa_list = list(map(lambda v:trace_list[v].get_pa(),predicate_index_list))
+        # print ("TA : ", len(predicate_index_list)," &&  ", predicate_pa_list)
+
+        k_list = [3, 6, 9, 12, 15, 18, 21, 24, 27, 30, 33, 36, 39, 42, 45, 48, 51]
+        # k_list = [15]
         for k in k_list:
-            ta_op_cnt = 0
             for predicate_ta in predicate_index_list:
+                print(trace_list[predicate_ta].get_pa())
                 sliced_trace = list(FigureK(trace_list, predicate_ta, k))
                 sliced_trace.sort()
-                binary_string = BinToStr(trace_list, sliced_trace, predicate_ta)
-                op, pa_dict = isOpaquePredicate(binary_string, predicate_ta, trace_list, pa_dict)
-                ta_op_cnt += op
-            wr.writerow([target, ta_op_cnt, pa_dict])
+                binary_string = BinToStrSOPT(trace_list, sliced_trace, predicate_ta)
+                # binary_string = BinToStrBBDSE(trace_list, k, predicate_ta)
+                op = isOpaquePredicate(binary_string, predicate_ta, trace_list)
+                if op == 1:
+                    if trace_list[predicate_ta].get_pa() not in pa_dict.keys():
+                        pa_dict[trace_list[predicate_ta].get_pa()] = 1
+                else:
+                    if trace_list[predicate_ta].get_pa() in pa_dict.keys():
+                        pa_dict[trace_list[predicate_ta].get_pa()] = 0
+            wr.writerow([target, k, num_of_predicates, len(pa_set), pa_dict.values().count(1), pa_dict])
             pa_dict.clear()
     f_output.close()
 
